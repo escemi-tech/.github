@@ -1,2 +1,1 @@
-# .github
-ESCMI Organization profile
+# ESCEMI Organization Profile
