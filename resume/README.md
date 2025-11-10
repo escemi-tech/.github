@@ -12,6 +12,10 @@ The resume is stored in a structured JSON format that serves as the single sourc
 
 - **`resume.en.json`** - English version of the resume following the standard JSON Resume schema
 - **`resume.fr.json`** - French version of the resume following the standard JSON Resume schema
+- **`pdf/`** - Directory containing generated PDF versions of the resumes
+  - `resume.en.pdf` - English PDF (auto-generated)
+  - `resume.fr.pdf` - French PDF (auto-generated)
+  - See [pdf/README.md](pdf/README.md) for more details
 
 ## Format
 
@@ -72,9 +76,36 @@ The GitHub Actions workflow (`.github/workflows/sync-resume.yml`) is set up to:
 
 1. Detect changes to `resume.en.json` or `resume.fr.json`
 2. Validate both files using `resume-cli validate` command
-3. Create an issue or notification reminding to update LinkedIn profile manually
+3. Generate PDF versions of both resumes
+4. **On push to main:** Commit the generated PDFs to the repository
+5. **On pull request:** Upload PDFs as artifacts for preview
+6. Create an issue or notification reminding to update LinkedIn profile manually
 
 For future enhancement when API access is available, the workflow can be extended to use the LinkedIn API directly.
+
+## PDF Generation
+
+PDFs are automatically generated from the JSON Resume files using `resume-cli` with the `elegant` theme.
+
+### Automatic Generation
+
+- **On main branch:** PDFs are generated and committed to `resume/pdf/` directory
+- **On pull requests:** PDFs are generated as artifacts for preview before merging
+
+### Manual Generation
+
+To generate PDFs locally:
+
+```bash
+# Install tools
+npm install -g resume-cli jsonresume-theme-elegant
+
+# Generate PDFs
+resume export resume/pdf/resume.en.pdf --resume resume/resume.en.json --format pdf --theme elegant
+resume export resume/pdf/resume.fr.pdf --resume resume/resume.fr.json --format pdf --theme elegant
+```
+
+See [pdf/README.md](pdf/README.md) for more details.
 
 ## Schema Reference
 
