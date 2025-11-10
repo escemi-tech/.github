@@ -42,6 +42,10 @@ En conjuguant une vision stratégique à une mise en œuvre opérationnelle, je 
 
 Ma méthodologie optimise l'expérience développeurs et la cohésion d'équipe, conduisant à une amélioration continue grâce à des cycles de livraison plus performants et une diminution de la dette technique.
 
+## [Resume as Code](resume/README.md)
+
+Professional resume managed as code in JSON Resume format with bilingual support (English/French).
+
 ## [Branding](branding/README.md)
 
 ## Links

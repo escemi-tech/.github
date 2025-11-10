@@ -1,0 +1,21 @@
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Node modules (if any npm tools are used)
+node_modules/
+package-lock.json
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# Generated files
+*.log

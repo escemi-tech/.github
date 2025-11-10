@@ -1,0 +1,124 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "meta": {
+    "version": "v1.0.0",
+    "lastModified": "2025-11-10",
+    "defaultLanguage": "en",
+    "supportedLanguages": ["en", "fr"]
+  },
+  "basics": {
+    "name": "Emilien Escalle",
+    "label": {
+      "en": "Fractional Hands-On CTO & Senior Lead Developer | Lean & DevX Expert | Node.js, PHP & Cloud Native",
+      "fr": "Hands-On CTO à la demande et Lead Développeur Senior | Expert Lean & DevX | Node.js, PHP & Cloud Native"
+    },
+    "image": "",
+    "email": "",
+    "phone": "",
+    "url": "https://www.escemi.com",
+    "summary": {
+      "en": "Fractional CTO and Senior Lead Developer with 16+ years in technology delivering Lean, impactful solutions that drive digital transformation.\n\nI architect scalable, maintainable, enterprise-grade applications using SOLID principles, Clean Code, and Clean Architecture across Node.js, PHP, and cloud-native ecosystems, while implementing DevOps best practices-with a strong emphasis on CI/CD-that eliminate bottlenecks and ensure operational reliability.\n\nCombining strategic vision with hands-on execution, I transform complex challenges into successful solutions with measurable business outcomes.\n\nMy methodology optimizes Developer Experience and team dynamics, driving sustainable growth through enhanced delivery performance and reduced technical debt.",
+      "fr": "Hands-On CTO à la demande et Lead Développeur Senior avec plus de 16 ans d'expérience dans le domaine technologique, je propose des solutions Lean à fort impact qui accompagnent la transformation numérique.\n\nJe conçois des applications évolutives, maintenables et de qualité en appliquant les principes SOLID, le Clean Code & Architecture dans les écosystèmes Node.js, PHP et cloud-native. J'intègre également les meilleures pratiques DevOps, avec un accent particulier sur l'intégration continue et la livraison continue (CI/CD), pour éliminer les goulots d'étranglement et garantir la fiabilité opérationnelle.\n\nEn conjuguant une vision stratégique à une mise en œuvre opérationnelle, je convertis des défis complexes en solutions concrètes générant des résultats tangibles pour l'entreprise.\n\nMa méthodologie optimise l'expérience développeurs et la cohésion d'équipe, conduisant à une amélioration continue grâce à des cycles de livraison plus performants et une diminution de la dette technique."
+    },
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "FR",
+      "region": ""
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "emilienescalle",
+        "url": "https://www.linkedin.com/in/emilienescalle/"
+      },
+      {
+        "network": "GitHub",
+        "username": "neilime",
+        "url": "https://github.com/neilime"
+      },
+      {
+        "network": "Malt",
+        "username": "emilienescalle",
+        "url": "https://www.malt.fr/profile/emilienescalle"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "ESCEMI",
+      "position": {
+        "en": "Fractional Hands-On CTO & Senior Lead Developer",
+        "fr": "Hands-On CTO à la demande et Lead Développeur Senior"
+      },
+      "url": "https://www.escemi.com",
+      "startDate": "2009",
+      "endDate": "",
+      "summary": {
+        "en": "At your service to support you and meet the challenges of your digital projects.",
+        "fr": "À votre service pour vous accompagner et relever les défis de vos projets digitaux."
+      },
+      "highlights": []
+    }
+  ],
+  "volunteer": [],
+  "education": [],
+  "awards": [],
+  "certificates": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "level": "Master",
+      "keywords": [
+        "Node.js",
+        "PHP",
+        "JavaScript",
+        "TypeScript"
+      ]
+    },
+    {
+      "name": "Architecture & Design",
+      "level": "Master",
+      "keywords": [
+        "SOLID Principles",
+        "Clean Code",
+        "Clean Architecture",
+        "Design Patterns"
+      ]
+    },
+    {
+      "name": "DevOps & Cloud",
+      "level": "Master",
+      "keywords": [
+        "CI/CD",
+        "Cloud Native",
+        "DevOps",
+        "Infrastructure as Code"
+      ]
+    },
+    {
+      "name": "Methodologies",
+      "level": "Master",
+      "keywords": [
+        "Lean",
+        "Agile",
+        "Developer Experience (DevX)"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "French",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Professional working proficiency"
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "projects": []
+}
