@@ -1,0 +1,106 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Emilien Escalle",
+    "label": "Hands-On CTO à la demande et Lead Développeur Senior | Expert Lean & DevX | Node.js, PHP & Cloud Native",
+    "image": "",
+    "email": "",
+    "phone": "",
+    "url": "https://www.escemi.com",
+    "summary": "Hands-On CTO à la demande et Lead Développeur Senior avec plus de 16 ans d'expérience dans le domaine technologique, je propose des solutions Lean à fort impact qui accompagnent la transformation numérique.\n\nJe conçois des applications évolutives, maintenables et de qualité en appliquant les principes SOLID, le Clean Code & Architecture dans les écosystèmes Node.js, PHP et cloud-native. J'intègre également les meilleures pratiques DevOps, avec un accent particulier sur l'intégration continue et la livraison continue (CI/CD), pour éliminer les goulots d'étranglement et garantir la fiabilité opérationnelle.\n\nEn conjuguant une vision stratégique à une mise en œuvre opérationnelle, je convertis des défis complexes en solutions concrètes générant des résultats tangibles pour l'entreprise.\n\nMa méthodologie optimise l'expérience développeurs et la cohésion d'équipe, conduisant à une amélioration continue grâce à des cycles de livraison plus performants et une diminution de la dette technique.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "",
+      "countryCode": "FR",
+      "region": ""
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "emilienescalle",
+        "url": "https://www.linkedin.com/in/emilienescalle/"
+      },
+      {
+        "network": "GitHub",
+        "username": "neilime",
+        "url": "https://github.com/neilime"
+      },
+      {
+        "network": "Malt",
+        "username": "emilienescalle",
+        "url": "https://www.malt.fr/profile/emilienescalle"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "ESCEMI",
+      "position": "Hands-On CTO à la demande et Lead Développeur Senior",
+      "url": "https://www.escemi.com",
+      "startDate": "2009",
+      "endDate": "",
+      "summary": "À votre service pour vous accompagner et relever les défis de vos projets digitaux.",
+      "highlights": []
+    }
+  ],
+  "volunteer": [],
+  "education": [],
+  "awards": [],
+  "certificates": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "Programming Languages",
+      "level": "Master",
+      "keywords": [
+        "Node.js",
+        "PHP",
+        "JavaScript",
+        "TypeScript"
+      ]
+    },
+    {
+      "name": "Architecture & Design",
+      "level": "Master",
+      "keywords": [
+        "SOLID Principles",
+        "Clean Code",
+        "Clean Architecture",
+        "Design Patterns"
+      ]
+    },
+    {
+      "name": "DevOps & Cloud",
+      "level": "Master",
+      "keywords": [
+        "CI/CD",
+        "Cloud Native",
+        "DevOps",
+        "Infrastructure as Code"
+      ]
+    },
+    {
+      "name": "Methodologies",
+      "level": "Master",
+      "keywords": [
+        "Lean",
+        "Agile",
+        "Developer Experience (DevX)"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "French",
+      "fluency": "Native speaker"
+    },
+    {
+      "language": "English",
+      "fluency": "Professional working proficiency"
+    }
+  ],
+  "interests": [],
+  "references": [],
+  "projects": []
+}

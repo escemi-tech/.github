@@ -5,10 +5,12 @@ on:
     branches:
       - main
     paths:
-      - 'resume/resume.json'
+      - 'resume/resume.en.json'
+      - 'resume/resume.fr.json'
   pull_request:
     paths:
-      - 'resume/resume.json'
+      - 'resume/resume.en.json'
+      - 'resume/resume.fr.json'
   workflow_dispatch:
 
 jobs:
@@ -24,53 +26,68 @@ jobs:
       
       - name: Validate JSON structure
         run: |
-          echo "Validating resume.json structure..."
-          if ! jq empty resume/resume.json 2>/dev/null; then
-            echo "❌ Invalid JSON format"
+          echo "Validating resume files..."
+          
+          if ! jq empty resume/resume.en.json 2>/dev/null; then
+            echo "❌ Invalid JSON format in resume.en.json"
             exit 1
           fi
-          echo "✅ JSON structure is valid"
+          echo "✅ resume.en.json structure is valid"
+          
+          if ! jq empty resume/resume.fr.json 2>/dev/null; then
+            echo "❌ Invalid JSON format in resume.fr.json"
+            exit 1
+          fi
+          echo "✅ resume.fr.json structure is valid"
       
       - name: Check required fields
         run: |
-          echo "Checking required bilingual fields..."
+          echo "Checking required fields..."
           
-          # Check if basics.label has both languages
-          if ! jq -e '.basics.label.en' resume/resume.json > /dev/null; then
-            echo "❌ Missing basics.label.en"
+          # Check English resume
+          if ! jq -e '.basics.name' resume/resume.en.json > /dev/null; then
+            echo "❌ Missing basics.name in resume.en.json"
             exit 1
           fi
-          if ! jq -e '.basics.label.fr' resume/resume.json > /dev/null; then
-            echo "❌ Missing basics.label.fr"
+          if ! jq -e '.basics.label' resume/resume.en.json > /dev/null; then
+            echo "❌ Missing basics.label in resume.en.json"
             exit 1
           fi
+          if ! jq -e '.basics.summary' resume/resume.en.json > /dev/null; then
+            echo "❌ Missing basics.summary in resume.en.json"
+            exit 1
+          fi
+          echo "✅ resume.en.json has all required fields"
           
-          # Check if basics.summary has both languages
-          if ! jq -e '.basics.summary.en' resume/resume.json > /dev/null; then
-            echo "❌ Missing basics.summary.en"
+          # Check French resume
+          if ! jq -e '.basics.name' resume/resume.fr.json > /dev/null; then
+            echo "❌ Missing basics.name in resume.fr.json"
             exit 1
           fi
-          if ! jq -e '.basics.summary.fr' resume/resume.json > /dev/null; then
-            echo "❌ Missing basics.summary.fr"
+          if ! jq -e '.basics.label' resume/resume.fr.json > /dev/null; then
+            echo "❌ Missing basics.label in resume.fr.json"
             exit 1
           fi
-          
-          echo "✅ All required bilingual fields are present"
+          if ! jq -e '.basics.summary' resume/resume.fr.json > /dev/null; then
+            echo "❌ Missing basics.summary in resume.fr.json"
+            exit 1
+          fi
+          echo "✅ resume.fr.json has all required fields"
       
       - name: Display resume summary
         run: |
           echo "## Resume Summary"
           echo ""
-          echo "**Name:** $(jq -r '.basics.name' resume/resume.json)"
+          echo "**Name:** $(jq -r '.basics.name' resume/resume.en.json)"
           echo ""
           echo "**English Label:**"
-          jq -r '.basics.label.en' resume/resume.json
+          jq -r '.basics.label' resume/resume.en.json
           echo ""
           echo "**French Label:**"
-          jq -r '.basics.label.fr' resume/resume.json
+          jq -r '.basics.label' resume/resume.fr.json
           echo ""
           echo "**LinkedIn Profile:**"
-          jq -r '.basics.profiles[] | select(.network == "LinkedIn") | .url' resume/resume.json
+          jq -r '.basics.profiles[] | select(.network == "LinkedIn") | .url' resume/resume.en.json
 
   notify-update:
     name: Notify LinkedIn Update
@@ -90,41 +107,42 @@ jobs:
         with:
           script: |
             const fs = require('fs');
-            const resume = JSON.parse(fs.readFileSync('resume/resume.json', 'utf8'));
+            const resumeEn = JSON.parse(fs.readFileSync('resume/resume.en.json', 'utf8'));
+            const resumeFr = JSON.parse(fs.readFileSync('resume/resume.fr.json', 'utf8'));
             
             const issueTitle = '🔄 Resume Updated - Update LinkedIn Profile';
             const issueBody = `
             ## Resume has been updated
             
-            The resume data has been updated in \`resume/resume.json\`. Please update the LinkedIn profile accordingly.
+            The resume data has been updated. Please update the LinkedIn profile accordingly.
             
             ### Current Information
             
-            **Name:** ${resume.basics.name}
+            **Name:** ${resumeEn.basics.name}
             
-            **LinkedIn Profile:** ${resume.basics.profiles.find(p => p.network === 'LinkedIn')?.url || 'Not specified'}
+            **LinkedIn Profile:** ${resumeEn.basics.profiles.find(p => p.network === 'LinkedIn')?.url || 'Not specified'}
             
             ### English Version
             
-            **Headline:** ${resume.basics.label.en}
+            **Headline:** ${resumeEn.basics.label}
             
             **About:**
             \`\`\`
-            ${resume.basics.summary.en}
+            ${resumeEn.basics.summary}
             \`\`\`
             
             ### French Version
             
-            **Headline:** ${resume.basics.label.fr}
+            **Headline:** ${resumeFr.basics.label}
             
             **About:**
             \`\`\`
-            ${resume.basics.summary.fr}
+            ${resumeFr.basics.summary}
             \`\`\`
             
             ### Action Required
             
-            1. Review the changes in the resume.json file
+            1. Review the changes in resume.en.json and resume.fr.json
             2. Log in to [LinkedIn](https://www.linkedin.com)
             3. Update your profile with the new information:
                - Update headline/title
