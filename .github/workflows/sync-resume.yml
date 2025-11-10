@@ -24,55 +24,34 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
-      - name: Validate JSON structure
-        run: |
-          echo "Validating resume files..."
-          
-          if ! jq empty resume/resume.en.json 2>/dev/null; then
-            echo "❌ Invalid JSON format in resume.en.json"
-            exit 1
-          fi
-          echo "✅ resume.en.json structure is valid"
-          
-          if ! jq empty resume/resume.fr.json 2>/dev/null; then
-            echo "❌ Invalid JSON format in resume.fr.json"
-            exit 1
-          fi
-          echo "✅ resume.fr.json structure is valid"
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
       
-      - name: Check required fields
+      - name: Install resume-cli
+        run: npm install -g resume-cli
+      
+      - name: Validate resumes with resume-cli
         run: |
-          echo "Checking required fields..."
+          echo "Validating resume files with resume-cli..."
           
-          # Check English resume
-          if ! jq -e '.basics.name' resume/resume.en.json > /dev/null; then
-            echo "❌ Missing basics.name in resume.en.json"
+          echo "Validating resume.en.json..."
+          if resume validate resume/resume.en.json; then
+            echo "✅ resume.en.json is valid"
+          else
+            echo "❌ resume.en.json validation failed"
             exit 1
           fi
-          if ! jq -e '.basics.label' resume/resume.en.json > /dev/null; then
-            echo "❌ Missing basics.label in resume.en.json"
-            exit 1
-          fi
-          if ! jq -e '.basics.summary' resume/resume.en.json > /dev/null; then
-            echo "❌ Missing basics.summary in resume.en.json"
-            exit 1
-          fi
-          echo "✅ resume.en.json has all required fields"
           
-          # Check French resume
-          if ! jq -e '.basics.name' resume/resume.fr.json > /dev/null; then
-            echo "❌ Missing basics.name in resume.fr.json"
+          echo ""
+          echo "Validating resume.fr.json..."
+          if resume validate resume/resume.fr.json; then
+            echo "✅ resume.fr.json is valid"
+          else
+            echo "❌ resume.fr.json validation failed"
             exit 1
           fi
-          if ! jq -e '.basics.label' resume/resume.fr.json > /dev/null; then
-            echo "❌ Missing basics.label in resume.fr.json"
-            exit 1
-          fi
-          if ! jq -e '.basics.summary' resume/resume.fr.json > /dev/null; then
-            echo "❌ Missing basics.summary in resume.fr.json"
-            exit 1
-          fi
-          echo "✅ resume.fr.json has all required fields"
       
       - name: Display resume summary
         run: |
