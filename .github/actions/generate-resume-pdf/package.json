@@ -1,0 +1,13 @@
+{
+  "name": "generate-resume-pdf",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Generates PDF resumes from JSON resume files.",
+  "dependencies": {
+    "jsonresume-theme-elegant": "^1.16.1",
+    "resume-cli": "^3.0.8"
+  },
+  "scripts": {
+    "generate-pdf": "resume export --theme elegant --format pdf --resume"
+  }
+}

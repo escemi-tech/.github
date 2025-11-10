@@ -24,6 +24,7 @@ The resume follows the standard [JSON Resume schema v1.0.0](https://jsonresume.o
 ### Supported Languages
 
 We maintain two separate files for bilingual support:
+
 - **resume.en.json** - English (English)
 - **resume.fr.json** - French (Français)
 
@@ -70,16 +71,37 @@ Until LinkedIn API access is granted:
 2. **Apply for Partnership:** If automated updates are critical, apply for the [LinkedIn Partner Program](https://www.linkedin.com/help/linkedin/answer/a545236)
 3. **Alternative Automation:** Consider using the workflow as a reminder/notification system when resume files change
 
-### Workflow
+### Workflows
 
-The GitHub Actions workflow (`.github/workflows/sync-resume.yml`) is set up to:
+The repository uses a modular CI/CD workflow structure:
 
-1. Detect changes to `resume.en.json` or `resume.fr.json`
-2. Validate both files using `resume-cli validate` command
-3. Generate PDF versions of both resumes
-4. **On push to main:** Commit the generated PDFs to the repository
-5. **On pull request:** Upload PDFs as artifacts for preview
-6. Create an issue or notification reminding to update LinkedIn profile manually
+**Main Workflows:**
+
+- `main-ci.yml` - Runs on push to main branch
+  - Validates resumes using composite actions
+  - Generates PDFs
+  - Commits PDFs to repository
+  - Creates LinkedIn update reminder issue
+
+- `pull-request-ci.yml` - Runs on pull requests
+  - Validates resumes
+  - Generates PDF previews as artifacts
+  - Comments on PR with download link
+
+- `shared-ci.yml` - Reusable workflow for common CI tasks
+  - Validates both resume files
+  - Generates PDFs
+
+**Composite Actions:**
+
+- `.github/actions/validate-resume` - Validates JSON Resume files
+- `.github/actions/generate-resume-pdf` - Generates PDFs from JSON Resume
+
+**Additional Workflows:**
+
+- `greetings.yml` - Welcomes new contributors
+- `semantic-pull-request.yml` - Enforces semantic PR titles
+- `stale.yml` - Manages stale issues and PRs
 
 For future enhancement when API access is available, the workflow can be extended to use the LinkedIn API directly.
 

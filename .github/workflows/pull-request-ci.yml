@@ -1,0 +1,52 @@
+name: Pull Request CI
+
+on:
+  pull_request:
+    branches:
+      - main
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  ci:
+    name: CI Pipeline
+    uses: ./.github/workflows/shared-ci.yml
+    permissions:
+      contents: read
+      statuses: write
+      actions: read
+      security-events: write
+
+  comment-preview:
+    name: Comment PDF Preview
+    runs-on: ubuntu-latest
+    needs: ci
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Comment on PR with preview link
+        id: comment-preview
+        uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+        env:
+          GENERATED_PDFS: ${{ needs.ci.outputs.generated-pdfs }}
+        with:
+          script: |
+            const generatedPdfs = JSON.parse(process.env.GENERATED_PDFS);
+            const comment = `## 📄 Resume PDF Preview
+
+            PDFs have been generated for this pull request. You can download them from the workflow artifacts.
+
+            **Generated files:**
+            ${generatedPdfs.map(pdf => `- **${pdf.language}**: [\`${pdf["pdf-path"]}\`](\`${pdf["artifact-url"]}\`)`).join('\n')}
+            `;
+
+            return comment;
+
+      - uses: hoverkraft-tech/ci-github-common/actions/create-or-update-comment@753288393de1f3d92f687a6761d236ca800f5306 # 0.28.1
+        with:
+          title: "Resume PDF Preview"
+          body: ${{ steps.comment-preview.outputs.result }}

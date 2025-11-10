@@ -53,12 +53,7 @@
     {
       "name": "Programming Languages",
       "level": "Master",
-      "keywords": [
-        "Node.js",
-        "PHP",
-        "JavaScript",
-        "TypeScript"
-      ]
+      "keywords": ["Node.js", "PHP", "JavaScript", "TypeScript"]
     },
     {
       "name": "Architecture & Design",
@@ -73,21 +68,12 @@
     {
       "name": "DevOps & Cloud",
       "level": "Master",
-      "keywords": [
-        "CI/CD",
-        "Cloud Native",
-        "DevOps",
-        "Infrastructure as Code"
-      ]
+      "keywords": ["CI/CD", "Cloud Native", "DevOps", "Infrastructure as Code"]
     },
     {
       "name": "Methodologies",
       "level": "Master",
-      "keywords": [
-        "Lean",
-        "Agile",
-        "Developer Experience (DevX)"
-      ]
+      "keywords": ["Lean", "Agile", "Developer Experience (DevX)"]
     }
   ],
   "languages": [
