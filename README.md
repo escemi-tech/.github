@@ -16,7 +16,7 @@ Fractional Hands-On CTO & Senior Lead Developer | Lean & DevX Expert | Nodejs, P
 
 Fractional CTO and Senior Lead Developer with 16+ years in technology delivering Lean, impactful solutions that drive digital transformation.
 
-I architect scalable, maintainable, enterprise-grade applications using SOLID principles, Clean Code, and Clean Architecture across Node.js, PHP, and cloud-native ecosystems, while implementing DevOps best practices—with a strong emphasis on CI/CD—that eliminate bottlenecks and ensure operational reliability.
+I architect scalable, maintainable, enterprise-grade applications using SOLID principles, Clean Code, and Clean Architecture across Node.js, PHP, and cloud-native ecosystems, while implementing DevOps best practices-with a strong emphasis on CI/CD-that eliminate bottlenecks and ensure operational reliability.
 
 Combining strategic vision with hands-on execution, I transform complex challenges into successful solutions with measurable business outcomes.
 
