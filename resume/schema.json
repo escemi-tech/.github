@@ -1,0 +1,243 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/escemi-tech/.github/resume/schema.json",
+  "title": "ESCEMI Resume Schema (Bilingual)",
+  "description": "Extended JSON Resume schema with bilingual support for French and English",
+  "type": "object",
+  "required": ["meta", "basics"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Link to JSON Resume schema"
+    },
+    "meta": {
+      "type": "object",
+      "required": ["defaultLanguage", "supportedLanguages"],
+      "properties": {
+        "version": {
+          "type": "string",
+          "description": "Schema version"
+        },
+        "lastModified": {
+          "type": "string",
+          "description": "Last modification date"
+        },
+        "defaultLanguage": {
+          "type": "string",
+          "enum": ["en", "fr"],
+          "description": "Default language"
+        },
+        "supportedLanguages": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": ["en", "fr"]
+          },
+          "minItems": 2,
+          "description": "Supported languages"
+        }
+      }
+    },
+    "basics": {
+      "type": "object",
+      "required": ["name", "label", "summary"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "Full name"
+        },
+        "label": {
+          "type": "object",
+          "required": ["en", "fr"],
+          "properties": {
+            "en": {
+              "type": "string",
+              "description": "Professional title/headline in English"
+            },
+            "fr": {
+              "type": "string",
+              "description": "Professional title/headline in French"
+            }
+          },
+          "description": "Professional title or headline"
+        },
+        "image": {
+          "type": "string",
+          "description": "URL to profile image"
+        },
+        "email": {
+          "type": "string",
+          "format": "email",
+          "description": "Email address"
+        },
+        "phone": {
+          "type": "string",
+          "description": "Phone number"
+        },
+        "url": {
+          "type": "string",
+          "format": "uri",
+          "description": "Personal website URL"
+        },
+        "summary": {
+          "type": "object",
+          "required": ["en", "fr"],
+          "properties": {
+            "en": {
+              "type": "string",
+              "description": "Professional summary in English"
+            },
+            "fr": {
+              "type": "string",
+              "description": "Professional summary in French"
+            }
+          },
+          "description": "Professional summary"
+        },
+        "location": {
+          "type": "object",
+          "properties": {
+            "address": {
+              "type": "string"
+            },
+            "postalCode": {
+              "type": "string"
+            },
+            "city": {
+              "type": "string"
+            },
+            "countryCode": {
+              "type": "string"
+            },
+            "region": {
+              "type": "string"
+            }
+          }
+        },
+        "profiles": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["network", "url"],
+            "properties": {
+              "network": {
+                "type": "string",
+                "description": "Social network name"
+              },
+              "username": {
+                "type": "string",
+                "description": "Username on the network"
+              },
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "description": "Profile URL"
+              }
+            }
+          }
+        }
+      }
+    },
+    "work": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Company name"
+          },
+          "position": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "required": ["en", "fr"],
+                "properties": {
+                  "en": {
+                    "type": "string"
+                  },
+                  "fr": {
+                    "type": "string"
+                  }
+                }
+              }
+            ],
+            "description": "Job title/position"
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          },
+          "startDate": {
+            "type": "string"
+          },
+          "endDate": {
+            "type": "string"
+          },
+          "summary": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "object",
+                "required": ["en", "fr"],
+                "properties": {
+                  "en": {
+                    "type": "string"
+                  },
+                  "fr": {
+                    "type": "string"
+                  }
+                }
+              }
+            ]
+          },
+          "highlights": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "skills": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
+          },
+          "keywords": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "languages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "language": {
+            "type": "string"
+          },
+          "fluency": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  }
+}

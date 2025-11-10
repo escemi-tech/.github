@@ -1,0 +1,175 @@
+name: Resume Sync
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'resume/resume.json'
+  pull_request:
+    paths:
+      - 'resume/resume.json'
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Validate Resume
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Validate JSON structure
+        run: |
+          echo "Validating resume.json structure..."
+          if ! jq empty resume/resume.json 2>/dev/null; then
+            echo "❌ Invalid JSON format"
+            exit 1
+          fi
+          echo "✅ JSON structure is valid"
+      
+      - name: Check required fields
+        run: |
+          echo "Checking required bilingual fields..."
+          
+          # Check if basics.label has both languages
+          if ! jq -e '.basics.label.en' resume/resume.json > /dev/null; then
+            echo "❌ Missing basics.label.en"
+            exit 1
+          fi
+          if ! jq -e '.basics.label.fr' resume/resume.json > /dev/null; then
+            echo "❌ Missing basics.label.fr"
+            exit 1
+          fi
+          
+          # Check if basics.summary has both languages
+          if ! jq -e '.basics.summary.en' resume/resume.json > /dev/null; then
+            echo "❌ Missing basics.summary.en"
+            exit 1
+          fi
+          if ! jq -e '.basics.summary.fr' resume/resume.json > /dev/null; then
+            echo "❌ Missing basics.summary.fr"
+            exit 1
+          fi
+          
+          echo "✅ All required bilingual fields are present"
+      
+      - name: Display resume summary
+        run: |
+          echo "## Resume Summary"
+          echo ""
+          echo "**Name:** $(jq -r '.basics.name' resume/resume.json)"
+          echo ""
+          echo "**English Label:**"
+          jq -r '.basics.label.en' resume/resume.json
+          echo ""
+          echo "**French Label:**"
+          jq -r '.basics.label.fr' resume/resume.json
+          echo ""
+          echo "**LinkedIn Profile:**"
+          jq -r '.basics.profiles[] | select(.network == "LinkedIn") | .url' resume/resume.json
+
+  notify-update:
+    name: Notify LinkedIn Update
+    runs-on: ubuntu-latest
+    needs: validate
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Create LinkedIn Update Reminder
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const resume = JSON.parse(fs.readFileSync('resume/resume.json', 'utf8'));
+            
+            const issueTitle = '🔄 Resume Updated - Update LinkedIn Profile';
+            const issueBody = `
+            ## Resume has been updated
+            
+            The resume data has been updated in \`resume/resume.json\`. Please update the LinkedIn profile accordingly.
+            
+            ### Current Information
+            
+            **Name:** ${resume.basics.name}
+            
+            **LinkedIn Profile:** ${resume.basics.profiles.find(p => p.network === 'LinkedIn')?.url || 'Not specified'}
+            
+            ### English Version
+            
+            **Headline:** ${resume.basics.label.en}
+            
+            **About:**
+            \`\`\`
+            ${resume.basics.summary.en}
+            \`\`\`
+            
+            ### French Version
+            
+            **Headline:** ${resume.basics.label.fr}
+            
+            **About:**
+            \`\`\`
+            ${resume.basics.summary.fr}
+            \`\`\`
+            
+            ### Action Required
+            
+            1. Review the changes in the resume.json file
+            2. Log in to [LinkedIn](https://www.linkedin.com)
+            3. Update your profile with the new information:
+               - Update headline/title
+               - Update about/summary section
+               - Update work experience if changed
+               - Update skills if changed
+            4. Close this issue once LinkedIn is updated
+            
+            ### Note on Automation
+            
+            LinkedIn's Profile Edit API is restricted to approved LinkedIn Partner Program applications. 
+            Automated profile updates require partnership approval from LinkedIn.
+            
+            To automate this in the future:
+            - Apply for [LinkedIn Partner Program](https://developer.linkedin.com/partner-programs)
+            - Once approved, update this workflow to use the LinkedIn API
+            
+            ---
+            
+            *This issue was automatically created by the Resume Sync workflow.*
+            *Commit: ${context.sha}*
+            `;
+            
+            // Check if an open issue already exists
+            const issues = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'resume-update'
+            });
+            
+            if (issues.data.length > 0) {
+              // Update existing issue
+              console.log('Updating existing issue...');
+              await github.rest.issues.update({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: issues.data[0].number,
+                body: issueBody
+              });
+              console.log(`Updated issue #${issues.data[0].number}`);
+            } else {
+              // Create new issue
+              console.log('Creating new issue...');
+              const issue = await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title: issueTitle,
+                body: issueBody,
+                labels: ['resume-update', 'manual-action-required']
+              });
+              console.log(`Created issue #${issue.data.number}`);
+            }
