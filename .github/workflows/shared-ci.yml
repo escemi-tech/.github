@@ -1,0 +1,99 @@
+name: Shared CI
+
+on:
+  workflow_call:
+    outputs:
+      generated-pdfs:
+        description: "List of generated PDF resumes"
+        value: ${{ jobs.get-generated-pdfs.outputs.generated-pdfs }}
+      pdfs-root-path:
+        description: "Path to the generated PDFs directory"
+        value: ${{ jobs.get-generated-pdfs.outputs.pdfs-root-path }}
+
+permissions: {}
+
+env:
+  RESUME_PDFS_ROOT_PATH: resume/pdf
+
+jobs:
+  linter:
+    uses: hoverkraft-tech/ci-github-common/.github/workflows/linter.yml@753288393de1f3d92f687a6761d236ca800f5306 # 0.28.1
+    permissions:
+      contents: read
+      statuses: write
+      actions: read
+      security-events: write
+
+  validate-resumes:
+    name: Validate Resumes
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    strategy:
+      matrix:
+        resume-language: [en, fr]
+      fail-fast: false
+    env:
+      RESUME_FILE: resume/resume.${{ matrix.resume-language }}.json
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+
+      - name: Validate English resume
+        uses: ./.github/actions/validate-resume
+        with:
+          resume-path: ${{ env.RESUME_FILE }}
+
+  generate-pdfs:
+    name: Generate PDF Resumes
+    runs-on: ubuntu-latest
+    needs: validate-resumes
+    permissions:
+      contents: read
+    strategy:
+      matrix:
+        resume-language: [en, fr]
+    env:
+      RESUME_FILE: resume/resume.${{ matrix.resume-language }}.json
+      OUTPUT_FILE: resume/pdf/resume.${{ matrix.resume-language }}.pdf
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Generate English PDF
+        uses: ./.github/actions/generate-resume-pdf
+        with:
+          resume-path: ${{ env.RESUME_FILE }}
+          output-path: ${{ env.OUTPUT_FILE }}
+
+      - name: Upload PDF artifacts
+        id: upload-artifact
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+        with:
+          name: resume-pdf-${{ matrix.resume-language }}
+          path: ${{ env.OUTPUT_FILE }}
+
+      - uses: hoverkraft-tech/ci-github-common/actions/set-matrix-output@753288393de1f3d92f687a6761d236ca800f5306 # 0.28.1
+        with:
+          value: |
+            {
+              "language": ${{ matrix.resume-language }}",
+              "pdf-path": ${{ env.OUTPUT_FILE }},
+              "artifact-url": "${{ steps.upload-artifact.outputs.artifact-url }}",
+              "artifact-id": "${{ steps.upload-artifact.outputs.artifact-id }}"
+            }
+          artifact-name: generated-pdfs
+
+  get-generated-pdfs:
+    name: Get Generated PDFs
+    runs-on: ubuntu-latest
+    needs: generate-pdfs
+    outputs:
+      generated-pdfs: ${{ steps.get-generated-pdfs.outputs.result }}
+      pdfs-root-path: ${{ env.RESUME_PDFS_ROOT_PATH }}
+    steps:
+      - id: get-generated-pdfs
+        uses: hoverkraft-tech/ci-github-common/actions/get-matrix-outputs@5f11437c716059f30c635f90055060e4ef8b31a0 # 0.28.0
+        with:
+          artifact-name: "generated-pdfs"

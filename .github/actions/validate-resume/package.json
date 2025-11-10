@@ -1,0 +1,12 @@
+{
+  "name": "validate-resume",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Validates resume JSON files against the resume schema.",
+  "dependencies": {
+    "resume-cli": "^3.0.8"
+  },
+  "scripts": {
+    "validate": "resume validate --resume"
+  }
+}
