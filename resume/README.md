@@ -10,34 +10,25 @@ The resume is stored in a structured JSON format that serves as the single sourc
 
 ### Files
 
-- **`resume.json`** - Main resume data file in JSON Resume format with bilingual support (English/French)
+- **`resume.en.json`** - English version of the resume following the standard JSON Resume schema
+- **`resume.fr.json`** - French version of the resume following the standard JSON Resume schema
 
 ## Format
 
-The resume follows the [JSON Resume schema](https://jsonresume.org/schema/) with extensions for multi-language support:
-
-### Bilingual Fields
-
-Fields that support multiple languages use an object with language codes:
-
-```json
-{
-  "label": {
-    "en": "English text",
-    "fr": "Texte français"
-  }
-}
-```
+The resume follows the standard [JSON Resume schema v1.0.0](https://jsonresume.org/schema/) without any custom extensions.
 
 ### Supported Languages
 
-- **en** - English
-- **fr** - French (Français)
+We maintain two separate files for bilingual support:
+- **resume.en.json** - English (English)
+- **resume.fr.json** - French (Français)
+
+Both files follow the exact same schema structure from [jsonresume.org/schema](https://jsonresume.org/schema/).
 
 ## Updating the Resume
 
-1. Edit `resume.json` directly
-2. Ensure both English (`en`) and French (`fr`) translations are provided for all bilingual fields
+1. Edit both `resume.en.json` and `resume.fr.json` files
+2. Keep the structure consistent between both files
 3. Commit the changes to trigger automated updates
 
 ## Validation
@@ -46,7 +37,15 @@ The resume data follows the JSON Resume schema v1.0.0. You can validate it using
 
 ```bash
 npm install -g resume-cli
-resume validate resume.json
+resume validate resume.en.json
+resume validate resume.fr.json
+```
+
+Or simply validate JSON structure with `jq`:
+
+```bash
+jq empty resume.en.json && echo "✅ Valid"
+jq empty resume.fr.json && echo "✅ Valid"
 ```
 
 ## LinkedIn Synchronization
@@ -63,15 +62,15 @@ resume validate resume.json
 
 Until LinkedIn API access is granted:
 
-1. **Manual Updates:** Use the resume.json as a reference when updating LinkedIn profile manually
+1. **Manual Updates:** Use the resume files as a reference when updating LinkedIn profile manually
 2. **Apply for Partnership:** If automated updates are critical, apply for the [LinkedIn Partner Program](https://www.linkedin.com/help/linkedin/answer/a545236)
-3. **Alternative Automation:** Consider using the workflow as a reminder/notification system when resume.json changes
+3. **Alternative Automation:** Consider using the workflow as a reminder/notification system when resume files change
 
 ### Workflow
 
 The GitHub Actions workflow (`.github/workflows/sync-resume.yml`) is set up to:
 
-1. Detect changes to `resume.json`
+1. Detect changes to `resume.en.json` or `resume.fr.json`
 2. Validate the JSON structure
 3. Create an issue or notification reminding to update LinkedIn profile manually
 
@@ -93,17 +92,24 @@ The resume uses the following main sections from JSON Resume schema:
 ### Reading Resume Data
 
 ```bash
-# Pretty print the resume
-cat resume.json | jq .
+# Pretty print the English resume
+cat resume.en.json | jq .
+
+# Pretty print the French resume
+cat resume.fr.json | jq .
 
 # Extract English summary
-cat resume.json | jq -r '.basics.summary.en'
+cat resume.en.json | jq -r '.basics.summary'
 
 # Extract French label
-cat resume.json | jq -r '.basics.label.fr'
+cat resume.fr.json | jq -r '.basics.label'
 
-# List all skills
-cat resume.json | jq -r '.skills[].name'
+# List all skills from English resume
+cat resume.en.json | jq -r '.skills[].name'
+
+# Compare names in both files (should be the same)
+echo "English: $(jq -r '.basics.name' resume.en.json)"
+echo "French: $(jq -r '.basics.name' resume.fr.json)"
 ```
 
 ## References
