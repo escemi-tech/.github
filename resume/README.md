@@ -71,7 +71,7 @@ Until LinkedIn API access is granted:
 The GitHub Actions workflow (`.github/workflows/sync-resume.yml`) is set up to:
 
 1. Detect changes to `resume.en.json` or `resume.fr.json`
-2. Validate the JSON structure
+2. Validate both files using `resume-cli validate` command
 3. Create an issue or notification reminding to update LinkedIn profile manually
 
 For future enhancement when API access is available, the workflow can be extended to use the LinkedIn API directly.
