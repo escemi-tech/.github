@@ -3,17 +3,13 @@
   "basics": {
     "name": "Emilien Escalle",
     "label": "Fractional Hands-On CTO & Senior Lead Developer | Lean & DevX Expert | Node.js, PHP & Cloud Native",
-    "image": "",
-    "email": "",
-    "phone": "",
     "url": "https://www.escemi.com",
+    "image": "https://raw.githubusercontent.com/escemi-tech/.github/main/headshots/primary.jpg",
     "summary": "Fractional CTO and Senior Lead Developer with 16+ years in technology delivering Lean, impactful solutions that drive digital transformation.\n\nI architect scalable, maintainable, enterprise-grade applications using SOLID principles, Clean Code, and Clean Architecture across Node.js, PHP, and cloud-native ecosystems, while implementing DevOps best practices-with a strong emphasis on CI/CD-that eliminate bottlenecks and ensure operational reliability.\n\nCombining strategic vision with hands-on execution, I transform complex challenges into successful solutions with measurable business outcomes.\n\nMy methodology optimizes Developer Experience and team dynamics, driving sustainable growth through enhanced delivery performance and reduced technical debt.",
     "location": {
-      "address": "",
-      "postalCode": "",
-      "city": "",
-      "countryCode": "FR",
-      "region": ""
+      "city": "Aix-en-Provence",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "countryCode": "FR"
     },
     "profiles": [
       {
@@ -36,18 +32,198 @@
   "work": [
     {
       "name": "ESCEMI",
+      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France",
+      "description": "Technical consulting and development services",
       "position": "Fractional Hands-On CTO & Senior Lead Developer",
       "url": "https://www.escemi.com",
-      "startDate": "2009",
-      "endDate": "",
-      "summary": "At your service to support you and meet the challenges of your digital projects.",
+      "startDate": "2009-01",
+      "summary": "Freelance consulting business providing technical consulting and development services. At your service to support you and meet the challenges of your digital projects.",
+      "highlights": [
+        "Technical coaching and skills development: Supporting tech teams in adopting Lean, DevOps and agile methodologies, fostering continuous improvement and effective knowledge transfer",
+        "Architecture and development standards: Implementation of custom technical frameworks and architectural blueprints based on proven methodologies (TDD, SOLID, Clean Code & Architecture) to reduce technical debt",
+        "Design and implementation: Designing and implementing scalable systems via modern API approaches (REST, GraphQL, gRPC) and advanced architectural patterns",
+        "CI/CD pipelines: Deployment of optimized pipelines (GitHub Actions, GitLab CI/CD, Jenkins) that automate quality checks and streamline deployments",
+        "Cloud-Native transformation: Supporting transformation to high-performance cloud-native architectures, enabling rapid iterations and simplified scaling"
+      ]
+    },
+    {
+      "name": "build and run FR",
+      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France",
+      "description": "Technical experts collective",
+      "position": "Fractional Hands-On CTO & Senior Lead Developer Freelance | Lean & DevX Expert | Node.js, PHP & Cloud Native",
+      "url": "https://www.build-and-run.fr/",
+      "startDate": "2020-02",
+      "summary": "As a member of the Build & Run collective, I bring my expertise as CTO and Senior Lead Developer to help companies structure, optimize and scale their technical teams.",
+      "highlights": [
+        "Architecture & Scalability: implementing robust and scalable solutions, aligned with business challenges and best practices (Clean Code, Clean Architecture, SOLID)",
+        "DevOps & Automation: improving CI/CD workflows, optimizing deployment on Kubernetes and cloud infrastructures",
+        "Developer Experience (DevX): implementing tools and processes to maximize productivity and well-being of tech teams",
+        "Coaching & Mentoring: supporting teams to upskill and adopt modern and effective development practices",
+        "Product & Delivery: aligning technical objectives with business challenges to ensure maximum impact"
+      ]
+    },
+    {
+      "name": "Ouistiti",
+      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France",
+      "description": "Mobile & web travel recommendation app",
+      "position": "Chief Technical Officer (Co-founder)",
+      "startDate": "2018-09",
+      "endDate": "2019-09",
+      "summary": "Creation of a mobile & web application for personalized travel recommendations and inspiration.",
+      "highlights": [
+        "Architecture & Technical Design: JAMStack / Serverless / AWS",
+        "Product roadmap, backlog and user stories, development, testing",
+        "User feedback, focus groups, data analysis, UX/UI improvement",
+        "Product growth, SEA, Facebook Ads, CRM & Emailing, Content & SEO"
+      ]
+    },
+    {
+      "name": "Qwamplify Activation, Groupe QWAMPLIFY",
+      "location": "Rousset, Provence-Alpes-Côte d'Azur, France",
+      "description": "Digital marketing and e-commerce company",
+      "position": "Technical Director",
+      "url": "https://www.qwamplify.com/",
+      "startDate": "2017-05",
+      "endDate": "2018-08",
+      "summary": "Technical leadership with responsibility for IT strategy, architecture and innovation.",
+      "highlights": [
+        "IT Strategy and Governance: Managing IT Master Plan, designing scalable architecture and coherent system urbanization",
+        "Gathering and analyzing business needs with company leadership",
+        "Evaluating and recommending technology investments while optimizing efficiency and risk management",
+        "Architecture and Development: Technical coordination of developments across all layers (UI, business services, persistence, interfacing)",
+        "Supervising and coordinating development, testing and operations teams",
+        "Validating development of key components and industrializing processes through automation, quality control and CI/CD",
+        "Innovation: Technology and legal monitoring, testing new technical solutions via POCs, integrating technological innovations"
+      ]
+    },
+    {
+      "name": "Qwamplify Activation, Groupe QWAMPLIFY",
+      "location": "Rousset, Provence-Alpes-Côte d'Azur, France",
+      "description": "Digital marketing and e-commerce company",
+      "position": "IS Architect",
+      "url": "https://www.qwamplify.com/",
+      "startDate": "2015-02",
+      "endDate": "2017-05",
+      "summary": "Design of service-oriented application architecture and industrialization of the development cycle.",
+      "highlights": [
+        "Study and design of service-oriented application architecture: Analysis of AMOA & Marketing needs, technical proposals (Microservices / SOA, Big Data: ElasticSearch, Logstash, MongoDB)",
+        "Industrialization of development cycle: Setting up unified environment (PHP, Twig, Javascript, Bash, Zend Framework 2, Doctrine 2, jQuery)",
+        "Definition and writing of development standards (PSR, W3C)",
+        "Code reviews, coding dojo",
+        "Continuous integration: Source code control (Git hooks), Unit & functional tests (PHPUnit, Selenium)",
+        "Automation & securing deployments via automated procedures (Phing)",
+        "Lead of Product / ERP development team: Technical support & project management (Scrum & Kanban)"
+      ]
+    },
+    {
+      "name": "Qwamplify Activation, Groupe QWAMPLIFY",
+      "location": "Rousset, Provence-Alpes-Côte d'Azur, France",
+      "description": "Digital marketing and e-commerce company",
+      "position": "Team leader",
+      "url": "https://www.qwamplify.com/",
+      "startDate": "2013-09",
+      "endDate": "2015-02",
+      "summary": "Managing activities and a development team according to agile organization.",
+      "highlights": [
+        "Team management and facilitation",
+        "Reporting and quality control",
+        "Expertise in optimizing management and production processes: Performance solutions, Application architecture"
+      ]
+    },
+    {
+      "name": "Logicielnet",
+      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France",
+      "description": "SAAS software publisher",
+      "position": "Application systems manager",
+      "url": "https://www.logicielnet.fr/",
+      "startDate": "2010-09",
+      "endDate": "2013-09",
+      "summary": "In charge of the evolution of the application suite, core business of the company: a modular SAAS solution.",
+      "highlights": [
+        "Implementation of structural and functional evolutions responding to potential innovations and/or client needs",
+        "Project tracking from specification writing, through development team management, to client validation"
+      ]
+    },
+    {
+      "name": "Logicielnet",
+      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France",
+      "description": "SAAS software publisher",
+      "position": "R&D Engineer",
+      "url": "https://www.logicielnet.fr/",
+      "startDate": "2009-09",
+      "endDate": "2010-09",
+      "summary": "Design of a Web Callback (Click to call) module to improve customer relations for users of the company's application panel.",
       "highlights": []
+    },
+    {
+      "name": "Multiwizz",
+      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France",
+      "description": "Social platform",
+      "position": "R&D Developer",
+      "startDate": "2009-04",
+      "endDate": "2009-08",
+      "summary": "Participation in setting up a social platform based on Zend Framework.",
+      "highlights": [
+        "Development of frontend and backend parts as well as the application API",
+        "Application of agile project management concepts: SCRUM",
+        "Development of the company's iPhone application"
+      ]
     }
   ],
-  "volunteer": [],
-  "education": [],
+  "volunteer": [
+    {
+      "organization": "Cloud Native Aix-Marseille",
+      "position": "Co-organizer & Speaker",
+      "url": "https://www.cloudnative.aixmarseille.tech/",
+      "startDate": "2022-10",
+      "summary": "Promoting cloud-native technologies in the Aix-Marseille region in collaboration with the CNCF community.",
+      "highlights": [
+        "Organizing innovative events with the CNCF community",
+        "Leading technical sessions on Cloud and DevOps best practices",
+        "Facilitating knowledge exchange between professionals"
+      ]
+    },
+    {
+      "organization": "Aix-Marseille Université",
+      "position": "Professional instructor",
+      "url": "https://www.univ-amu.fr/",
+      "startDate": "2019-01",
+      "summary": "Teaching software architectures and web development best practices.",
+      "highlights": [
+        "Introduction to software architecture models in web context",
+        "Training on different implementations and their justification according to needs",
+        "Practical application of architecture typologies on concrete cases"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Université Aix-Marseille III Paul Cézanne",
+      "area": "MIAGE (Computer Methods Applied to Business Management)",
+      "studyType": "Master 2",
+      "url": "https://www.univ-amu.fr/",
+      "startDate": "2007-09",
+      "endDate": "2010-06"
+    },
+    {
+      "institution": "IUT GEA Gap",
+      "area": "GEA (Business and Administration Management)",
+      "studyType": "DUT",
+      "url": "https://iut.univ-amu.fr/",
+      "startDate": "2005-09",
+      "endDate": "2007-06"
+    }
+  ],
   "awards": [],
-  "certificates": [],
+  "certificates": [
+    {
+      "name": "LFC102: Inclusive Open Source Community Orientation",
+      "issuer": "The Linux Foundation",
+      "date": "2024-11-01",
+      "url": "https://www.credly.com/badges/336e21aa-95f6-4025-8ddf-17ffda9953f7/",
+      "summary": "Training on building inclusive open source communities, covering governance, allyship, and community health best practices."
+    }
+  ],
   "publications": [],
   "skills": [
     {
@@ -86,7 +262,93 @@
       "fluency": "Professional working proficiency"
     }
   ],
-  "interests": [],
+  "interests": [
+    {
+      "name": "Cloud Native Technologies",
+      "keywords": ["Kubernetes", "Serverless", "Microservices", "CNCF"]
+    },
+    {
+      "name": "Developer Experience",
+      "keywords": ["DevX", "CI/CD", "Automation", "Productivity Tools"]
+    },
+    {
+      "name": "Software Architecture",
+      "keywords": [
+        "Clean Architecture",
+        "Design Patterns",
+        "Domain-Driven Design"
+      ]
+    },
+    {
+      "name": "Open Source",
+      "keywords": ["OSS Contribution", "Community Building", "Collaboration"]
+    },
+    {
+      "name": "Technical Education",
+      "keywords": [
+        "Mentoring",
+        "Teaching",
+        "Knowledge Sharing",
+        "Community Speaking"
+      ]
+    },
+    {
+      "name": "Lean & Agile Methodologies",
+      "keywords": [
+        "Continuous Improvement",
+        "Team Dynamics",
+        "Delivery Excellence"
+      ]
+    }
+  ],
   "references": [],
-  "projects": []
+  "projects": [
+    {
+      "name": "twbs-helper-module",
+      "description": "Laminas (formerly Zend Framework) module that streamlines Twitter Bootstrap component integration.",
+      "highlights": [
+        "21+ GitHub stars and 20+ forks adopted by enterprise portals and design systems",
+        "Ships reusable helpers for grids, forms, navigation, and responsive layouts to accelerate delivery",
+        "Maintains comprehensive docs, CI pipelines, and semantic versioning to guarantee backward compatibility"
+      ],
+      "keywords": ["PHP", "Laminas", "Bootstrap", "Open Source"],
+      "url": "https://github.com/neilime/twbs-helper-module",
+      "roles": ["Creator", "Maintainer"],
+      "entity": "Open Source Community",
+      "type": "open-source"
+    },
+    {
+      "name": "php-css-lint",
+      "description": "CLI and Composer package that enforces CSS quality gates directly from PHP projects.",
+      "highlights": [
+        "11 GitHub stars and active usage inside custom CI pipelines for multi-brand marketing platforms",
+        "Wraps MDN and W3C specifications to surface actionable errors for large design systems",
+        "Provides zero-dependency binaries and GitHub Pages docs for quick onboarding"
+      ],
+      "keywords": ["PHP", "CSS", "Linting", "Composer"],
+      "url": "https://github.com/neilime/php-css-lint",
+      "roles": ["Creator", "Maintainer"],
+      "entity": "Open Source Community",
+      "type": "open-source"
+    },
+    {
+      "name": "ubuntu-config",
+      "description": "Infrastructure-as-code flavored bootstrap that standardizes my developer workstations on Ubuntu.",
+      "highlights": [
+        "Automates installation of Docker, Node.js, PHP toolchains, and desktop essentials via scripted tasks",
+        "Documents repeatable steps so consulting engagements start with a consistent developer environment",
+        "Modular Make targets and shell scripts make it easy to extend the setup per client needs"
+      ],
+      "keywords": ["Shell", "Automation", "Developer Experience", "Ubuntu"],
+      "url": "https://github.com/neilime/ubuntu-config",
+      "roles": ["Maintainer"],
+      "entity": "Personal Tooling",
+      "type": "infrastructure"
+    }
+  ],
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.en.json",
+    "version": "2025.11.14",
+    "lastModified": "2025-11-14T11:00:00Z"
+  }
 }

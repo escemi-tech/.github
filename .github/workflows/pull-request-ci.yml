@@ -34,6 +34,7 @@ jobs:
         env:
           GENERATED_PDFS: ${{ needs.ci.outputs.generated-pdfs }}
         with:
+          result-encoding: string
           script: |
             const generatedPdfs = JSON.parse(process.env.GENERATED_PDFS);
             const comment = `## 📄 Resume PDF Preview
@@ -41,7 +42,7 @@ jobs:
             PDFs have been generated for this pull request. You can download them from the workflow artifacts.
 
             **Generated files:**
-            ${generatedPdfs.map(pdf => `- **${pdf.language}**: [\`${pdf["pdf-path"]}\`](\`${pdf["artifact-url"]}\`)`).join('\n')}
+            ${generatedPdfs.map(pdf => `- **${pdf.language}**: [\`${pdf["pdf-path"]}\`](${pdf["artifact-url"]})`).join('\n')}
             `;
 
             return comment;
