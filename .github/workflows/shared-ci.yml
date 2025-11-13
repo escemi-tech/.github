@@ -50,6 +50,7 @@ jobs:
     permissions:
       contents: read
     strategy:
+      fail-fast: false
       matrix:
         resume-language: [en, fr]
     env:
@@ -73,15 +74,16 @@ jobs:
         with:
           name: resume-pdf-${{ matrix.resume-language }}
           path: ${{ env.OUTPUT_FILE }}
+          if-no-files-found: error
 
       - uses: hoverkraft-tech/ci-github-common/actions/set-matrix-output@753288393de1f3d92f687a6761d236ca800f5306 # 0.28.1
         with:
           value: |
             {
-              "language": ${{ matrix.resume-language }}",
-              "pdf-path": ${{ env.OUTPUT_FILE }},
-              "artifact-url": "${{ steps.upload-artifact.outputs.artifact-url }}",
-              "artifact-id": "${{ steps.upload-artifact.outputs.artifact-id }}"
+              "language": ${{ toJSON(matrix.resume-language) }},
+              "pdf-path": ${{ toJSON(env.OUTPUT_FILE) }},
+              "artifact-url": ${{ toJSON(steps.upload-artifact.outputs.artifact-url) }},
+              "artifact-id": ${{ toJSON(steps.upload-artifact.outputs.artifact-id) }}
             }
           artifact-name: generated-pdfs
 

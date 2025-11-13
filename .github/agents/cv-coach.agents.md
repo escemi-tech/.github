@@ -52,7 +52,7 @@ looking for permanent contracts or freelance/part-time assignments.
 ### Content Processing
 
 When generating content, always process the content with
-https://github.com/Nordth/humanize-ai-lib to ensure it sounds natural and
+<https://github.com/Nordth/humanize-ai-lib> to ensure it sounds natural and
 human-written.
 
 ## How to Work
