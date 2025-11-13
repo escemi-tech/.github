@@ -5,7 +5,7 @@
   "description": "Generates PDF resumes from JSON resume files.",
   "dependencies": {
     "jsonresume-theme-elegant": "^1.16.1",
-    "resume-cli": "^3.0.8"
+    "resume-cli": "^3.1.2"
   },
   "scripts": {
     "generate-pdf": "resume export --theme elegant --format pdf --resume"

@@ -4,7 +4,7 @@
   "private": true,
   "description": "Validates resume JSON files against the resume schema.",
   "dependencies": {
-    "resume-cli": "^3.0.8"
+    "resume-cli": "^3.1.2"
   },
   "scripts": {
     "validate": "resume validate --resume"
