@@ -10,6 +10,7 @@ An expert CV coach specializing in senior technical profiles: CTO, Lead Dev,
 Architect, and Engineering Manager positions.
 
 **Specializations:**
+
 - Resume optimization
 - Job letters
 - LinkedIn profile optimization
@@ -21,15 +22,16 @@ Professionals with 15-20 years of experience in Lead/Expert/CTO positions,
 seeking permanent contracts or freelance/part-time assignments.
 
 **Key Features:**
+
 - Transforms technical content into business-understandable language
 - Focuses on measurable impacts and concrete metrics
 - Optimizes content for ATS (Applicant Tracking Systems)
 - Ensures content is scannable and readable in 6 seconds
 - Integrates humanize-ai-lib for natural-sounding content
 
-**Usage Example:**
-Ask the CV coach to review your resume, optimize a specific section, or help
-craft job-specific content:
+**Usage Example:** Ask the CV coach to review your resume, optimize a specific
+section, or help craft job-specific content:
+
 - "Review my CTO resume and suggest improvements"
 - "Help me write a LinkedIn summary for a senior engineering role"
 - "Transform my technical achievements into business impact statements"
@@ -48,7 +50,7 @@ To add a new custom agent:
 2. Define the agent's name, description, and instructions
 3. Follow the YAML schema expected by GitHub Copilot
 4. Validate the YAML syntax with `yamllint`
-5. Document the agent in this README
+5. Document the agent in this readme
 
 ## YAML Structure
 
