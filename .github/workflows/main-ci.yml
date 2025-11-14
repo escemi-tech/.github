@@ -32,7 +32,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: false
 
       - id: get-pdfs-artifacts-ids
         name: Get PDFs Artifacts IDs
@@ -52,7 +52,7 @@ jobs:
           artifact-ids: ${{ steps.get-pdfs-artifacts-ids.outputs.result }}
           path: ${{ needs.ci.outputs.pdfs-root-path }}
 
-      - uses: hoverkraft-tech/ci-github-common/actions/create-and-merge-pull-request@5f11437c716059f30c635f90055060e4ef8b31a0 # 0.28.0
+      - uses: hoverkraft-tech/ci-github-common/actions/create-and-merge-pull-request@753288393de1f3d92f687a6761d236ca800f5306 # 0.28.1
         with:
           branch: chore/update-resume-pdfs
           commit-message: "chore(resume): update generated resume PDFs"

@@ -37,6 +37,8 @@ jobs:
       RESUME_FILE: resume/resume.${{ matrix.resume-language }}.json
     steps:
       - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
 
       - name: Validate English resume
         uses: ./.github/actions/validate-resume
@@ -60,7 +62,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          persist-credentials: false
 
       - name: Generate English PDF
         uses: ./.github/actions/generate-resume-pdf
@@ -96,6 +98,6 @@ jobs:
       pdfs-root-path: ${{ env.RESUME_PDFS_ROOT_PATH }}
     steps:
       - id: get-generated-pdfs
-        uses: hoverkraft-tech/ci-github-common/actions/get-matrix-outputs@5f11437c716059f30c635f90055060e4ef8b31a0 # 0.28.0
+        uses: hoverkraft-tech/ci-github-common/actions/get-matrix-outputs@753288393de1f3d92f687a6761d236ca800f5306 # 0.28.1
         with:
           artifact-name: "generated-pdfs"
