@@ -306,13 +306,13 @@
   "projects": [
     {
       "name": "Tekoway / Eukles - Standardisation d'architecture",
-      "description": "Accompagnement stratégique technique de 3 ans auprès d'équipes de développement européennes, standardisant l'architecture et boostant l'efficacité de livraison pour les projets PHP/Symfony et Node.js/NestJS pendant l'intégration de Tekoway dans Eukles.",
+      "description": "Accompagnement stratégique technique de 3 ans auprès d'équipes de développement européennes, standardisant l'architecture et boostant l'efficacité de livraison pour les projets PHP/Symfony et Node.js/NestJS avant et après l'intégration de Tekoway dans Eukles.",
       "highlights": [
         "Réduit le temps de bootstrap de projet de 45% (de ~10 à ~5,5 jours) via des blueprints d'architecture partagés appliquant Clean Architecture et principes SOLID sur les stacks Symfony et NestJS",
         "Accéléré l'onboarding développeur ×2 fois (de ~3 semaines à 1,5 semaine) grâce à des templates de projets unifiés, scripts de configuration automatisés et outillage commun entre les sites européens",
         "Réduit le taux de bugs post-release de 30% après implémentation de workflows QA standardisés et pipelines DevOps inter-pays utilisant Docker, GitLab CI et ArgoCD",
         "Amélioré la satisfaction développeur de 35% sur les enquêtes internes concernant la clarté architecturale et l'outillage via cliniques d'architecture, ateliers et documentation",
-        "Mentoré des équipes distribuées à distance dans plusieurs pays européens, établissant un langage technique partagé et une culture d'ingénierie unifiée qui a scallé sans friction sous Eukles",
+        "Mentoré des équipes distribuées à distance dans plusieurs pays européens, établissant un langage technique partagé et une culture d'ingénierie unifiée qui a scallé sans friction à travers l'évolution de Tekoway vers Eukles",
         "Créé des boilerplates multi-stack intégrant structures de dossiers DDD, injection de dépendances, logging, monitoring et hooks d'observabilité pour une qualité de livraison constante quel que soit la localisation de l'équipe"
       ],
       "keywords": [
