@@ -337,6 +337,39 @@
       "type": "consulting"
     },
     {
+      "name": "Plateforme Gateway IoT pour Infrastructure Critique",
+      "description": "Gateway IoT haute performance pour fournisseur SaaS mondial d'infrastructure intelligente, unifiant l'intégration d'appareils hétérogènes dans les datacenters et bâtiments intelligents avec résilience Redis, CI/CD automatisé et observabilité OpenTelemetry.",
+      "highlights": [
+        "Atteint 99,99% de disponibilité en production via cache Redis, file d'attente edge et stratégies de retry automatiques avec backoff exponentiel",
+        "Réduit les incidents de perte de données de 85% grâce à des mécanismes de fallback résilients qui bufferisent les messages durant les pannes de la plateforme SaaS",
+        "Accéléré l'onboarding de nouveaux appareils de 81% (de 3 semaines à 4 jours) via décodeurs centralisés, validation basée sur schéma et pipeline de payload normalisé",
+        "Scalé pour gérer une augmentation de trafic ×10 (100K+ événements/minute par gateway) sans matériel supplémentaire grâce aux worker pools et au cache en mémoire optimisé",
+        "Réduit le temps de cycle de déploiement de 70% avec automatisation GitLab CI intégrant tests unitaires, d'intégration et E2E, plus releases canary et déploiements progressifs",
+        "Construit une API REST unifiée avec spécification OpenAPI pour la gestion du cycle de vie des appareils, permettant enregistrement à distance, mises à jour et monitoring temps réel",
+        "Intégré OpenTelemetry pour observabilité complète avec logs, métriques et alerting liés à la santé des appareils et aux KPI de flux de données"
+      ],
+      "keywords": [
+        "Node.js",
+        "TypeScript",
+        "NestJS",
+        "Redis",
+        "OpenTelemetry",
+        "OpenAPI",
+        "GitLab CI",
+        "Docker",
+        "IoT",
+        "Gateway Architecture",
+        "Device Management",
+        "High Availability",
+        "CI/CD"
+      ],
+      "startDate": "2023-01",
+      "endDate": "2024-08",
+      "roles": ["Architecte plateforme IoT", "Lead Développeur"],
+      "entity": "Fournisseur SaaS mondial d'infrastructure intelligente",
+      "type": "consulting"
+    },
+    {
       "name": "Tekoway / Eukles - Standardisation d'architecture",
       "description": "Accompagnement stratégique technique de 3 ans auprès d'équipes de développement européennes, standardisant l'architecture et boostant l'efficacité de livraison pour les projets PHP/Symfony et Node.js/NestJS avant et après l'intégration de Tekoway dans Eukles.",
       "highlights": [
@@ -410,7 +443,7 @@
   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.fr.json",
-    "version": "2025.11.15",
-    "lastModified": "2025-11-15T14:45:00Z"
+    "version": "2025.11.15.2",
+    "lastModified": "2025-11-15T16:19:29Z"
   }
 }

@@ -337,6 +337,39 @@
       "type": "consulting"
     },
     {
+      "name": "Critical Infrastructure IoT Gateway Platform",
+      "description": "High-performance IoT gateway for global smart infrastructure SaaS provider, unifying heterogeneous device integration across data centers and smart buildings with Redis-backed resilience, automated CI/CD, and OpenTelemetry observability.",
+      "highlights": [
+        "Achieved 99.99% production uptime by implementing Redis caching, edge queueing, and automatic retry strategies with exponential backoff",
+        "Reduced data loss incidents by 85% through resilient fallback mechanisms that buffer messages during SaaS platform outages",
+        "Accelerated new device onboarding by 81% (from 3 weeks to 4 days) via centralized decoders, schema-based validation, and normalized payload pipeline",
+        "Scaled to handle 10× traffic increase (100K+ events/minute per gateway) without additional hardware through worker pools and optimized in-memory caching",
+        "Cut deployment cycle time by 70% with GitLab CI automation integrating unit, integration, and E2E tests plus canary releases and staged rollouts",
+        "Built unified REST API with OpenAPI specification for device lifecycle management, enabling remote registration, updates, and real-time monitoring",
+        "Integrated OpenTelemetry for full observability with logs, metrics, and alerting tied to device health and data flow KPIs"
+      ],
+      "keywords": [
+        "Node.js",
+        "TypeScript",
+        "NestJS",
+        "Redis",
+        "OpenTelemetry",
+        "OpenAPI",
+        "GitLab CI",
+        "Docker",
+        "IoT",
+        "Gateway Architecture",
+        "Device Management",
+        "High Availability",
+        "CI/CD"
+      ],
+      "startDate": "2023-01",
+      "endDate": "2024-08",
+      "roles": ["IoT Platform Architect", "Lead Developer"],
+      "entity": "Global Smart Infrastructure SaaS Provider",
+      "type": "consulting"
+    },
+    {
       "name": "Tekoway / Eukles - Architecture Standardization",
       "description": "3-year strategic technical mentorship across European development teams, standardizing architecture and boosting delivery efficiency for PHP/Symfony and Node.js/NestJS projects before and after Tekoway's integration into Eukles.",
       "highlights": [
@@ -410,7 +443,7 @@
   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.en.json",
-    "version": "2025.11.15",
-    "lastModified": "2025-11-15T14:45:00Z"
+    "version": "2025.11.15.2",
+    "lastModified": "2025-11-15T16:19:29Z"
   }
 }
