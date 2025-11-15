@@ -305,6 +305,38 @@
   "references": [],
   "projects": [
     {
+      "name": "Air Corsica - DevX Platform Engineering",
+      "description": "Modernized developer experience and transactional security for airline booking platform through GitHub Actions CI/CD ecosystem, hands-on mentoring, and resilient NestJS/RabbitMQ proxy architecture.",
+      "highlights": [
+        "Reduced deployment time by 80% (from ~2 days manual work to <30 minutes fully automated) via reusable GitHub Actions workflows with canary deployments and automated rollbacks",
+        "Increased release frequency 5× (from monthly to weekly feature releases) through infrastructure-as-code (Terraform + ArgoCD) ensuring staging/production parity",
+        "Improved transaction reliability to 99.9% uptime with 90% fewer third-party failures by architecting NestJS proxy with RabbitMQ, implementing circuit breakers, retry policies, and idempotency guarantees",
+        "Cut new developer onboarding time by 70% (from multiple days to <1 day productivity) through standardized workflows, living style guides, and automated dependency updates",
+        "Mentored distributed team (in-house + contractors) on Clean Architecture and SOLID principles via weekly workshops, elevating code quality and establishing unit-test coverage thresholds",
+        "Deployed resilient microservice in Docker with OpenTelemetry monitoring, Datadog integration, and zero-downtime health checks for critical booking/payment flows"
+      ],
+      "keywords": [
+        "DevX",
+        "GitHub Actions",
+        "CI/CD",
+        "NestJS",
+        "RabbitMQ",
+        "Clean Architecture",
+        "SOLID",
+        "Terraform",
+        "ArgoCD",
+        "Docker",
+        "Datadog",
+        "Mentoring"
+      ],
+      "startDate": "2023-01",
+      "endDate": "2024-12",
+      "url": "https://www.youtube.com/watch?v=Xb8PKOdTilA",
+      "roles": ["DevX Lead", "Platform Engineer", "Technical Mentor"],
+      "entity": "Air Corsica",
+      "type": "consulting"
+    },
+    {
       "name": "Tekoway / Eukles - Architecture Standardization",
       "description": "3-year strategic technical mentorship across European development teams, standardizing architecture and boosting delivery efficiency for PHP/Symfony and Node.js/NestJS projects before and after Tekoway's integration into Eukles.",
       "highlights": [
