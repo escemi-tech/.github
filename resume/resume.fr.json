@@ -343,7 +343,7 @@
         "Atteint 99,99% de disponibilité en production via cache Redis, file d'attente edge et stratégies de retry automatiques avec backoff exponentiel",
         "Réduit les incidents de perte de données de 85% grâce à des mécanismes de fallback résilients qui bufferisent les messages durant les pannes de la plateforme SaaS",
         "Accéléré l'onboarding de nouveaux appareils de 81% (de 3 semaines à 4 jours) via décodeurs centralisés, validation basée sur schéma et pipeline de payload normalisé",
-        "Scalé pour gérer une augmentation de trafic ×10 (100K+ événements/minute par gateway) sans matériel supplémentaire grâce aux worker pools et au cache en mémoire optimisé",
+        "Scalé pour gérer une augmentation de trafic x10 (100K+ événements/minute par gateway) sans matériel supplémentaire grâce aux worker pools et au cache en mémoire optimisé",
         "Réduit le temps de cycle de déploiement de 70% avec automatisation GitLab CI intégrant tests unitaires, d'intégration et E2E, plus releases canary et déploiements progressifs",
         "Construit une API REST unifiée avec spécification OpenAPI pour la gestion du cycle de vie des appareils, permettant enregistrement à distance, mises à jour et monitoring temps réel",
         "Intégré OpenTelemetry pour observabilité complète avec logs, métriques et alerting liés à la santé des appareils et aux KPI de flux de données"
@@ -366,7 +366,8 @@
       "startDate": "2023-01",
       "endDate": "2024-08",
       "roles": ["Architecte plateforme IoT", "Lead Développeur"],
-      "entity": "Fournisseur SaaS mondial d'infrastructure intelligente"
+      "entity": "Fournisseur SaaS mondial d'infrastructure intelligente",
+      "type": "consulting"
     },
     {
       "name": "TestUnMetier - Accompagnement CTO",
@@ -397,11 +398,41 @@
       "type": "consulting"
     },
     {
+      "name": "Atlas des Régions Naturelles (ARN) - Architecture backend",
+      "description": "Conception et développement de l'architecture backend pour la plateforme d'archive photographique ARN, documentant 15 000+ images des paysages et bâtis français via une stack NestJS/Laravel optimisée pour la performance et la scalabilité.",
+      "highlights": [
+        "Architecturé une plateforme d'archive photo gérant 15 000+ images haute résolution avec filtrage multi-critères (région, typologie, matériau, période), assurant <300ms de temps de réponse et 99,9% de disponibilité",
+        "Implémenté un système de catégorisation hybride avec indexation full-text permettant de traiter 10 000+ requêtes de recherche quotidiennes avec navigation géographique, thématique et historique",
+        "Optimisé le pipeline de traitement d'images réduisant le temps d'upload et de génération de miniatures de 60% (de ~5min à ~2min par lot de 50 images) via parallélisation et compression intelligente",
+        "Conçu une API REST/GraphQL unifiée avec cache distribué réduisant la charge serveur de 70% et permettant l'intégration avec expositions physiques et publications imprimées",
+        "Déployé infrastructure cloud-native avec CDN géographiquement distribué réduisant les coûts de bande passante de 40% tout en améliorant les temps de chargement internationaux de 55%",
+        "Établi pipeline CI/CD avec tests automatisés assurant la qualité des métadonnées (géolocalisation, taxonomie régionale) et réduisant les erreurs de catalogage de 80%"
+      ],
+      "keywords": [
+        "NestJS",
+        "Laravel",
+        "Backend Architecture",
+        "API REST",
+        "GraphQL",
+        "Image Processing",
+        "Full-text Search",
+        "CDN",
+        "Cloud Native",
+        "CI/CD"
+      ],
+      "startDate": "2022-06",
+      "endDate": "2023-12",
+      "url": "https://www.archive-arn.fr/",
+      "roles": ["Architecte backend", "Lead développeur"],
+      "entity": "Atlas des Régions Naturelles",
+      "type": "consulting"
+    },
+    {
       "name": "Tekoway / Eukles - Standardisation d'architecture",
       "description": "Accompagnement stratégique technique de 3 ans auprès d'équipes de développement européennes, standardisant l'architecture et boostant l'efficacité de livraison pour les projets PHP/Symfony et Node.js/NestJS avant et après l'intégration de Tekoway dans Eukles.",
       "highlights": [
         "Réduit le temps de bootstrap de projet de 45% (de ~10 à ~5,5 jours) via des blueprints d'architecture partagés appliquant Clean Architecture et principes SOLID sur les stacks Symfony et NestJS",
-        "Accéléré l'onboarding développeur ×2 fois (de ~3 semaines à 1,5 semaine) grâce à des templates de projets unifiés, scripts de configuration automatisés et outillage commun entre les sites européens",
+        "Accéléré l'onboarding développeur x2 fois (de ~3 semaines à 1,5 semaine) grâce à des templates de projets unifiés, scripts de configuration automatisés et outillage commun entre les sites européens",
         "Réduit le taux de bugs post-release de 30% après implémentation de workflows QA standardisés et pipelines DevOps inter-pays utilisant Docker, GitLab CI et ArgoCD",
         "Amélioré la satisfaction développeur de 35% sur les enquêtes internes concernant la clarté architecturale et l'outillage via cliniques d'architecture, ateliers et documentation",
         "Mentoré des équipes distribuées à distance dans plusieurs pays européens, établissant un langage technique partagé et une culture d'ingénierie unifiée qui a scallé sans friction à travers l'évolution de Tekoway vers Eukles",
@@ -470,7 +501,7 @@
   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.fr.json",
-    "version": "2025.11.15.2",
-    "lastModified": "2025-11-15T16:19:29Z"
+    "version": "2025.11.15",
+    "lastModified": "2025-11-15T17:52:54Z"
   }
 }

@@ -366,7 +366,8 @@
       "startDate": "2023-01",
       "endDate": "2024-08",
       "roles": ["IoT Platform Architect", "Lead Developer"],
-      "entity": "Global Smart Infrastructure SaaS Provider"
+      "entity": "Global Smart Infrastructure SaaS Provider",
+      "type": "consulting"
     },
     {
       "name": "TestUnMetier - CTO Accompaniment",
@@ -394,6 +395,36 @@
       "url": "https://www.testunmetier.com/",
       "roles": ["CTO Consultant", "Strategic Advisor"],
       "entity": "TestUnMetier",
+      "type": "consulting"
+    },
+    {
+      "name": "Atlas des Régions Naturelles (ARN) - Backend Architecture",
+      "description": "Designed and developed backend architecture for the ARN photographic archive platform, documenting 15,000+ images of French landscapes and buildings through an optimized NestJS/Laravel stack focused on performance and scalability.",
+      "highlights": [
+        "Architected photo archive platform managing 15,000+ high-resolution images with multi-criteria filtering (region, typology, materials, period), ensuring <300ms response time and 99.9% uptime",
+        "Implemented hybrid categorization system with full-text indexing handling 10,000+ daily search queries with geographic, thematic, and historical navigation",
+        "Optimized image processing pipeline reducing upload and thumbnail generation time by 60% (from ~5min to ~2min per batch of 50 images) through parallelization and smart compression",
+        "Designed unified REST/GraphQL API with distributed caching cutting server load by 70% and enabling integration with physical exhibitions and printed publications",
+        "Deployed cloud-native infrastructure with geographically distributed CDN reducing bandwidth costs by 40% while improving international load times by 55%",
+        "Established CI/CD pipeline with automated testing ensuring metadata quality (geolocation, regional taxonomy) and reducing cataloging errors by 80%"
+      ],
+      "keywords": [
+        "NestJS",
+        "Laravel",
+        "Backend Architecture",
+        "REST API",
+        "GraphQL",
+        "Image Processing",
+        "Full-text Search",
+        "CDN",
+        "Cloud Native",
+        "CI/CD"
+      ],
+      "startDate": "2022-06",
+      "endDate": "2023-12",
+      "url": "https://www.archive-arn.fr/",
+      "roles": ["Backend Architect", "Lead Developer"],
+      "entity": "Atlas des Régions Naturelles",
       "type": "consulting"
     },
     {
@@ -470,7 +501,7 @@
   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.en.json",
-    "version": "2025.11.15.2",
-    "lastModified": "2025-11-15T16:19:29Z"
+    "version": "2025.11.15",
+    "lastModified": "2025-11-15T17:52:54Z"
   }
 }
