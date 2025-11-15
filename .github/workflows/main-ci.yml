@@ -40,6 +40,7 @@ jobs:
         env:
           GENERATED_PDFS: ${{ needs.ci.outputs.generated-pdfs }}
         with:
+          result-encoding: string
           script: |
             const generatedPdfs = JSON.parse(process.env.GENERATED_PDFS);
             return generatedPdfs.map(pdf => pdf["artifact-id"]).join('\n');
