@@ -63,23 +63,6 @@
       ]
     },
     {
-      "name": "Tekoway / Eukles",
-      "location": "Europe (Remote)",
-      "description": "IT services & Consulting",
-      "position": "Technical Mentor & Architecture Lead",
-      "startDate": "2020-01",
-      "endDate": "2023-01",
-      "summary": "3-year strategic technical mentorship across European development teams, standardizing architecture and boosting delivery efficiency for PHP/Symfony and Node.js/NestJS projects during Tekoway's integration into Eukles.",
-      "highlights": [
-        "Reduced project bootstrap time by 45% (from ~10 to ~5.5 days) through shared architecture blueprints applying Clean Architecture and SOLID principles across Symfony and NestJS stacks",
-        "Accelerated developer onboarding ×2 faster (from ~3 weeks to 1.5 weeks) via unified project templates, automated setup scripts, and common tooling across European locations",
-        "Cut post-release bug rate by 30% after implementing standardized QA workflows and cross-country DevOps pipelines using Docker, GitLab CI, and ArgoCD",
-        "Improved developer satisfaction by 35% on internal surveys regarding architecture clarity and tooling through architecture clinics, workshops, and documentation",
-        "Mentored distributed teams remotely across multiple European countries, establishing shared technical language and unified engineering culture that scaled seamlessly under Eukles",
-        "Built multi-stack project boilerplates integrating DDD folder structures, dependency injection, logging, monitoring, and observability hooks for consistent delivery quality regardless of team location"
-      ]
-    },
-    {
       "name": "Ouistiti",
       "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France",
       "description": "Mobile & web travel recommendation app",
@@ -321,6 +304,35 @@
   ],
   "references": [],
   "projects": [
+    {
+      "name": "Tekoway / Eukles - Architecture Standardization",
+      "description": "3-year strategic technical mentorship across European development teams, standardizing architecture and boosting delivery efficiency for PHP/Symfony and Node.js/NestJS projects during Tekoway's integration into Eukles.",
+      "highlights": [
+        "Reduced project bootstrap time by 45% (from ~10 to ~5.5 days) through shared architecture blueprints applying Clean Architecture and SOLID principles across Symfony and NestJS stacks",
+        "Accelerated developer onboarding ×2 faster (from ~3 weeks to 1.5 weeks) via unified project templates, automated setup scripts, and common tooling across European locations",
+        "Cut post-release bug rate by 30% after implementing standardized QA workflows and cross-country DevOps pipelines using Docker, GitLab CI, and ArgoCD",
+        "Improved developer satisfaction by 35% on internal surveys regarding architecture clarity and tooling through architecture clinics, workshops, and documentation",
+        "Mentored distributed teams remotely across multiple European countries, establishing shared technical language and unified engineering culture that scaled seamlessly under Eukles",
+        "Built multi-stack project boilerplates integrating DDD folder structures, dependency injection, logging, monitoring, and observability hooks for consistent delivery quality regardless of team location"
+      ],
+      "keywords": [
+        "PHP",
+        "Symfony",
+        "Node.js",
+        "NestJS",
+        "Clean Architecture",
+        "DevOps",
+        "Docker",
+        "GitLab CI",
+        "ArgoCD",
+        "Mentoring"
+      ],
+      "startDate": "2020-01",
+      "endDate": "2023-01",
+      "roles": ["Technical Mentor", "Architecture Lead"],
+      "entity": "Tekoway / Eukles",
+      "type": "consulting"
+    },
     {
       "name": "twbs-helper-module",
       "description": "Laminas (formerly Zend Framework) module that streamlines Twitter Bootstrap component integration.",
