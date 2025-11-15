@@ -366,7 +366,34 @@
       "startDate": "2023-01",
       "endDate": "2024-08",
       "roles": ["IoT Platform Architect", "Lead Developer"],
-      "entity": "Global Smart Infrastructure SaaS Provider",
+      "entity": "Global Smart Infrastructure SaaS Provider"
+    },
+    {
+      "name": "TestUnMetier - CTO Accompaniment",
+      "description": "Two-phase strategic consulting engagement for a career guidance platform: comprehensive IT audit followed by monthly CTO accompaniment covering product roadmap, technical recruitment, and infrastructure/security vendor management.",
+      "highlights": [
+        "Conducted 1-week IT audit analyzing application architecture, development processes, and team organization, identifying 12 priority improvement areas that reduced technical risk by 60%",
+        "Structured interviews with 8 stakeholders (product, project, tech leads) to map system dependencies and bottlenecks, reducing feature delivery timelines by ~40%",
+        "Developed 5 technical job descriptions aligned with product strategy, accelerating recruitment process from 3 months to 6 weeks and improving candidate-role fit by 45%",
+        "Defined 12-month technical roadmap prioritizing 15+ initiatives by business impact and feasibility, aligning tech investments with growth objectives (+30% target user increase)",
+        "Managed relationships with 3 external vendors (cloud infrastructure, security assurance), negotiating SLAs guaranteeing 99.5% uptime and reducing infrastructure costs by ~25%",
+        "Established technical governance framework (monthly committees, velocity KPIs, quality dashboards) improving team visibility and reducing time-to-market by 35%"
+      ],
+      "keywords": [
+        "CTO Accompaniment",
+        "IT Audit",
+        "Technical Strategy",
+        "Roadmap Planning",
+        "Team Building",
+        "Vendor Management",
+        "Technical Governance",
+        "Recruitment"
+      ],
+      "startDate": "2021-11",
+      "endDate": "2022-05",
+      "url": "https://www.testunmetier.com/",
+      "roles": ["CTO Consultant", "Strategic Advisor"],
+      "entity": "TestUnMetier",
       "type": "consulting"
     },
     {
