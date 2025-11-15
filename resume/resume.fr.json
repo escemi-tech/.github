@@ -366,7 +366,34 @@
       "startDate": "2023-01",
       "endDate": "2024-08",
       "roles": ["Architecte plateforme IoT", "Lead Développeur"],
-      "entity": "Fournisseur SaaS mondial d'infrastructure intelligente",
+      "entity": "Fournisseur SaaS mondial d'infrastructure intelligente"
+    },
+    {
+      "name": "TestUnMetier - Accompagnement CTO",
+      "description": "Mission de conseil stratégique en deux phases pour une plateforme d'orientation professionnelle : audit IT complet suivi d'un accompagnement CTO mensuel couvrant la roadmap produit, le recrutement technique et l'interface avec les prestataires infrastructure/sécurité.",
+      "highlights": [
+        "Conduit un audit IT sur 1 semaine analysant l'architecture applicative, les processus de développement et l'organisation d'équipe, identifiant 12 axes d'amélioration prioritaires réduisant les risques techniques de 60%",
+        "Structuré les interviews avec 8 parties prenantes (product, project, tech leads) pour cartographier les dépendances système et les goulots d'étranglement, réduisant les délais de livraison de fonctionnalités de ~40%",
+        "Élaboré 5 fiches de poste techniques alignées sur la stratégie produit, accélérant le processus de recrutement de 3 mois à 6 semaines et améliorant le matching candidat/poste de 45%",
+        "Défini une roadmap technique sur 12 mois priorisant 15+ initiatives selon impact business et faisabilité, alignant les investissements tech avec les objectifs de croissance (+30% d'utilisateurs visés)",
+        "Piloté les relations avec 3 prestataires externes (infrastructure cloud, PSSI), négociant des SLA garantissant 99,5% de disponibilité et réduisant les coûts d'infrastructure de ~25%",
+        "Établi un cadre de gouvernance technique (comités mensuels, KPIs de vélocité, dashboards de qualité) améliorant la visibilité des équipes et réduisant le time-to-market de 35%"
+      ],
+      "keywords": [
+        "CTO Accompaniment",
+        "IT Audit",
+        "Technical Strategy",
+        "Roadmap Planning",
+        "Team Building",
+        "Vendor Management",
+        "Technical Governance",
+        "Recruitment"
+      ],
+      "startDate": "2021-11",
+      "endDate": "2022-05",
+      "url": "https://www.testunmetier.com/",
+      "roles": ["CTO Consultant", "Strategic Advisor"],
+      "entity": "TestUnMetier",
       "type": "consulting"
     },
     {
