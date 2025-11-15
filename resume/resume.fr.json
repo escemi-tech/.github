@@ -305,6 +305,38 @@
   "references": [],
   "projects": [
     {
+      "name": "Air Corsica - Ingénierie de plateforme DevX",
+      "description": "Modernisation de l'expérience développeur et de la sécurité transactionnelle de la plateforme de réservation aérienne via un écosystème CI/CD GitHub Actions, mentorat hands-on, et architecture proxy résiliente NestJS/RabbitMQ.",
+      "highlights": [
+        "Réduit le temps de déploiement de 80% (de ~2 jours de travail manuel à <30 minutes entièrement automatisé) via workflows GitHub Actions réutilisables avec déploiements canary et rollbacks automatiques",
+        "Augmenté la fréquence de release ×5 (de mensuelle à hebdomadaire) grâce à l'infrastructure-as-code (Terraform + ArgoCD) assurant la parité staging/production",
+        "Amélioré la fiabilité transactionnelle à 99,9% de disponibilité avec 90% moins d'échecs tiers en architecturant un proxy NestJS avec RabbitMQ, implémentant circuit breakers, politiques de retry et garanties d'idempotence",
+        "Réduit le temps d'onboarding développeur de 70% (de plusieurs jours à <1 jour de productivité) via workflows standardisés, guides de style vivants et mises à jour automatiques des dépendances",
+        "Mentoré l'équipe distribuée (interne + contractants) sur Clean Architecture et principes SOLID via ateliers hebdomadaires, élevant la qualité du code et établissant des seuils de couverture de tests unitaires",
+        "Déployé un microservice résilient dans Docker avec monitoring OpenTelemetry, intégration Datadog et health checks zero-downtime pour les flux critiques de réservation/paiement"
+      ],
+      "keywords": [
+        "DevX",
+        "GitHub Actions",
+        "CI/CD",
+        "NestJS",
+        "RabbitMQ",
+        "Clean Architecture",
+        "SOLID",
+        "Terraform",
+        "ArgoCD",
+        "Docker",
+        "Datadog",
+        "Mentorat"
+      ],
+      "startDate": "2023-01",
+      "endDate": "2024-12",
+      "url": "https://www.youtube.com/watch?v=Xb8PKOdTilA",
+      "roles": ["DevX Lead", "Ingénieur plateforme", "Mentor technique"],
+      "entity": "Air Corsica",
+      "type": "consulting"
+    },
+    {
       "name": "Tekoway / Eukles - Standardisation d'architecture",
       "description": "Accompagnement stratégique technique de 3 ans auprès d'équipes de développement européennes, standardisant l'architecture et boostant l'efficacité de livraison pour les projets PHP/Symfony et Node.js/NestJS avant et après l'intégration de Tekoway dans Eukles.",
       "highlights": [
