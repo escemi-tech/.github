@@ -230,12 +230,26 @@
     {
       "name": "Core Tech",
       "level": "Master",
-      "keywords": ["Node.js (NestJS)", "PHP (Symfony, Laravel)", "JavaScript", "TypeScript"]
+      "keywords": [
+        "Node.js (NestJS)",
+        "PHP (Symfony, Laravel)",
+        "JavaScript",
+        "TypeScript"
+      ]
     },
     {
       "name": "DevOps & Cloud",
       "level": "Master",
-      "keywords": ["Docker", "GitHub Actions", "GitLab CI", "Kubernetes", "AWS", "Cloud Native", "CI/CD", "Infrastructure as Code"]
+      "keywords": [
+        "Docker",
+        "GitHub Actions",
+        "GitLab CI",
+        "Kubernetes",
+        "AWS",
+        "Cloud Native",
+        "CI/CD",
+        "Infrastructure as Code"
+      ]
     },
     {
       "name": "Methods & Leadership",

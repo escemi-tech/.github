@@ -40,14 +40,16 @@ You must follow these rules for ALL content you generate:
 **Problem**: Vague positioning between CTO, technical coach, and lead developer. Too much methodology description, not enough concrete business results.
 
 **Solutions**:
+
 - ✅ Clarify your offer in 1 sentence: "I help companies industrialize their development and elevate their teams' technical capabilities"
-- ✅ Add a 6-word baseline under the title that includes your core expertise: "Node.js & PHP Expert" or for French "Code de qualité, équipes autonomes, produit scalable" (Quality code, autonomous teams, scalable product)
+- ✅ Add a 6-word baseline under the title that includes your core expertise: "Node.js & PHP Expert" or for French "Code robuste, équipes autonomes, produit scalable" (Robust code, autonomous teams, scalable product)
 - ✅ Add signature numbers: "16 years of experience · 15+ teams mentored · 20+ projects delivered"
 - ✅ Create a 3-line pitch that positions you as both strategic and hands-on:
   - "On-demand CTO and Senior Lead Dev, I work on projects that need structure and velocity. I combine technical coaching, DevX excellence, and cloud-native modernization to transform product quality and velocity."
   - Add framework expertise: "Node.js and PHP expert with deep mastery of NestJS, Symfony, and Laravel frameworks."
 
 **Key Elements**:
+
 - **Highlight core technical expertise early**: If you have deep framework mastery (NestJS, Symfony, Laravel), mention it in your label or summary
 - Differentiate clearly between technical role and leadership role
 - Focus on business outcomes, not just methodologies
@@ -58,28 +60,32 @@ You must follow these rules for ALL content you generate:
 **Problem**: High-level technical content but unreadable. No impact highlighted, no structure. Too much execution detail, not enough results.
 
 **Solutions**:
+
 - ✅ Rewrite each experience following "Challenge → Action → Result" model
 - ✅ Keep maximum 4 main experiences (Escemi, Build & Run, Qwamplify, Ouistiti)
 - ✅ Consolidate similar Qwamplify roles (Architect/Technical Director/Team Lead) into one synthesized experience (2013-2018)
 - ✅ Reduce ancient experiences (pre-2010 → 1 line each)
 
 **Experience Template**:
-```
+
+```txt
 [Company] – [Role] ([Dates])
-🎯 Challenge: [Business need or technical challenge]
-💡 Actions: [Key technical initiatives and methodologies]
-🚀 Results: [Measurable impact with numbers]
+**Challenge**: [Business need or technical challenge]
+**Actions**: [Key technical initiatives and methodologies]
+**Results**: [Measurable impact with numbers]
 ```
 
 **Example (Build & Run)**:
-```
+
+```txt
 Build & Run – Fractional CTO / DevX Expert (2020 - Present)
-🎯 Challenge: Structure production and technical culture for rapidly growing teams
-💡 Actions: Unified CI/CD pipelines (GitLab, Docker), cloud-native Kubernetes architecture, multi-squad technical mentoring
-🚀 Results: +35% sprint velocity, -40% technical debt, 100% CI/CD pipeline adoption in 3 months
+**Challenge**: Structure production and technical culture for rapidly growing teams
+**Actions**: Unified CI/CD pipelines (GitLab, Docker), cloud-native Kubernetes architecture, multi-squad technical mentoring
+**Results**: +35% sprint velocity, -40% technical debt, 100% CI/CD pipeline adoption in 3 months
 ```
 
 **Metrics to Include**:
+
 - Always add measurable results: time saved, performance gain, stability improvement
 - Highlight mentoring impact: "mentored X developers", "elevated team capabilities"
 - Show scale: team size, systems managed, users impacted
@@ -90,6 +96,7 @@ Build & Run – Fractional CTO / DevX Expert (2020 - Present)
 **Problem**: Academic and over-explanatory tone. No energy or personal voice. Leadership unclear.
 
 **Solutions**:
+
 - ✅ Use short sentences (max 20-25 words)
 - ✅ Replace weak verbs with strong action verbs:
   - ❌ "contributed", "ensured", "implemented"
@@ -101,6 +108,7 @@ Build & Run – Fractional CTO / DevX Expert (2020 - Present)
 - ✅ Add strategic ATS keywords: cloud-native, clean architecture, technical leadership, DevOps, mentoring, CI/CD, Node.js, PHP, product velocity, design patterns, scalability
 
 **Verb Examples**:
+
 - Leadership: Structured, Led, Directed, Mentored, Coached, Aligned
 - Technical: Architected, Optimized, Migrated, Unified, Automated, Scaled
 - Results: Reduced, Accelerated, Improved, Increased, Eliminated, Delivered
@@ -110,16 +118,20 @@ Build & Run – Fractional CTO / DevX Expert (2020 - Present)
 **Problem**: Mixed languages, methods, CI/CD, soft skills with no hierarchy. Flat presentation.
 
 **Solutions**:
+
 - ✅ Reorganize into 3 clear categories with visual indicators:
 - ✅ **Emphasize core expertise**: Highlight framework mastery by grouping languages with their key frameworks
 
 **🎯 Core Tech**
+
 - Node.js (NestJS) ●●●●● | PHP (Symfony, Laravel) ●●●●● | JavaScript | TypeScript
 
 **☁️ DevOps & Cloud**
+
 - Docker | GitHub Actions | GitLab CI | Kubernetes | AWS | Cloud Native
 
 **🧠 Methods & Leadership**
+
 - Clean Code | TDD | SOLID | DevX | Mentoring | Software Architecture
 
 - ✅ Add synthesis sentence emphasizing expertise: "Node.js and PHP expert with deep mastery of NestJS, Symfony, and Laravel frameworks. Specialist in scalable architecture and DevX, with a Lean and pragmatic approach to code"
@@ -131,6 +143,7 @@ Build & Run – Fractional CTO / DevX Expert (2020 - Present)
 **Problem**: Disorganized and repeated multiple times. No readability.
 
 **Solutions**:
+
 - ✅ Remove duplicates "Université Aix-Marseille / GEA"
 - ✅ Keep only one block:
   - 🎓 Université Aix-Marseille III – Master 2 MIAGE (2007-2010)
@@ -142,9 +155,10 @@ Build & Run – Fractional CTO / DevX Expert (2020 - Present)
 **Problem**: Profile shows technical competence but not quantified leadership impact.
 
 **Solution**:
+
 - ✅ Add "Measurable Impact" section:
   - +35% dev velocity | -40% technical debt | +25% developer satisfaction
-- ✅ Add closing statement: "My goal: build systems and teams as reliable as the code they produce"
+- ✅ Add closing statement: "My goal: build tools and teams as reliable as the code they produce"
 
 ## Part II: FORM Guidelines (Visual Structure)
 
@@ -153,6 +167,7 @@ Build & Run – Fractional CTO / DevX Expert (2020 - Present)
 **Problem**: Rich, exhaustive CV but too verbose and linear. Resembles a detailed job description rather than a quick decision document.
 
 **Solutions**:
+
 - ✅ Recompose to 1 main page + 1 optional appendix page
 - ✅ Each section maximum 5 lines
 - ✅ Remove all generic intro sentences ("I am at your service for...")
@@ -166,6 +181,7 @@ Build & Run – Fractional CTO / DevX Expert (2020 - Present)
 **Problem**: Functional but not visually hierarchical. No rhythm, no visual landmarks, no identity.
 
 **Solutions**:
+
 - ✅ Two-column design:
   - Left: contact info, skills, languages, certifications
   - Right: experiences and achievements
@@ -182,9 +198,10 @@ Build & Run – Fractional CTO / DevX Expert (2020 - Present)
   - 🎓 Education
   - 🌍 Languages
 - ✅ Remove all visual repetitions and unnecessary blocks ("Summary", "Experience" written multiple times)
-- ✅ Add white space for breathing room
+- ✅ Add whitespace for breathing room
 
 **Scannable in 6 seconds**: Recruiter should instantly see:
+
 - Who you are (title/role)
 - Your signature impact (key metrics)
 - Your top 3-4 experiences
@@ -195,6 +212,7 @@ Build & Run – Fractional CTO / DevX Expert (2020 - Present)
 **Problem**: Too discreet and poorly hierarchical.
 
 **Solutions**:
+
 - ✅ Simplify: 🇬🇧 English fluent | 🇩🇪 German intermediate
 - ✅ For soft skills, group 3 strong qualities tied to the role:
   - Technical Leadership · Coaching · Cross-squad Collaboration
@@ -204,13 +222,15 @@ Build & Run – Fractional CTO / DevX Expert (2020 - Present)
 **Problem**: Links not visible and not contextualized.
 
 **Solutions**:
+
 - ✅ Group everything in clear block:
-  - 📍 Aix-en-Provence | 📞 +33 6 72 96 23 78 | ✉️ emilien.escalle@escemi.com
+  - 📍 Aix-en-Provence | 📞 +33 6 72 96 23 78 | ✉️ <emilien.escalle@escemi.com>
   - 🔗 LinkedIn | Portfolio
 
 ### 5. ATS Optimization
 
 **Critical for passing automated screening**:
+
 - Use standard section headers: "Professional Experience", "Skills", "Education"
 - Include keywords from job descriptions naturally in text
 - Avoid tables, text boxes, headers/footers that ATS can't parse
@@ -246,18 +266,20 @@ Build & Run – Fractional CTO / DevX Expert (2020 - Present)
 ### Form/Structure Examples
 
 ❌ Bad Structure:
-```
+
+```txt
 Build & Run (2020-Present)
 CTO à temps partiel / Expert Lean & DevX / Node.js, PHP & Cloud Native
 As a member of Build & Run collective, I bring my expertise to help companies structure and optimize their technical teams. I have architected microservices platforms and optimized CI/CD workflows...
 ```
 
 ✅ Good Structure:
-```
+
+```txt
 Build & Run – Fractional CTO / DevX Expert (2020-Present)
-🎯 Challenge: Structure rapidly growing teams' technical culture
-💡 Actions: CI/CD unification, K8s architecture, multi-squad mentoring
-🚀 Results: +35% velocity, -40% debt, 100% CI/CD adoption in 3 months
+**Challenge**: Structure rapidly growing teams' technical culture
+**Actions**: CI/CD unification, K8s architecture, multi-squad mentoring
+**Results**: +35% velocity, -40% debt, 100% CI/CD adoption in 3 months
 ```
 
 ## Remember
