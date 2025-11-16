@@ -107,7 +107,19 @@ For future enhancement when API access is available, the workflow can be extende
 
 ## PDF Generation
 
-PDFs are automatically generated from the JSON Resume files using `resume-cli` with the `elegant` theme.
+PDFs are automatically generated from the JSON Resume files using a custom **ESCEMI theme** that follows CV Coach best practices for senior technical profiles.
+
+### Theme Features
+
+The custom theme (`jsonresume-theme-escemi`) is optimized for:
+- **Two-column layout**: Contact info and skills on the left, professional experience on the right
+- **Visual hierarchy**: Clear distinction between sections, positions, and achievements
+- **ATS-friendly**: Simple formatting that passes automated screening systems
+- **Professional design**: Modern typography, tech blue color scheme, proper spacing
+- **Metric emphasis**: Highlights quantifiable achievements and business impact
+- **6-second scannability**: Recruiters can instantly identify key information
+
+See [themes/escemi/README.md](themes/escemi/README.md) for complete theme documentation.
 
 ### Automatic Generation
 
@@ -116,15 +128,27 @@ PDFs are automatically generated from the JSON Resume files using `resume-cli` w
 
 ### Manual Generation
 
-To generate PDFs locally:
+To generate PDFs locally using the custom theme:
 
 ```bash
-# Install tools
-npm install -g resume-cli jsonresume-theme-elegant
+# From the repository root
+cd .github/actions/generate-resume-pdf
 
-# Generate PDFs
-resume export resume/pdf/resume.en.pdf --resume resume/resume.en.json --format pdf --theme elegant
-resume export resume/pdf/resume.fr.pdf --resume resume/resume.fr.json --format pdf --theme elegant
+# Install dependencies (including the custom theme)
+npm install
+
+# Generate English PDF
+npm run generate-pdf -- ../../resume/resume.en.json ../../resume/pdf/resume.en.pdf
+
+# Generate French PDF
+npm run generate-pdf -- ../../resume/resume.fr.json ../../resume/pdf/resume.fr.pdf
+```
+
+Or use the theme directly with Node.js:
+
+```bash
+# From the actions directory
+node generate-pdf.js /path/to/resume.json /path/to/output.pdf
 ```
 
 See [pdf/README.md](pdf/README.md) for more details.
