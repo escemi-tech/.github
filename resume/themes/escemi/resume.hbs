@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{basics.name}} - {{basics.label}}</title>
+  <style>
+    {{{css}}}
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+    <!-- Header - Full Width -->
+    <header class="header">
+      <h1 class="name">{{basics.name}}</h1>
+      <div class="label">{{basics.label}}</div>
+      {{#if basics.summary}}
+      <div class="summary">{{newlineToBr basics.summary}}</div>
+      {{/if}}
+    </header>
+
+    <!-- Left Column -->
+    <aside class="left-column">
+      <!-- Contact Information -->
+      <section class="contact-info">
+        <h2 class="section-title">
+          <span class="section-icon">📍</span>
+          Contact
+        </h2>
+        {{#if basics.location}}
+        <div class="contact-item">
+          <span class="contact-icon">📍</span>
+          <span>{{basics.location.city}}{{#if basics.location.region}}, {{basics.location.region}}{{/if}}</span>
+        </div>
+        {{/if}}
+        {{#if basics.email}}
+        <div class="contact-item">
+          <span class="contact-icon">✉️</span>
+          <a href="mailto:{{basics.email}}">{{basics.email}}</a>
+        </div>
+        {{/if}}
+        {{#if basics.phone}}
+        <div class="contact-item">
+          <span class="contact-icon">📞</span>
+          <span>{{basics.phone}}</span>
+        </div>
+        {{/if}}
+        {{#if basics.url}}
+        <div class="contact-item">
+          <span class="contact-icon">🔗</span>
+          <a href="{{basics.url}}" target="_blank">{{basics.url}}</a>
+        </div>
+        {{/if}}
+      </section>
+
+      <!-- Profiles -->
+      {{#if basics.profiles}}
+      <section class="profiles-section">
+        <h2 class="section-title">
+          <span class="section-icon">🔗</span>
+          Links
+        </h2>
+        {{#each basics.profiles}}
+        <div class="contact-item">
+          <span class="contact-icon">→</span>
+          <a href="{{url}}" target="_blank">{{network}}</a>
+        </div>
+        {{/each}}
+      </section>
+      {{/if}}
+
+      <!-- Skills -->
+      {{#if skills}}
+      <section class="skills-section">
+        <h2 class="section-title">
+          <span class="section-icon">⚙️</span>
+          Skills
+        </h2>
+        {{#each skills}}
+        <div class="skill-category">
+          <div class="skill-category-title">
+            {{#if (eq name "Core Tech")}}🎯{{/if}}
+            {{#if (eq name "DevOps & Cloud")}}☁️{{/if}}
+            {{#if (eq name "Methods & Leadership")}}🧠{{/if}}
+            {{#if (eq name "Languages")}}💻{{/if}}
+            {{#if (eq name "Frameworks")}}🔧{{/if}}
+            {{#if (eq name "Tools")}}🛠️{{/if}}
+            {{name}}
+          </div>
+          <div class="skill-list">
+            {{#each keywords}}
+            <div class="skill-item">{{this}}</div>
+            {{/each}}
+          </div>
+        </div>
+        {{/each}}
+      </section>
+      {{/if}}
+
+      <!-- Languages -->
+      {{#if languages}}
+      <section class="languages-section">
+        <h2 class="section-title">
+          <span class="section-icon">🌍</span>
+          Languages
+        </h2>
+        {{#each languages}}
+        <div class="language-item">
+          <span class="language-name">{{language}}</span>
+          <span class="language-level">{{fluency}}</span>
+        </div>
+        {{/each}}
+      </section>
+      {{/if}}
+
+      <!-- Education -->
+      {{#if education}}
+      <section class="education-section">
+        <h2 class="section-title">
+          <span class="section-icon">🎓</span>
+          Education
+        </h2>
+        {{#each education}}
+        <div class="education-item">
+          <div class="education-header">
+            <div class="degree">{{studyType}}{{#if area}} - {{area}}{{/if}}</div>
+            <div class="institution">{{institution}}</div>
+            <div class="education-date">
+              {{#if startDate}}{{formatDate startDate}}{{/if}}
+              {{#if endDate}} - {{formatDate endDate}}{{/if}}
+            </div>
+          </div>
+        </div>
+        {{/each}}
+      </section>
+      {{/if}}
+    </aside>
+
+    <!-- Right Column - Professional Experience -->
+    <main class="right-column">
+      {{#if work}}
+      <section class="experience-section">
+        <h2 class="section-title">
+          <span class="section-icon">📈</span>
+          Professional Experience
+        </h2>
+        {{#each work}}
+        <article class="experience-item">
+          <div class="experience-header">
+            <h3 class="position">{{position}}</h3>
+            <div class="company">{{name}}</div>
+            <div class="date-location">
+              {{formatDate startDate}} - {{formatDate endDate}}
+              {{#if location}} • {{location}}{{/if}}
+            </div>
+          </div>
+          {{#if summary}}
+          <div class="experience-summary">{{newlineToBr summary}}</div>
+          {{/if}}
+          {{#if highlights}}
+          <ul class="highlights">
+            {{#each highlights}}
+            <li class="highlight-item">{{this}}</li>
+            {{/each}}
+          </ul>
+          {{/if}}
+        </article>
+        {{/each}}
+      </section>
+      {{/if}}
+
+      <!-- Projects (if any) -->
+      {{#if projects}}
+      <section class="projects-section">
+        <h2 class="section-title">
+          <span class="section-icon">🚀</span>
+          Key Projects
+        </h2>
+        {{#each projects}}
+        <article class="experience-item">
+          <div class="experience-header">
+            <h3 class="position">{{name}}</h3>
+            {{#if entity}}
+            <div class="company">{{entity}}</div>
+            {{/if}}
+            {{#if startDate}}
+            <div class="date-location">
+              {{formatDate startDate}}{{#if endDate}} - {{formatDate endDate}}{{/if}}
+            </div>
+            {{/if}}
+          </div>
+          {{#if description}}
+          <div class="experience-summary">{{description}}</div>
+          {{/if}}
+          {{#if highlights}}
+          <ul class="highlights">
+            {{#each highlights}}
+            <li class="highlight-item">{{this}}</li>
+            {{/each}}
+          </ul>
+          {{/if}}
+        </article>
+        {{/each}}
+      </section>
+      {{/if}}
+
+      <!-- Volunteer Work (if any) -->
+      {{#if volunteer}}
+      <section class="volunteer-section">
+        <h2 class="section-title">
+          <span class="section-icon">💡</span>
+          Volunteer Work
+        </h2>
+        {{#each volunteer}}
+        <article class="experience-item">
+          <div class="experience-header">
+            <h3 class="position">{{position}}</h3>
+            <div class="company">{{organization}}</div>
+            <div class="date-location">
+              {{formatDate startDate}} - {{formatDate endDate}}
+            </div>
+          </div>
+          {{#if summary}}
+          <div class="experience-summary">{{summary}}</div>
+          {{/if}}
+          {{#if highlights}}
+          <ul class="highlights">
+            {{#each highlights}}
+            <li class="highlight-item">{{this}}</li>
+            {{/each}}
+          </ul>
+          {{/if}}
+        </article>
+        {{/each}}
+      </section>
+      {{/if}}
+
+      <!-- Certifications (if any) -->
+      {{#if certificates}}
+      <section class="certifications-section">
+        <h2 class="section-title">
+          <span class="section-icon">💡</span>
+          Certifications
+        </h2>
+        {{#each certificates}}
+        <div class="education-item">
+          <div class="education-header">
+            <div class="degree">{{name}}</div>
+            <div class="institution">{{issuer}}</div>
+            {{#if date}}
+            <div class="education-date">{{formatDate date}}</div>
+            {{/if}}
+          </div>
+        </div>
+        {{/each}}
+      </section>
+      {{/if}}
+    </main>
+  </div>
+</body>
+</html>
