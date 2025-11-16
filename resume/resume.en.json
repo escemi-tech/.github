@@ -5,7 +5,7 @@
     "label": "On-Demand CTO & Senior Lead Developer | Node.js & PHP Expert | Clean Code, Autonomous Teams, Scalable Products",
     "url": "https://www.escemi.com",
     "image": "https://raw.githubusercontent.com/escemi-tech/.github/main/headshots/primary.jpg",
-    "summary": "16 years of experience · 30+ teams mentored · 50+ projects delivered\n\nOn-demand CTO and Senior Lead Dev, I work on projects that need structure and velocity. I combine technical coaching, DevX excellence, and cloud-native modernization to transform product quality and velocity.\n\nNode.js and PHP expert with deep mastery of NestJS, Symfony, and Laravel frameworks. Specialist in scalable architecture and DevX, with a Lean and pragmatic approach to code. I help companies industrialize their development and elevate their teams' technical capabilities, typically reducing deployment time by 50-70% and cutting infrastructure costs by 30-40%.",
+    "summary": "16 years of experience · 15+ teams mentored · 20+ projects delivered\n\nOn-demand CTO and Senior Lead Dev, I work on projects that need structure and velocity. I combine technical coaching, DevX excellence, and cloud-native modernization to transform product quality and velocity.\n\nNode.js and PHP expert with deep mastery of NestJS, Symfony, and Laravel frameworks. Specialist in scalable architecture and DevX, with a Lean and pragmatic approach to code. I help companies industrialize their development and elevate their teams' technical capabilities, typically reducing deployment time by 50-70% and cutting infrastructure costs by 30-40%.",
     "location": {
       "city": "Aix-en-Provence",
       "region": "Provence-Alpes-Côte d'Azur",
@@ -532,7 +532,7 @@
   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.en.json",
-    "version": "2025.11.16.3",
-    "lastModified": "2025-11-16T09:05:32Z"
+    "version": "2025.11.16.4",
+    "lastModified": "2025-11-16T09:20:16Z"
   }
 }

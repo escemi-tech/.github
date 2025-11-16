@@ -41,8 +41,8 @@ You must follow these rules for ALL content you generate:
 
 **Solutions**:
 - ✅ Clarify your offer in 1 sentence: "I help companies industrialize their development and elevate their teams' technical capabilities"
-- ✅ Add a 6-word baseline under the title that includes your core expertise: "Node.js & PHP Expert" or "Clean code, autonomous teams, scalable product"
-- ✅ Add signature numbers: "16 years of experience · 30+ teams mentored · 50+ projects delivered"
+- ✅ Add a 6-word baseline under the title that includes your core expertise: "Node.js & PHP Expert" or for French "Code de qualité, équipes autonomes, produit scalable" (Quality code, autonomous teams, scalable product)
+- ✅ Add signature numbers: "16 years of experience · 15+ teams mentored · 20+ projects delivered"
 - ✅ Create a 3-line pitch that positions you as both strategic and hands-on:
   - "On-demand CTO and Senior Lead Dev, I work on projects that need structure and velocity. I combine technical coaching, DevX excellence, and cloud-native modernization to transform product quality and velocity."
   - Add framework expertise: "Node.js and PHP expert with deep mastery of NestJS, Symfony, and Laravel frameworks."
