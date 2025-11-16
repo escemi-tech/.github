@@ -2,10 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Emilien Escalle",
-    "label": "Fractional Hands-On CTO & Senior Lead Developer | Lean & DevX Expert | Node.js, PHP & Cloud Native",
+    "label": "On-Demand CTO & Senior Lead Developer | Clean Code, Autonomous Teams, Scalable Products",
     "url": "https://www.escemi.com",
     "image": "https://raw.githubusercontent.com/escemi-tech/.github/main/headshots/primary.jpg",
-    "summary": "Fractional CTO and Senior Lead Developer with 16+ years helping companies reduce deployment time by 50-70% and cut infrastructure costs by 30-40% through Lean engineering and DevOps transformation.\n\nI architect scalable applications using SOLID principles and Clean Architecture across Node.js, PHP, and cloud-native ecosystems. My implementations typically accelerate release cycles from weeks to days while improving system uptime from ~99% to 99.9%.\n\nCombining strategic vision with hands-on execution, I've supported 20+ digital transformation projects across e-commerce, SaaS, and consulting sectors, delivering solutions that eliminate technical bottlenecks and reduce time-to-market by 40-60%.\n\nMy Developer Experience methodology improves team velocity by 30-50% through optimized CI/CD pipelines, automated quality gates, and reduced technical debt-enabling sustainable growth and faster feature delivery.",
+    "summary": "16 years of experience · 30+ teams mentored · 50+ projects delivered\n\nOn-demand CTO and Senior Lead Dev, I work on projects that need structure and velocity. I combine technical coaching, DevX excellence, and cloud-native modernization to transform product quality and velocity.\n\nSpecialist in scalable architecture and DevX, with a Lean and pragmatic approach to code. I help companies industrialize their development and elevate their teams' technical capabilities, typically reducing deployment time by 50-70% and cutting infrastructure costs by 30-40%.",
     "location": {
       "city": "Aix-en-Provence",
       "region": "Provence-Alpes-Côte d'Azur",
@@ -34,10 +34,10 @@
       "name": "ESCEMI",
       "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France",
       "description": "Technical consulting and development services",
-      "position": "Fractional Hands-On CTO & Senior Lead Developer",
+      "position": "On-Demand CTO & Senior Lead Developer",
       "url": "https://www.escemi.com",
       "startDate": "2009-01",
-      "summary": "Freelance consulting business providing technical consulting and development services. At your service to support you and meet the challenges of your digital projects.",
+      "summary": "Freelance consulting providing technical leadership and development services to help companies meet their digital transformation challenges.",
       "highlights": [
         "Coached 15+ technical teams (5-12 developers each) in Lean and DevOps adoption, reducing bug escape rate by ~40% and accelerating sprint velocity by 30-50% through structured knowledge transfer and hands-on mentoring",
         "Implemented SOLID-based architectural frameworks across 8 client projects, cutting technical debt accumulation by 50% and reducing code review cycles from 3-4 days to <24 hours",
@@ -50,10 +50,10 @@
       "name": "build and run FR",
       "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France",
       "description": "Technical experts collective",
-      "position": "Fractional Hands-On CTO & Senior Lead Developer Freelance | Lean & DevX Expert | Node.js, PHP & Cloud Native",
+      "position": "Fractional CTO & DevX Expert",
       "url": "https://www.build-and-run.fr/",
       "startDate": "2020-02",
-      "summary": "As a member of the Build & Run collective, I bring my expertise as CTO and Senior Lead Developer to help companies structure, optimize and scale their technical teams.",
+      "summary": "Member of Build & Run collective, bringing CTO and Senior Lead Dev expertise to help companies structure, optimize, and scale their technical teams.",
       "highlights": [
         "Architected microservices platforms processing 500K+ daily transactions with 99.9% uptime, reducing monolith complexity by 60% and enabling independent team deployments",
         "Optimized CI/CD workflows cutting deployment time from 3 hours to 20 minutes, increasing release frequency from bi-weekly to daily while reducing production incidents by 45%",
@@ -228,29 +228,29 @@
   "publications": [],
   "skills": [
     {
-      "name": "Programming Languages",
+      "name": "Core Tech",
       "level": "Master",
-      "keywords": ["Node.js", "PHP", "JavaScript", "TypeScript"]
-    },
-    {
-      "name": "Architecture & Design",
-      "level": "Master",
-      "keywords": [
-        "SOLID Principles",
-        "Clean Code",
-        "Clean Architecture",
-        "Design Patterns"
-      ]
+      "keywords": ["Node.js", "PHP", "JavaScript", "TypeScript", "Symfony", "Laravel", "NestJS"]
     },
     {
       "name": "DevOps & Cloud",
       "level": "Master",
-      "keywords": ["CI/CD", "Cloud Native", "DevOps", "Infrastructure as Code"]
+      "keywords": ["Docker", "GitHub Actions", "GitLab CI", "Kubernetes", "AWS", "Cloud Native", "CI/CD", "Infrastructure as Code"]
     },
     {
-      "name": "Methodologies",
+      "name": "Methods & Leadership",
       "level": "Master",
-      "keywords": ["Lean", "Agile", "Developer Experience (DevX)"]
+      "keywords": [
+        "Clean Code",
+        "TDD",
+        "SOLID Principles",
+        "Clean Architecture",
+        "Design Patterns",
+        "DevX",
+        "Mentoring",
+        "Lean",
+        "Agile"
+      ]
     }
   ],
   "languages": [
@@ -532,7 +532,7 @@
   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.en.json",
-    "version": "2025.11.16",
-    "lastModified": "2025-11-16T06:31:14Z"
+    "version": "2025.11.16.2",
+    "lastModified": "2025-11-16T07:03:54Z"
   }
 }

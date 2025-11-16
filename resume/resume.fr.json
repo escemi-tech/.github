@@ -2,10 +2,10 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Emilien Escalle",
-    "label": "Hands-On CTO à la demande et Lead Développeur Senior | Expert Lean & DevX | Node.js, PHP & Cloud Native",
+    "label": "CTO à la demande & Lead Développeur Senior | Code propre, équipes autonomes, produit scalable",
     "url": "https://www.escemi.com",
     "image": "https://raw.githubusercontent.com/escemi-tech/.github/main/headshots/primary.jpg",
-    "summary": "Hands-On CTO à la demande et Lead Développeur Senior avec plus de 16 ans d'expérience, aidant les entreprises à réduire leur temps de déploiement de 50-70% et leurs coûts d'infrastructure de 30-40% grâce au Lean engineering et à la transformation DevOps.\n\nJe conçois des applications évolutives en appliquant les principes SOLID et la Clean Architecture dans les écosystèmes Node.js, PHP et cloud-native. Mes implémentations accélèrent typiquement les cycles de release de plusieurs semaines à quelques jours tout en améliorant la disponibilité système de ~99% à 99,9%.\n\nEn conjuguant vision stratégique et exécution opérationnelle, j'ai accompagné plus de 20 projets de transformation numérique dans les secteurs e-commerce, SaaS et conseil, délivrant des solutions qui éliminent les goulots d'étranglement techniques et réduisent le time-to-market de 40-60%.\n\nMa méthodologie d'optimisation de l'expérience développeur améliore la vélocité des équipes de 30-50% via des pipelines CI/CD optimisés, des contrôles qualité automatisés et une réduction de la dette technique-permettant une croissance durable et une livraison de fonctionnalités plus rapide.",
+    "summary": "16 ans d'expérience · 30+ équipes accompagnées · 50+ projets livrés\n\nCTO à la demande et Lead Dev Senior, j'interviens sur les projets qui ont besoin de structure et de vitesse. J'allie coaching technique, excellence DevX et modernisation cloud-native pour transformer la qualité et la vélocité produit.\n\nSpécialiste de l'architecture scalable et du DevX, avec une approche Lean et pragmatique du code. J'aide les entreprises à industrialiser leur développement et à élever le niveau technique de leurs équipes, réduisant typiquement le temps de déploiement de 50-70% et les coûts d'infrastructure de 30-40%.",
     "location": {
       "city": "Aix-en-Provence",
       "region": "Provence-Alpes-Côte d'Azur",
@@ -34,10 +34,10 @@
       "name": "ESCEMI",
       "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France",
       "description": "Service de conseil et développement technique",
-      "position": "Hands-On CTO à la demande et Lead Développeur Senior",
+      "position": "CTO à la demande & Lead Développeur Senior",
       "url": "https://www.escemi.com",
       "startDate": "2009-01",
-      "summary": "Activité de conseil freelance fournissant des services de conseil et développement technique. À votre service pour vous accompagner et relever les défis de vos projets digitaux.",
+      "summary": "Conseil freelance fournissant leadership technique et services de développement pour aider les entreprises à relever leurs défis de transformation digitale.",
       "highlights": [
         "Accompagné 15+ équipes techniques (5-12 développeurs chacune) dans l'adoption Lean et DevOps, réduisant le taux d'échappement de bugs de ~40% et accélérant la vélocité de sprint de 30-50% via mentorat structuré",
         "Implémenté des frameworks architecturaux basés sur SOLID pour 8 projets clients, réduisant l'accumulation de dette technique de 50% et les cycles de revue de code de 3-4 jours à <24 heures",
@@ -50,10 +50,10 @@
       "name": "build and run FR",
       "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France",
       "description": "Groupement d'experts techniques",
-      "position": "Hands-On CTO et Lead Développeur Senior Freelance | Expert Lean & DevX | Node.js, PHP & Cloud Native",
+      "position": "CTO Fractionné & Expert DevX",
       "url": "https://www.build-and-run.fr/",
       "startDate": "2020-02",
-      "summary": "En tant que membre du groupement Build & Run, j'apporte mon expertise de CTO et Lead Développeur Senior pour aider les entreprises à structurer, optimiser et faire évoluer leurs équipes techniques.",
+      "summary": "Membre du collectif Build & Run, apportant expertise CTO et Lead Dev Senior pour aider les entreprises à structurer, optimiser et faire évoluer leurs équipes techniques.",
       "highlights": [
         "Architecturé des plateformes microservices traitant 500K+ transactions quotidiennes avec 99,9% de disponibilité, réduisant la complexité du monolithe de 60% et permettant des déploiements d'équipes indépendants",
         "Optimisé les workflows CI/CD réduisant le temps de déploiement de 3 heures à 20 minutes, augmentant la fréquence de release de bi-hebdomadaire à quotidienne tout en réduisant les incidents production de 45%",
@@ -228,29 +228,29 @@
   "publications": [],
   "skills": [
     {
-      "name": "Programming Languages",
+      "name": "Core Tech",
       "level": "Master",
-      "keywords": ["Node.js", "PHP", "JavaScript", "TypeScript"]
-    },
-    {
-      "name": "Architecture & Design",
-      "level": "Master",
-      "keywords": [
-        "SOLID Principles",
-        "Clean Code",
-        "Clean Architecture",
-        "Design Patterns"
-      ]
+      "keywords": ["Node.js", "PHP", "JavaScript", "TypeScript", "Symfony", "Laravel", "NestJS"]
     },
     {
       "name": "DevOps & Cloud",
       "level": "Master",
-      "keywords": ["CI/CD", "Cloud Native", "DevOps", "Infrastructure as Code"]
+      "keywords": ["Docker", "GitHub Actions", "GitLab CI", "Kubernetes", "AWS", "Cloud Native", "CI/CD", "Infrastructure as Code"]
     },
     {
-      "name": "Methodologies",
+      "name": "Méthodes & Leadership",
       "level": "Master",
-      "keywords": ["Lean", "Agile", "Developer Experience (DevX)"]
+      "keywords": [
+        "Clean Code",
+        "TDD",
+        "SOLID Principles",
+        "Clean Architecture",
+        "Design Patterns",
+        "DevX",
+        "Mentorat",
+        "Lean",
+        "Agile"
+      ]
     }
   ],
   "languages": [
@@ -532,7 +532,7 @@
   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.fr.json",
-    "version": "2025.11.16",
-    "lastModified": "2025-11-16T06:31:14Z"
+    "version": "2025.11.16.2",
+    "lastModified": "2025-11-16T07:03:54Z"
   }
 }
