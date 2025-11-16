@@ -41,12 +41,14 @@ You must follow these rules for ALL content you generate:
 
 **Solutions**:
 - ✅ Clarify your offer in 1 sentence: "I help companies industrialize their development and elevate their teams' technical capabilities"
-- ✅ Add a 6-word baseline under the title: "Clean code, autonomous teams, scalable product"
+- ✅ Add a 6-word baseline under the title that includes your core expertise: "Node.js & PHP Expert" or "Clean code, autonomous teams, scalable product"
 - ✅ Add signature numbers: "16 years of experience · 30+ teams mentored · 50+ projects delivered"
 - ✅ Create a 3-line pitch that positions you as both strategic and hands-on:
   - "On-demand CTO and Senior Lead Dev, I work on projects that need structure and velocity. I combine technical coaching, DevX excellence, and cloud-native modernization to transform product quality and velocity."
+  - Add framework expertise: "Node.js and PHP expert with deep mastery of NestJS, Symfony, and Laravel frameworks."
 
 **Key Elements**:
+- **Highlight core technical expertise early**: If you have deep framework mastery (NestJS, Symfony, Laravel), mention it in your label or summary
 - Differentiate clearly between technical role and leadership role
 - Focus on business outcomes, not just methodologies
 - Create a strong signature that sets you apart
@@ -109,9 +111,10 @@ Build & Run – Fractional CTO / DevX Expert (2020 - Present)
 
 **Solutions**:
 - ✅ Reorganize into 3 clear categories with visual indicators:
+- ✅ **Emphasize core expertise**: Highlight framework mastery by grouping languages with their key frameworks
 
 **🎯 Core Tech**
-- Node.js ●●●●○ | PHP ●●●●● | Symfony | Laravel | NestJS
+- Node.js (NestJS) ●●●●● | PHP (Symfony, Laravel) ●●●●● | JavaScript | TypeScript
 
 **☁️ DevOps & Cloud**
 - Docker | GitHub Actions | GitLab CI | Kubernetes | AWS | Cloud Native
@@ -119,7 +122,9 @@ Build & Run – Fractional CTO / DevX Expert (2020 - Present)
 **🧠 Methods & Leadership**
 - Clean Code | TDD | SOLID | DevX | Mentoring | Software Architecture
 
-- ✅ Add synthesis sentence: "Specialist in scalable architecture and DevX, with a Lean and pragmatic approach to code"
+- ✅ Add synthesis sentence emphasizing expertise: "Node.js and PHP expert with deep mastery of NestJS, Symfony, and Laravel frameworks. Specialist in scalable architecture and DevX, with a Lean and pragmatic approach to code"
+
+**Key Point**: When you have deep expertise in specific frameworks (e.g., NestJS for Node.js, Symfony/Laravel for PHP), **always group them together** to show ecosystem mastery, not just language knowledge.
 
 ### 5. Education & Certifications
 
