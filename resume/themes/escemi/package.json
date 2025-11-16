@@ -1,0 +1,25 @@
+{
+  "name": "jsonresume-theme-escemi",
+  "version": "1.0.0",
+  "description": "A professional JSON Resume theme optimized for senior technical profiles following CV Coach best practices",
+  "main": "index.js",
+  "license": "MIT",
+  "author": "ESCEMI",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/escemi-tech/.github"
+  },
+  "keywords": [
+    "jsonresume",
+    "theme",
+    "cv",
+    "resume",
+    "technical",
+    "senior",
+    "cto",
+    "lead-developer"
+  ],
+  "dependencies": {
+    "handlebars": "^4.7.8"
+  }
+}
