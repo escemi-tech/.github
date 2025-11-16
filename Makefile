@@ -18,6 +18,8 @@ lint-fix: ## Execute linting and fix
 		-e FIX_MARKDOWN_PRETTIER=true \
 		-e FIX_NATURAL_LANGUAGE=true\
 		-e FIX_HTML_PRETTIER=true\
+		-e FIX_CSS=true\
+		-e FIX_CSS_PRETTIER=true\
 	)
 
 define run_linter
