@@ -20,14 +20,11 @@ Handlebars.registerHelper('section', function(items) {
   return items && items.length > 0;
 });
 
-Handlebars.registerHelper('stripTags', function(text) {
-  if (!text) return '';
-  return text.replace(/<[^>]*>/g, '');
-});
-
 Handlebars.registerHelper('newlineToBr', function(text) {
   if (!text) return '';
-  return new Handlebars.SafeString(text.replace(/\n/g, '<br>'));
+  // Escape HTML to prevent injection, then replace newlines with <br>
+  const escaped = Handlebars.Utils.escapeExpression(text);
+  return new Handlebars.SafeString(escaped.replace(/\n/g, '<br>'));
 });
 
 function render(resume) {
