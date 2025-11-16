@@ -1,5 +1,5 @@
 name: "Generate Resume PDF"
-description: "Generates PDF from JSON Resume file using custom ESCEMI theme"
+description: "Generates PDF from JSON Resume file using resume-cli"
 inputs:
   resume-path:
     description: "Path to the resume JSON file"

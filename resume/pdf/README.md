@@ -28,7 +28,7 @@ See [../themes/escemi/README.md](../themes/escemi/README.md) for complete theme 
 
 ## Manual Generation
 
-To generate PDFs manually, you can use the custom generator:
+To generate PDFs manually:
 
 ```bash
 # From the repository root, navigate to the actions directory
@@ -42,13 +42,6 @@ npm run generate-pdf -- ../../resume/resume.en.json ../../resume/pdf/resume.en.p
 
 # Generate French PDF
 npm run generate-pdf -- ../../resume/resume.fr.json ../../resume/pdf/resume.fr.pdf
-```
-
-Or using the direct Node.js script:
-
-```bash
-# From the actions directory
-node generate-pdf.js /path/to/resume.json /path/to/output.pdf
 ```
 
 ## Preview on Pull Requests

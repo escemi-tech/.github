@@ -112,6 +112,7 @@ PDFs are automatically generated from the JSON Resume files using a custom **ESC
 ### Theme Features
 
 The custom theme (`jsonresume-theme-escemi`) is optimized for:
+
 - **Two-column layout**: Contact info and skills on the left, professional experience on the right
 - **Visual hierarchy**: Clear distinction between sections, positions, and achievements
 - **ATS-friendly**: Simple formatting that passes automated screening systems
@@ -142,13 +143,6 @@ npm run generate-pdf -- ../../resume/resume.en.json ../../resume/pdf/resume.en.p
 
 # Generate French PDF
 npm run generate-pdf -- ../../resume/resume.fr.json ../../resume/pdf/resume.fr.pdf
-```
-
-Or use the theme directly with Node.js:
-
-```bash
-# From the actions directory
-node generate-pdf.js /path/to/resume.json /path/to/output.pdf
 ```
 
 See [pdf/README.md](pdf/README.md) for more details.

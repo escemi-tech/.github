@@ -5,6 +5,7 @@ A professional JSON Resume theme optimized for senior technical profiles (CTO, L
 ## Features
 
 ### Visual Design
+
 - **Two-column layout**: Contact info and skills on the left, professional experience on the right
 - **ESCEMI branding**: Source Sans Pro font with official ESCEMI colors (dark blue #1c3144, gold #ecb807)
 - **Professional color scheme**: Matches ESCEMI brand identity
@@ -13,11 +14,12 @@ A professional JSON Resume theme optimized for senior technical profiles (CTO, L
 - **Optimized spacing**: Adequate whitespace for readability and scannability
 
 ### Content Optimization
+
 - **6-second scannability**: Recruiter can instantly see key information
 - **ATS-friendly**: Simple formatting without tables or complex layouts
 - **Metric emphasis**: Highlights achievements and quantifiable results
 - **Action-oriented language**: Focus on results and impact
-- **Professional sections**: 
+- **Professional sections**:
   - Contact information
   - Professional links (LinkedIn, GitHub, etc.)
   - Core technical skills
@@ -28,6 +30,7 @@ A professional JSON Resume theme optimized for senior technical profiles (CTO, L
   - Volunteer work (optional)
 
 ### Technical Features
+
 - **Print-optimized**: A4 page format with proper margins
 - **Page break control**: Prevents awkward splits in content
 - **Semantic HTML**: Proper structure for accessibility and parsing

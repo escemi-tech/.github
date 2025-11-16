@@ -1,4 +1,5 @@
 /* ESCEMI Resume Theme - CV Coach Optimized */
+
 /* Following best practices for senior technical profiles */
 
 :root {
@@ -7,7 +8,7 @@
   --text-primary: #1f2937;
   --text-secondary: #4b5563;
   --text-light: #6b7280;
-  --background: #ffffff;
+  --background: #fff;
   --border-color: #e5e7eb;
   --section-spacing: 1.5rem;
 }
@@ -19,12 +20,17 @@
 }
 
 @page {
-  size: A4;
+  size: a4;
   margin: 15mm;
 }
 
 body {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family:
+    "Source Sans Pro",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-size: 10pt;
   line-height: 1.5;
   color: var(--text-primary);
@@ -238,7 +244,7 @@ body {
   page-break-inside: avoid;
 }
 
-.highlight-item:before {
+.highlight-item::before {
   content: "▸";
   position: absolute;
   left: 0;
@@ -275,8 +281,11 @@ body {
 }
 
 /* ===== ATS OPTIMIZATION ===== */
+
 /* Use semantic HTML and standard section headers */
+
 /* Avoid tables, text boxes, and complex layouts */
+
 /* Keep formatting simple for parsing */
 
 /* ===== PRINT OPTIMIZATION ===== */
@@ -302,11 +311,30 @@ body {
 }
 
 /* Utility classes */
-.mb-small { margin-bottom: 0.5rem; }
-.mb-medium { margin-bottom: 1rem; }
-.mb-large { margin-bottom: 1.5rem; }
+.mb-small {
+  margin-bottom: 0.5rem;
+}
 
-.text-bold { font-weight: 600; }
-.text-primary { color: var(--text-primary); }
-.text-secondary { color: var(--text-secondary); }
-.text-light { color: var(--text-light); }
+.mb-medium {
+  margin-bottom: 1rem;
+}
+
+.mb-large {
+  margin-bottom: 1.5rem;
+}
+
+.text-bold {
+  font-weight: 600;
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.text-light {
+  color: var(--text-light);
+}

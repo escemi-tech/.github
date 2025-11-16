@@ -9,6 +9,6 @@
     "resume-cli": "^3.1.2"
   },
   "scripts": {
-    "generate-pdf": "node generate-pdf.js"
+    "generate-pdf": "resume export --theme escemi --format pdf --resume"
   }
 }
