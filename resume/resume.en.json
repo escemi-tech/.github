@@ -398,6 +398,37 @@
       "type": "consulting"
     },
     {
+      "name": "Tekkare - Technical Mentoring & Architectural Bootstrap",
+      "description": "Hands-on mentorship of development team for technical services management platform, accelerating their skill growth in GraphQL/modern backend API architecture and optimizing development practices.",
+      "highlights": [
+        "Reduced new feature development time by 40% through optimized GraphQL architecture with NestJS, replacing multiple REST endpoints with unified, type-safe queries",
+        "Accelerated new developer onboarding from ~2 weeks to ~5 days via living architectural documentation, reusable patterns, and annotated code examples",
+        "Improved code maintainability by 50% by implementing Clean Architecture and SOLID principles with clear layer separation (domain, application, infrastructure)",
+        "Optimized database query performance by 60% (from ~800ms to ~300ms average) through Postgres ORM optimization, strategic indexing, and N+1 query resolution",
+        "Established quality pipeline with automated testing (unit, integration, E2E) reducing production regressions by 70% and increasing deployment confidence",
+        "Mentored team on GraphQL best practices (dataloaders, pagination, error handling) and NestJS patterns via pair programming and structured code reviews"
+      ],
+      "keywords": [
+        "GraphQL",
+        "NestJS",
+        "Node.js",
+        "PostgreSQL",
+        "ORM",
+        "TypeScript",
+        "Clean Architecture",
+        "SOLID",
+        "Mentoring",
+        "API Design",
+        "Backend Architecture"
+      ],
+      "startDate": "2022-04",
+      "endDate": "2022-06",
+      "url": "https://tekkare.com/",
+      "roles": ["Technical Mentor", "Backend Architect"],
+      "entity": "Tekkare",
+      "type": "consulting"
+    },
+    {
       "name": "Atlas des Régions Naturelles (ARN) - Backend Architecture",
       "description": "Designed and developed backend architecture for the ARN photographic archive platform, documenting 15,000+ images of French landscapes and buildings through an optimized NestJS/Laravel stack focused on performance and scalability.",
       "highlights": [
@@ -501,7 +532,7 @@
   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.en.json",
-    "version": "2025.11.15",
-    "lastModified": "2025-11-15T17:52:54Z"
+    "version": "2025.11.16",
+    "lastModified": "2025-11-16T06:31:14Z"
   }
 }
