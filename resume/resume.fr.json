@@ -2,7 +2,7 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Emilien Escalle",
-    "label": "CTO à la demande & Lead Développeur Senior | Expert Node.js & PHP | Code de qualité, équipes autonomes, produit scalable",
+    "label": "CTO à la demande & Lead Développeur Senior | Expert Node.js & PHP | Code robuste, équipes autonomes, produit scalable",
     "url": "https://www.escemi.com",
     "image": "https://raw.githubusercontent.com/escemi-tech/.github/main/headshots/primary.jpg",
     "summary": "16 ans d'expérience · 15+ équipes accompagnées · 20+ projets livrés\n\nCTO à la demande et Lead Dev Senior, j'interviens sur les projets qui ont besoin de structure et de vitesse. J'allie coaching technique, excellence DevX et modernisation cloud-native pour transformer la qualité et la vélocité produit.\n\nExpert Node.js et PHP avec une maîtrise approfondie des frameworks NestJS, Symfony et Laravel. Spécialiste de l'architecture scalable et du DevX, avec une approche Lean et pragmatique du code. J'aide les entreprises à industrialiser leur développement et à élever le niveau technique de leurs équipes, réduisant typiquement le temps de déploiement de 50-70% et les coûts d'infrastructure de 30-40%.",
@@ -50,7 +50,7 @@
       "name": "build and run FR",
       "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France",
       "description": "Groupement d'experts techniques",
-      "position": "CTO à temps partagé & Expert DevX",
+      "position": "Fractional CTO & Expert DevX",
       "url": "https://www.build-and-run.fr/",
       "startDate": "2020-02",
       "summary": "Membre du collectif Build & Run, apportant expertise CTO et Lead Dev Senior pour aider les entreprises à structurer, optimiser et faire évoluer leurs équipes techniques.",
@@ -230,12 +230,26 @@
     {
       "name": "Core Tech",
       "level": "Master",
-      "keywords": ["Node.js (NestJS)", "PHP (Symfony, Laravel)", "JavaScript", "TypeScript"]
+      "keywords": [
+        "Node.js (NestJS)",
+        "PHP (Symfony, Laravel)",
+        "JavaScript",
+        "TypeScript"
+      ]
     },
     {
       "name": "DevOps & Cloud",
       "level": "Master",
-      "keywords": ["Docker", "GitHub Actions", "GitLab CI", "Kubernetes", "AWS", "Cloud Native", "CI/CD", "Infrastructure as Code"]
+      "keywords": [
+        "Docker",
+        "GitHub Actions",
+        "GitLab CI",
+        "Kubernetes",
+        "AWS",
+        "Cloud Native",
+        "CI/CD",
+        "Infrastructure as Code"
+      ]
     },
     {
       "name": "Méthodes & Leadership",
@@ -532,7 +546,7 @@
   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.fr.json",
-    "version": "2025.11.16.4",
-    "lastModified": "2025-11-16T09:20:16Z"
+    "version": "2025.11.16.5",
+    "lastModified": "2025-11-16T09:41:03Z"
   }
 }
