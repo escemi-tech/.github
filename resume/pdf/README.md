@@ -18,7 +18,7 @@ The workflow uses a **custom ESCEMI theme** specifically designed for senior tec
 The custom `jsonresume-theme-escemi` provides:
 
 - **Two-column layout**: Contact information and skills on the left, professional experience on the right
-- **Professional design**: Modern typography (Inter, Source Sans Pro, Lato), tech blue color scheme
+- **ESCEMI branding**: Source Sans Pro typography with official ESCEMI colors (dark blue #1c3144, gold #ecb807)
 - **Visual hierarchy**: Clear distinction between sections with icons and proper spacing
 - **ATS optimization**: Simple, parser-friendly structure without tables or complex layouts
 - **Metric emphasis**: Highlights quantifiable achievements and business impact

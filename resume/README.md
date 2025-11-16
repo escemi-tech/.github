@@ -115,7 +115,7 @@ The custom theme (`jsonresume-theme-escemi`) is optimized for:
 - **Two-column layout**: Contact info and skills on the left, professional experience on the right
 - **Visual hierarchy**: Clear distinction between sections, positions, and achievements
 - **ATS-friendly**: Simple formatting that passes automated screening systems
-- **Professional design**: Modern typography, tech blue color scheme, proper spacing
+- **ESCEMI branding**: Source Sans Pro font with official ESCEMI colors (dark blue #1c3144, gold #ecb807)
 - **Metric emphasis**: Highlights quantifiable achievements and business impact
 - **6-second scannability**: Recruiters can instantly identify key information
 

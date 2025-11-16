@@ -6,8 +6,8 @@ A professional JSON Resume theme optimized for senior technical profiles (CTO, L
 
 ### Visual Design
 - **Two-column layout**: Contact info and skills on the left, professional experience on the right
-- **Modern typography**: Clean, readable fonts (Inter, Source Sans Pro, Lato)
-- **Professional color scheme**: Tech blue (#2563eb) with DevOps green accents
+- **ESCEMI branding**: Source Sans Pro font with official ESCEMI colors (dark blue #1c3144, gold #ecb807)
+- **Professional color scheme**: Matches ESCEMI brand identity
 - **Proper hierarchy**: Clear visual distinction between sections, positions, and details
 - **Icon integration**: Visual markers for quick section identification
 - **Optimized spacing**: Adequate whitespace for readability and scannability
@@ -135,12 +135,12 @@ This theme follows the CV Coach methodology for senior technical profiles:
 
 ## Customization
 
-You can customize colors by editing the CSS variables in `style.css`:
+The theme uses ESCEMI's official branding colors. You can customize colors by editing the CSS variables in `style.css`:
 
 ```css
 :root {
-  --primary-color: #2563eb; /* Tech blue */
-  --secondary-color: #059669; /* DevOps green */
+  --primary-color: #1c3144; /* ESCEMI Main - Dark blue */
+  --secondary-color: #ecb807; /* ESCEMI Secondary - Gold */
   --text-primary: #1f2937;
   --text-secondary: #4b5563;
   --text-light: #6b7280;

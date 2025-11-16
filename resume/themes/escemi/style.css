@@ -2,8 +2,8 @@
 /* Following best practices for senior technical profiles */
 
 :root {
-  --primary-color: #2563eb; /* Tech blue */
-  --secondary-color: #059669; /* DevOps green */
+  --primary-color: #1c3144; /* ESCEMI Main - Dark blue */
+  --secondary-color: #ecb807; /* ESCEMI Secondary - Gold */
   --text-primary: #1f2937;
   --text-secondary: #4b5563;
   --text-light: #6b7280;
@@ -24,7 +24,7 @@
 }
 
 body {
-  font-family: 'Inter', 'Source Sans Pro', 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   font-size: 10pt;
   line-height: 1.5;
   color: var(--text-primary);
