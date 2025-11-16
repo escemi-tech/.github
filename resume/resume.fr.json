@@ -398,6 +398,37 @@
       "type": "consulting"
     },
     {
+      "name": "Tekkare - Mentorat technique et bootstrap architectural",
+      "description": "Accompagnement hands-on d'une équipe de développement d'une plateforme de gestion de services techniques, accélérant leur montée en compétences sur l'architecture GraphQL/API backend moderne et optimisant leurs pratiques de développement.",
+      "highlights": [
+        "Réduit le temps de développement de nouvelles fonctionnalités de 40% via architecture GraphQL optimisée avec NestJS, remplaçant multiples endpoints REST par des requêtes unifiées et typées",
+        "Accéléré l'onboarding des nouveaux développeurs de ~2 semaines à ~5 jours grâce à la documentation architecturale vivante, patterns réutilisables et exemples de code commentés",
+        "Amélioré la maintenabilité du code de 50% en implémentant Clean Architecture et principes SOLID avec séparation claire des couches (domaine, application, infrastructure)",
+        "Optimisé les performances de requêtes base de données de 60% (de ~800ms à ~300ms en moyenne) via optimisation ORM Postgres, indexation stratégique et résolution N+1 queries",
+        "Établi un pipeline de qualité avec tests automatisés (unit, intégration, E2E) réduisant les régressions en production de 70% et augmentant la confiance de déploiement",
+        "Mentoré l'équipe sur les best practices GraphQL (dataloaders, pagination, error handling) et patterns NestJS via pair programming et code reviews structurées"
+      ],
+      "keywords": [
+        "GraphQL",
+        "NestJS",
+        "Node.js",
+        "PostgreSQL",
+        "ORM",
+        "TypeScript",
+        "Clean Architecture",
+        "SOLID",
+        "Mentorat",
+        "API Design",
+        "Backend Architecture"
+      ],
+      "startDate": "2022-04",
+      "endDate": "2022-06",
+      "url": "https://tekkare.com/",
+      "roles": ["Mentor technique", "Architecte backend"],
+      "entity": "Tekkare",
+      "type": "consulting"
+    },
+    {
       "name": "Atlas des Régions Naturelles (ARN) - Architecture backend",
       "description": "Conception et développement de l'architecture backend pour la plateforme d'archive photographique ARN, documentant 15 000+ images des paysages et bâtis français via une stack NestJS/Laravel optimisée pour la performance et la scalabilité.",
       "highlights": [
@@ -501,7 +532,7 @@
   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.fr.json",
-    "version": "2025.11.15",
-    "lastModified": "2025-11-15T17:52:54Z"
+    "version": "2025.11.16",
+    "lastModified": "2025-11-16T06:31:14Z"
   }
 }
