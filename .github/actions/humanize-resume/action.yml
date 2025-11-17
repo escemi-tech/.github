@@ -31,4 +31,4 @@ runs:
             throw new Error(`Resume file does not exist at path: ${resumePath}`);
           }
 
-          await exec.getExecOutput('npm', ['run', 'humanize', '--', resumePath], { cwd: process.env.ACTION_PATH });
+          await exec.exec('npm', ['run', 'humanize', '--', resumePath], { cwd: process.env.ACTION_PATH });

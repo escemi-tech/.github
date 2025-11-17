@@ -76,54 +76,7 @@ function renderHtml() {
 function wrapWithA4Preview(html) {
   const previewStyles = `
     <style id="dev-preview-a4-styles">
-      body.preview-shell {
-        background: linear-gradient(135deg, #0f1621 0%, #1c3144 65%);
-        padding: 40px;
-        min-height: 100vh;
-        box-sizing: border-box;
-        font-family: 'Source Sans Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      }
-
-      .preview-stage {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 24px;
-        max-width: 1200px;
-        margin: 0 auto;
-        width: 100%;
-      }
-
-      .preview-page {
-        width: 210mm;
-        min-height: 297mm;
-        background: #ffffff;
-        box-shadow: 0 18px 45px rgba(12, 19, 34, 0.35);
-        border-radius: 10px;
-        overflow: hidden;
-        border: 1px solid rgba(19, 49, 68, 0.12);
-      }
-
-      @media (max-width: 1100px) {
-        .preview-stage {
-          flex-direction: column;
-          align-items: center;
-        }
-      }
-
-      @media print {
-        body.preview-shell {
-          background: #ffffff;
-          padding: 0;
-        }
-
-        .preview-page {
-          box-shadow: none;
-          border-radius: 0;
-          width: 210mm;
-          min-height: 297mm;
-        }
-      }
+      
     </style>
   `;
 
@@ -131,12 +84,9 @@ function wrapWithA4Preview(html) {
     let wrapped = html;
     wrapped = wrapped.replace("</head>", `${previewStyles}</head>`);
 
-    wrapped = wrapped.replace(
-      "<body>",
-      '<body class="preview-shell"><div class="preview-stage"><div class="preview-page">',
-    );
+    wrapped = wrapped.replace("<body>", '<div class="preview-page">');
 
-    wrapped = wrapped.replace("</body>", "</div></div></body>");
+    wrapped = wrapped.replace("</body>", "</div></body>");
 
     return wrapped;
   }
@@ -148,11 +98,9 @@ function wrapWithA4Preview(html) {
       <meta charset="utf-8" />
       ${previewStyles}
     </head>
-    <body class="preview-shell">
-      <div class="preview-stage">
-        <div class="preview-page">
-          ${html}
-        </div>
+    <body>
+      <div class="preview-page">
+        ${html}
       </div>
     </body>
   </html>`;

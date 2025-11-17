@@ -152,6 +152,16 @@
   "publications": [],
   "skills": [
     {
+      "name": "🧠 Méthodes & Leadership",
+      "level": "Expert",
+      "keywords": [
+        "Coaching technique · DevX",
+        "Clean Code · Design Systems",
+        "Mentorat 15+ équipes",
+        "Lean · Agile · Vélocité produit"
+      ]
+    },
+    {
       "name": "🎯 Tech cœur",
       "level": "Expert",
       "keywords": [
@@ -165,20 +175,9 @@
       "name": "☁️ DevOps & Cloud",
       "level": "Expert",
       "keywords": [
-        "Docker · Kubernetes · AWS",
         "GitHub Actions · GitLab CI",
-        "Terraform · ArgoCD · IaC",
+        "Docker · AWS",
         "Observabilité · OpenTelemetry"
-      ]
-    },
-    {
-      "name": "🧠 Méthodes & Leadership",
-      "level": "Expert",
-      "keywords": [
-        "Coaching technique · DevX",
-        "Clean Code · Design Systems",
-        "Mentorat 15+ équipes",
-        "Lean · Agile · Vélocité produit"
       ]
     }
   ],

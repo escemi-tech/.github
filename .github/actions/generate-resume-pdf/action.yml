@@ -10,6 +10,20 @@ inputs:
 runs:
   using: "composite"
   steps:
+    - uses: hoverkraft-tech/ci-github-nodejs/actions/setup-node@32a69b7b8fd5f7ab7bf656e7e88aa90ad235cf8d # 0.18.0
+      with:
+        working-directory: resume/themes/escemi
+    - name: Build escemi theme
+      uses: actions/github-script@ed597411d8f924073f98dfc5c65a23a2325f34cd # v8.0.0
+      env:
+        NODE_PATH: resume/themes/escemi/node_modules
+        THEME_PATH: resume/themes/escemi
+      with:
+        script: |
+          const path = require('node:path');
+          const themePath = path.resolve(process.env.THEME_PATH);
+          await exec.exec('npm', ['run', 'build'], { cwd: themePath });
+
     # jscpd:ignore-start
     - uses: hoverkraft-tech/ci-github-nodejs/actions/setup-node@32a69b7b8fd5f7ab7bf656e7e88aa90ad235cf8d # 0.18.0
       with:
@@ -47,5 +61,5 @@ runs:
             throw new Error(`Output directory does not exist: ${path.dirname(outputPath)}`);
           }
 
-          await exec.getExecOutput('npm', ['run', 'generate-pdf', '--', resumePath, outputPath], { cwd: process.env.ACTION_PATH });
+          await exec.exec('npm', ['run', 'generate-pdf', '--', resumePath, outputPath], { cwd: process.env.ACTION_PATH });
     # jscpd:ignore-end

@@ -2,13 +2,12 @@
   "name": "jsonresume-theme-escemi",
   "version": "2.0.0",
   "description": "A professional JSON Resume theme optimized for senior technical profiles following CV Coach best practices - React edition",
-  "main": "./index.js",
+  "main": "./dist/index.js",
   "exports": {
-    ".": "./index.js"
+    ".": "./dist/index.js"
   },
   "files": [
     "dist",
-    "index.js",
     "src"
   ],
   "scripts": {
