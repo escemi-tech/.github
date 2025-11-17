@@ -1,0 +1,13 @@
+{
+  "name": "@escemi/humanize-resume",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Humanizes resume JSON text by normalizing punctuation and whitespace via humanize-ai-lib",
+  "type": "module",
+  "scripts": {
+    "humanize": "node humanize-resume.js"
+  },
+  "dependencies": {
+    "humanize-ai-lib": "^1.0.0"
+  }
+}

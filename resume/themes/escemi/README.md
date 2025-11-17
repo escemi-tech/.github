@@ -1,8 +1,18 @@
 # ESCEMI JSON Resume Theme
 
-A professional JSON Resume theme optimized for senior technical profiles (CTO, Lead Developer, Architect, Engineering Manager) following CV Coach best practices.
+A professional JSON Resume theme optimized for senior technical profiles (CTO, Lead Developer, Architect, Engineering Manager) following **CV Coach best practices**.
 
 ## Features
+
+### CV Coach Optimization (NEW)
+
+This theme now incorporates the CV Coach methodology for transforming senior technical CVs into compelling documents:
+
+- **Automatic baseline extraction**: Signature numbers (e.g., "16 years · 15+ teams · 20+ projects") are automatically extracted and visually emphasized
+- **Metric highlighting**: Numbers, percentages, and quantifiable results are automatically emphasized in highlights
+- **Visual hierarchy**: Clear distinction between challenges, actions, and results
+- **6-second scannability**: Visual design optimized for recruiters to quickly grasp key information
+- **Impact-focused**: Emphasis on measurable business outcomes and technical achievements
 
 ### Visual Design
 
@@ -106,6 +116,24 @@ Use the `highlights` array for achievements with metrics:
 ]
 ```
 
+### Highlights with Metrics
+
+The theme automatically emphasizes quantifiable results in your highlights. Use metrics and percentages for maximum impact:
+
+```json
+"highlights": [
+  "Coached 15+ teams, reducing bug rate by 40% and accelerating velocity by 30-50%",
+  "Migrated to cloud-native architecture, cutting costs by €120K/year (-35%)",
+  "Reduced deployment time from 2-4 hours to 15-30 minutes (75% reduction)"
+]
+```
+
+The theme will automatically:
+
+- **Bold** numbers with context (15+, 120K, etc.)
+- **Emphasize** percentages and improvements (+40%, -35%)
+- **Highlight** time comparisons (2-4 hours → 15-30 minutes)
+
 ### Label (Professional Title)
 
 Use a comprehensive label that includes your expertise:
@@ -116,25 +144,52 @@ Use a comprehensive label that includes your expertise:
 }
 ```
 
-### Summary
+### Summary with Baseline
 
-Include your signature numbers and positioning:
+Structure your summary to include signature numbers on the first line, followed by your positioning and value proposition:
 
 ```json
 "basics": {
-  "summary": "16 years of experience · 15+ teams mentored · 20+ projects delivered\n\nOn-demand CTO and Senior Lead Dev, I work on projects that need structure and velocity. I combine technical coaching, DevX excellence, and cloud-native modernization to transform product quality and velocity."
+  "summary": "16 years of experience · 15+ teams mentored · 20+ projects delivered\n\nOn-demand CTO and Senior Lead Dev, I work on projects that need structure and velocity. I combine technical coaching, DevX excellence, and cloud-native modernization to transform product quality and velocity.\n\nNode.js and PHP expert with deep mastery of NestJS, Symfony, and Laravel frameworks."
 }
 ```
 
-## Design Principles
+The theme will automatically:
 
-This theme follows the CV Coach methodology for senior technical profiles:
+- Extract and visually emphasize the first line if it contains signature numbers
+- Display remaining content as the main summary
+- Apply proper formatting and visual hierarchy
+
+## CV Coach Methodology
+
+This theme follows the CV Coach methodology for senior technical profiles, designed to generate interviews within 48 hours:
+
+### Core Principles
 
 1. **Clarity above all**: Non-tech people must understand the business impact
 2. **Measurable value**: 90% of lines should include metrics or tangible impact
 3. **Action → Result**: Always link what was done to its effect
 4. **No empty jargon**: Avoid buzzwords without proof
 5. **Honest metrics**: Never invent figures; use '~' for estimates
+6. **6-second scannability**: Visual hierarchy allows instant comprehension
+
+### Visual Elements
+
+The theme uses a strategic color system for maximum impact:
+
+- **Baseline/Signature**: Highlighted with gold border for immediate visibility
+- **Metrics & Results**: Automatically emphasized in green for quick scanning
+- **Numbers & Percentages**: Bolded and highlighted for instant recognition
+- **Professional Sections**: Clear visual hierarchy with icons and spacing
+
+### Automatic Optimizations
+
+The theme automatically enhances your resume:
+
+- **Baseline Extraction**: First line with signature numbers (e.g., "16 years · 15+ teams") is extracted and displayed prominently
+- **Metric Emphasis**: Numbers, percentages (+40%, -35%), and time comparisons (2h → 30min) are visually emphasized
+- **ATS Compatibility**: Clean, semantic HTML structure for automated screening systems
+- **Print Perfect**: Optimized A4 rendering with proper page breaks and color preservation
 
 ## Customization
 

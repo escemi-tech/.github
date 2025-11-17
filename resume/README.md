@@ -33,8 +33,28 @@ Both files follow the exact same schema structure from [jsonresume.org/schema](h
 ## Updating the Resume
 
 1. Edit both `resume.en.json` and `resume.fr.json` files
-2. Keep the structure consistent between both files
-3. Commit the changes to trigger automated updates
+2. Run `make humanize-resume` to normalize punctuation and whitespace with `humanize-ai-lib`
+3. Keep the structure consistent between both files
+4. Commit the changes to trigger automated updates
+
+### Cleanup automation
+
+To keep the content recruiter-friendly, we automatically strip smart quotes, non-breaking spaces, em dashes, and other AI artifacts using [`humanize-ai-lib`](https://github.com/Nordth/humanize-ai-lib).
+
+Run the cleanup before validating or generating PDFs:
+
+```sh
+make humanize-resume
+```
+
+The command runs the script in `resume/scripts/humanize-resume`. Pass custom files or limit output to ASCII characters with:
+
+```sh
+cd resume/scripts/humanize-resume
+npm run humanize -- --keyboard-only ../../resume.en.json ../../resume.fr.json
+```
+
+The script rewrites the JSON files only when changes are detected and prints a short summary of normalized symbols.
 
 ## Validation
 
@@ -131,18 +151,8 @@ See [themes/escemi/README.md](themes/escemi/README.md) for complete theme docume
 
 To generate PDFs locally using the custom theme:
 
-```bash
-# From the repository root
-cd .github/actions/generate-resume-pdf
-
-# Install dependencies (including the custom theme)
-npm install
-
-# Generate English PDF
-npm run generate-pdf -- ../../resume/resume.en.json ../../resume/pdf/resume.en.pdf
-
-# Generate French PDF
-npm run generate-pdf -- ../../resume/resume.fr.json ../../resume/pdf/resume.fr.pdf
+```sh
+make generate-pdfs
 ```
 
 See [pdf/README.md](pdf/README.md) for more details.

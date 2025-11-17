@@ -10,6 +10,7 @@ lint: ## Execute linting
 	$(call run_linter,)
 
 lint-fix: ## Execute linting and fix
+	$(MAKE) humanize-resume
 	$(call run_linter, \
 		-e FIX_JSON_PRETTIER=true \
 		-e FIX_JAVASCRIPT_PRETTIER=true \
@@ -20,7 +21,33 @@ lint-fix: ## Execute linting and fix
 		-e FIX_HTML_PRETTIER=true\
 		-e FIX_CSS=true\
 		-e FIX_CSS_PRETTIER=true\
+		-e FIX_JSX_PRETTIER=true\
 	)
+
+humanize-resume: ## Normalize resume text with humanize-ai-lib
+	@cd .github/actions/humanize-resume && \
+	npm install && \
+	npm run humanize -- ../../../resume/resume.en.json ../../../resume/resume.fr.json
+
+
+preview-resume: ## Preview resume in the browser
+	@cd resume/themes/escemi && \
+	npm install && npm start
+
+validate-resume: ## Validate resume JSON files
+	@cd ./.github/actions/validate-resume && \
+	npm install && \
+	npm run validate -- ../../../resume/resume.en.json && \
+	npm run validate -- ../../../resume/resume.fr.json
+
+generate-pdfs: ## Generate all resumes PDFs
+	@cd resume/themes/escemi && \
+	npm install && npm run build
+	@cd ./.github/actions/generate-resume-pdf && \
+	npm install && \
+	npm run generate-pdf -- ../../../resume/resume.en.json ../../../resume/pdf/resume.en.pdf && \
+	npm run generate-pdf -- ../../../resume/resume.fr.json ../../../resume/pdf/resume.fr.pdf
+
 
 define run_linter
 	DEFAULT_WORKSPACE="$(CURDIR)"; \

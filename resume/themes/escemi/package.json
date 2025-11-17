@@ -1,8 +1,23 @@
 {
   "name": "jsonresume-theme-escemi",
-  "version": "1.0.0",
-  "description": "A professional JSON Resume theme optimized for senior technical profiles following CV Coach best practices",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "A professional JSON Resume theme optimized for senior technical profiles following CV Coach best practices - React edition",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "dist",
+    "index.js",
+    "src"
+  ],
+  "scripts": {
+    "start": "node dev-server.js",
+    "build": "node build.js",
+    "prebuild": "rm -rf dist",
+    "prepublishOnly": "npm run build",
+    "prepare": "npm run build"
+  },
   "license": "MIT",
   "author": "ESCEMI",
   "repository": {
@@ -17,9 +32,58 @@
     "technical",
     "senior",
     "cto",
-    "lead-developer"
+    "lead-developer",
+    "react",
+    "cv-coach"
   ],
   "dependencies": {
-    "handlebars": "^4.7.8"
+    "prop-types": "^15.8.1",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "styled-components": "^6.1.19"
+  },
+  "devDependencies": {
+    "esbuild": "^0.19.0"
+  },
+  "peerDependencies": {
+    "react": "^18.0.0 || ^19.0.0",
+    "react-dom": "^18.0.0 || ^19.0.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "browser": true,
+      "node": true,
+      "es2023": true
+    },
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "settings": {
+      "react": {
+        "version": "detect"
+      }
+    },
+    "plugins": [
+      "react"
+    ],
+    "extends": [
+      "eslint:recommended",
+      "plugin:react/recommended"
+    ],
+    "rules": {
+      "react/react-in-jsx-scope": "off",
+      "react/prop-types": "off",
+      "no-unused-vars": [
+        "error",
+        {
+          "argsIgnorePattern": "^_"
+        }
+      ]
+    }
   }
 }

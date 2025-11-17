@@ -23,7 +23,6 @@ runs:
         ACTION_PATH: ${{ github.action_path }}
         RESUME_PATH: ${{ inputs.resume-path }}
         OUTPUT_PATH: ${{ inputs.output-path }}
-        RESUME_PUPPETEER_NO_SANDBOX: "true"
       with:
         script: |
           const path = require('node:path');
