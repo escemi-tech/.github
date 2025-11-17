@@ -1,6 +1,5 @@
 /* ESCEMI Resume Theme - CV Coach Optimized */
-
-/* Following best practices for senior technical profiles */
+/* Optimized for PDF rendering */
 
 :root {
   --primary-color: #1c3144; /* ESCEMI Main - Dark blue */
@@ -8,7 +7,7 @@
   --text-primary: #1f2937;
   --text-secondary: #4b5563;
   --text-light: #6b7280;
-  --background: #fff;
+  --background: #ffffff;
   --border-color: #e5e7eb;
   --section-spacing: 1.5rem;
 }
@@ -19,36 +18,40 @@
   box-sizing: border-box;
 }
 
+/* PDF-specific page settings */
 @page {
-  size: a4;
-  margin: 15mm;
+  size: A4;
+  margin: 15mm 15mm 15mm 15mm;
 }
 
 body {
-  font-family:
-    "Source Sans Pro",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 10pt;
   line-height: 1.5;
   color: var(--text-primary);
   background: var(--background);
+  /* Enable better PDF rendering */
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+  color-adjust: exact;
 }
 
-/* Two-column layout */
+/* Two-column layout optimized for PDF */
 .resume-container {
   display: grid;
   grid-template-columns: 200px 1fr;
   gap: 2rem;
   max-width: 100%;
+  /* Prevent page breaks inside container */
+  page-break-inside: auto;
 }
 
 /* ===== LEFT COLUMN ===== */
 .left-column {
   padding-right: 1.5rem;
   border-right: 2px solid var(--border-color);
+  /* Avoid breaking left column sections */
+  page-break-inside: avoid;
 }
 
 /* ===== HEADER ===== */
@@ -57,6 +60,9 @@ body {
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
   border-bottom: 3px solid var(--primary-color);
+  /* Keep header together */
+  page-break-after: avoid;
+  page-break-inside: avoid;
 }
 
 .name {
@@ -85,6 +91,7 @@ body {
 /* Contact info */
 .contact-info {
   margin-bottom: var(--section-spacing);
+  page-break-inside: avoid;
 }
 
 .contact-item {
@@ -117,6 +124,8 @@ body {
   display: flex;
   align-items: center;
   gap: 0.4rem;
+  /* Keep section title with content */
+  page-break-after: avoid;
 }
 
 .section-icon {
@@ -126,10 +135,12 @@ body {
 /* ===== SKILLS SECTION ===== */
 .skills-section {
   margin-bottom: var(--section-spacing);
+  page-break-inside: avoid;
 }
 
 .skill-category {
   margin-bottom: 1rem;
+  page-break-inside: avoid;
 }
 
 .skill-category-title {
@@ -161,6 +172,7 @@ body {
 /* ===== LANGUAGES SECTION ===== */
 .languages-section {
   margin-bottom: var(--section-spacing);
+  page-break-inside: avoid;
 }
 
 .language-item {
@@ -191,14 +203,20 @@ body {
   margin-bottom: var(--section-spacing);
 }
 
+/* PDF-optimized experience items */
 .experience-item,
 .education-item {
   margin-bottom: 1.5rem;
+  /* Prevent breaking experience items across pages */
   page-break-inside: avoid;
+  /* Add page break before if needed for better layout */
+  page-break-before: auto;
 }
 
 .experience-header {
   margin-bottom: 0.5rem;
+  /* Keep header with content */
+  page-break-after: avoid;
 }
 
 .position {
@@ -241,7 +259,10 @@ body {
   font-size: 9.5pt;
   line-height: 1.5;
   color: var(--text-secondary);
+  /* Avoid breaking highlights in the middle */
   page-break-inside: avoid;
+  orphans: 2;
+  widows: 2;
 }
 
 .highlight-item::before {
@@ -261,6 +282,7 @@ body {
 /* ===== EDUCATION SECTION ===== */
 .education-header {
   margin-bottom: 0.3rem;
+  page-break-after: avoid;
 }
 
 .degree {
@@ -280,33 +302,66 @@ body {
   color: var(--text-light);
 }
 
-/* ===== ATS OPTIMIZATION ===== */
+/* ===== IMAGE OPTIMIZATION FOR PDF ===== */
+img {
+  max-width: 100%;
+  height: auto;
+  /* Optimize image rendering in PDF */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  page-break-inside: avoid;
+}
 
-/* Use semantic HTML and standard section headers */
-
-/* Avoid tables, text boxes, and complex layouts */
-
-/* Keep formatting simple for parsing */
-
-/* ===== PRINT OPTIMIZATION ===== */
+/* ===== PRINT/PDF OPTIMIZATION ===== */
 @media print {
   body {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    color-adjust: exact;
+  }
+
+  /* Ensure colors are preserved in PDF */
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+    color-adjust: exact;
   }
 
   .resume-container {
-    page-break-inside: avoid;
+    page-break-inside: auto;
   }
 
+  /* Optimize page breaks for experience items */
   .experience-item,
   .education-item {
     page-break-inside: avoid;
+    orphans: 3;
+    widows: 3;
   }
 
+  /* Keep sections together when possible */
+  .skills-section,
+  .languages-section,
+  .contact-info {
+    page-break-inside: avoid;
+  }
+
+  /* Ensure links are visible and properly colored */
   a {
     color: var(--primary-color);
     text-decoration: none;
+  }
+
+  /* Prevent orphaned section titles */
+  .section-title {
+    page-break-after: avoid;
+    orphans: 4;
+  }
+
+  /* Better control of highlights */
+  .highlights {
+    orphans: 2;
+    widows: 2;
   }
 }
 

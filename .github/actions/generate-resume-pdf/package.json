@@ -4,7 +4,6 @@
   "private": true,
   "description": "Generates PDF resumes from JSON resume files.",
   "dependencies": {
-    "jsonresume-theme-elegant": "^1.16.1",
     "jsonresume-theme-escemi": "file:../../../resume/themes/escemi",
     "resume-cli": "^3.1.2"
   },
