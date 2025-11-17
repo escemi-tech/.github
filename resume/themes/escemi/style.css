@@ -1,5 +1,5 @@
-/* ESCEMI Resume Theme - CV Coach Optimized */
-/* Optimized for PDF rendering */
+/* ESCEMI Resume Theme - Modern, Readable & Printable */
+/* Optimized for PDF rendering with contemporary design */
 
 :root {
   --primary-color: #1c3144; /* ESCEMI Main - Dark blue */
@@ -10,6 +10,7 @@
   --background: #ffffff;
   --border-color: #e5e7eb;
   --section-spacing: 1.5rem;
+  --accent-light: #f8f9fa;
 }
 
 * {
@@ -21,13 +22,13 @@
 /* PDF-specific page settings */
 @page {
   size: A4;
-  margin: 15mm 15mm 15mm 15mm;
+  margin: 12mm 15mm 12mm 15mm;
 }
 
 body {
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 10pt;
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--text-primary);
   background: var(--background);
   /* Enable better PDF rendering */
@@ -39,8 +40,8 @@ body {
 /* Two-column layout optimized for PDF */
 .resume-container {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 2rem;
+  grid-template-columns: 220px 1fr;
+  gap: 2.5rem;
   max-width: 100%;
   /* Prevent page breaks inside container */
   page-break-inside: auto;
@@ -48,47 +49,75 @@ body {
 
 /* ===== LEFT COLUMN ===== */
 .left-column {
-  padding-right: 1.5rem;
-  border-right: 2px solid var(--border-color);
+  padding-right: 1.75rem;
+  border-right: 1px solid var(--border-color);
   /* Avoid breaking left column sections */
   page-break-inside: avoid;
 }
 
-/* ===== HEADER ===== */
+/* ===== MODERN HEADER WITH PHOTO ===== */
 .header {
   grid-column: 1 / -1;
   margin-bottom: 2rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 2rem;
+  border-bottom: 2px solid var(--primary-color);
   /* Keep header together */
   page-break-after: avoid;
   page-break-inside: avoid;
 }
 
+.header-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.headshot-container {
+  flex-shrink: 0;
+}
+
+.headshot {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--primary-color);
+  /* Optimize image rendering in PDF */
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  page-break-inside: avoid;
+  box-shadow: 0 2px 8px rgba(28, 49, 68, 0.15);
+}
+
+.header-text {
+  flex: 1;
+}
+
 .name {
-  font-size: 24pt;
+  font-size: 28pt;
   font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 0.25rem;
-  line-height: 1.2;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+  letter-spacing: -0.5px;
 }
 
 .label {
   font-size: 11pt;
   font-weight: 600;
-  color: var(--primary-color);
-  margin-bottom: 0.75rem;
-  line-height: 1.3;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+  line-height: 1.4;
 }
 
 .summary {
   font-size: 10pt;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--text-secondary);
   margin-top: 0.75rem;
 }
 
-/* Contact info */
+/* Contact info - Modern styling */
 .contact-info {
   margin-bottom: var(--section-spacing);
   page-break-inside: avoid;
@@ -97,33 +126,42 @@ body {
 .contact-item {
   display: flex;
   align-items: flex-start;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
   font-size: 9pt;
   color: var(--text-secondary);
+  line-height: 1.5;
 }
 
 .contact-icon {
-  margin-right: 0.4rem;
-  font-weight: 600;
+  margin-right: 0.5rem;
+  font-size: 10pt;
+  flex-shrink: 0;
 }
 
 .contact-item a {
   color: var(--primary-color);
   text-decoration: none;
+  word-break: break-word;
 }
 
-/* Section titles */
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+/* Modern section titles */
 .section-title {
-  font-size: 12pt;
+  font-size: 11pt;
   font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 0.75rem;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
   margin-top: var(--section-spacing);
-  padding-bottom: 0.3rem;
-  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--secondary-color);
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
   /* Keep section title with content */
   page-break-after: avoid;
 }
@@ -132,35 +170,39 @@ body {
   font-size: 11pt;
 }
 
-/* ===== SKILLS SECTION ===== */
+/* ===== SKILLS SECTION - Modern cards ===== */
 .skills-section {
   margin-bottom: var(--section-spacing);
   page-break-inside: avoid;
 }
 
 .skill-category {
-  margin-bottom: 1rem;
+  margin-bottom: 1.25rem;
   page-break-inside: avoid;
+  background: var(--accent-light);
+  padding: 0.75rem;
+  border-radius: 4px;
+  border-left: 3px solid var(--secondary-color);
 }
 
 .skill-category-title {
   font-size: 9.5pt;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: 0.3rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
-  gap: 0.3rem;
+  gap: 0.4rem;
 }
 
 .skill-list {
   font-size: 9pt;
   color: var(--text-secondary);
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 .skill-item {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.25rem;
 }
 
 .skill-level {
@@ -179,21 +221,25 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem;
+  background: var(--accent-light);
+  border-radius: 4px;
   font-size: 9pt;
 }
 
 .language-name {
-  font-weight: 600;
-  color: var(--text-primary);
+  font-weight: 700;
+  color: var(--primary-color);
 }
 
 .language-level {
   color: var(--text-secondary);
   font-size: 8.5pt;
+  font-style: italic;
 }
 
-/* ===== RIGHT COLUMN - EXPERIENCE ===== */
+/* ===== RIGHT COLUMN - EXPERIENCE - Modern styling ===== */
 .right-column {
   padding-left: 0;
 }
@@ -203,18 +249,25 @@ body {
   margin-bottom: var(--section-spacing);
 }
 
-/* PDF-optimized experience items */
+/* PDF-optimized experience items with modern styling */
 .experience-item,
 .education-item {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
   /* Prevent breaking experience items across pages */
   page-break-inside: avoid;
   /* Add page break before if needed for better layout */
   page-break-before: auto;
 }
 
+.experience-item:last-child,
+.education-item:last-child {
+  border-bottom: none;
+}
+
 .experience-header {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
   /* Keep header with content */
   page-break-after: avoid;
 }
@@ -222,42 +275,45 @@ body {
 .position {
   font-size: 12pt;
   font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 0.2rem;
+  color: var(--primary-color);
+  margin-bottom: 0.3rem;
+  line-height: 1.3;
 }
 
 .company {
-  font-size: 10pt;
+  font-size: 10.5pt;
   font-weight: 600;
-  color: var(--primary-color);
-  margin-bottom: 0.2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
 }
 
 .date-location {
   font-size: 9pt;
   color: var(--text-light);
   margin-bottom: 0.5rem;
+  font-style: italic;
 }
 
 .experience-summary {
   font-size: 9.5pt;
   color: var(--text-secondary);
-  margin-bottom: 0.5rem;
-  line-height: 1.5;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  font-style: italic;
 }
 
 .highlights {
   list-style: none;
   padding-left: 0;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 .highlight-item {
   position: relative;
-  padding-left: 1.2rem;
-  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  margin-bottom: 0.6rem;
   font-size: 9.5pt;
-  line-height: 1.5;
+  line-height: 1.6;
   color: var(--text-secondary);
   /* Avoid breaking highlights in the middle */
   page-break-inside: avoid;
@@ -269,37 +325,42 @@ body {
   content: "▸";
   position: absolute;
   left: 0;
-  color: var(--primary-color);
+  color: var(--secondary-color);
   font-weight: 700;
+  font-size: 11pt;
 }
 
 /* Strong emphasis in highlights */
 .highlight-item strong {
-  color: var(--text-primary);
-  font-weight: 600;
+  color: var(--primary-color);
+  font-weight: 700;
 }
 
-/* ===== EDUCATION SECTION ===== */
+/* ===== EDUCATION SECTION - Modern styling ===== */
 .education-header {
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.5rem;
   page-break-after: avoid;
 }
 
 .degree {
   font-size: 11pt;
   font-weight: 700;
-  color: var(--text-primary);
+  color: var(--primary-color);
+  line-height: 1.3;
 }
 
 .institution {
   font-size: 10pt;
   font-weight: 600;
-  color: var(--primary-color);
+  color: var(--text-primary);
+  margin-top: 0.25rem;
 }
 
 .education-date {
   font-size: 9pt;
   color: var(--text-light);
+  font-style: italic;
+  margin-top: 0.25rem;
 }
 
 /* ===== IMAGE OPTIMIZATION FOR PDF ===== */
@@ -363,6 +424,17 @@ img {
     orphans: 2;
     widows: 2;
   }
+
+  /* Ensure headshot prints properly */
+  .headshot {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* Skill categories print optimization */
+  .skill-category {
+    page-break-inside: avoid;
+  }
 }
 
 /* Utility classes */
@@ -379,7 +451,7 @@ img {
 }
 
 .text-bold {
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .text-primary {

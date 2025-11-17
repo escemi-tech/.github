@@ -10,13 +10,22 @@
 </head>
 <body>
   <div class="resume-container">
-    <!-- Header - Full Width -->
+    <!-- Header - Full Width with Photo -->
     <header class="header">
-      <h1 class="name">{{basics.name}}</h1>
-      <div class="label">{{basics.label}}</div>
-      {{#if basics.summary}}
-      <div class="summary">{{newlineToBr basics.summary}}</div>
-      {{/if}}
+      <div class="header-content">
+        {{#if basics.image}}
+        <div class="headshot-container">
+          <img src="{{basics.image}}" alt="{{basics.name}}" class="headshot" />
+        </div>
+        {{/if}}
+        <div class="header-text">
+          <h1 class="name">{{basics.name}}</h1>
+          <div class="label">{{basics.label}}</div>
+          {{#if basics.summary}}
+          <div class="summary">{{newlineToBr basics.summary}}</div>
+          {{/if}}
+        </div>
+      </div>
     </header>
 
     <!-- Left Column -->
