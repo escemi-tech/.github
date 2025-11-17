@@ -1,4 +1,5 @@
 /* ESCEMI Resume Theme - Modern, Readable & Printable */
+
 /* Optimized for PDF rendering with contemporary design */
 
 :root {
@@ -7,7 +8,7 @@
   --text-primary: #1f2937;
   --text-secondary: #4b5563;
   --text-light: #6b7280;
-  --background: #ffffff;
+  --background: #fff;
   --border-color: #e5e7eb;
   --section-spacing: 1.5rem;
   --accent-light: #f8f9fa;
@@ -21,16 +22,22 @@
 
 /* PDF-specific page settings */
 @page {
-  size: A4;
-  margin: 12mm 15mm 12mm 15mm;
+  size: a4;
+  margin: 12mm 15mm;
 }
 
 body {
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-family:
+    "Source Sans Pro",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
   font-size: 10pt;
   line-height: 1.6;
   color: var(--text-primary);
   background: var(--background);
+
   /* Enable better PDF rendering */
   -webkit-print-color-adjust: exact;
   print-color-adjust: exact;
@@ -43,6 +50,7 @@ body {
   grid-template-columns: 220px 1fr;
   gap: 2.5rem;
   max-width: 100%;
+
   /* Prevent page breaks inside container */
   page-break-inside: auto;
 }
@@ -51,6 +59,7 @@ body {
 .left-column {
   padding-right: 1.75rem;
   border-right: 1px solid var(--border-color);
+
   /* Avoid breaking left column sections */
   page-break-inside: avoid;
 }
@@ -61,6 +70,7 @@ body {
   margin-bottom: 2rem;
   padding-bottom: 2rem;
   border-bottom: 2px solid var(--primary-color);
+
   /* Keep header together */
   page-break-after: avoid;
   page-break-inside: avoid;
@@ -82,11 +92,12 @@ body {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--primary-color);
+
   /* Optimize image rendering in PDF */
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
   page-break-inside: avoid;
-  box-shadow: 0 2px 8px rgba(28, 49, 68, 0.15);
+  box-shadow: 0 2px 8px rgb(28 49 68 / 15%);
 }
 
 .header-text {
@@ -141,7 +152,7 @@ body {
 .contact-item a {
   color: var(--primary-color);
   text-decoration: none;
-  word-break: break-word;
+  word-break: break-all;
 }
 
 .contact-item a:hover {
@@ -162,6 +173,7 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
+
   /* Keep section title with content */
   page-break-after: avoid;
 }
@@ -255,8 +267,10 @@ body {
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--border-color);
+
   /* Prevent breaking experience items across pages */
   page-break-inside: avoid;
+
   /* Add page break before if needed for better layout */
   page-break-before: auto;
 }
@@ -268,6 +282,7 @@ body {
 
 .experience-header {
   margin-bottom: 0.75rem;
+
   /* Keep header with content */
   page-break-after: avoid;
 }
@@ -315,6 +330,7 @@ body {
   font-size: 9.5pt;
   line-height: 1.6;
   color: var(--text-secondary);
+
   /* Avoid breaking highlights in the middle */
   page-break-inside: avoid;
   orphans: 2;
@@ -367,6 +383,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
+
   /* Optimize image rendering in PDF */
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
