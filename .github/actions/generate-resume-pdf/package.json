@@ -8,6 +8,6 @@
     "resume-cli": "^3.1.2"
   },
   "scripts": {
-    "generate-pdf": "resume export --theme escemi --format pdf --resume"
+    "generate-pdf": "RESUME_PUPPETEER_NO_SANDBOX=true resume export --theme escemi --format pdf --resume"
   }
 }

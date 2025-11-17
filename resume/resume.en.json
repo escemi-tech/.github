@@ -2,10 +2,21 @@
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "basics": {
     "name": "Emilien Escalle",
-    "label": "On-Demand CTO & Senior Lead Developer | Node.js & PHP Expert | Clean Code, Autonomous Teams, Scalable Products",
+    "label": "On-Demand CTO & DevX Expert",
+    "baseline": "Node.js & PHP Expert · Cloud Native · DevX Coach",
+    "signatureNumbers": [
+      "16 years of experience",
+      "15+ teams mentored",
+      "20+ platforms delivered"
+    ],
+    "pitch": [
+      "I help companies industrialize their development and elevate their teams' technical capabilities.",
+      "On-demand CTO and Senior Lead Dev for missions that need structure, velocity, and clean execution.",
+      "Node.js & PHP expert with deep mastery of NestJS, Symfony, and Laravel frameworks."
+    ],
     "url": "https://www.escemi.com",
     "image": "https://raw.githubusercontent.com/escemi-tech/.github/main/headshots/primary.jpg",
-    "summary": "16 years of experience · 15+ teams mentored · 20+ projects delivered\n\nOn-demand CTO and Senior Lead Dev, I work on projects that need structure and velocity. I combine technical coaching, DevX excellence, and cloud-native modernization to transform product quality and velocity.\n\nNode.js and PHP expert with deep mastery of NestJS, Symfony, and Laravel frameworks. Specialist in scalable architecture and DevX, with a Lean and pragmatic approach to code. I help companies industrialize their development and elevate their teams' technical capabilities, typically reducing deployment time by 50-70% and cutting infrastructure costs by 30-40%.",
+    "summary": "I combine technical coaching, DevX excellence, and cloud-native modernization to transform product quality and velocity while keeping teams autonomous and accountable.",
     "location": {
       "city": "Aix-en-Provence",
       "region": "Provence-Alpes-Côte d'Azur",
@@ -31,143 +42,56 @@
   },
   "work": [
     {
-      "name": "ESCEMI",
-      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France",
-      "description": "Technical consulting and development services",
-      "position": "On-Demand CTO & Senior Lead Developer",
-      "url": "https://www.escemi.com",
-      "startDate": "2009-01",
-      "summary": "Freelance consulting providing technical leadership and development services to help companies meet their digital transformation challenges.",
-      "highlights": [
-        "Coached 15+ technical teams (5-12 developers each) in Lean and DevOps adoption, reducing bug escape rate by ~40% and accelerating sprint velocity by 30-50% through structured knowledge transfer and hands-on mentoring",
-        "Implemented SOLID-based architectural frameworks across 8 client projects, cutting technical debt accumulation by 50% and reducing code review cycles from 3-4 days to <24 hours",
-        "Designed and deployed scalable API systems (REST, GraphQL, gRPC) handling 100K+ daily requests with <100ms latency, supporting 10x traffic growth without infrastructure scaling",
-        "Built optimized CI/CD pipelines (GitHub Actions, GitLab CI/CD, Jenkins) reducing deployment time from 2-4 hours to 15-30 minutes while automating 90% of quality checks",
-        "Led cloud-native migrations (AWS, Kubernetes) cutting infrastructure costs by €80-150K/year (-30-40%) and improving deployment frequency from monthly to daily releases"
-      ]
-    },
-    {
-      "name": "build and run FR",
-      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France",
-      "description": "Technical experts collective",
+      "name": "Build & Run - Fractional CTO / DevX Expert",
+      "location": "Remote · France",
       "position": "Fractional CTO & DevX Expert",
       "url": "https://www.build-and-run.fr/",
       "startDate": "2020-02",
-      "summary": "Member of Build & Run collective, bringing CTO and Senior Lead Dev expertise to help companies structure, optimize, and scale their technical teams.",
+      "summary": "**Challenge:** Scale-ups lacked senior technical leadership to align squads and speed up releases.\n**Actions:** Authored cloud-native reference architectures, reusable GitHub/GitLab CI/CD stacks, DevX playbooks, and mentored 25+ engineers on Clean Architecture and TDD.\n**Results:** +35% velocity, -40% technical debt, 5× release frequency, and onboarding time reduced from 4 weeks to 1 week.",
       "highlights": [
-        "Architected microservices platforms processing 500K+ daily transactions with 99.9% uptime, reducing monolith complexity by 60% and enabling independent team deployments",
-        "Optimized CI/CD workflows cutting deployment time from 3 hours to 20 minutes, increasing release frequency from bi-weekly to daily while reducing production incidents by 45%",
-        "Enhanced Developer Experience through tooling and automation, improving developer onboarding from 4 weeks to 1 week and increasing code commit-to-production speed by 50%",
-        "Mentored 25+ developers across 5 companies in modern practices (TDD, Clean Architecture, pair programming), elevating team seniority level and reducing turnover by ~30%",
-        "Aligned technical roadmaps with business objectives, delivering features 40% faster by implementing prioritization frameworks and eliminating 50% of unnecessary technical work"
+        "Challenge: multi-squad delivery slowed by heterogeneous stacks and manual releases",
+        "Actions: Kubernetes/Terraform blueprints, reusable CI/CD templates, DevX scorecards, and coaching rituals",
+        "Results: +35% velocity, -40% debt, 5× releases, onboarding cut to 1 week"
       ]
     },
     {
-      "name": "Ouistiti",
-      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France",
-      "description": "Mobile & web travel recommendation app",
-      "position": "Chief Technical Officer (Co-founder)",
-      "startDate": "2018-09",
-      "endDate": "2019-09",
-      "summary": "Creation of a mobile & web application for personalized travel recommendations and inspiration.",
+      "name": "ESCEMI - Strategic Technical Partner",
+      "location": "Aix-en-Provence, France",
+      "position": "On-Demand CTO & Senior Lead Developer",
+      "url": "https://www.escemi.com",
+      "startDate": "2009-01",
+      "summary": "**Challenge:** SMEs and scale-ups needed industrialized software delivery without hiring a permanent CTO.\n**Actions:** Designed SOLID architectures, delivered API platforms (REST/GraphQL/gRPC), built CI/CD + observability stacks tailored to each client, and coached teams hands-on.\n**Results:** 90% automated quality gates, >100K requests/day with <100ms latency, deployment time reduced from hours to <30 minutes, and infrastructure spend cut by 30-40%.",
       "highlights": [
-        "Built JAMStack/Serverless travel app on AWS reaching 5,000+ active users within 6 months, with <500ms page load time and 99.8% uptime",
-        "Delivered MVP in 3 months with full product roadmap, user stories, development and testing-75% faster than traditional development approach",
-        "Conducted 12 user focus groups analyzing feedback from 150+ testers, implementing UX improvements that increased engagement by 40%",
-        "Managed product growth via SEA, Facebook Ads (€15K budget), CRM & email campaigns generating 300+ weekly signups at €2.50 CPA"
+        "Challenge: ambitious product roadmaps with under-structured tech teams",
+        "Actions: SOLID-centric frameworks, API platforms, CI/CD automation, and cloud-native migrations",
+        "Results: 90% automated checks, <30min deployments, €80-150K/year savings, 10× traffic readiness"
       ]
     },
     {
-      "name": "Qwamplify Activation, Groupe QWAMPLIFY",
-      "location": "Rousset, Provence-Alpes-Côte d'Azur, France",
-      "description": "Digital marketing and e-commerce company",
-      "position": "Technical Director",
-      "url": "https://www.qwamplify.com/",
-      "startDate": "2017-05",
-      "endDate": "2018-08",
-      "summary": "Technical leadership with responsibility for IT strategy, architecture and innovation.",
-      "highlights": [
-        "Executed IT Master Plan for 3-year digital transformation, consolidating 8 disparate systems into unified architecture and reducing maintenance costs by €200K/year",
-        "Led requirements gathering with C-level stakeholders across 5 business units, translating needs into technical specifications that reduced project scope creep by 60%",
-        "Evaluated and implemented technology investments worth €500K, delivering ROI within 18 months through efficiency gains and automation",
-        "Coordinated cross-functional teams of 25 people (developers, testers, ops) across UI, services, and infrastructure layers, improving delivery predictability from 50% to 85%",
-        "Industrialized development processes through CI/CD automation, reducing production defects by 55% and cutting release cycle from 4 weeks to 1 week",
-        "Integrated 5 POC innovations (including microservices and containerization) into production, accelerating feature development by 35%"
-      ]
-    },
-    {
-      "name": "Qwamplify Activation, Groupe QWAMPLIFY",
-      "location": "Rousset, Provence-Alpes-Côte d'Azur, France",
-      "description": "Digital marketing and e-commerce company",
-      "position": "IS Architect",
-      "url": "https://www.qwamplify.com/",
-      "startDate": "2015-02",
-      "endDate": "2017-05",
-      "summary": "Design of service-oriented application architecture and industrialization of the development cycle.",
-      "highlights": [
-        "Designed service-oriented architecture (SOA/Microservices) handling 2M+ daily requests, improving system modularity and enabling 3 teams to deploy independently",
-        "Implemented Big Data infrastructure (ElasticSearch, Logstash, MongoDB) processing 50GB+ daily logs, reducing query time from minutes to <3 seconds",
-        "Standardized development environment (PHP, Zend Framework 2, Doctrine 2) for 15-person team, cutting setup time from 2 days to 2 hours",
-        "Established development standards (PSR, W3C) and code review practices, reducing code defects by 40% and improving maintainability scores by 35%",
-        "Built continuous integration pipeline with automated tests (PHPUnit, Selenium), catching 70% of bugs before production and reducing hotfixes by 50%",
-        "Automated deployment procedures (Phing) eliminating manual errors and reducing deployment time from 3 hours to 30 minutes",
-        "Led Product/ERP team of 8 developers using Scrum/Kanban, increasing sprint completion rate from 60% to 90% over 12 months"
-      ]
-    },
-    {
-      "name": "Qwamplify Activation, Groupe QWAMPLIFY",
-      "location": "Rousset, Provence-Alpes-Côte d'Azur, France",
-      "description": "Digital marketing and e-commerce company",
-      "position": "Team leader",
+      "name": "Qwamplify Group - Technical Director & IS Architect",
+      "location": "Rousset, France",
+      "position": "Technical Director & IS Architect",
       "url": "https://www.qwamplify.com/",
       "startDate": "2013-09",
-      "endDate": "2015-02",
-      "summary": "Managing activities and a development team according to agile organization.",
+      "endDate": "2018-08",
+      "summary": "**Challenge:** Consolidate 8 business units, modernize legacy PHP stack, and sustain rapid campaign delivery.\n**Actions:** Ran 3-year IT master plan, introduced SOA/microservices, standardized dev environments, and launched CI/CD with automated QA for a 25-person org.\n**Results:** Maintenance costs -€200K/year, release cycle from 4 weeks to 1 week, production defects -55%, and sprint reliability up to 85%.",
       "highlights": [
-        "Managed agile development team of 6 developers, improving sprint velocity by 25% through optimized processes and daily standups",
-        "Implemented quality control framework reducing production bugs by 35% and improving code review efficiency by tracking key metrics",
-        "Optimized application architecture and performance, reducing page load time by 40% (from 2.5s to 1.5s) and improving user satisfaction scores"
+        "Challenge: fragmented legacy stack blocking digital transformation",
+        "Actions: SOA blueprint, Big Data observability, CI/CD automation, and cross-squad governance",
+        "Results: €200K/year savings, release cycle ÷4, defects -55%, sprint predictability 85%"
       ]
     },
     {
-      "name": "Logicielnet",
-      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France",
-      "description": "SAAS software publisher",
-      "position": "Application systems manager",
-      "url": "https://www.logicielnet.fr/",
-      "startDate": "2010-09",
-      "endDate": "2013-09",
-      "summary": "In charge of the evolution of the application suite, core business of the company: a modular SAAS solution.",
+      "name": "Ouistiti - Co-founder & CTO",
+      "location": "Aix-en-Provence, France",
+      "position": "Chief Technical Officer",
+      "startDate": "2018-09",
+      "endDate": "2019-09",
+      "summary": "**Challenge:** Launch a travel inspiration platform with zero technical debt and aggressive growth targets.\n**Actions:** Built JAMStack/serverless app on AWS, delivered MVP in 3 months, and piloted growth experiments blending SEA, CRM, and analytics.\n**Results:** 5K active users in 6 months, <500ms load time, 40% engagement lift, and 300+ weekly sign-ups at €2.50 CPA.",
       "highlights": [
-        "Evolved modular SaaS platform serving 200+ B2B clients, delivering 15+ major features annually while maintaining 99.5% uptime",
-        "Led development projects from specification to client validation, coordinating 4-person team and reducing time-to-market by 30% through improved project tracking"
-      ]
-    },
-    {
-      "name": "Logicielnet",
-      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France",
-      "description": "SAAS software publisher",
-      "position": "R&D Engineer",
-      "url": "https://www.logicielnet.fr/",
-      "startDate": "2009-09",
-      "endDate": "2010-09",
-      "summary": "Design of a Web Callback (Click to call) module to improve customer relations for users of the company's application panel.",
-      "highlights": [
-        "Designed and implemented Web Callback module integrated with VoIP systems, improving customer response time by 50% and increasing call conversion rates by 25%"
-      ]
-    },
-    {
-      "name": "Multiwizz",
-      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France",
-      "description": "Social platform",
-      "position": "R&D Developer",
-      "startDate": "2009-04",
-      "endDate": "2009-08",
-      "summary": "Participation in setting up a social platform based on Zend Framework.",
-      "highlights": [
-        "Built frontend, backend, and REST API for social platform using Zend Framework, supporting 1,000+ beta users with real-time interactions",
-        "Developed iPhone application achieving 500+ downloads and 4.2★ rating in first month, delivering social features on mobile",
-        "Applied Scrum methodology completing 8 two-week sprints with 85% story completion rate and consistent velocity"
+        "Challenge: deliver a compelling MVP in under 3 months",
+        "Actions: JAMStack/serverless architecture, rapid UX loops, data-driven acquisition",
+        "Results: 5K MAU, 40% higher engagement, €2.50 CPA, 99.8% uptime"
       ]
     }
   ],
@@ -228,52 +152,43 @@
   "publications": [],
   "skills": [
     {
-      "name": "Core Tech",
-      "level": "Master",
+      "name": "🎯 Core Tech",
+      "level": "Expert",
       "keywords": [
-        "Node.js (NestJS)",
-        "PHP (Symfony, Laravel)",
-        "JavaScript",
-        "TypeScript"
+        "Node.js (NestJS) ●●●●●",
+        "PHP (Symfony, Laravel) ●●●●●",
+        "TypeScript / JavaScript ●●●●◐",
+        "Clean Architecture · SOLID · TDD"
       ]
     },
     {
-      "name": "DevOps & Cloud",
-      "level": "Master",
+      "name": "☁️ DevOps & Cloud",
+      "level": "Expert",
       "keywords": [
-        "Docker",
-        "GitHub Actions",
-        "GitLab CI",
-        "Kubernetes",
-        "AWS",
-        "Cloud Native",
-        "CI/CD",
-        "Infrastructure as Code"
+        "Docker · Kubernetes · AWS",
+        "GitHub Actions · GitLab CI",
+        "Terraform · ArgoCD · IaC",
+        "Observability · OpenTelemetry"
       ]
     },
     {
-      "name": "Methods & Leadership",
-      "level": "Master",
+      "name": "🧠 Methods & Leadership",
+      "level": "Expert",
       "keywords": [
-        "Clean Code",
-        "TDD",
-        "SOLID Principles",
-        "Clean Architecture",
-        "Design Patterns",
-        "DevX",
-        "Mentoring",
-        "Lean",
-        "Agile"
+        "Technical coaching · DevX",
+        "Clean Code · Design Systems",
+        "Mentoring 15+ teams",
+        "Lean · Agile · Product velocity"
       ]
     }
   ],
   "languages": [
     {
-      "language": "French",
-      "fluency": "Native speaker"
+      "language": "🇫🇷 French",
+      "fluency": "Native"
     },
     {
-      "language": "English",
+      "language": "🇬🇧 English",
       "fluency": "Professional working proficiency"
     }
   ],
@@ -497,6 +412,7 @@
       ],
       "startDate": "2020-01",
       "endDate": "2023-01",
+      "url": "https://www.tekoway.com",
       "roles": ["Technical Mentor", "Architecture Lead"],
       "entity": "Tekoway / Eukles",
       "type": "consulting"
@@ -546,7 +462,36 @@
   ],
   "meta": {
     "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.en.json",
-    "version": "2025.11.16.4",
-    "lastModified": "2025-11-16T09:20:16Z"
+    "version": "2025.11.16.5",
+    "lastModified": "2025-11-16T11:30:00Z",
+    "impact": [
+      {
+        "label": "Velocity gain",
+        "value": "+35%",
+        "description": "Average sprint acceleration after DevX playbooks (3-month rolling avg)"
+      },
+      {
+        "label": "Technical debt",
+        "value": "-40%",
+        "description": "Debt paydown after architecture refactors and mentoring"
+      },
+      {
+        "label": "Deployment time",
+        "value": "-70%",
+        "description": "Lead time drop thanks to unified CI/CD pipelines"
+      },
+      {
+        "label": "Cloud costs",
+        "value": "€120K/year saved",
+        "description": "Average annual savings from cloud-native modernization"
+      }
+    ],
+    "additionalExperience": [
+      {
+        "name": "Logicielnet & Multiwizz",
+        "dates": "2009-2013",
+        "summary": "Application Systems Manager then R&D Engineer for SaaS publisher and social platform. Delivered 15+ major releases/year, 99.5% uptime, and first iOS app (500+ downloads in month one)."
+      }
+    ]
   }
 }
