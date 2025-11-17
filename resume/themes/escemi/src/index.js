@@ -4,8 +4,9 @@ import { ServerStyleSheet } from "styled-components";
 import Resume from "./Resume.jsx";
 
 /**
- * JSON Resume Sidebar Theme
- * Two-column layout with dark sidebar and cream main content
+ * JSON Resume ESCEMI Theme - React Edition
+ * Professional theme optimized for senior technical profiles
+ * Implements CV Coach methodology for maximum impact
  *
  * @param {Object} resume - JSON Resume object
  * @param {Object} [options] - Rendering options
@@ -27,29 +28,32 @@ export function render(resume, options = {}) {
 
     const styles = sheet.getStyleTags();
 
-    const fontLinks = `
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap"
-    rel="stylesheet"
-  >
-`;
-
+    // ESCEMI + CV Coach Design Tokens
     const designTokens = `
     :root {
-      --resume-font-sans: 'Source Sans Pro', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      --resume-color-primary: #1c3144;
-      --resume-color-secondary: #ecb807;
-      --resume-color-text: #1f2933;
-      --resume-color-muted: #4c5a67;
-      --resume-color-sidebar: #132030;
-      --resume-color-sidebar-text: #f4f6fb;
-      --resume-color-main: #f7f9fc;
-      --resume-color-border: #d5dce3;
-      --resume-color-highlight: rgba(236, 184, 7, 0.15);
-      --resume-radius-panel: 12px;
-      --resume-spacing-section: 40px;
+      /* ESCEMI Brand Colors */
+      --escemi-primary: #1c3144;
+      --escemi-secondary: #ecb807;
+      
+      /* CV Coach Color Scheme */
+      --challenge-bg: #fef3c7;
+      --challenge-border: #f59e0b;
+      --results-bg: #d1fae5;
+      --results-border: #10b981;
+      --action-color: #4338ca;
+      
+      /* Typography */
+      --resume-font-sans: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      
+      /* Color System */
+      --color-text-primary: #1f2937;
+      --color-text-secondary: #4b5563;
+      --color-text-light: #6b7280;
+      --color-background: #fff;
+      --color-sidebar: #1c3144;
+      --color-main: #f5f2ed;
+      --color-border: #e5e7eb;
+      --color-accent-light: #f8f9fa;
     }
   `;
 
@@ -62,11 +66,19 @@ export function render(resume, options = {}) {
 
     body {
       margin: 0;
-      font-family: var(--resume-font-sans);
-      background: #e7ebf2;
-      color: var(--resume-color-text);
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
+      
+      /* Enable better PDF rendering */
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+      color-adjust: exact;
+    }
+
+    /* PDF-specific page settings */
+    @page {
+      size: A4;
+      margin: 12mm 15mm;
     }
 
     @media print {
@@ -74,9 +86,11 @@ export function render(resume, options = {}) {
         background: #fff;
       }
 
-      @page {
-        size: A4;
-        margin: 0;
+      /* Ensure colors are preserved in PDF */
+      * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        color-adjust: exact;
       }
     }
   `;
@@ -87,15 +101,16 @@ export function render(resume, options = {}) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title}</title>
-
-  ${fontLinks}
-
+  
+  <!-- ESCEMI + CV Coach Design Tokens -->
   <style>
     ${designTokens}
   </style>
 
+  <!-- Styled Components CSS -->
   ${styles}
 
+  <!-- Global Styles -->
   <style>
     ${globalStyles}
   </style>

@@ -47,11 +47,11 @@
       "position": "Fractional CTO & Expert DevX",
       "url": "https://www.build-and-run.fr/",
       "startDate": "2020-02",
-      "summary": "**Défi :** scale-ups sans leadership technique senior pour aligner les squads et accélérer les releases.\n**Actions :** architecture cloud-native de référence, CI/CD mutualisés GitHub/GitLab, playbooks DevX et mentorat de 25+ développeurs sur Clean Architecture & TDD.\n**Résultats :** +35% de vélocité, -40% de dette technique, releases ×5 et onboarding réduit de 4 semaines à 1 semaine.",
+      "summary": "**Défi :** scale-ups sans leadership technique senior pour aligner les squads et accélérer les releases.\n**Actions :** architecture cloud-native de référence, CI/CD mutualisés GitHub/GitLab, playbooks DevX et mentorat de 25+ développeurs sur Clean Architecture & TDD.\n**Résultats :** +35% de vélocité, -40% de dette technique, releases x5 et onboarding réduit de 4 semaines à 1 semaine.",
       "highlights": [
         "Défi : livraison multi-squads freinée par stacks hétérogènes et releases manuelles",
         "Actions : blueprints Kubernetes/Terraform, templates CI/CD réutilisables, scorecards DevX et rituels de coaching",
-        "Résultats : +35% de vélocité, -40% de dette, releases ×5, onboarding ramené à 1 semaine"
+        "Résultats : +35% de vélocité, -40% de dette, releases x5, onboarding ramené à 1 semaine"
       ]
     },
     {
@@ -64,7 +64,7 @@
       "highlights": [
         "Défi : roadmap ambitieuse avec équipes sous-structurées",
         "Actions : frameworks SOLID, automation CI/CD, migrations cloud-native",
-        "Résultats : 90% de checks auto, déploiements <30min, économies 80-150K€/an, trafic ×10 absorbé"
+        "Résultats : 90% de checks auto, déploiements <30min, économies 80-150K€/an, trafic x10 absorbé"
       ]
     },
     {
@@ -152,6 +152,16 @@
   "publications": [],
   "skills": [
     {
+      "name": "🧠 Méthodes & Leadership",
+      "level": "Expert",
+      "keywords": [
+        "Coaching technique · DevX",
+        "Clean Code · Design Systems",
+        "Mentorat 15+ équipes",
+        "Lean · Agile · Vélocité produit"
+      ]
+    },
+    {
       "name": "🎯 Tech cœur",
       "level": "Expert",
       "keywords": [
@@ -165,20 +175,9 @@
       "name": "☁️ DevOps & Cloud",
       "level": "Expert",
       "keywords": [
-        "Docker · Kubernetes · AWS",
         "GitHub Actions · GitLab CI",
-        "Terraform · ArgoCD · IaC",
+        "Docker · AWS",
         "Observabilité · OpenTelemetry"
-      ]
-    },
-    {
-      "name": "🧠 Méthodes & Leadership",
-      "level": "Expert",
-      "keywords": [
-        "Coaching technique · DevX",
-        "Clean Code · Design Systems",
-        "Mentorat 15+ équipes",
-        "Lean · Agile · Vélocité produit"
       ]
     }
   ],
@@ -238,7 +237,7 @@
       "description": "Modernisation de l'expérience développeur et de la sécurité transactionnelle de la plateforme de réservation aérienne via un écosystème CI/CD GitHub Actions, mentorat hands-on, et architecture proxy résiliente NestJS/RabbitMQ.",
       "highlights": [
         "Réduit le temps de déploiement de 80% (de ~2 jours de travail manuel à <30 minutes entièrement automatisé) via workflows GitHub Actions réutilisables avec déploiements canary et rollbacks automatiques",
-        "Augmenté la fréquence de release ×5 (de mensuelle à hebdomadaire) grâce à l'infrastructure-as-code (Terraform + ArgoCD) assurant la parité staging/production",
+        "Augmenté la fréquence de release x5 (de mensuelle à hebdomadaire) grâce à l'infrastructure-as-code (Terraform + ArgoCD) assurant la parité staging/production",
         "Amélioré la fiabilité transactionnelle à 99,9% de disponibilité avec 90% moins d'échecs tiers en architecturant un proxy NestJS avec RabbitMQ, implémentant circuit breakers, politiques de retry et garanties d'idempotence",
         "Réduit le temps d'onboarding développeur de 70% (de plusieurs jours à <1 jour de productivité) via workflows standardisés, guides de style vivants et mises à jour automatiques des dépendances",
         "Mentoré l'équipe distribuée (interne + contractants) sur Clean Architecture et principes SOLID via ateliers hebdomadaires, élevant la qualité du code et établissant des seuils de couverture de tests unitaires",

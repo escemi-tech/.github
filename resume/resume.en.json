@@ -47,11 +47,11 @@
       "position": "Fractional CTO & DevX Expert",
       "url": "https://www.build-and-run.fr/",
       "startDate": "2020-02",
-      "summary": "**Challenge:** Scale-ups lacked senior technical leadership to align squads and speed up releases.\n**Actions:** Authored cloud-native reference architectures, reusable GitHub/GitLab CI/CD stacks, DevX playbooks, and mentored 25+ engineers on Clean Architecture and TDD.\n**Results:** +35% velocity, -40% technical debt, 5× release frequency, and onboarding time reduced from 4 weeks to 1 week.",
+      "summary": "**Challenge:** Scale-ups lacked senior technical leadership to align squads and speed up releases.\n**Actions:** Authored cloud-native reference architectures, reusable GitHub/GitLab CI/CD stacks, DevX playbooks, and mentored 25+ engineers on Clean Architecture and TDD.\n**Results:** +35% velocity, -40% technical debt, 5x release frequency, and onboarding time reduced from 4 weeks to 1 week.",
       "highlights": [
         "Challenge: multi-squad delivery slowed by heterogeneous stacks and manual releases",
         "Actions: Kubernetes/Terraform blueprints, reusable CI/CD templates, DevX scorecards, and coaching rituals",
-        "Results: +35% velocity, -40% debt, 5× releases, onboarding cut to 1 week"
+        "Results: +35% velocity, -40% debt, 5x releases, onboarding cut to 1 week"
       ]
     },
     {
@@ -64,7 +64,7 @@
       "highlights": [
         "Challenge: ambitious product roadmaps with under-structured tech teams",
         "Actions: SOLID-centric frameworks, API platforms, CI/CD automation, and cloud-native migrations",
-        "Results: 90% automated checks, <30min deployments, €80-150K/year savings, 10× traffic readiness"
+        "Results: 90% automated checks, <30min deployments, €80-150K/year savings, 10x traffic readiness"
       ]
     },
     {
@@ -152,6 +152,16 @@
   "publications": [],
   "skills": [
     {
+      "name": "🧠 Methods & Leadership",
+      "level": "Expert",
+      "keywords": [
+        "Technical coaching · DevX",
+        "Clean Code · Design Systems",
+        "Mentoring 15+ teams",
+        "Lean · Agile · Product velocity"
+      ]
+    },
+    {
       "name": "🎯 Core Tech",
       "level": "Expert",
       "keywords": [
@@ -165,20 +175,9 @@
       "name": "☁️ DevOps & Cloud",
       "level": "Expert",
       "keywords": [
-        "Docker · Kubernetes · AWS",
         "GitHub Actions · GitLab CI",
-        "Terraform · ArgoCD · IaC",
+        "Docker · AWS",
         "Observability · OpenTelemetry"
-      ]
-    },
-    {
-      "name": "🧠 Methods & Leadership",
-      "level": "Expert",
-      "keywords": [
-        "Technical coaching · DevX",
-        "Clean Code · Design Systems",
-        "Mentoring 15+ teams",
-        "Lean · Agile · Product velocity"
       ]
     }
   ],
@@ -194,10 +193,6 @@
   ],
   "interests": [
     {
-      "name": "Cloud Native Technologies",
-      "keywords": ["Kubernetes", "Serverless", "Microservices", "CNCF"]
-    },
-    {
       "name": "Developer Experience",
       "keywords": ["DevX", "CI/CD", "Automation", "Productivity Tools"]
     },
@@ -208,6 +203,10 @@
         "Design Patterns",
         "Domain-Driven Design"
       ]
+    },
+    {
+      "name": "Cloud Native Technologies",
+      "keywords": ["Serverless", "Microservices", "CNCF"]
     },
     {
       "name": "Open Source",
@@ -238,7 +237,7 @@
       "description": "Modernized developer experience and transactional security for airline booking platform through GitHub Actions CI/CD ecosystem, hands-on mentoring, and resilient NestJS/RabbitMQ proxy architecture.",
       "highlights": [
         "Reduced deployment time by 80% (from ~2 days manual work to <30 minutes fully automated) via reusable GitHub Actions workflows with canary deployments and automated rollbacks",
-        "Increased release frequency 5× (from monthly to weekly feature releases) through infrastructure-as-code (Terraform + ArgoCD) ensuring staging/production parity",
+        "Increased release frequency 5x (from monthly to weekly feature releases) through infrastructure-as-code (Terraform + ArgoCD) ensuring staging/production parity",
         "Improved transaction reliability to 99.9% uptime with 90% fewer third-party failures by architecting NestJS proxy with RabbitMQ, implementing circuit breakers, retry policies, and idempotency guarantees",
         "Cut new developer onboarding time by 70% (from multiple days to <1 day productivity) through standardized workflows, living style guides, and automated dependency updates",
         "Mentored distributed team (in-house + contractors) on Clean Architecture and SOLID principles via weekly workshops, elevating code quality and establishing unit-test coverage thresholds",
@@ -272,7 +271,7 @@
         "Achieved 99.99% production uptime by implementing Redis caching, edge queueing, and automatic retry strategies with exponential backoff",
         "Reduced data loss incidents by 85% through resilient fallback mechanisms that buffer messages during SaaS platform outages",
         "Accelerated new device onboarding by 81% (from 3 weeks to 4 days) via centralized decoders, schema-based validation, and normalized payload pipeline",
-        "Scaled to handle 10× traffic increase (100K+ events/minute per gateway) without additional hardware through worker pools and optimized in-memory caching",
+        "Scaled to handle 10x traffic increase (100K+ events/minute per gateway) without additional hardware through worker pools and optimized in-memory caching",
         "Cut deployment cycle time by 70% with GitLab CI automation integrating unit, integration, and E2E tests plus canary releases and staged rollouts",
         "Built unified REST API with OpenAPI specification for device lifecycle management, enabling remote registration, updates, and real-time monitoring",
         "Integrated OpenTelemetry for full observability with logs, metrics, and alerting tied to device health and data flow KPIs"
@@ -392,7 +391,7 @@
       "description": "3-year strategic technical mentorship across European development teams, standardizing architecture and boosting delivery efficiency for PHP/Symfony and Node.js/NestJS projects before and after Tekoway's integration into Eukles.",
       "highlights": [
         "Reduced project bootstrap time by 45% (from ~10 to ~5.5 days) through shared architecture blueprints applying Clean Architecture and SOLID principles across Symfony and NestJS stacks",
-        "Accelerated developer onboarding ×2 faster (from ~3 weeks to 1.5 weeks) via unified project templates, automated setup scripts, and common tooling across European locations",
+        "Accelerated developer onboarding x2 faster (from ~3 weeks to 1.5 weeks) via unified project templates, automated setup scripts, and common tooling across European locations",
         "Cut post-release bug rate by 30% after implementing standardized QA workflows and cross-country DevOps pipelines using Docker, GitLab CI, and ArgoCD",
         "Improved developer satisfaction by 35% on internal surveys regarding architecture clarity and tooling through architecture clinics, workshops, and documentation",
         "Mentored distributed teams remotely across multiple European countries, establishing shared technical language and unified engineering culture that scaled seamlessly through Tekoway's evolution into Eukles",
