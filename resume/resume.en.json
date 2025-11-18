@@ -34,6 +34,11 @@
         "url": "https://github.com/neilime"
       },
       {
+        "network": "Collective",
+        "username": "emilien-escalle",
+        "url": "https://app.collective.work/collective/emilien-escalle"
+      },
+      {
         "network": "Malt",
         "username": "emilienescalle",
         "url": "https://www.malt.fr/profile/emilienescalle"
@@ -46,12 +51,14 @@
       "location": "Remote · France",
       "position": "Fractional CTO & DevX Expert",
       "url": "https://www.build-and-run.fr/",
-      "startDate": "2020-02",
-      "summary": "**Challenge:** Scale-ups lacked senior technical leadership to align squads and speed up releases.\n**Actions:** Authored cloud-native reference architectures, reusable GitHub/GitLab CI/CD stacks, DevX playbooks, and mentored 25+ engineers on Clean Architecture and TDD.\n**Results:** +35% velocity, -40% technical debt, 5x release frequency, and onboarding time reduced from 4 weeks to 1 week.",
+      "startDate": "2022-10",
+      "type": "freelance",
+      "featured": false,
+      "summary": "Fractional CTO within the Build & Run collective, parachuted into scale-ups needing structure, modern DevX, and senior guidance. Designed reference cloud-native architectures, reusable CI/CD stacks, and leadership rituals that align squads around measurable delivery outcomes.",
       "highlights": [
         "Challenge: multi-squad delivery slowed by heterogeneous stacks and manual releases",
-        "Actions: Kubernetes/Terraform blueprints, reusable CI/CD templates, DevX scorecards, and coaching rituals",
-        "Results: +35% velocity, -40% debt, 5x releases, onboarding cut to 1 week"
+        "Actions: standardized Kubernetes/Terraform blueprints, reusable GitHub/GitLab CI/CD templates, DevX scorecards, and leadership rituals",
+        "Results: +35% velocity, -40% debt, 5x releases, onboarding cut from 4 weeks to 1 with <5% change failure rate"
       ]
     },
     {
@@ -59,12 +66,29 @@
       "location": "Aix-en-Provence, France",
       "position": "On-Demand CTO & Senior Lead Developer",
       "url": "https://www.escemi.com",
-      "startDate": "2009-01",
-      "summary": "**Challenge:** SMEs and scale-ups needed industrialized software delivery without hiring a permanent CTO.\n**Actions:** Designed SOLID architectures, delivered API platforms (REST/GraphQL/gRPC), built CI/CD + observability stacks tailored to each client, and coached teams hands-on.\n**Results:** 90% automated quality gates, >100K requests/day with <100ms latency, deployment time reduced from hours to <30 minutes, and infrastructure spend cut by 30-40%.",
+      "startDate": "2019-09",
+      "type": "freelance",
+      "featured": true,
+      "summary": "Independent strategic partner for SMEs and scale-ups that need industrialized delivery without a permanent CTO. I architect SOLID-centric platforms, tailor CI/CD and observability stacks, and embed coaching so mixed-seniority teams become autonomous.",
       "highlights": [
-        "Challenge: ambitious product roadmaps with under-structured tech teams",
-        "Actions: SOLID-centric frameworks, API platforms, CI/CD automation, and cloud-native migrations",
-        "Results: 90% automated checks, <30min deployments, €80-150K/year savings, 10x traffic readiness"
+        "Challenge: ambitious product roadmaps executed by under-structured mixed-seniority teams",
+        "Actions: engineered SOLID-centric API platforms, client-specific CI/CD + IaC stacks, FinOps reviews, and immersive coaching",
+        "Results: 90% automated quality gates, <30 min deployments, €80-150K/year savings, squads ready for 10x traffic"
+      ]
+    },
+    {
+      "name": "Ouistiti - Co-founder & CTO",
+      "location": "Aix-en-Provence, France",
+      "position": "Chief Technical Officer",
+      "startDate": "2018-09",
+      "endDate": "2019-09",
+      "type": "founder",
+      "featured": true,
+      "summary": "Co-founded Ouistiti to launch a zero-debt travel inspiration platform, owning product engineering from concept to growth. Delivered a JAMStack/serverless stack on AWS, orchestrated continuous UX loops, and instrumented the growth engine with SEA, CRM, and analytics.",
+      "highlights": [
+        "Challenge: launch a zero-debt travel inspiration MVP under 3 months with aggressive acquisition goals",
+        "Actions: delivered JAMStack/serverless stack on AWS, rapid UX experimentation, data-driven CRM/SEA funnels, and product ops dashboards",
+        "Results: MVP shipped in 12 weeks, <500 ms loads, 5K MAU in 6 months, +40% engagement, 300+ sign-ups/week at €2.50 CPA"
       ]
     },
     {
@@ -74,24 +98,13 @@
       "url": "https://www.qwamplify.com/",
       "startDate": "2013-09",
       "endDate": "2018-08",
-      "summary": "**Challenge:** Consolidate 8 business units, modernize legacy PHP stack, and sustain rapid campaign delivery.\n**Actions:** Ran 3-year IT master plan, introduced SOA/microservices, standardized dev environments, and launched CI/CD with automated QA for a 25-person org.\n**Results:** Maintenance costs -€200K/year, release cycle from 4 weeks to 1 week, production defects -55%, and sprint reliability up to 85%.",
+      "type": "employee",
+      "featured": true,
+      "summary": "Led the 3-year modernization program for Qwamplify, consolidating 8 business units, taming a legacy PHP estate, and sustaining high-volume marketing campaigns. Owned the IT master plan, architecture standards, and delivery governance for a 25-person engineering org.",
       "highlights": [
-        "Challenge: fragmented legacy stack blocking digital transformation",
-        "Actions: SOA blueprint, Big Data observability, CI/CD automation, and cross-squad governance",
-        "Results: €200K/year savings, release cycle ÷4, defects -55%, sprint predictability 85%"
-      ]
-    },
-    {
-      "name": "Ouistiti - Co-founder & CTO",
-      "location": "Aix-en-Provence, France",
-      "position": "Chief Technical Officer",
-      "startDate": "2018-09",
-      "endDate": "2019-09",
-      "summary": "**Challenge:** Launch a travel inspiration platform with zero technical debt and aggressive growth targets.\n**Actions:** Built JAMStack/serverless app on AWS, delivered MVP in 3 months, and piloted growth experiments blending SEA, CRM, and analytics.\n**Results:** 5K active users in 6 months, <500ms load time, 40% engagement lift, and 300+ weekly sign-ups at €2.50 CPA.",
-      "highlights": [
-        "Challenge: deliver a compelling MVP in under 3 months",
-        "Actions: JAMStack/serverless architecture, rapid UX loops, data-driven acquisition",
-        "Results: 5K MAU, 40% higher engagement, €2.50 CPA, 99.8% uptime"
+        "Challenge: fragmented legacy PHP stack blocking consolidation of 8 business units and rapid campaign launches",
+        "Actions: ran 3-year IT master plan, introduced SOA/microservices and standardized environments, enforced CI/CD + observability governance",
+        "Results: release cycle cut 4w→1w, production defects -55%, sprint reliability 85%, €200K/year maintenance savings"
       ]
     }
   ],
@@ -234,6 +247,7 @@
   "projects": [
     {
       "name": "Air Corsica - DevX Platform Engineering",
+      "featured": true,
       "description": "Modernized developer experience and transactional security for airline booking platform through GitHub Actions CI/CD ecosystem, hands-on mentoring, and resilient NestJS/RabbitMQ proxy architecture.",
       "highlights": [
         "Reduced deployment time by 80% (from ~2 days manual work to <30 minutes fully automated) via reusable GitHub Actions workflows with canary deployments and automated rollbacks",
@@ -266,6 +280,7 @@
     },
     {
       "name": "Critical Infrastructure IoT Gateway Platform",
+      "featured": true,
       "description": "High-performance IoT gateway for global smart infrastructure SaaS provider, unifying heterogeneous device integration across data centers and smart buildings with Redis-backed resilience, automated CI/CD, and OpenTelemetry observability.",
       "highlights": [
         "Achieved 99.99% production uptime by implementing Redis caching, edge queueing, and automatic retry strategies with exponential backoff",
@@ -299,6 +314,7 @@
     },
     {
       "name": "TestUnMetier - CTO Accompaniment",
+      "featured": true,
       "description": "Two-phase strategic consulting engagement for a career guidance platform: comprehensive IT audit followed by monthly CTO accompaniment covering product roadmap, technical recruitment, and infrastructure/security vendor management.",
       "highlights": [
         "Conducted 1-week IT audit analyzing application architecture, development processes, and team organization, identifying 12 priority improvement areas that reduced technical risk by 60%",
@@ -327,6 +343,7 @@
     },
     {
       "name": "Tekkare - Technical Mentoring & Architectural Bootstrap",
+      "featured": true,
       "description": "Hands-on mentorship of development team for technical services management platform, accelerating their skill growth in GraphQL/modern backend API architecture and optimizing development practices.",
       "highlights": [
         "Reduced new feature development time by 40% through optimized GraphQL architecture with NestJS, replacing multiple REST endpoints with unified, type-safe queries",
@@ -358,6 +375,7 @@
     },
     {
       "name": "Atlas des Régions Naturelles (ARN) - Backend Architecture",
+      "featured": true,
       "description": "Designed and developed backend architecture for the ARN photographic archive platform, documenting 15,000+ images of French landscapes and buildings through an optimized NestJS/Laravel stack focused on performance and scalability.",
       "highlights": [
         "Architected photo archive platform managing 15,000+ high-resolution images with multi-criteria filtering (region, typology, materials, period), ensuring <300ms response time and 99.9% uptime",
@@ -388,6 +406,7 @@
     },
     {
       "name": "Tekoway / Eukles - Architecture Standardization",
+      "featured": true,
       "description": "3-year strategic technical mentorship across European development teams, standardizing architecture and boosting delivery efficiency for PHP/Symfony and Node.js/NestJS projects before and after Tekoway's integration into Eukles.",
       "highlights": [
         "Reduced project bootstrap time by 45% (from ~10 to ~5.5 days) through shared architecture blueprints applying Clean Architecture and SOLID principles across Symfony and NestJS stacks",
@@ -418,6 +437,7 @@
     },
     {
       "name": "twbs-helper-module",
+      "featured": false,
       "description": "Laminas (formerly Zend Framework) module that streamlines Twitter Bootstrap component integration.",
       "highlights": [
         "21+ GitHub stars and 20+ forks adopted by enterprise portals and design systems",
@@ -432,6 +452,7 @@
     },
     {
       "name": "php-css-lint",
+      "featured": false,
       "description": "CLI and Composer package that enforces CSS quality gates directly from PHP projects.",
       "highlights": [
         "11 GitHub stars and active usage inside custom CI pipelines for multi-brand marketing platforms",
@@ -446,6 +467,7 @@
     },
     {
       "name": "ubuntu-config",
+      "featured": false,
       "description": "Infrastructure-as-code flavored bootstrap that standardizes my developer workstations on Ubuntu.",
       "highlights": [
         "Automates installation of Docker, Node.js, PHP toolchains, and desktop essentials via scripted tasks",

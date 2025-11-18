@@ -22,6 +22,7 @@ lint-fix: ## Execute linting and fix
 		-e FIX_CSS=true\
 		-e FIX_CSS_PRETTIER=true\
 		-e FIX_JSX_PRETTIER=true\
+		-e FIX_TYPESCRIPT_PRETTIER=true\
 	)
 
 humanize-resume: ## Normalize resume text with humanize-ai-lib

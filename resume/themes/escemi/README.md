@@ -16,9 +16,11 @@ This theme now incorporates the CV Coach methodology for transforming senior tec
 
 ### Visual Design
 
-- **Two-column layout**: Contact info and skills on the left, professional experience on the right
-- **ESCEMI branding**: Source Sans Pro font with official ESCEMI colors (dark blue #1c3144, gold #ecb807)
-- **Professional color scheme**: Matches ESCEMI brand identity
+- **Tailwind-powered system**: The theme ships with a bundled Tailwind CSS build for predictable styling and easy maintenance
+- **First page grid layout**: The opening page is forced into a two-column grid (brand sidebar + main content) while every following page automatically switches to a single-column reading experience
+- **A4-perfect printing**: Global styles enforce 12mm × 15mm margins, color preservation, and `break-after: page` rules to keep PDF exports clean
+- **ESCEMI branding**: Source Sans Pro font with official ESCEMI colors (dark blue #1c3144 primary, gold #ecb807 as accents only)
+- **Professional color scheme**: Matches ESCEMI brand identity without using the secondary color for text
 - **Proper hierarchy**: Clear visual distinction between sections, positions, and details
 - **Icon integration**: Visual markers for quick section identification
 - **Optimized spacing**: Adequate whitespace for readability and scannability
@@ -192,6 +194,17 @@ The theme automatically enhances your resume:
 - **Print Perfect**: Optimized A4 rendering with proper page breaks and color preservation
 
 ## Customization
+
+### Component-level styling
+
+Every domain component now owns its bespoke CSS next to the React files (for example `src/components/hero/hero.css` or `src/components/continuation/continuation.css`). The main `src/styles.css` simply imports those partials, so you can:
+
+1. Add or tweak styles inside the component-level file.
+2. Re-run `npm run build` so Tailwind/PostCSS bundles the updated rules.
+
+When creating a new section, drop a `<domain>.css` file beside the component, wrap selectors in `@layer components { ... }`, and add the component folder to the existing imports list inside `src/styles.css`.
+
+### Colors
 
 The theme uses ESCEMI's official branding colors. You can customize colors by editing the CSS variables in `style.css`:
 

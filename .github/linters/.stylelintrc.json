@@ -1,0 +1,25 @@
+{
+  "extends": "stylelint-config-standard",
+  "rules": {
+    "at-rule-no-unknown": [
+      true,
+      {
+        "ignoreAtRules": [
+          "tailwind",
+          "layer",
+          "apply",
+          "variants",
+          "responsive",
+          "screen"
+        ]
+      }
+    ],
+    "selector-class-pattern": [
+      "^[a-z]+(?:-[a-z]+)*(?:__(?:[a-z]+(?:-[a-z]+)*))?(?:--[a-z]+(?:-[a-z]+)*)?$",
+      {
+        "resolveNestedSelectors": true,
+        "message": "Expected class selector to follow kebab-case or BEM conventions"
+      }
+    ]
+  }
+}

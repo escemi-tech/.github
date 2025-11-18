@@ -4,11 +4,18 @@ const path = require("path");
 const fs = require("fs");
 const http = require("http");
 const esbuild = require("esbuild");
+const chokidar = require("chokidar");
+const { spawnSync } = require("child_process");
 
 const themeRoot = __dirname;
 const distDir = path.join(themeRoot, "dist");
 const bundlePath = path.join(distDir, "index.js");
 const resumePath = path.join(themeRoot, "..", "..", "resume.en.json");
+const tailwindConfig = path.join(themeRoot, "tailwind.config.js");
+const tailwindInput = path.join(themeRoot, "src", "styles.css");
+const tailwindOutput = path.join(distDir, "tailwind.css");
+const postcssConfig = path.join(themeRoot, "postcss.config.js");
+fs.mkdirSync(distDir, { recursive: true });
 const port = Number(process.env.PORT || 4173);
 
 const buildOptions = {
@@ -18,17 +25,91 @@ const buildOptions = {
   platform: "node",
   target: "node18",
   outfile: bundlePath,
-  external: ["react", "react-dom", "styled-components"],
+  external: ["react", "react-dom"],
   jsx: "automatic",
   jsxImportSource: "react",
   loader: {
     ".js": "jsx",
     ".jsx": "jsx",
+    ".ts": "ts",
+    ".tsx": "tsx",
   },
   logLevel: "silent",
 };
 
 let currentRender = null;
+let tailwindWatcher = null;
+let tailwindRebuildTimer = null;
+
+function buildTailwindCSS({ verbose = true } = {}) {
+  const cliPath = require.resolve("tailwindcss/lib/cli.js");
+  const args = [
+    cliPath,
+    "-c",
+    tailwindConfig,
+    "--postcss",
+    postcssConfig,
+    "-i",
+    tailwindInput,
+    "-o",
+    tailwindOutput,
+  ];
+
+  if (process.env.NODE_ENV === "production") {
+    args.push("--minify");
+  }
+
+  if (verbose) {
+    log("Building Tailwind CSS...");
+  }
+
+  const result = spawnSync(process.execPath, args, {
+    stdio: verbose ? "inherit" : "ignore",
+  });
+
+  if (result.status !== 0) {
+    throw new Error("Tailwind CSS build failed");
+  }
+}
+
+function startTailwindWatcher() {
+  if (tailwindWatcher) {
+    tailwindWatcher.close();
+  }
+
+  const cssGlob = path.join(themeRoot, "src", "**", "*.css");
+  tailwindWatcher = chokidar
+    .watch([tailwindConfig, cssGlob], {
+      ignoreInitial: true,
+    })
+    .on("all", () => {
+      if (tailwindRebuildTimer) {
+        clearTimeout(tailwindRebuildTimer);
+      }
+      tailwindRebuildTimer = setTimeout(() => {
+        try {
+          buildTailwindCSS({ verbose: false });
+          log("Tailwind CSS refreshed from style change");
+        } catch (error) {
+          console.error("[dev-server] Tailwind rebuild failed", error);
+        }
+      }, 75);
+    })
+    .on("error", (error) => {
+      console.error("[dev-server] Tailwind watcher error", error);
+    });
+}
+
+function stopTailwindWatcher() {
+  if (tailwindWatcher) {
+    tailwindWatcher.close();
+    tailwindWatcher = null;
+  }
+  if (tailwindRebuildTimer) {
+    clearTimeout(tailwindRebuildTimer);
+    tailwindRebuildTimer = null;
+  }
+}
 
 function log(message) {
   console.log(`[dev-server] ${message}`);
@@ -119,6 +200,7 @@ async function startWatchServer() {
         }
 
         try {
+          buildTailwindCSS({ verbose: false });
           loadRenderer();
           if (isInitialBuild) {
             log("Renderer ready");
@@ -133,6 +215,8 @@ async function startWatchServer() {
     },
   };
 
+  buildTailwindCSS();
+  startTailwindWatcher();
   const ctx = await esbuild.context({
     ...buildOptions,
     plugins: [...(buildOptions.plugins || []), watcherPlugin],
@@ -171,6 +255,7 @@ async function startWatchServer() {
   const cleanup = async () => {
     log("Shutting down...");
     server.close();
+    stopTailwindWatcher();
     await ctx.dispose();
     process.exit(0);
   };

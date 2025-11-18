@@ -1,0 +1,18 @@
+@layer components {
+  .highlight-bullet {
+    position: relative;
+    padding-left: 1.4rem;
+  }
+
+  .highlight-bullet::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.4rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 999px;
+    background: #ecb807;
+    box-shadow: 0 6px 14px rgb(236 184 7 / 35%);
+  }
+}
