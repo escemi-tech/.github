@@ -42,7 +42,7 @@
     "styled-components": "^6.1.19"
   },
   "devDependencies": {
-    "esbuild": "^0.19.0"
+    "esbuild": "^0.27.0"
   },
   "peerDependencies": {
     "react": "^18.0.0 || ^19.0.0",
