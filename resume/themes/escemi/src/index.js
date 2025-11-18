@@ -1,6 +1,7 @@
 import React from "react";
 import { renderToString } from "react-dom/server";
-import { ServerStyleSheet } from "styled-components";
+import fs from "fs";
+import path from "path";
 import Resume from "./Resume.jsx";
 
 /**
@@ -12,6 +13,26 @@ import Resume from "./Resume.jsx";
  * @param {Object} [options] - Rendering options
  * @returns {string} Complete HTML document
  */
+const tailwindOutputPath = path.join(__dirname, "tailwind.css");
+let cachedStyles = null;
+
+function getTailwindStyles() {
+  if (cachedStyles) {
+    return cachedStyles;
+  }
+
+  try {
+    cachedStyles = fs.readFileSync(tailwindOutputPath, "utf8");
+    return cachedStyles;
+  } catch (error) {
+    console.warn(
+      "[jsonresume-theme-escemi] Tailwind CSS bundle missing. Returning basic markup.",
+      error,
+    );
+    return "";
+  }
+}
+
 export function render(resume, options = {}) {
   const {
     locale = "en",
@@ -19,109 +40,24 @@ export function render(resume, options = {}) {
     title = resume.basics?.name || "Resume",
   } = options;
 
-  const sheet = new ServerStyleSheet();
+  const html = renderToString(<Resume resume={resume} locale={locale} />);
+  const styles = getTailwindStyles();
 
-  try {
-    const html = renderToString(
-      sheet.collectStyles(<Resume resume={resume} />),
-    );
-
-    const styles = sheet.getStyleTags();
-
-    // ESCEMI + CV Coach Design Tokens
-    const designTokens = `
-    :root {
-      /* ESCEMI Brand Colors */
-      --escemi-primary: #1c3144;
-      --escemi-secondary: #ecb807;
-      
-      /* CV Coach Color Scheme */
-      --challenge-bg: #fef3c7;
-      --challenge-border: #f59e0b;
-      --results-bg: #d1fae5;
-      --results-border: #10b981;
-      --action-color: #4338ca;
-      
-      /* Typography */
-      --resume-font-sans: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      
-      /* Color System */
-      --color-text-primary: #1f2937;
-      --color-text-secondary: #4b5563;
-      --color-text-light: #6b7280;
-      --color-background: #fff;
-      --color-sidebar: #1c3144;
-      --color-main: #f5f2ed;
-      --color-border: #e5e7eb;
-      --color-accent-light: #f8f9fa;
-    }
-  `;
-
-    const globalStyles = `
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      
-      /* Enable better PDF rendering */
-      -webkit-print-color-adjust: exact;
-      print-color-adjust: exact;
-      color-adjust: exact;
-    }
-
-    /* PDF-specific page settings */
-    @page {
-      size: A4;
-      margin: 12mm 15mm;
-    }
-
-    @media print {
-      body {
-        background: #fff;
-      }
-
-      /* Ensure colors are preserved in PDF */
-      * {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-        color-adjust: exact;
-      }
-    }
-  `;
-
-    return `<!DOCTYPE html>
+  return `<!DOCTYPE html>
 <html lang="${locale}" dir="${dir}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title}</title>
-  
-  <!-- ESCEMI + CV Coach Design Tokens -->
-  <style>
-    ${designTokens}
-  </style>
-
-  <!-- Styled Components CSS -->
-  ${styles}
-
-  <!-- Global Styles -->
-  <style>
-    ${globalStyles}
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>${styles}</style>
 </head>
 <body>
   ${html}
 </body>
 </html>`;
-  } finally {
-    sheet.seal();
-  }
 }
 
 export { Resume };

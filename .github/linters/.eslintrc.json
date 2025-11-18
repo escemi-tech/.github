@@ -27,6 +27,7 @@
       {
         "argsIgnorePattern": "^_"
       }
-    ]
+    ],
+    "n/no-missing-import": "off"
   }
 }

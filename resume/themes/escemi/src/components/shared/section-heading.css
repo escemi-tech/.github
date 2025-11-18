@@ -1,0 +1,12 @@
+@layer components {
+  .section-title {
+    font-size: 0.7rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: #6b7280;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+}

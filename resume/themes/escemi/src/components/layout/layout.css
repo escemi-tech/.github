@@ -1,0 +1,54 @@
+@layer base {
+  .resume-root {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0.25rem;
+  }
+
+  .page {
+    width: 100%;
+    min-height: 297mm;
+    break-inside: avoid;
+    margin-bottom: 0.2rem;
+  }
+
+  .page:last-child {
+    margin-bottom: 0;
+  }
+
+  .page-first {
+    break-after: page;
+  }
+
+  .page-shell {
+    background: #fff;
+    border: 1px solid rgb(28 49 68 / 8%);
+    box-shadow: 0 10px 30px rgb(28 49 68 / 8%);
+    overflow: hidden;
+    position: relative;
+    min-height: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media print {
+    .resume-root {
+      padding: 0;
+    }
+
+    .page {
+      margin: 0;
+      width: auto;
+      break-after: page;
+    }
+
+    .page-shell {
+      border-radius: 0;
+      box-shadow: none;
+    }
+
+    .page:last-child {
+      break-after: auto;
+    }
+  }
+}
