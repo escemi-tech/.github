@@ -10,6 +10,7 @@ const { spawnSync } = require("child_process");
 const themeRoot = __dirname;
 const distDir = path.join(themeRoot, "dist");
 const bundlePath = path.join(distDir, "index.js");
+const previewBundlePath = path.join(distDir, "print-toolbar.js");
 const resumePath = path.join(themeRoot, "..", "..", "resume.en.json");
 const tailwindConfig = path.join(themeRoot, "tailwind.config.js");
 const tailwindInput = path.join(themeRoot, "src", "styles.css");
@@ -37,9 +38,25 @@ const buildOptions = {
   logLevel: "silent",
 };
 
+const previewBuildOptions = {
+  entryPoints: [path.join(themeRoot, "src/preview/printToolbar.jsx")],
+  bundle: true,
+  format: "iife",
+  platform: "browser",
+  target: "es2018",
+  outfile: previewBundlePath,
+  jsx: "automatic",
+  jsxImportSource: "react",
+  sourcemap: false,
+  define: {
+    "process.env.NODE_ENV": '"production"',
+  },
+};
+
 let currentRender = null;
 let tailwindWatcher = null;
 let tailwindRebuildTimer = null;
+let previewContext = null;
 
 function buildTailwindCSS({ verbose = true } = {}) {
   const cliPath = require.resolve("tailwindcss/lib/cli.js");
@@ -160,14 +177,27 @@ function wrapWithA4Preview(html) {
       
     </style>
   `;
+  const previewScripts = `
+    <script defer src="/print-toolbar.js"></script>
+  `;
+  const toolbarFallback = `
+    <div id="preview-toolbar" class="preview-toolbar-host">
+      <button type="button" class="print-toolbar__button" onclick="window.print()">
+        Print resume · Imprimer le CV
+      </button>
+    </div>
+  `;
 
   if (html.includes("</head>") && html.includes("<body")) {
     let wrapped = html;
     wrapped = wrapped.replace("</head>", `${previewStyles}</head>`);
 
-    wrapped = wrapped.replace("<body>", '<div class="preview-page">');
+    wrapped = wrapped.replace(
+      "<body>",
+      `<body>\n${toolbarFallback}\n<div class="preview-page">`,
+    );
 
-    wrapped = wrapped.replace("</body>", "</div></body>");
+    wrapped = wrapped.replace("</body>", `</div>${previewScripts}</body>`);
 
     return wrapped;
   }
@@ -180,11 +210,43 @@ function wrapWithA4Preview(html) {
       ${previewStyles}
     </head>
     <body>
+      ${toolbarFallback}
       <div class="preview-page">
         ${html}
       </div>
+      ${previewScripts}
     </body>
   </html>`;
+}
+
+async function buildPreviewBundle() {
+  if (previewContext) {
+    await previewContext.dispose();
+  }
+
+  const toolbarWatcherPlugin = {
+    name: "resume-preview-toolbar",
+    setup(build) {
+      build.onEnd((result) => {
+        if (result.errors.length > 0) {
+          console.error(
+            "[dev-server] Preview toolbar build failed",
+            result.errors,
+          );
+        } else {
+          log("Preview print toolbar refreshed");
+        }
+      });
+    },
+  };
+
+  previewContext = await esbuild.context({
+    ...previewBuildOptions,
+    plugins: [...(previewBuildOptions.plugins || []), toolbarWatcherPlugin],
+  });
+
+  await previewContext.rebuild();
+  await previewContext.watch();
 }
 
 async function startWatchServer() {
@@ -217,6 +279,7 @@ async function startWatchServer() {
 
   buildTailwindCSS();
   startTailwindWatcher();
+  await buildPreviewBundle();
   const ctx = await esbuild.context({
     ...buildOptions,
     plugins: [...(buildOptions.plugins || []), watcherPlugin],
@@ -230,6 +293,22 @@ async function startWatchServer() {
     if (req.url === "/resume.json") {
       res.writeHead(200, { "Content-Type": "application/json; charset=utf-8" });
       res.end(readResumeFile());
+      return;
+    }
+
+    if (req.url === "/print-toolbar.js") {
+      fs.readFile(previewBundlePath, (error, data) => {
+        if (error) {
+          res.writeHead(500, { "Content-Type": "text/plain; charset=utf-8" });
+          res.end("Unable to load preview toolbar bundle");
+          return;
+        }
+        res.writeHead(200, {
+          "Content-Type": "application/javascript; charset=utf-8",
+          "Cache-Control": "no-store",
+        });
+        res.end(data);
+      });
       return;
     }
 
@@ -256,6 +335,9 @@ async function startWatchServer() {
     log("Shutting down...");
     server.close();
     stopTailwindWatcher();
+    if (previewContext) {
+      await previewContext.dispose();
+    }
     await ctx.dispose();
     process.exit(0);
   };

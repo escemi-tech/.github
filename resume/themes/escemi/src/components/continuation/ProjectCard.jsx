@@ -44,7 +44,13 @@ const ProjectCard = ({ project, locale, strings }) => {
       {project.description && (
         <p className="project-card__summary">{project.description}</p>
       )}
-      <HighlightList items={highlights} tone="light" />
+      <HighlightList
+        items={highlights}
+        tone="light"
+        dense
+        limit={2}
+        className="project-card__highlights"
+      />
       {keywordBadges.length > 0 && (
         <div className="project-card__keywords">
           {keywordBadges.map((keyword, index) => (

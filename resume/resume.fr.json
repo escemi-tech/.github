@@ -106,6 +106,36 @@
         "Actions : schéma directeur 3 ans, blueprint SOA/microservices, environnements standardisés, gouvernance CI/CD + observabilité",
         "Résultats : cycle release 4 sem → 1, défauts prod -55%, sprints fiables à 85%, 200 K€/an d'économies de maintenance"
       ]
+    },
+    {
+      "name": "Logicielnet",
+      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France · Sur site",
+      "position": "Responsable systèmes applicatifs",
+      "startDate": "2010-09",
+      "endDate": "2013-09",
+      "type": "employee",
+      "featured": true,
+      "summary": "En charge de l'évolution de la suite applicative SaaS modulaire : définition des cahiers des charges, pilotage des évolutions structurantes et coordination de l'équipe de développement jusqu'à la validation client.",
+      "highlights": [
+        "Structuré la roadmap de la suite SaaS et livré 20+ évolutions majeures/an en arbitrant innovations clients et dette technique",
+        "Animé une équipe pluridisciplinaire (dévs, QA, support) et instauré revues de code + socle Zend Framework commun pour fiabiliser les releases",
+        "Mis en place un suivi bout-en-bout (cadrage → recettage) réduisant de 30% le temps entre expression de besoin et mise en production"
+      ]
+    },
+    {
+      "name": "Logicielnet",
+      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France · Sur site",
+      "position": "Ingénieur R&D",
+      "startDate": "2009-09",
+      "endDate": "2010-09",
+      "type": "apprenticeship",
+      "featured": false,
+      "summary": "Conception et développement d'un module Web Callback (Click-to-call) afin d'améliorer la relation client au sein du panel applicatif de l'éditeur.",
+      "highlights": [
+        "Conçu le module Web Callback sur Zend Framework/PHP avec intégration VoIP, réduisant de 40% le temps de traitement des demandes",
+        "Créé des composants JavaScript réutilisables et sécurisés pour exposer le click-to-call dans 100% des écrans clients",
+        "Industrialisation : documentation technique + transferts vers l'équipe support permettant un déploiement sans régression"
+      ]
     }
   ],
   "volunteer": [
@@ -178,9 +208,9 @@
       "name": "🎯 Tech cœur",
       "level": "Expert",
       "keywords": [
-        "Node.js (NestJS) ●●●●●",
-        "PHP (Symfony, Laravel) ●●●●●",
-        "TypeScript / JavaScript ●●●●◐",
+        "Node.js (NestJS)",
+        "PHP (Symfony, Laravel)",
+        "TypeScript / JavaScript",
         "Clean Architecture · SOLID · TDD"
       ]
     },
@@ -272,7 +302,6 @@
         "Mentorat"
       ],
       "startDate": "2023-01",
-      "endDate": "2024-12",
       "url": "https://www.youtube.com/watch?v=Xb8PKOdTilA",
       "roles": ["DevX Lead", "Ingénieur plateforme", "Mentor technique"],
       "entity": "Air Corsica",

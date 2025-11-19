@@ -106,6 +106,36 @@
         "Actions: ran 3-year IT master plan, introduced SOA/microservices and standardized environments, enforced CI/CD + observability governance",
         "Results: release cycle cut 4w→1w, production defects -55%, sprint reliability 85%, €200K/year maintenance savings"
       ]
+    },
+    {
+      "name": "Logicielnet",
+      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France · On-site",
+      "position": "Application Systems Manager",
+      "startDate": "2010-09",
+      "endDate": "2013-09",
+      "type": "employee",
+      "featured": true,
+      "summary": "Owned the evolution of the company's modular SaaS core product, from requirements gathering through development leadership to client validation of each release.",
+      "highlights": [
+        "Structured the SaaS roadmap and shipped 20+ major upgrades per year by balancing client innovations with technical debt reduction",
+        "Led a cross-functional squad (dev, QA, support) and instituted code reviews plus a shared Zend Framework baseline to stabilize releases",
+        "Implemented end-to-end delivery governance (spec → UAT) that reduced lead time from request to production by 30%"
+      ]
+    },
+    {
+      "name": "Logicielnet",
+      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France · On-site",
+      "position": "R&D Engineer",
+      "startDate": "2009-09",
+      "endDate": "2010-09",
+      "type": "apprenticeship",
+      "featured": true,
+      "summary": "Designed and built a Web Callback (click-to-call) module to improve customer relationships inside the company's application panel.",
+      "highlights": [
+        "Engineered the Web Callback service on Zend Framework/PHP with VoIP integration, cutting customer follow-up time by 40%",
+        "Created reusable, secure JavaScript widgets to expose click-to-call across 100% of client-facing screens",
+        "Industrialized the rollout with technical docs and knowledge transfer so support teams could deploy without regressions"
+      ]
     }
   ],
   "volunteer": [
@@ -178,9 +208,9 @@
       "name": "🎯 Core Tech",
       "level": "Expert",
       "keywords": [
-        "Node.js (NestJS) ●●●●●",
-        "PHP (Symfony, Laravel) ●●●●●",
-        "TypeScript / JavaScript ●●●●◐",
+        "Node.js (NestJS)",
+        "PHP (Symfony, Laravel)",
+        "TypeScript / JavaScript",
         "Clean Architecture · SOLID · TDD"
       ]
     },
@@ -272,7 +302,6 @@
         "Mentoring"
       ],
       "startDate": "2023-01",
-      "endDate": "2024-12",
       "url": "https://www.youtube.com/watch?v=Xb8PKOdTilA",
       "roles": ["DevX Lead", "Platform Engineer", "Technical Mentor"],
       "entity": "Air Corsica",

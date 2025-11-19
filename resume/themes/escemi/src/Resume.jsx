@@ -39,7 +39,7 @@ function Resume({ resume, locale = "en" }) {
   const extraSections = [
     {
       label: strings.sections.professional,
-      icon: "📈",
+      icon: "💼",
       entries: timeline,
       type: "experience",
     },
@@ -77,7 +77,7 @@ function Resume({ resume, locale = "en" }) {
               locale={locale}
               strings={strings}
               dense
-              highlightLimit={3}
+              highlightLimit={4}
             />
           </div>
         </div>
