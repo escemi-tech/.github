@@ -4,6 +4,7 @@
     "**/node_modules/**",
     "**/profile/README.md",
     "**/branding/email-signature/email-signature.html",
-    "**/resume/themes/escemi/dist/**"
+    "**/resume/theme/dist/**",
+    "**/resume/theme/eslint-report.json"
   ]
 }

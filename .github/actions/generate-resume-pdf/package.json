@@ -4,10 +4,12 @@
   "private": true,
   "description": "Generates PDF resumes from JSON resume files.",
   "dependencies": {
-    "jsonresume-theme-escemi": "file:../../../resume/themes/escemi",
-    "resume-cli": "^3.1.2"
+    "jsonresume-theme-escemi": "file:../../../resume/theme",
+    "puppeteer": "^23.4.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
   },
   "scripts": {
-    "generate-pdf": "RESUME_PUPPETEER_NO_SANDBOX=true resume export --theme escemi --format pdf --resume"
+    "generate-pdf": "node ./generate-pdf.js"
   }
 }

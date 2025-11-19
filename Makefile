@@ -32,8 +32,8 @@ humanize-resume: ## Normalize resume text with humanize-ai-lib
 
 
 preview-resume: ## Preview resume in the browser
-	@cd resume/themes/escemi && \
-	npm install && npm start
+	@cd resume/theme && \
+	npm install && npm run dev
 
 validate-resume: ## Validate resume JSON files
 	@cd ./.github/actions/validate-resume && \
@@ -42,7 +42,7 @@ validate-resume: ## Validate resume JSON files
 	npm run validate -- ../../../resume/resume.fr.json
 
 generate-pdfs: ## Generate all resumes PDFs
-	@cd resume/themes/escemi && \
+	@cd resume/theme && \
 	npm install && npm run build
 	@cd ./.github/actions/generate-resume-pdf && \
 	npm install && \

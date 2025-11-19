@@ -17,9 +17,12 @@ jobs:
     name: CI Pipeline
     uses: ./.github/workflows/shared-ci.yml
     permissions:
-      contents: read
-      statuses: write
       actions: read
+      contents: read
+      id-token: write
+      packages: read
+      pull-requests: write
+      statuses: write
       security-events: write
 
   update-pdfs:
