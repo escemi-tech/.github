@@ -19,10 +19,10 @@ jobs:
   linter:
     uses: hoverkraft-tech/ci-github-common/.github/workflows/linter.yml@c314229c3ca6914f7023ffca7afc26753ab99b41 # 0.30.1
     permissions:
-      contents: read
-      statuses: write
       actions: read
+      contents: read
       security-events: write
+      statuses: write
 
   validate-resumes:
     name: Validate Resumes
@@ -45,10 +45,25 @@ jobs:
         with:
           resume-path: ${{ env.RESUME_FILE }}
 
+  theme-continuous-integration:
+    name: Resume Theme CI
+    uses: hoverkraft-tech/ci-github-nodejs/.github/workflows/continuous-integration.yml@ce2467e5d41ff0abe85094dcc39c98288448065a # 0.20.4
+    permissions:
+      contents: read
+      id-token: write
+      packages: read
+      pull-requests: write
+      security-events: write
+    with:
+      working-directory: resume/theme
+      build: |
+        {"artifact": ["dist"]}
+      lint: null
+
   generate-pdfs:
     name: Generate PDF Resumes
     runs-on: ubuntu-latest
-    needs: validate-resumes
+    needs: [validate-resumes, theme-continuous-integration]
     permissions:
       contents: read
     strategy:
@@ -63,6 +78,11 @@ jobs:
         uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
         with:
           persist-credentials: false
+
+      - uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
+        with:
+          artifact-ids: ${{ needs.theme-continuous-integration.outputs.build-artifact-id }}
+          path: /
 
       - name: Generate English PDF
         uses: ./.github/actions/generate-resume-pdf

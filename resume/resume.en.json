@@ -1,8 +1,35 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.en.json",
+    "version": "2025.11.16.5",
+    "lastModified": "2025-11-16T11:30:00Z",
+    "impact": [
+      {
+        "label": "Velocity gain",
+        "value": "+35%",
+        "description": "Average sprint acceleration after DevX playbooks (3-month rolling avg)"
+      },
+      {
+        "label": "Technical debt",
+        "value": "-40%",
+        "description": "Debt paydown after architecture refactors and mentoring"
+      },
+      {
+        "label": "Deployment time",
+        "value": "-70%",
+        "description": "Lead time drop thanks to unified CI/CD pipelines"
+      },
+      {
+        "label": "Mentoring teams",
+        "value": "15+",
+        "description": "Structured coaching on Clean Architecture & DevX increasing autonomy and delivery quality of mentored teams."
+      }
+    ]
+  },
   "basics": {
     "name": "Emilien Escalle",
-    "label": "On-Demand CTO & DevX Expert",
+    "label": "On-Demand CTO & DevX Expert - Senior Lead Developer",
     "baseline": "Node.js & PHP Expert · Cloud Native · DevX Coach",
     "signatureNumbers": [
       "16 years of experience",
@@ -144,11 +171,10 @@
       "position": "Co-organizer & Speaker",
       "url": "https://www.cloudnative.aixmarseille.tech/",
       "startDate": "2022-10",
-      "summary": "Promoting cloud-native technologies in the Aix-Marseille region in collaboration with the CNCF community.",
+      "summary": "Promoting cloud-native technologies in the Aix-Marseille region with 60+ meetups animated for 1,200+ members alongside the CNCF community.",
       "highlights": [
-        "Co-organized 8+ Cloud Native meetups and events attracting 300+ professionals, growing community from 50 to 400+ members in 2 years",
-        "Delivered 6 technical talks on Kubernetes, GitOps, and DevOps practices, receiving 4.5★ average rating from attendees",
-        "Facilitated knowledge exchange between 15+ companies in the region, fostering collaboration and best practice sharing"
+        "Co-organized 60+ Cloud Native meetups (61 past events) uniting 1,200+ registered members across the Aix/Marseille tech scene",
+        "Delivered 6 technical talks on Kubernetes, GitOps, and DevOps practices while sustaining a 4.8★ score based on 250 Meetup reviews"
       ]
     },
     {
@@ -199,9 +225,8 @@
       "level": "Expert",
       "keywords": [
         "Technical coaching · DevX",
-        "Clean Code · Design Systems",
-        "Mentoring 15+ teams",
-        "Lean · Agile · Product velocity"
+        "Software craftsmanship",
+        "Lean · Agile · Team Velocity"
       ]
     },
     {
@@ -211,7 +236,7 @@
         "Node.js (NestJS)",
         "PHP (Symfony, Laravel)",
         "TypeScript / JavaScript",
-        "Clean Architecture · SOLID · TDD"
+        "Clean Architecture · DDD · TDD"
       ]
     },
     {
@@ -509,39 +534,5 @@
       "entity": "Personal Tooling",
       "type": "infrastructure"
     }
-  ],
-  "meta": {
-    "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.en.json",
-    "version": "2025.11.16.5",
-    "lastModified": "2025-11-16T11:30:00Z",
-    "impact": [
-      {
-        "label": "Velocity gain",
-        "value": "+35%",
-        "description": "Average sprint acceleration after DevX playbooks (3-month rolling avg)"
-      },
-      {
-        "label": "Technical debt",
-        "value": "-40%",
-        "description": "Debt paydown after architecture refactors and mentoring"
-      },
-      {
-        "label": "Deployment time",
-        "value": "-70%",
-        "description": "Lead time drop thanks to unified CI/CD pipelines"
-      },
-      {
-        "label": "Cloud costs",
-        "value": "€120K/year saved",
-        "description": "Average annual savings from cloud-native modernization"
-      }
-    ],
-    "additionalExperience": [
-      {
-        "name": "Logicielnet & Multiwizz",
-        "dates": "2009-2013",
-        "summary": "Application Systems Manager then R&D Engineer for SaaS publisher and social platform. Delivered 15+ major releases/year, 99.5% uptime, and first iOS app (500+ downloads in month one)."
-      }
-    ]
-  }
+  ]
 }
