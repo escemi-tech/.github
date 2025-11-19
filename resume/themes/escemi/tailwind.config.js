@@ -1,6 +1,6 @@
-const defaultTheme = require("tailwindcss/defaultTheme");
+import typography from "@tailwindcss/typography";
 
-module.exports = {
+export default {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
@@ -22,12 +22,12 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["'Source Sans Pro'", ...defaultTheme.fontFamily.sans],
+        sans: ["Source Sans Pro", "sans-serif"],
       },
       boxShadow: {
         resume: "0 10px 30px rgba(28, 49, 68, 0.12)",
       },
     },
   },
-  plugins: [require("@tailwindcss/typography")],
+  plugins: [typography],
 };

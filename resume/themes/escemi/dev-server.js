@@ -5,7 +5,9 @@ const fs = require("fs");
 const http = require("http");
 const esbuild = require("esbuild");
 const chokidar = require("chokidar");
-const { spawnSync } = require("child_process");
+const postcss = require("postcss");
+const postcssImport = require("postcss-import");
+const tailwindcss = require("@tailwindcss/postcss");
 
 const themeRoot = __dirname;
 const distDir = path.join(themeRoot, "dist");
@@ -58,34 +60,26 @@ let tailwindWatcher = null;
 let tailwindRebuildTimer = null;
 let previewContext = null;
 
-function buildTailwindCSS({ verbose = true } = {}) {
-  const cliPath = require.resolve("tailwindcss/lib/cli.js");
-  const args = [
-    cliPath,
-    "-c",
-    tailwindConfig,
-    "--postcss",
-    postcssConfig,
-    "-i",
-    tailwindInput,
-    "-o",
-    tailwindOutput,
-  ];
-
-  if (process.env.NODE_ENV === "production") {
-    args.push("--minify");
-  }
-
+async function buildTailwindCSS({ verbose = true } = {}) {
   if (verbose) {
     log("Building Tailwind CSS...");
   }
 
-  const result = spawnSync(process.execPath, args, {
-    stdio: verbose ? "inherit" : "ignore",
-  });
+  try {
+    const css = fs.readFileSync(tailwindInput, "utf8");
 
-  if (result.status !== 0) {
-    throw new Error("Tailwind CSS build failed");
+    const result = await postcss([postcssImport, tailwindcss]).process(css, {
+      from: tailwindInput,
+      to: tailwindOutput,
+    });
+
+    fs.writeFileSync(tailwindOutput, result.css, "utf8");
+
+    if (result.map) {
+      fs.writeFileSync(tailwindOutput + ".map", result.map.toString(), "utf8");
+    }
+  } catch (error) {
+    throw new Error(`Tailwind CSS build failed: ${error.message}`);
   }
 }
 
@@ -103,9 +97,9 @@ function startTailwindWatcher() {
       if (tailwindRebuildTimer) {
         clearTimeout(tailwindRebuildTimer);
       }
-      tailwindRebuildTimer = setTimeout(() => {
+      tailwindRebuildTimer = setTimeout(async () => {
         try {
-          buildTailwindCSS({ verbose: false });
+          await buildTailwindCSS({ verbose: false });
           log("Tailwind CSS refreshed from style change");
         } catch (error) {
           console.error("[dev-server] Tailwind rebuild failed", error);
@@ -262,7 +256,7 @@ async function startWatchServer() {
         }
 
         try {
-          buildTailwindCSS({ verbose: false });
+          await buildTailwindCSS({ verbose: false });
           loadRenderer();
           if (isInitialBuild) {
             log("Renderer ready");
@@ -277,7 +271,7 @@ async function startWatchServer() {
     },
   };
 
-  buildTailwindCSS();
+  await buildTailwindCSS();
   startTailwindWatcher();
   await buildPreviewBundle();
   const ctx = await esbuild.context({

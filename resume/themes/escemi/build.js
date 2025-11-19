@@ -1,34 +1,33 @@
 const esbuild = require("esbuild");
-const { mkdirSync, writeFileSync } = require("fs");
-const { spawnSync } = require("child_process");
+const { mkdirSync, writeFileSync, readFileSync } = require("fs");
 const path = require("path");
+const postcss = require("postcss");
+const postcssImport = require("postcss-import");
+const tailwindcss = require("@tailwindcss/postcss");
 
 const distDir = path.join(__dirname, "dist");
 mkdirSync(distDir, { recursive: true });
 
-function buildTailwindCSS() {
-  const cliPath = require.resolve("tailwindcss/lib/cli.js");
+async function buildTailwindCSS() {
   const inputCss = path.join(__dirname, "src", "styles.css");
   const outputCss = path.join(distDir, "tailwind.css");
-  const args = [
-    cliPath,
-    "-c",
-    path.join(__dirname, "tailwind.config.js"),
-    "--postcss",
-    path.join(__dirname, "postcss.config.js"),
-    "-i",
-    inputCss,
-    "-o",
-    outputCss,
-    "--minify",
-  ];
 
   console.log("Building Tailwind CSS...");
-  const result = spawnSync(process.execPath, args, { stdio: "inherit" });
 
-  if (result.status !== 0) {
-    throw new Error("Tailwind CSS build failed");
+  const css = readFileSync(inputCss, "utf8");
+
+  const result = await postcss([postcssImport, tailwindcss]).process(css, {
+    from: inputCss,
+    to: outputCss,
+  });
+
+  writeFileSync(outputCss, result.css, "utf8");
+
+  if (result.map) {
+    writeFileSync(outputCss + ".map", result.map.toString(), "utf8");
   }
+
+  console.log("✅ Tailwind CSS built successfully!");
 }
 
 const buildOptions = {
@@ -52,10 +51,8 @@ const buildOptions = {
 
 console.log("Building ESCEMI Resume Theme (React edition)...");
 
-buildTailwindCSS();
-
-esbuild
-  .build(buildOptions)
+buildTailwindCSS()
+  .then(() => esbuild.build(buildOptions))
   .then(() => {
     const shimPath = path.join(__dirname, "index.js");
     const shimContents = "module.exports = require('./dist/index.js');\n";
