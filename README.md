@@ -9,11 +9,11 @@
 | English  | At your service to support you and meet the challenges of your digital projects.    |
 | French   | À votre service pour vous accompagner et relever les défis de vos projets digitaux. |
 
-## [Resume as Code](resume/README.md)
+## [Resume as Code](/resume/README.md)
 
 Professional resume managed as code in JSON Resume format with bilingual support (English/French).
 
-## [Branding](branding/README.md)
+## [Branding](/branding/README.md)
 
 ## Links
 

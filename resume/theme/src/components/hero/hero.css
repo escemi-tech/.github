@@ -1,0 +1,127 @@
+@layer components {
+  .glow-panel {
+    position: relative;
+    background:
+      radial-gradient(
+        circle at 85% 10%,
+        rgb(236 184 7 / 55%),
+        rgb(236 184 7 / 15%) 15%,
+        transparent 30%
+      ),
+      linear-gradient(
+        to bottom left,
+        rgb(236 184 7 / 55%) 0%,
+        rgb(255 250 235 / 95%) 15%,
+        rgb(255 255 255 / 98%) 28%,
+        #fff 40%
+      );
+    overflow: hidden;
+  }
+
+  .glow-panel::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgb(255 255 255 / 8%) 1px, transparent 1px),
+      linear-gradient(90deg, rgb(255 255 255 / 8%) 1px, transparent 1px);
+    background-size: 24px 24px;
+    opacity: 0.2;
+    pointer-events: none;
+  }
+
+  .metric-chip {
+    border-radius: 999px;
+    border: 1px solid rgb(236 184 7 / 45%);
+    background: linear-gradient(135deg, #fffdf5, #ffe6a3);
+    padding: 0.2rem 0.7rem;
+    font-size: 0.76rem;
+    font-weight: 600;
+    color: #1c3144;
+    box-shadow: 0 10px 22px rgb(236 184 7 / 22%);
+    backdrop-filter: blur(4px);
+  }
+
+  .hero-contact-row {
+    border-top: 1px solid rgb(28 49 68 / 8%);
+    padding-top: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .contact-inline-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem 0.85rem;
+    width: 100%;
+  }
+
+  .contact-inline-list__item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #1c3144;
+  }
+
+  .contact-inline-list__item--primary {
+    color: #1c3144;
+  }
+
+  .contact-inline-list__item:hover {
+    text-decoration: underline;
+  }
+
+  .contact-inline-list__item--muted {
+    color: rgb(28 49 68 / 70%);
+    font-weight: 500;
+  }
+
+  .contact-inline-list__icon {
+    font-size: 0.9rem;
+  }
+
+  @media print {
+    .glow-panel {
+      padding: 0.9rem 1.35rem 0.8rem;
+      background: #fff;
+    }
+
+    .hero-profile-row {
+      flex-direction: row;
+      gap: 1rem;
+    }
+
+    .hero-profile-row h1 {
+      font-size: 1.6rem;
+    }
+
+    .hero-profile-row p {
+      font-size: 0.82rem;
+      line-height: 1.35;
+    }
+
+    .metric-chip {
+      padding: 0.15rem 0.55rem;
+      font-size: 0.7rem;
+      box-shadow: none;
+    }
+
+    .hero-contact-row {
+      flex-flow: row wrap;
+      gap: 0.35rem 0.85rem;
+    }
+
+    .contact-inline-list {
+      flex: 1 1 45%;
+      gap: 0.25rem 0.65rem;
+    }
+
+    .contact-inline-list__item {
+      font-size: 0.75rem;
+    }
+  }
+}
