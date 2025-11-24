@@ -7,7 +7,7 @@ inputs:
 runs:
   using: "composite"
   steps:
-    - uses: hoverkraft-tech/ci-github-nodejs/actions/setup-node@a9809af04394e66675b8644865be1ddcec02cdcd # 0.20.0
+    - uses: hoverkraft-tech/ci-github-nodejs/actions/setup-node@80acfc9bc4dd87030d73006dee4c788ed9af1fb0 # 0.20.1
       with:
         working-directory: ${{ github.action_path }}
 
