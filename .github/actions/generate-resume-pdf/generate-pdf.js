@@ -5,6 +5,57 @@ const path = require("node:path");
 const puppeteer = require("puppeteer");
 const theme = require("jsonresume-theme-escemi");
 
+const FALLBACK_LOCALE = "en";
+const COUNTRY_LOCALE_MAP = {
+  FR: "fr",
+  EN: "en",
+  US: "en",
+  GB: "en",
+};
+
+const normalizeLocale = (candidate) => {
+  if (typeof candidate !== "string") {
+    return null;
+  }
+  const trimmed = candidate.trim();
+  return trimmed ? trimmed.toLowerCase() : null;
+};
+
+const inferLocaleFromPath = (filePath) => {
+  const fileName = path.basename(filePath);
+  const match = fileName.match(/\.([a-z]{2}(?:-[a-z]{2})?)\.json$/i);
+  return match ? match[1].toLowerCase() : null;
+};
+
+const inferLocale = (resumeData, resumePath) => {
+  const metaLocale = normalizeLocale(resumeData?.meta?.locale);
+  if (metaLocale) {
+    return metaLocale;
+  }
+
+  const countryCode = resumeData?.basics?.location?.countryCode;
+  if (countryCode) {
+    const mappedLocale = COUNTRY_LOCALE_MAP[countryCode.toUpperCase()];
+    if (mappedLocale) {
+      return mappedLocale;
+    }
+  }
+
+  const pathLocale = inferLocaleFromPath(resumePath);
+  if (pathLocale) {
+    return pathLocale;
+  }
+
+  return FALLBACK_LOCALE;
+};
+
+const buildRenderOptions = (resumeData, resumePath) => {
+  const locale = inferLocale(resumeData, resumePath);
+  const dir = resumeData?.meta?.dir === "rtl" ? "rtl" : "ltr";
+  const title = resumeData?.basics?.name || "Resume";
+  return { locale, dir, title };
+};
+
 async function main() {
   const [resumeArg, outputArg] = process.argv.slice(2);
 
@@ -32,7 +83,8 @@ async function main() {
     process.exit(1);
   }
 
-  const html = theme.render(resumeData);
+  const renderOptions = buildRenderOptions(resumeData, resumePath);
+  const html = theme.render(resumeData, renderOptions);
 
   const browser = await puppeteer.launch({
     headless: "new",

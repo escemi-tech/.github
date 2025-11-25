@@ -4,6 +4,7 @@
     "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.fr.json",
     "version": "2025.11.16.6",
     "lastModified": "2025-11-16T11:15:00Z",
+    "locale": "fr",
     "impact": [
       {
         "label": "Gain de vélocité",
@@ -36,14 +37,9 @@
       "15+ équipes mentorées",
       "20+ plateformes livrées"
     ],
-    "pitch": [
-      "J'aide les entreprises à industrialiser leur développement et à élever le niveau technique de leurs équipes.",
-      "CTO à la demande et Lead Dev Senior pour les missions qui exigent structure, vélocité et exécution propre.",
-      "Expert Node.js & PHP avec une maîtrise approfondie de NestJS, Symfony et Laravel."
-    ],
     "url": "https://www.escemi.com",
     "image": "https://raw.githubusercontent.com/escemi-tech/.github/main/headshots/primary.jpg",
-    "summary": "J'allie coaching technique, excellence DevX et modernisation cloud-native pour transformer la qualité produit tout en gardant des équipes autonomes et responsables.",
+    "summary": "J'allie coaching technique, excellence DevX et modernisation cloud-native pour transformer la qualité produit tout en gardant des équipes autonomes et responsables.\n\nJ'aide les entreprises à industrialiser leur développement et à élever le niveau technique de leurs équipes.\nCTO à la demande et Lead Dev Senior pour les missions qui exigent structure, vélocité et exécution propre.\nExpert Node.js & PHP avec une maîtrise approfondie de NestJS, Symfony et Laravel.",
     "location": {
       "city": "Aix-en-Provence",
       "region": "Provence-Alpes-Côte d'Azur",
@@ -81,10 +77,10 @@
       "startDate": "2022-10",
       "type": "freelance",
       "featured": false,
-      "summary": "CTO fractionné au sein du collectif Build & Run, parachuté chez des scale-ups qui ont besoin de structure, de DevX moderne et d'un leadership senior. Je conçois des architectures cloud-native de référence, des stacks CI/CD mutualisées et des rituels de gouvernance qui alignent les squads sur des indicateurs mesurables.",
+      "summary": "CTO Freelance au sein du collectif Build & Run, engagé chez des scale-ups qui ont besoin de structure, de DevX moderne et d'un leadership senior. Je conçois des applications cloud-native de référence, des stacks CI/CD mutualisées et des rituels de gouvernance qui alignent les squads sur des indicateurs mesurables.",
       "highlights": [
         "Défi : delivery multi-squads ralentie par stacks hétérogènes et releases manuelles",
-        "Actions : blueprints Kubernetes/Terraform, templates GitHub/GitLab CI/CD réutilisables, scorecards DevX et rituels de leadership",
+        "Actions : blueprints \"12 factors Application\", templates GitHub/GitLab CI/CD réutilisables, scorecards DevX et rituels de leadership",
         "Résultats : +35% de vélocité, -40% de dette, releases x5, onboarding 4 semaines → 1 avec <5% de change failure rate"
       ]
     },

@@ -14,6 +14,11 @@ export type ResumeStrings = {
   };
 };
 
+export type ResumeMeta = {
+  locale?: string;
+  dir?: "ltr" | "rtl";
+};
+
 export type BasicsProfile = {
   network?: string;
   url?: string;
@@ -127,6 +132,7 @@ export type ExtraSection =
     };
 
 export type ResumeSchema = {
+  meta?: ResumeMeta;
   basics?: Basics;
   work?: ExperienceEntry[];
   education?: Education[];

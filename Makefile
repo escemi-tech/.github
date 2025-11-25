@@ -30,7 +30,6 @@ humanize-resume: ## Normalize resume text with humanize-ai-lib
 	npm install && \
 	npm run humanize -- ../../../resume/resume.en.json ../../../resume/resume.fr.json
 
-
 preview-resume: ## Preview resume in the browser
 	@cd resume/theme && \
 	npm install && npm run dev
@@ -49,6 +48,10 @@ generate-pdfs: ## Generate all resumes PDFs
 	npm run generate-pdf -- ../../../resume/resume.en.json ../../../resume/pdf/resume.en.pdf && \
 	npm run generate-pdf -- ../../../resume/resume.fr.json ../../../resume/pdf/resume.fr.pdf
 
+ci: ## Run all CI tasks
+	$(MAKE) lint-fix
+	$(MAKE) validate-resume
+	$(MAKE) generate-pdfs
 
 define run_linter
 	DEFAULT_WORKSPACE="$(CURDIR)"; \
