@@ -26,6 +26,28 @@
         "value": "15+",
         "description": "Structured coaching on Clean Architecture & DevX increasing autonomy and delivery quality of mentored teams."
       }
+    ],
+    "services": [
+      {
+        "name": "Fractional CTO (Operational & Advisory)",
+        "summary": "I translate business objectives into an execution plan that keeps multi-squad releases predictable during fast growth phases.",
+        "description": "I audit legacy stacks, prioritize a 12-month roadmap, and roll out shared GitHub/GitLab CI/CD pipelines to shrink deployment time from hours to <30 minutes while securing 90% automated quality gates."
+      },
+      {
+        "name": "Senior Lead Dev PHP & Node.js",
+        "summary": "Senior backend lead who stabilizes critical Node.js/PHP platforms and uplevels squads through hands-on mentoring.",
+        "description": "I design Cloud-Native architectures in Node.js (NestJS) / PHP (Symfony, Laravel), formalize contract-tested APIs, and run automated unit/E2E suites that cut technical debt by 40% and keep platforms ready for 10x traffic."
+      },
+      {
+        "name": "Engineering Manager",
+        "summary": "Engineering leader structuring rituals and indicators to keep multi-squad delivery predictable.",
+        "description": "I deploy pragmatic Agile/Lean workflows, steer DORA metrics, and run operational reviews. Results: +35% velocity on average, -55% production defects, and rituals aligned with product KPIs."
+      },
+      {
+        "name": "Staff Engineer",
+        "summary": "Technical expert ensuring architecture/product coherence and driving critical RFC/design decisions.",
+        "description": "I set architecture standards, lead key RFCs, and coach squads on high-stakes topics (scalability, reliability). Impact: -40% technical debt, 10x fewer critical incidents, and senior onboarding <2 weeks."
+      }
     ]
   },
   "basics": {
@@ -140,9 +162,9 @@
       "featured": true,
       "summary": "Owned the evolution of the company's modular SaaS core product, from requirements gathering through development leadership to client validation of each release.",
       "highlights": [
-        "Structured the SaaS roadmap and shipped 20+ major upgrades per year by balancing client innovations with technical debt reduction",
-        "Led a cross-functional squad (dev, QA, support) and instituted code reviews plus a shared Zend Framework baseline to stabilize releases",
-        "Implemented end-to-end delivery governance (spec → UAT) that reduced lead time from request to production by 30%"
+        "Challenge: Balance client-driven innovations with mounting technical debt while maintaining a packed SaaS roadmap.",
+        "Actions: Prioritized roadmap governance, led a cross-functional squad with mandatory code reviews, and enforced a shared Zend Framework baseline.",
+        "Results: Delivered 20+ major upgrades annually, stabilized release quality, and cut request-to-production lead time by 30%."
       ]
     },
     {
@@ -155,9 +177,9 @@
       "featured": true,
       "summary": "Designed and built a Web Callback (click-to-call) module to improve customer relationships inside the company's application panel.",
       "highlights": [
-        "Engineered the Web Callback service on Zend Framework/PHP with VoIP integration, cutting customer follow-up time by 40%",
-        "Created reusable, secure JavaScript widgets to expose click-to-call across 100% of client-facing screens",
-        "Industrialized the rollout with technical docs and knowledge transfer so support teams could deploy without regressions"
+        "Challenge: Deliver instant customer callbacks inside the legacy SaaS while integrating external VoIP providers.",
+        "Actions: Engineered a Zend Framework/PHP callback service with secure, reusable widgets covering 100% of client-facing screens and comprehensive rollout documentation.",
+        "Results: Cut customer follow-up time by 40% and enabled support teams to deploy the feature without regressions."
       ]
     }
   ],
@@ -181,8 +203,7 @@
       "summary": "Teaching software architectures and web development best practices.",
       "highlights": [
         "Taught software architecture course to 60+ Master's students annually, covering practical applications of Clean Architecture, SOLID, and design patterns",
-        "Developed hands-on curriculum with 10+ real-world case studies, achieving 90% student satisfaction rating and 85% pass rate",
-        "Mentored 15+ students on thesis projects implementing modern architectures, with 80% securing developer positions within 3 months of graduation"
+        "Developed hands-on curriculum with 10+ real-world case studies, achieving 90% student satisfaction rating and 85% pass rate"
       ]
     }
   ],
@@ -252,7 +273,7 @@
     },
     {
       "language": "🇬🇧 English",
-      "fluency": "Professional working proficiency"
+      "fluency": "Full Professional"
     }
   ],
   "interests": [

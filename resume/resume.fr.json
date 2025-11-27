@@ -26,6 +26,28 @@
         "value": "15+",
         "description": "Coaching structuré Clean Architecture & DevX augmentant l'autonomie et la qualité de livraison des équipes encadrées."
       }
+    ],
+    "services": [
+      {
+        "name": "CTO Fractional (Opérationnel & Advisory)",
+        "summary": "Je convertis les objectifs business en plan d'exécution mesurable et sécurise les releases multi-squads dans des contextes de croissance rapide.",
+        "description": "J'audite les stacks legacy, priorise une roadmap 12 mois et déploie des pipelines CI/CD mutualisés (GitHub/GitLab) pour passer les déploiements de plusieurs heures à <30 min et fiabiliser 90% des contrôles qualité."
+      },
+      {
+        "name": "Lead Dev Senior PHP & Node.js",
+        "summary": "Lead backend senior qui stabilise les plateformes Node.js/PHP critiques et élève les équipes via un mentorat opérationnel.",
+        "description": "Je conçois des architectures Cloud-Native en Node.js (NestJS) / PHP (Symfony, Laravel), contractualise les APIs testables et pilote des suites automatiques (unitaires/E2E) qui réduisent la dette technique de 40% et préparent les plateformes à un trafic x10."
+      },
+      {
+        "name": "Engineering Manager",
+        "summary": "Cadre engineering qui structure les rituels et les indicateurs pour sécuriser la livraison multi-squads.",
+        "description": "Je mets en place des workflows Agile/Lean, pilote les métriques DORA et conduis des revues opérationnelles. Résultats : vélocité +35% en moyenne, défauts prod -55% et rituels de pilotage alignés sur les KPIs produit."
+      },
+      {
+        "name": "Staff Engineer",
+        "summary": "Expert technique qui garantit la cohérence architecture/produit et drive les décisions critiques (RFC, design reviews).",
+        "description": "Je définis les standards d'architecture, anime les RFC clés et accompagne les squads sur les chantiers sensibles (scalabilité, fiabilité). Impact : dette technique -40%, incidents critiques /10 et onboarding seniors <2 semaines."
+      }
     ]
   },
   "basics": {
@@ -82,6 +104,16 @@
         "Défi : delivery multi-squads ralentie par stacks hétérogènes et releases manuelles",
         "Actions : blueprints \"12 factors Application\", templates GitHub/GitLab CI/CD réutilisables, scorecards DevX et rituels de leadership",
         "Résultats : +35% de vélocité, -40% de dette, releases x5, onboarding 4 semaines → 1 avec <5% de change failure rate"
+      ],
+      "keywords": [
+        "Fractional CTO",
+        "DevX",
+        "cloud-native",
+        "CI/CD",
+        "GitHub",
+        "GitLab",
+        "12 factors Application",
+        "Leadership"
       ]
     },
     {
@@ -97,6 +129,16 @@
         "Défi : roadmaps ambitieuses exécutées par des équipes sous-structurées",
         "Actions : plateformes API SOLID, stacks CI/CD + IaC sur mesure, revues FinOps, coaching immersif",
         "Résultats : 90% de contrôles automatisés, déploiements <30 min, économies 80-150 K€/an, équipes prêtes pour trafic x10"
+      ],
+      "keywords": [
+        "CTO à la demande",
+        "Lead Dev Senior",
+        "SOLID",
+        "CI/CD",
+        "IaC",
+        "Observabilité",
+        "FinOps",
+        "Coaching immersif"
       ]
     },
     {
@@ -112,6 +154,16 @@
         "Défi : lancer un MVP inspiration voyage <3 mois avec objectifs d'acquisition élevés",
         "Actions : stack JAMStack/serverless sur AWS, boucles UX rapides, funnels CRM/SEA pilotés par la donnée, dashboards produit",
         "Résultats : MVP livré en 12 semaines, <500 ms de chargement, 5K MAU en 6 mois, +40% d'engagement, 300+ inscriptions/semaine à 2,50€ CPA"
+      ],
+      "keywords": [
+        "JAMStack",
+        "Serverless",
+        "AWS",
+        "UX",
+        "CRM",
+        "SEA",
+        "analytics",
+        "MVP"
       ]
     },
     {
@@ -128,6 +180,14 @@
         "Défi : stack PHP fragmentée bloquant la consolidation de 8 entités et la cadence campagne",
         "Actions : schéma directeur 3 ans, blueprint SOA/microservices, environnements standardisés, gouvernance CI/CD + observabilité",
         "Résultats : cycle release 4 sem → 1, défauts prod -55%, sprints fiables à 85%, 200 K€/an d'économies de maintenance"
+      ],
+      "keywords": [
+        "legacy PHP",
+        "Schéma directeur IT",
+        "SOA/microservices",
+        "CI/CD",
+        "observabilité",
+        "Environnements standardisés"
       ]
     },
     {
@@ -140,9 +200,17 @@
       "featured": true,
       "summary": "En charge de l'évolution de la suite applicative SaaS modulaire : définition des cahiers des charges, pilotage des évolutions structurantes et coordination de l'équipe de développement jusqu'à la validation client.",
       "highlights": [
-        "Structuré la roadmap de la suite SaaS et livré 20+ évolutions majeures/an en arbitrant innovations clients et dette technique",
-        "Animé une équipe pluridisciplinaire (dévs, QA, support) et instauré revues de code + socle Zend Framework commun pour fiabiliser les releases",
-        "Mis en place un suivi bout-en-bout (cadrage → recettage) réduisant de 30% le temps entre expression de besoin et mise en production"
+        "Défi : orchestrer une roadmap SaaS ambitieuse conciliant exigences clients, innovations et réduction de la dette technique",
+        "Actions : animé une équipe pluridisciplinaire, instauré les revues de code et un socle Zend Framework partagé, sécurisé chaque livraison du cadrage au recettage",
+        "Résultats : livré 20+ évolutions majeures/an avec des releases fiabilisées et un délai besoin → production réduit de 30%"
+      ],
+      "keywords": [
+        "SaaS modulaire",
+        "cahiers des charges",
+        "roadmap SaaS",
+        "Zend Framework",
+        "revues de code",
+        "équipe pluridisciplinaire"
       ]
     },
     {
@@ -155,9 +223,18 @@
       "featured": true,
       "summary": "Conception et développement d'un module Web Callback (Click-to-call) afin d'améliorer la relation client au sein du panel applicatif de l'éditeur.",
       "highlights": [
-        "Conçu le module Web Callback sur Zend Framework/PHP avec intégration VoIP, réduisant de 40% le temps de traitement des demandes",
-        "Créé des composants JavaScript réutilisables et sécurisés pour exposer le click-to-call dans 100% des écrans clients",
-        "Industrialisation : documentation technique + transferts vers l'équipe support permettant un déploiement sans régression"
+        "Défi : intégrer un module Web Callback VoIP dans la suite legacy pour fluidifier le traitement des demandes clients",
+        "Actions : développé le module Zend Framework/PHP, créé des composants JavaScript réutilisables et documenté l'industrialisation avec transferts vers le support",
+        "Résultats : temps de traitement des demandes réduit de 40%, couverture click-to-call portée à 100% des écrans et déploiements sans régression"
+      ],
+      "keywords": [
+        "Web Callback",
+        "Click-to-call",
+        "VoIP",
+        "Zend Framework",
+        "PHP",
+        "JavaScript",
+        "support"
       ]
     }
   ],
@@ -171,6 +248,14 @@
       "highlights": [
         "Co-organisé 60+ meetups Cloud Native (61 événements passés) réunissant 1 200+ membres inscrits sur Meetup dans la région Aix/Marseille",
         "Présenté 6 talks techniques sur Kubernetes, GitOps et pratiques DevOps, maintenant une note de 4,8★ basée sur 250 avis Meetup"
+      ],
+      "keywords": [
+        "Cloud Native",
+        "CNCF",
+        "Meetup",
+        "Kubernetes",
+        "GitOps",
+        "DevOps"
       ]
     },
     {
@@ -181,8 +266,15 @@
       "summary": "Enseignement des architectures logicielles et des bonnes pratiques de développement web.",
       "highlights": [
         "Enseigné le cours d'architecture logicielle à 60+ étudiants de Master annuellement, couvrant les applications pratiques de Clean Architecture, SOLID et design patterns",
-        "Développé un curriculum hands-on avec 10+ études de cas réelles, atteignant 90% de satisfaction étudiante et 85% de taux de réussite",
-        "Mentoré 15+ étudiants sur des projets de thèse implémentant des architectures modernes, avec 80% obtenant des postes de développeur dans les 3 mois suivant l'obtention du diplôme"
+        "Développé un curriculum hands-on avec 10+ études de cas réelles, atteignant 90% de satisfaction étudiante et 85% de taux de réussite"
+      ],
+      "keywords": [
+        "Architecture logicielle",
+        "Clean Architecture",
+        "SOLID",
+        "Design patterns",
+        "Master",
+        "études de cas"
       ]
     }
   ],
