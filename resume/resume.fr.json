@@ -394,7 +394,7 @@
       "description": "Modernisation de l'expérience développeur et de la sécurité transactionnelle de la plateforme de réservation aérienne via un écosystème CI/CD GitHub Actions, mentorat hands-on, et architecture proxy résiliente NestJS/RabbitMQ.",
       "highlights": [
         "Réduit le temps de déploiement de 80% (de ~2 jours manuels à <30 min automatisées) via workflows GitHub Actions réutilisables avec canary et rollbacks automatiques",
-        "Augmenté la fréquence de release x5 (de mensuelle à hebdomadaire) grâce à l'infrastructure-as-code (Terraform + ArgoCD) assurant la parité staging/production",
+        "Augmenté la fréquence de release x5 (de mensuelle à hebdomadaire) grâce à l'implémentation des principes Cloud Native, assurant la parité staging/production",
         "Amélioré la fiabilité transactionnelle à 99,9% de disponibilité avec 90% moins d'échecs tiers en architecturant un proxy NestJS avec RabbitMQ, implémentant circuit breakers, politiques de retry et garanties d'idempotence",
         "Réduit le temps d'onboarding développeur de 70% (de plusieurs jours à <1 jour de productivité) via workflows standardisés, guides de style vivants et mises à jour automatiques des dépendances",
         "Mentoré l'équipe distribuée (interne + contractants) sur Clean Architecture et principes SOLID via ateliers hebdomadaires, élevant la qualité du code et établissant des seuils de couverture de tests unitaires",
@@ -408,8 +408,6 @@
         "RabbitMQ",
         "Clean Architecture",
         "SOLID",
-        "Terraform",
-        "ArgoCD",
         "Docker",
         "Datadog",
         "Mentorat"
@@ -444,12 +442,12 @@
         "Docker",
         "IoT",
         "Gateway Architecture",
-        "Device Management",
-        "High Availability",
+        "Gestion à distance des appareils",
+        "Haute disponibilité",
         "CI/CD"
       ],
-      "startDate": "2023-01",
-      "endDate": "2024-08",
+      "startDate": "2025-04",
+      "endDate": "2025-07",
       "roles": ["Architecte plateforme IoT", "Lead Développeur"],
       "entity": "Fournisseur SaaS d'infrastructure intelligente",
       "type": "consulting"
@@ -467,19 +465,21 @@
         "Établi un cadre de gouvernance technique (comités mensuels, KPIs de vélocité, dashboards de qualité) améliorant la visibilité des équipes et réduisant le time-to-market de 35%"
       ],
       "keywords": [
-        "CTO Accompaniment",
-        "IT Audit",
-        "Technical Strategy",
-        "Roadmap Planning",
-        "Team Building",
-        "Vendor Management",
-        "Technical Governance",
-        "Recruitment"
+        "Accompagnement CTO",
+        "Audit SI",
+        "Stratégie technique",
+        "Planification de roadmap",
+        "Structuration d'équipe",
+        "Gestion des prestataires",
+        "Gouvernance technique",
+        "Recrutement",
+        "PHP",
+        "Symfony"
       ],
       "startDate": "2021-11",
       "endDate": "2022-05",
       "url": "https://www.testunmetier.com/",
-      "roles": ["CTO Consultant", "Strategic Advisor"],
+      "roles": ["Consultant CTO", "Conseiller stratégique"],
       "entity": "TestUnMetier",
       "type": "consulting"
     },
@@ -506,7 +506,7 @@
         "SOLID",
         "Mentorat",
         "API Design",
-        "Backend Architecture"
+        "Architecture Backend"
       ],
       "startDate": "2022-04",
       "endDate": "2022-06",
@@ -530,13 +530,14 @@
       "keywords": [
         "NestJS",
         "Laravel",
-        "Backend Architecture",
+        "Architecture Backend",
         "API REST",
         "GraphQL",
-        "Image Processing",
+        "Traitement de l'image",
         "Full-text Search",
         "CDN",
         "Cloud Native",
+        "AWS",
         "CI/CD"
       ],
       "startDate": "2022-06",
@@ -568,7 +569,8 @@
         "Docker",
         "GitLab CI",
         "ArgoCD",
-        "Mentorat"
+        "Mentorat",
+        "Leadership d'équipe"
       ],
       "startDate": "2020-01",
       "endDate": "2023-01",

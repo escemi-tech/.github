@@ -323,7 +323,7 @@
       "description": "Modernized developer experience and transactional security for airline booking platform through GitHub Actions CI/CD ecosystem, hands-on mentoring, and resilient NestJS/RabbitMQ proxy architecture.",
       "highlights": [
         "Reduced deployment time by 80% (from ~2 days manual work to <30 minutes fully automated) via reusable GitHub Actions workflows with canary deployments and automated rollbacks",
-        "Increased release frequency 5x (from monthly to weekly feature releases) through infrastructure-as-code (Terraform + ArgoCD) ensuring staging/production parity",
+        "Increased release frequency 5x (from monthly to weekly feature releases) through implementing Cloud Native principles, ensuring staging/production parity",
         "Improved transaction reliability to 99.9% uptime with 90% fewer third-party failures by architecting NestJS proxy with RabbitMQ, implementing circuit breakers, retry policies, and idempotency guarantees",
         "Cut new developer onboarding time by 70% (from multiple days to <1 day productivity) through standardized workflows, living style guides, and automated dependency updates",
         "Mentored distributed team (in-house + contractors) on Clean Architecture and SOLID principles via weekly workshops, elevating code quality and establishing unit-test coverage thresholds",
@@ -337,8 +337,6 @@
         "RabbitMQ",
         "Clean Architecture",
         "SOLID",
-        "Terraform",
-        "ArgoCD",
         "Docker",
         "Datadog",
         "Mentoring"
@@ -377,8 +375,8 @@
         "High Availability",
         "CI/CD"
       ],
-      "startDate": "2023-01",
-      "endDate": "2024-08",
+      "startDate": "2025-04",
+      "endDate": "2025-07",
       "roles": ["IoT Platform Architect", "Lead Developer"],
       "entity": "Global Smart Infrastructure SaaS Provider",
       "type": "consulting"
@@ -403,7 +401,9 @@
         "Team Building",
         "Vendor Management",
         "Technical Governance",
-        "Recruitment"
+        "Recruitment",
+        "PHP",
+        "Symfony"
       ],
       "startDate": "2021-11",
       "endDate": "2022-05",
@@ -466,6 +466,7 @@
         "Full-text Search",
         "CDN",
         "Cloud Native",
+        "AWS",
         "CI/CD"
       ],
       "startDate": "2022-06",
@@ -497,7 +498,8 @@
         "Docker",
         "GitLab CI",
         "ArgoCD",
-        "Mentoring"
+        "Mentoring",
+        "Team leadership"
       ],
       "startDate": "2020-01",
       "endDate": "2023-01",
