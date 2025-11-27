@@ -28,6 +28,5 @@ Professional resume managed as code in JSON Resume format with bilingual support
 - [LinkedIn](https://www.linkedin.com/in/emilienescalle/)
 - [GitHub](https://github.com/neilime)
 - [Malt](https://www.malt.fr/profile/emilienescalle)
-- [DoYouBuzz](https://www.doyoubuzz.com/emilien-escalle)
 - [Collective](https://www.collective.work/profile/emilien-escalle)
 - <https://www.build-and-run.fr/>
