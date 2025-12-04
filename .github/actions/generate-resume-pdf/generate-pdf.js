@@ -87,7 +87,11 @@ const optimizePdf = async (inputPath) => {
       `📉 PDF optimized: ${Math.round(originalStats.size / 1024)}KB → ${Math.round(optimizedStats.size / 1024)}KB (${reduction.toFixed(1)}% reduction)`,
     );
   } finally {
-    await fs.unlink(tempPath).catch(() => {});
+    await fs.unlink(tempPath).catch((error) => {
+      console.warn(
+        `⚠️ Failed to remove temporary file ${tempPath}: ${error.message}`,
+      );
+    });
   }
 };
 
