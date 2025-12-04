@@ -2,8 +2,12 @@
 /* global document */
 const fs = require("node:fs/promises");
 const path = require("node:path");
+const { execFile } = require("node:child_process");
+const { promisify } = require("node:util");
 const puppeteer = require("puppeteer");
 const theme = require("jsonresume-theme-escemi");
+
+const execFileAsync = promisify(execFile);
 
 const FALLBACK_LOCALE = "en";
 const COUNTRY_LOCALE_MAP = {
@@ -54,6 +58,37 @@ const buildRenderOptions = (resumeData, resumePath) => {
   const dir = resumeData?.meta?.dir === "rtl" ? "rtl" : "ltr";
   const title = resumeData?.basics?.name || "Resume";
   return { locale, dir, title };
+};
+
+const optimizePdf = async (inputPath) => {
+  const tempPath = inputPath.replace(/\.pdf$/i, ".unoptimized.pdf");
+  await fs.rename(inputPath, tempPath);
+
+  try {
+    await execFileAsync("gs", [
+      "-sDEVICE=pdfwrite",
+      "-dCompatibilityLevel=1.4",
+      "-dPDFSETTINGS=/ebook",
+      "-dNOPAUSE",
+      "-dQUIET",
+      "-dBATCH",
+      `-sOutputFile=${inputPath}`,
+      tempPath,
+    ]);
+
+    const [originalStats, optimizedStats] = await Promise.all([
+      fs.stat(tempPath),
+      fs.stat(inputPath),
+    ]);
+
+    const reduction =
+      ((originalStats.size - optimizedStats.size) / originalStats.size) * 100;
+    console.log(
+      `📉 PDF optimized: ${Math.round(originalStats.size / 1024)}KB → ${Math.round(optimizedStats.size / 1024)}KB (${reduction.toFixed(1)}% reduction)`,
+    );
+  } finally {
+    await fs.unlink(tempPath).catch(() => {});
+  }
 };
 
 async function main() {
@@ -108,6 +143,8 @@ async function main() {
       preferCSSPageSize: true,
     });
     console.log(`✅ Resume PDF created: ${outputPath}`);
+
+    await optimizePdf(outputPath);
   } catch (error) {
     console.error("Failed to generate PDF:", error.message);
     process.exitCode = 1;
