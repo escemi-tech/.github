@@ -50,7 +50,7 @@ jobs:
 
             return comment;
 
-      - uses: hoverkraft-tech/ci-github-common/actions/create-or-update-comment@5e8d0e6d1e76d8577a070db6d0128a91b1c9d5ad # 0.30.2
+      - uses: hoverkraft-tech/ci-github-common/actions/create-or-update-comment@5ac504609f6ef35c5ac94bd8199063aa32104721 # 0.31.3
         with:
           title: "Resume PDF Preview"
           body: ${{ steps.comment-preview.outputs.result }}
