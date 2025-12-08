@@ -17,7 +17,7 @@ env:
 
 jobs:
   linter:
-    uses: hoverkraft-tech/ci-github-common/.github/workflows/linter.yml@5e8d0e6d1e76d8577a070db6d0128a91b1c9d5ad # 0.30.2
+    uses: hoverkraft-tech/ci-github-common/.github/workflows/linter.yml@5ac504609f6ef35c5ac94bd8199063aa32104721 # 0.31.3
     permissions:
       actions: read
       contents: read
@@ -36,7 +36,7 @@ jobs:
     env:
       RESUME_FILE: resume/resume.${{ matrix.resume-language }}.json
     steps:
-      - uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           persist-credentials: false
 
@@ -48,7 +48,7 @@ jobs:
   theme-continuous-integration:
     needs: [linter, validate-resumes]
     name: Resume Theme CI
-    uses: hoverkraft-tech/ci-github-nodejs/.github/workflows/continuous-integration.yml@ce2467e5d41ff0abe85094dcc39c98288448065a # 0.20.4
+    uses: hoverkraft-tech/ci-github-nodejs/.github/workflows/continuous-integration.yml@338755b95043af1f8aa17409529fd20a9d2ef659 # 0.20.6
     permissions:
       contents: read
       id-token: write
@@ -76,7 +76,7 @@ jobs:
       OUTPUT_FILE: resume/pdf/resume.${{ matrix.resume-language }}.pdf
     steps:
       - name: Checkout code
-        uses: actions/checkout@1af3b93b6815bc44a9784bd300feb67ff0d1eeb3 # v6.0.0
+        uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           persist-credentials: false
 
@@ -99,7 +99,7 @@ jobs:
           path: ${{ env.OUTPUT_FILE }}
           if-no-files-found: error
 
-      - uses: hoverkraft-tech/ci-github-common/actions/set-matrix-output@5e8d0e6d1e76d8577a070db6d0128a91b1c9d5ad # 0.30.2
+      - uses: hoverkraft-tech/ci-github-common/actions/set-matrix-output@5ac504609f6ef35c5ac94bd8199063aa32104721 # 0.31.3
         with:
           value: |
             {
@@ -119,6 +119,6 @@ jobs:
       pdfs-root-path: ${{ env.RESUME_PDFS_ROOT_PATH }}
     steps:
       - id: get-generated-pdfs
-        uses: hoverkraft-tech/ci-github-common/actions/get-matrix-outputs@5e8d0e6d1e76d8577a070db6d0128a91b1c9d5ad # 0.30.2
+        uses: hoverkraft-tech/ci-github-common/actions/get-matrix-outputs@5ac504609f6ef35c5ac94bd8199063aa32104721 # 0.31.3
         with:
           artifact-name: "generated-pdfs"
