@@ -52,10 +52,31 @@ jobs:
             return artifactIds;
 
       - name: Download PDFs
+        id: download-pdfs
         uses: actions/download-artifact@018cc2cf5baa6db3ef3c5f8a56943fffe632ef53 # v6.0.0
         with:
           artifact-ids: ${{ steps.get-pdfs-artifacts-ids.outputs.result }}
-          path: ${{ needs.ci.outputs.pdfs-root-path }}
+          path: ${{ runner.temp }}/generated-pdfs-${{ github.run_id }}
+
+      - name: Copy generated PDFs
+        env:
+          DOWNLOAD_PATH: ${{ steps.download-pdfs.outputs.download-path }}
+          DESTINATION_PATH: ${{ needs.ci.outputs.pdfs-root-path }}
+        run: |
+          ls -la ${{ env.DOWNLOAD_PATH }}/**/*.pdf
+          rm -f ${{ env.DESTINATION_PATH }}/*.pdf
+          cp ${{ env.DOWNLOAD_PATH }}/**/*.pdf ${{ env.DESTINATION_PATH }}/
+          ls -la ${{ env.DESTINATION_PATH }}
+
+      - name: Upload resumes artifact
+        id: upload-resumes
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
+        with:
+          name: resumes
+          path: |
+            resume/resume.*.json
+            resume/pdf/resume.*.pdf
+          if-no-files-found: error
 
       - uses: hoverkraft-tech/ci-github-common/actions/create-and-merge-pull-request@5ac504609f6ef35c5ac94bd8199063aa32104721 # 0.31.3
         with:
@@ -68,16 +89,6 @@ jobs:
             The PDFs are generated automatically from the JSON resume data.
 
             [skip ci]
-
-      - name: Upload resumes artifact
-        id: upload-resumes
-        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5.0.0
-        with:
-          name: resumes
-          path: |
-            resume/resume.*.json
-            resume/pdf/resume.*.pdf
-          if-no-files-found: error
 
       - uses: actions/create-github-app-token@29824e69f54612133e76f7eaac726eef6c875baf # v2.2.1
         id: generate-token
