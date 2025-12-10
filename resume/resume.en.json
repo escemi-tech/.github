@@ -102,8 +102,8 @@
       "summary": "Independent strategic partner for SMEs and scale-ups that need industrialized delivery without a permanent CTO. I architect SOLID-centric platforms, tailor CI/CD and observability stacks, and embed coaching so mixed-seniority teams become autonomous.",
       "highlights": [
         "Challenge: ambitious product roadmaps executed by under-structured mixed-seniority teams",
-        "Actions: engineered SOLID-centric API platforms, client-specific CI/CD + IaC stacks, FinOps reviews, and immersive coaching",
-        "Results: 90% automated quality gates, <30 min deployments, €80-150K/year savings, squads ready for 10x traffic"
+        "Actions: engineering of SOLID-centric API platforms, tailoring of client-specific CI/CD + IaC stacks, execution of FinOps reviews, and immersive coaching",
+        "Results: automation of 90% quality gates, achievement of <30 min deployments, generation of €80-150K/year savings, preparation of squads for 10x traffic"
       ]
     },
     {
@@ -117,8 +117,8 @@
       "summary": "Fractional CTO within the Build & Run collective, engaged with scale-ups needing structure, modern DevX, and senior guidance. Designed reference cloud-native applications, reusable CI/CD stacks, and leadership rituals that align squads around measurable delivery outcomes.",
       "highlights": [
         "Challenge: multi-squad delivery slowed by heterogeneous stacks and manual releases",
-        "Actions: standardized \"12 factors Application\" blueprints, reusable GitHub/GitLab CI/CD templates, DevX scorecards, and leadership rituals",
-        "Results: +35% velocity, -40% debt, 5x releases, onboarding cut from 4 weeks to 1 with <5% change failure rate"
+        "Actions: standardization of \"12 factors Application\" blueprints, deployment of reusable GitHub/GitLab CI/CD templates, implementation of DevX scorecards and leadership rituals",
+        "Results: gain of +35% velocity, reduction of -40% debt, multiplication of releases x5, reduction of onboarding from 4 weeks to 1 with <5% change failure rate"
       ]
     },
     {
@@ -131,9 +131,9 @@
       "featured": true,
       "summary": "Co-founded Ouistiti to launch a zero-debt travel inspiration platform, owning product engineering from concept to growth. Delivered a JAMStack/serverless stack on AWS, orchestrated continuous UX loops, and instrumented the growth engine with SEA, CRM, and analytics.",
       "highlights": [
-        "Challenge: launch a zero-debt travel inspiration MVP under 3 months with aggressive acquisition goals",
-        "Actions: delivered JAMStack/serverless stack on AWS, rapid UX experimentation, data-driven CRM/SEA funnels, and product ops dashboards",
-        "Results: MVP shipped in 12 weeks, <500 ms loads, 5K MAU in 6 months, +40% engagement, 300+ sign-ups/week at €2.50 CPA"
+        "Challenge: launch of a zero-debt travel inspiration MVP under 3 months with aggressive acquisition goals",
+        "Actions: delivery of JAMStack/serverless stack on AWS, execution of rapid UX experimentation, implementation of data-driven CRM/SEA funnels, and creation of product ops dashboards",
+        "Results: shipment of MVP in 12 weeks, achievement of <500 ms loads, attainment of 5K MAU in 6 months, increase of +40% engagement, acquisition of 300+ sign-ups/week at €2.50 CPA"
       ]
     },
     {
@@ -148,8 +148,8 @@
       "summary": "Led the 3-year modernization program for Qwamplify, consolidating 8 business units, taming a legacy PHP estate, and sustaining high-volume marketing campaigns. Owned the IT master plan, architecture standards, and delivery governance for a 25-person engineering org.",
       "highlights": [
         "Challenge: fragmented legacy PHP stack blocking consolidation of 8 business units and rapid campaign launches",
-        "Actions: ran 3-year IT master plan, introduced SOA/microservices and standardized environments, enforced CI/CD + observability governance",
-        "Results: release cycle cut 4w→1w, production defects -55%, sprint reliability 85%, €200K/year maintenance savings"
+        "Actions: execution of 3-year IT master plan, introduction of SOA/microservices and standardization of environments, enforcement of CI/CD + observability governance",
+        "Results: reduction of release cycle from 4w to 1w, decrease of production defects by -55%, achievement of sprint reliability at 85%, generation of €200K/year maintenance savings"
       ]
     },
     {
@@ -162,9 +162,9 @@
       "featured": true,
       "summary": "Owned the evolution of the company's modular SaaS core product, from requirements gathering through development leadership to client validation of each release.",
       "highlights": [
-        "Challenge: Balance client-driven innovations with mounting technical debt while maintaining a packed SaaS roadmap.",
-        "Actions: Prioritized roadmap governance, led a cross-functional squad with mandatory code reviews, and enforced a shared Zend Framework baseline.",
-        "Results: Delivered 20+ major upgrades annually, stabilized release quality, and cut request-to-production lead time by 30%."
+        "Challenge: Balance of client-driven innovations with mounting technical debt while maintaining a packed SaaS roadmap.",
+        "Actions: Prioritization of roadmap governance, leadership of a cross-functional squad with mandatory code reviews, and enforcement of a shared Zend Framework baseline.",
+        "Results: Delivery of 20+ major upgrades annually, stabilization of release quality, and reduction of request-to-production lead time by 30%."
       ]
     },
     {
@@ -177,9 +177,9 @@
       "featured": true,
       "summary": "Designed and built a Web Callback (click-to-call) module to improve customer relationships inside the company's application panel.",
       "highlights": [
-        "Challenge: Deliver instant customer callbacks inside the legacy SaaS while integrating external VoIP providers.",
-        "Actions: Engineered a Zend Framework/PHP callback service with secure, reusable widgets covering 100% of client-facing screens and comprehensive rollout documentation.",
-        "Results: Cut customer follow-up time by 40% and enabled support teams to deploy the feature without regressions."
+        "Challenge: Delivery of instant customer callbacks inside the legacy SaaS while integrating external VoIP providers.",
+        "Actions: Engineering of a Zend Framework/PHP callback service with secure, reusable widgets covering 100% of client-facing screens and comprehensive rollout documentation.",
+        "Results: Reduction of customer follow-up time by 40% and enablement of support teams to deploy the feature without regressions."
       ]
     }
   ],
@@ -191,8 +191,8 @@
       "startDate": "2022-10",
       "summary": "Promoting cloud-native technologies in the Aix-Marseille region with 60+ meetups animated for 1,200+ members alongside the CNCF community.",
       "highlights": [
-        "Co-organized 60+ Cloud Native meetups (61 past events) uniting 1,200+ registered members across the Aix/Marseille tech scene",
-        "Delivered 6 technical talks on Kubernetes, GitOps, and DevOps practices while sustaining a 4.8★ score based on 250 Meetup reviews"
+        "Co-organization of 60+ Cloud Native meetups (61 past events) uniting 1,200+ registered members across the Aix/Marseille tech scene",
+        "Delivery of 6 technical talks on Kubernetes, GitOps, and DevOps practices while sustaining a 4.8★ score based on 250 Meetup reviews"
       ]
     },
     {
@@ -202,8 +202,8 @@
       "startDate": "2019-01",
       "summary": "Teaching software architectures and web development best practices.",
       "highlights": [
-        "Taught software architecture course to 60+ Master's students annually, covering practical applications of Clean Architecture, SOLID, and design patterns",
-        "Developed hands-on curriculum with 10+ real-world case studies, achieving 90% student satisfaction rating and 85% pass rate"
+        "Teaching of software architecture course to 60+ Master's students annually, covering practical applications of Clean Architecture, SOLID, and design patterns",
+        "Development of hands-on curriculum with 10+ real-world case studies, achieving 90% student satisfaction rating and 85% pass rate"
       ]
     }
   ],
@@ -322,12 +322,12 @@
       "featured": true,
       "description": "Modernized developer experience and transactional security for airline booking platform through GitHub Actions CI/CD ecosystem, hands-on mentoring, and resilient NestJS/RabbitMQ proxy architecture.",
       "highlights": [
-        "Reduced deployment time by 80% (from ~2 days manual work to <30 minutes fully automated) via reusable GitHub Actions workflows with canary deployments and automated rollbacks",
-        "Increased release frequency 5x (from monthly to weekly feature releases) through implementing Cloud Native principles, ensuring staging/production parity",
-        "Improved transaction reliability to 99.9% uptime with 90% fewer third-party failures by architecting NestJS proxy with RabbitMQ, implementing circuit breakers, retry policies, and idempotency guarantees",
-        "Cut new developer onboarding time by 70% (from multiple days to <1 day productivity) through standardized workflows, living style guides, and automated dependency updates",
-        "Mentored distributed team (in-house + contractors) on Clean Architecture and SOLID principles via weekly workshops, elevating code quality and establishing unit-test coverage thresholds",
-        "Deployed resilient microservice in Docker with OpenTelemetry monitoring, Datadog integration, and zero-downtime health checks for critical booking/payment flows"
+        "Reduction of deployment time by 80% (from ~2 days manual work to <30 minutes fully automated) via reusable GitHub Actions workflows with canary deployments and automated rollbacks",
+        "Increase in release frequency by 5x (from monthly to weekly feature releases) through implementation of Cloud Native principles, ensuring staging/production parity",
+        "Improvement of transaction reliability to 99.9% uptime with 90% fewer third-party failures by architecting NestJS proxy with RabbitMQ, implementing circuit breakers, retry policies, and idempotency guarantees",
+        "Reduction of new developer onboarding time by 70% (from multiple days to <1 day productivity) through standardization of workflows, creation of living style guides, and automation of dependency updates",
+        "Mentoring of distributed team (in-house + contractors) on Clean Architecture and SOLID principles via weekly workshops, elevating code quality and establishing unit-test coverage thresholds",
+        "Deployment of resilient microservice in Docker with OpenTelemetry monitoring, Datadog integration, and zero-downtime health checks for critical booking/payment flows"
       ],
       "keywords": [
         "DevX",
@@ -352,13 +352,13 @@
       "featured": true,
       "description": "High-performance IoT gateway for global smart infrastructure SaaS provider, unifying heterogeneous device integration across data centers and smart buildings with Redis-backed resilience, automated CI/CD, and OpenTelemetry observability.",
       "highlights": [
-        "Achieved 99.99% production uptime by implementing Redis caching, edge queueing, and automatic retry strategies with exponential backoff",
-        "Reduced data loss incidents by 85% through resilient fallback mechanisms that buffer messages during SaaS platform outages",
-        "Accelerated new device onboarding by 81% (from 3 weeks to 4 days) via centralized decoders, schema-based validation, and normalized payload pipeline",
-        "Scaled to handle 10x traffic increase (100K+ events/minute per gateway) without additional hardware through worker pools and optimized in-memory caching",
-        "Cut deployment cycle time by 70% with GitLab CI automation integrating unit, integration, and E2E tests plus canary releases and staged rollouts",
-        "Built unified REST API with OpenAPI specification for device lifecycle management, enabling remote registration, updates, and real-time monitoring",
-        "Integrated OpenTelemetry for full observability with logs, metrics, and alerting tied to device health and data flow KPIs"
+        "Achievement of 99.99% production uptime by implementing Redis caching, edge queueing, and automatic retry strategies with exponential backoff",
+        "Reduction of data loss incidents by 85% through resilient fallback mechanisms that buffer messages during SaaS platform outages",
+        "Acceleration of new device onboarding by 81% (from 3 weeks to 4 days) via centralized decoders, schema-based validation, and normalized payload pipeline",
+        "Scaling to handle 10x traffic increase (100K+ events/minute per gateway) without additional hardware through worker pools and optimized in-memory caching",
+        "Reduction of deployment cycle time by 70% with GitLab CI automation integrating unit, integration, and E2E tests plus canary releases and staged rollouts",
+        "Construction of unified REST API with OpenAPI specification for device lifecycle management, enabling remote registration, updates, and real-time monitoring",
+        "Integration of OpenTelemetry for full observability with logs, metrics, and alerting tied to device health and data flow KPIs"
       ],
       "keywords": [
         "Node.js",
@@ -386,12 +386,12 @@
       "featured": true,
       "description": "Two-phase strategic consulting engagement for a career guidance platform: comprehensive IT audit followed by monthly CTO accompaniment covering product roadmap, technical recruitment, and infrastructure/security vendor management.",
       "highlights": [
-        "Conducted 1-week IT audit analyzing application architecture, development processes, and team organization, identifying 12 priority improvement areas that reduced technical risk by 60%",
-        "Structured interviews with 8 stakeholders (product, project, tech leads) to map system dependencies and bottlenecks, reducing feature delivery timelines by ~40%",
-        "Developed 5 technical job descriptions aligned with product strategy, accelerating recruitment process from 3 months to 6 weeks and improving candidate-role fit by 45%",
-        "Defined 12-month technical roadmap prioritizing 15+ initiatives by business impact and feasibility, aligning tech investments with growth objectives (+30% target user increase)",
-        "Managed relationships with 3 external vendors (cloud infrastructure, security assurance), negotiating SLAs guaranteeing 99.5% uptime and reducing infrastructure costs by ~25%",
-        "Established technical governance framework (monthly committees, velocity KPIs, quality dashboards) improving team visibility and reducing time-to-market by 35%"
+        "Conduction of 1-week IT audit analyzing application architecture, development processes, and team organization, identifying 12 priority improvement areas that reduced technical risk by 60%",
+        "Structuring of interviews with 8 stakeholders (product, project, tech leads) to map system dependencies and bottlenecks, reducing feature delivery timelines by ~40%",
+        "Development of 5 technical job descriptions aligned with product strategy, accelerating recruitment process from 3 months to 6 weeks and improving candidate-role fit by 45%",
+        "Definition of 12-month technical roadmap prioritizing 15+ initiatives by business impact and feasibility, aligning tech investments with growth objectives (+30% target user increase)",
+        "Management of relationships with 3 external vendors (cloud infrastructure, security assurance), negotiating SLAs guaranteeing 99.5% uptime and reducing infrastructure costs by ~25%",
+        "Establishment of technical governance framework (monthly committees, velocity KPIs, quality dashboards) improving team visibility and reducing time-to-market by 35%"
       ],
       "keywords": [
         "CTO Accompaniment",
@@ -417,12 +417,12 @@
       "featured": true,
       "description": "Hands-on mentorship of development team for technical services management platform, accelerating their skill growth in GraphQL/modern backend API architecture and optimizing development practices.",
       "highlights": [
-        "Reduced new feature development time by 40% through optimized GraphQL architecture with NestJS, replacing multiple REST endpoints with unified, type-safe queries",
-        "Accelerated new developer onboarding from ~2 weeks to ~5 days via living architectural documentation, reusable patterns, and annotated code examples",
-        "Improved code maintainability by 50% by implementing Clean Architecture and SOLID principles with clear layer separation (domain, application, infrastructure)",
-        "Optimized database query performance by 60% (from ~800ms to ~300ms average) through Postgres ORM optimization, strategic indexing, and N+1 query resolution",
-        "Established quality pipeline with automated testing (unit, integration, E2E) reducing production regressions by 70% and increasing deployment confidence",
-        "Mentored team on GraphQL best practices (dataloaders, pagination, error handling) and NestJS patterns via pair programming and structured code reviews"
+        "Reduction of new feature development time by 40% through optimized GraphQL architecture with NestJS, replacing multiple REST endpoints with unified, type-safe queries",
+        "Acceleration of new developer onboarding from ~2 weeks to ~5 days via living architectural documentation, reusable patterns, and annotated code examples",
+        "Improvement of code maintainability by 50% by implementing Clean Architecture and SOLID principles with clear layer separation (domain, application, infrastructure)",
+        "Optimization of database query performance by 60% (from ~800ms to ~300ms average) through Postgres ORM optimization, strategic indexing, and N+1 query resolution",
+        "Establishment of quality pipeline with automated testing (unit, integration, E2E) reducing production regressions by 70% and increasing deployment confidence",
+        "Mentoring of team on GraphQL best practices (dataloaders, pagination, error handling) and NestJS patterns via pair programming and structured code reviews"
       ],
       "keywords": [
         "GraphQL",
@@ -449,12 +449,12 @@
       "featured": true,
       "description": "Designed and developed backend architecture for the ARN photographic archive platform, documenting 15,000+ images of French landscapes and buildings through an optimized NestJS/Laravel stack focused on performance and scalability.",
       "highlights": [
-        "Architected photo archive platform managing 15,000+ high-resolution images with multi-criteria filtering (region, typology, materials, period), ensuring <300ms response time and 99.9% uptime",
-        "Implemented hybrid categorization system with full-text indexing handling 10,000+ daily search queries with geographic, thematic, and historical navigation",
-        "Optimized image processing pipeline reducing upload and thumbnail generation time by 60% (from ~5min to ~2min per batch of 50 images) through parallelization and smart compression",
-        "Designed unified REST/GraphQL API with distributed caching cutting server load by 70% and enabling integration with physical exhibitions and printed publications",
-        "Deployed cloud-native infrastructure with geographically distributed CDN reducing bandwidth costs by 40% while improving international load times by 55%",
-        "Established CI/CD pipeline with automated testing ensuring metadata quality (geolocation, regional taxonomy) and reducing cataloging errors by 80%"
+        "Architecting of photo archive platform managing 15,000+ high-resolution images with multi-criteria filtering (region, typology, materials, period), ensuring <300ms response time and 99.9% uptime",
+        "Implementation of hybrid categorization system with full-text indexing handling 10,000+ daily search queries with geographic, thematic, and historical navigation",
+        "Optimization of image processing pipeline reducing upload and thumbnail generation time by 60% (from ~5min to ~2min per batch of 50 images) through parallelization and smart compression",
+        "Design of unified REST/GraphQL API with distributed caching cutting server load by 70% and enabling integration with physical exhibitions and printed publications",
+        "Deployment of cloud-native infrastructure with geographically distributed CDN reducing bandwidth costs by 40% while improving international load times by 55%",
+        "Establishment of CI/CD pipeline with automated testing ensuring metadata quality (geolocation, regional taxonomy) and reducing cataloging errors by 80%"
       ],
       "keywords": [
         "NestJS",
@@ -481,12 +481,12 @@
       "featured": true,
       "description": "3-year strategic technical mentorship across European development teams, standardizing architecture and boosting delivery efficiency for PHP/Symfony and Node.js/NestJS projects before and after Tekoway's integration into Eukles.",
       "highlights": [
-        "Reduced project bootstrap time by 45% (from ~10 to ~5.5 days) through shared architecture blueprints applying Clean Architecture and SOLID principles across Symfony and NestJS stacks",
-        "Accelerated developer onboarding x2 faster (from ~3 weeks to 1.5 weeks) via unified project templates, automated setup scripts, and common tooling across European locations",
-        "Cut post-release bug rate by 30% after implementing standardized QA workflows and cross-country DevOps pipelines using Docker, GitLab CI, and ArgoCD",
-        "Improved developer satisfaction by 35% on internal surveys regarding architecture clarity and tooling through architecture clinics, workshops, and documentation",
-        "Mentored distributed teams remotely across multiple European countries, establishing shared technical language and unified engineering culture that scaled seamlessly through Tekoway's evolution into Eukles",
-        "Built multi-stack project boilerplates integrating DDD folder structures, dependency injection, logging, monitoring, and observability hooks for consistent delivery quality regardless of team location"
+        "Reduction of project bootstrap time by 45% (from ~10 to ~5.5 days) through shared architecture blueprints applying Clean Architecture and SOLID principles across Symfony and NestJS stacks",
+        "Acceleration of developer onboarding x2 faster (from ~3 weeks to 1.5 weeks) via unified project templates, automated setup scripts, and common tooling across European locations",
+        "Reduction of post-release bug rate by 30% after implementing standardized QA workflows and cross-country DevOps pipelines using Docker, GitLab CI, and ArgoCD",
+        "Improvement of developer satisfaction by 35% on internal surveys regarding architecture clarity and tooling through architecture clinics, workshops, and documentation",
+        "Mentoring of distributed teams remotely across multiple European countries, establishing shared technical language and unified engineering culture that scaled seamlessly through Tekoway's evolution into Eukles",
+        "Creation of multi-stack project boilerplates integrating DDD folder structures, dependency injection, logging, monitoring, and observability hooks for consistent delivery quality regardless of team location"
       ],
       "keywords": [
         "PHP",
