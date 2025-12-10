@@ -18,7 +18,7 @@ const STRINGS: Record<string, ResumeStrings> = {
   },
   fr: {
     sections: {
-      impact: "Missions à Impact",
+      impact: "Expériences Professionnelles",
       professional: "Expériences Professionnelles",
       projects: "Projets Clés",
       community: "Engagement Communautaire",
