@@ -52,7 +52,7 @@
   },
   "basics": {
     "name": "Emilien Escalle",
-    "label": "CTO à la demande & Expert DevX - Lead Developer Senior",
+    "label": "CTO à la demande & Expert Web et Cloud - Lead Developer Senior",
     "baseline": "Expert Node.js & PHP · Cloud Native · Coach DevX",
     "signatureNumbers": [
       "16 ans d'expérience",
@@ -103,7 +103,7 @@
       "highlights": [
         "Défi : delivery multi-squads ralentie par stacks hétérogènes et releases manuelles",
         "Actions : blueprints \"12 factors Application\", templates GitHub/GitLab CI/CD réutilisables, scorecards DevX et rituels de leadership",
-        "Résultats : +35% de vélocité, -40% de dette, releases x5, onboarding 4 semaines → 1 avec <5% de change failure rate"
+        "Résultats : gain de vélocité de +35%, réduction de dette de -40%, multiplication des releases x5, réduction de l'onboarding de 4 semaines à 1 avec <5% de change failure rate"
       ],
       "keywords": [
         "Fractional CTO",
@@ -128,7 +128,7 @@
       "highlights": [
         "Défi : roadmaps ambitieuses exécutées par des équipes sous-structurées",
         "Actions : plateformes API SOLID, stacks CI/CD + IaC sur mesure, revues FinOps, coaching immersif",
-        "Résultats : 90% de contrôles automatisés, déploiements <30 min, économies 80-150 K€/an, équipes prêtes pour trafic x10"
+        "Résultats : automatisation de 90% des contrôles, déploiements en <30 min, économies de 80-150 K€/an, préparation des équipes pour un trafic x10"
       ],
       "keywords": [
         "CTO à la demande",
@@ -153,7 +153,7 @@
       "highlights": [
         "Défi : lancer un MVP inspiration voyage <3 mois avec objectifs d'acquisition élevés",
         "Actions : stack JAMStack/serverless sur AWS, boucles UX rapides, funnels CRM/SEA pilotés par la donnée, dashboards produit",
-        "Résultats : MVP livré en 12 semaines, <500 ms de chargement, 5K MAU en 6 mois, +40% d'engagement, 300+ inscriptions/semaine à 2,50€ CPA"
+        "Résultats : livraison du MVP en 12 semaines, chargement <500 ms, atteinte de 5K MAU en 6 mois, augmentation de l'engagement de +40%, obtention de 300+ inscriptions/semaine à 2,50€ CPA"
       ],
       "keywords": [
         "JAMStack",
@@ -179,7 +179,7 @@
       "highlights": [
         "Défi : stack PHP fragmentée bloquant la consolidation de 8 entités et la cadence campagne",
         "Actions : schéma directeur 3 ans, blueprint SOA/microservices, environnements standardisés, gouvernance CI/CD + observabilité",
-        "Résultats : cycle release 4 sem → 1, défauts prod -55%, sprints fiables à 85%, 200 K€/an d'économies de maintenance"
+        "Résultats : réduction du cycle de release de 4 sem à 1, diminution des défauts prod de -55%, fiabilisation des sprints à 85%, réalisation d'économies de maintenance de 200 K€/an"
       ],
       "keywords": [
         "legacy PHP",
@@ -201,8 +201,8 @@
       "summary": "En charge de l'évolution de la suite applicative SaaS modulaire : définition des cahiers des charges, pilotage des évolutions structurantes et coordination de l'équipe de développement jusqu'à la validation client.",
       "highlights": [
         "Défi : orchestrer une roadmap SaaS ambitieuse conciliant exigences clients, innovations et réduction de la dette technique",
-        "Actions : animé une équipe pluridisciplinaire, instauré les revues de code et un socle Zend Framework partagé, sécurisé chaque livraison du cadrage au recettage",
-        "Résultats : livré 20+ évolutions majeures/an avec des releases fiabilisées et un délai besoin → production réduit de 30%"
+        "Actions : animation d'une équipe pluridisciplinaire, instauration des revues de code et d'un socle Zend Framework partagé, sécurisation de chaque livraison du cadrage au recettage",
+        "Résultats : livraison de 20+ évolutions majeures/an avec des releases fiabilisées et une réduction du délai besoin → production de 30%"
       ],
       "keywords": [
         "SaaS modulaire",
@@ -224,8 +224,8 @@
       "summary": "Conception et développement d'un module Web Callback (Click-to-call) afin d'améliorer la relation client au sein du panel applicatif de l'éditeur.",
       "highlights": [
         "Défi : intégrer un module Web Callback VoIP dans la suite legacy pour fluidifier le traitement des demandes clients",
-        "Actions : développé le module Zend Framework/PHP, créé des composants JavaScript réutilisables et documenté l'industrialisation avec transferts vers le support",
-        "Résultats : temps de traitement des demandes réduit de 40%, couverture click-to-call portée à 100% des écrans et déploiements sans régression"
+        "Actions : développement du module Zend Framework/PHP, création de composants JavaScript réutilisables et documentation de l'industrialisation avec transferts vers le support",
+        "Résultats : réduction du temps de traitement des demandes de 40%, extension de la couverture click-to-call à 100% des écrans et déploiements sans régression"
       ],
       "keywords": [
         "Web Callback",
@@ -246,8 +246,8 @@
       "startDate": "2022-10",
       "summary": "Promotion des technologies cloud-native dans la région Aix-Marseille en collaboration avec la communauté CNCF, avec 60+ meetups animant 1 200+ membres sur Meetup.",
       "highlights": [
-        "Co-organisé 60+ meetups Cloud Native (61 événements passés) réunissant 1 200+ membres inscrits sur Meetup dans la région Aix/Marseille",
-        "Présenté 6 talks techniques sur Kubernetes, GitOps et pratiques DevOps, maintenant une note de 4,8★ basée sur 250 avis Meetup"
+        "Co-organisation de 60+ meetups Cloud Native (61 événements passés) réunissant 1 200+ membres inscrits sur Meetup dans la région Aix/Marseille",
+        "Présentation de 6 talks techniques sur Kubernetes, GitOps et pratiques DevOps, maintenant une note de 4,8★ basée sur 250 avis Meetup"
       ],
       "keywords": [
         "Cloud Native",
@@ -265,8 +265,8 @@
       "startDate": "2019-01",
       "summary": "Enseignement des architectures logicielles et des bonnes pratiques de développement web.",
       "highlights": [
-        "Enseigné le cours d'architecture logicielle à 60+ étudiants de Master annuellement, couvrant les applications pratiques de Clean Architecture, SOLID et design patterns",
-        "Développé un curriculum hands-on avec 10+ études de cas réelles, atteignant 90% de satisfaction étudiante et 85% de taux de réussite"
+        "Enseignement du cours d'architecture logicielle à 60+ étudiants de Master annuellement, couvrant les applications pratiques de Clean Architecture, SOLID et design patterns",
+        "Développement d'un curriculum hands-on avec 10+ études de cas réelles, atteignant 90% de satisfaction étudiante et 85% de taux de réussite"
       ],
       "keywords": [
         "Architecture logicielle",
@@ -393,12 +393,12 @@
       "featured": true,
       "description": "Modernisation de l'expérience développeur et de la sécurité transactionnelle de la plateforme de réservation aérienne via un écosystème CI/CD GitHub Actions, mentorat hands-on, et architecture proxy résiliente NestJS/RabbitMQ.",
       "highlights": [
-        "Réduit le temps de déploiement de 80% (de ~2 jours manuels à <30 min automatisées) via workflows GitHub Actions réutilisables avec canary et rollbacks automatiques",
-        "Augmenté la fréquence de release x5 (de mensuelle à hebdomadaire) grâce à l'implémentation des principes Cloud Native, assurant la parité staging/production",
-        "Amélioré la fiabilité transactionnelle à 99,9% de disponibilité avec 90% moins d'échecs tiers en architecturant un proxy NestJS avec RabbitMQ, implémentant circuit breakers, politiques de retry et garanties d'idempotence",
-        "Réduit le temps d'onboarding développeur de 70% (de plusieurs jours à <1 jour de productivité) via workflows standardisés, guides de style vivants et mises à jour automatiques des dépendances",
-        "Mentoré l'équipe distribuée (interne + contractants) sur Clean Architecture et principes SOLID via ateliers hebdomadaires, élevant la qualité du code et établissant des seuils de couverture de tests unitaires",
-        "Déployé un microservice résilient dans Docker avec monitoring OpenTelemetry, intégration Datadog et health checks zero-downtime pour les flux critiques de réservation/paiement"
+        "Réduction du temps de déploiement de 80% (de ~2 jours manuels à <30 min automatisées) via workflows GitHub Actions réutilisables avec canary et rollbacks automatiques",
+        "Augmentation de la fréquence de release x5 (de mensuelle à hebdomadaire) grâce à l'implémentation des principes Cloud Native, assurant la parité staging/production",
+        "Amélioration de la fiabilité transactionnelle à 99,9% de disponibilité avec 90% moins d'échecs tiers en architecturant un proxy NestJS avec RabbitMQ, implémentant circuit breakers, politiques de retry et garanties d'idempotence",
+        "Réduction du temps d'onboarding développeur de 70% (de plusieurs jours à <1 jour de productivité) via workflows standardisés, guides de style vivants et mises à jour automatiques des dépendances",
+        "Mentorat de l'équipe distribuée (interne + contractants) sur Clean Architecture et principes SOLID via ateliers hebdomadaires, élevant la qualité du code et établissant des seuils de couverture de tests unitaires",
+        "Déploiement d'un microservice résilient dans Docker avec monitoring OpenTelemetry, intégration Datadog et health checks zero-downtime pour les flux critiques de réservation/paiement"
       ],
       "keywords": [
         "DevX",
@@ -423,13 +423,13 @@
       "featured": true,
       "description": "Gateway IoT haute performance pour fournisseur SaaS mondial d'infrastructure intelligente, unifiant l'intégration d'appareils hétérogènes dans les datacenters et bâtiments intelligents avec résilience Redis, CI/CD automatisé et observabilité OpenTelemetry.",
       "highlights": [
-        "Atteint 99,99% de disponibilité en production via cache Redis, file d'attente edge et stratégies de retry automatiques avec backoff exponentiel",
-        "Réduit les incidents de perte de données de 85% grâce à des mécanismes de fallback résilients qui bufferisent les messages durant les pannes de la plateforme SaaS",
-        "Accéléré l'onboarding de nouveaux appareils de 81% (de 3 semaines à 4 jours) via décodeurs centralisés, validation basée sur schéma et pipeline de payload normalisé",
-        "Scalé pour gérer une augmentation de trafic x10 (100K+ événements/minute par gateway) sans matériel supplémentaire grâce aux worker pools et au cache en mémoire optimisé",
-        "Réduit le temps de cycle de déploiement de 70% avec automatisation GitLab CI intégrant tests unitaires, d'intégration et E2E, plus releases canary et déploiements progressifs",
-        "Construit une API REST unifiée avec spécification OpenAPI pour la gestion du cycle de vie des appareils, permettant enregistrement à distance, mises à jour et monitoring temps réel",
-        "Intégré OpenTelemetry pour observabilité complète avec logs, métriques et alerting liés à la santé des appareils et aux KPI de flux de données"
+        "Atteinte de 99,99% de disponibilité en production via cache Redis, file d'attente edge et stratégies de retry automatiques avec backoff exponentiel",
+        "Réduction des incidents de perte de données de 85% grâce à des mécanismes de fallback résilients qui bufferisent les messages durant les pannes de la plateforme SaaS",
+        "Accélération de l'onboarding de nouveaux appareils de 81% (de 3 semaines à 4 jours) via décodeurs centralisés, validation basée sur schéma et pipeline de payload normalisé",
+        "Mise à l'échelle pour gérer une augmentation de trafic x10 (100K+ événements/minute par gateway) sans matériel supplémentaire grâce aux worker pools et au cache en mémoire optimisé",
+        "Réduction du temps de cycle de déploiement de 70% avec automatisation GitLab CI intégrant tests unitaires, d'intégration et E2E, plus releases canary et déploiements progressifs",
+        "Construction d'une API REST unifiée avec spécification OpenAPI pour la gestion du cycle de vie des appareils, permettant enregistrement à distance, mises à jour et monitoring temps réel",
+        "Intégration d'OpenTelemetry pour observabilité complète avec logs, métriques et alerting liés à la santé des appareils et aux KPI de flux de données"
       ],
       "keywords": [
         "Node.js",
@@ -457,12 +457,12 @@
       "featured": true,
       "description": "Mission de conseil stratégique pour une plateforme d'orientation professionnelle. Audit IT complet suivi d'un accompagnement CTO mensuel couvrant roadmap produit, recrutement technique et interface avec prestataires infrastructure/sécurité.",
       "highlights": [
-        "Mené un audit IT d'une semaine sur architecture applicative, pratiques de développement et organisation, priorisant 12 améliorations réduisant les risques techniques de 60%",
-        "Structuré des interviews avec 8 parties prenantes (product, project, tech leads) pour cartographier dépendances et goulots, réduisant les délais de livraison de ~40%",
-        "Élaboré 5 fiches de poste techniques alignées sur la stratégie produit, accélérant le processus de recrutement de 3 mois à 6 semaines et améliorant le matching candidat/poste de 45%",
-        "Défini une roadmap technique sur 12 mois priorisant 15+ initiatives selon impact business et faisabilité, alignant les investissements tech avec les objectifs de croissance (+30% d'utilisateurs visés)",
-        "Piloté les relations avec 3 prestataires externes (infrastructure cloud, PSSI), négociant des SLA garantissant 99,5% de disponibilité et réduisant les coûts d'infrastructure de ~25%",
-        "Établi un cadre de gouvernance technique (comités mensuels, KPIs de vélocité, dashboards de qualité) améliorant la visibilité des équipes et réduisant le time-to-market de 35%"
+        "Réalisation d'un audit IT d'une semaine sur architecture applicative, pratiques de développement et organisation, priorisant 12 améliorations réduisant les risques techniques de 60%",
+        "Structuration d'interviews avec 8 parties prenantes (product, project, tech leads) pour cartographier dépendances et goulots, réduisant les délais de livraison de ~40%",
+        "Élaboration de 5 fiches de poste techniques alignées sur la stratégie produit, accélérant le processus de recrutement de 3 mois à 6 semaines et améliorant le matching candidat/poste de 45%",
+        "Définition d'une roadmap technique sur 12 mois priorisant 15+ initiatives selon impact business et faisabilité, alignant les investissements tech avec les objectifs de croissance (+30% d'utilisateurs visés)",
+        "Pilotage des relations avec 3 prestataires externes (infrastructure cloud, PSSI), négociant des SLA garantissant 99,5% de disponibilité et réduisant les coûts d'infrastructure de ~25%",
+        "Établissement d'un cadre de gouvernance technique (comités mensuels, KPIs de vélocité, dashboards de qualité) améliorant la visibilité des équipes et réduisant le time-to-market de 35%"
       ],
       "keywords": [
         "Accompagnement CTO",
@@ -488,12 +488,12 @@
       "featured": true,
       "description": "Accompagnement hands-on d'une équipe de développement d'une plateforme de gestion de services techniques, accélérant leur montée en compétences sur l'architecture GraphQL/API backend moderne et optimisant leurs pratiques de développement.",
       "highlights": [
-        "Réduit le temps de développement des fonctionnalités de 40% grâce à une architecture GraphQL NestJS qui remplace les endpoints REST multiples par des requêtes typées unifiées",
-        "Accéléré l'onboarding des nouveaux développeurs de ~2 semaines à ~5 jours grâce à la documentation architecturale vivante, patterns réutilisables et exemples de code commentés",
-        "Amélioré la maintenabilité du code de 50% en implémentant Clean Architecture et principes SOLID avec séparation claire des couches (domaine, application, infrastructure)",
-        "Optimisé les performances de requêtes base de données de 60% (de ~800ms à ~300ms en moyenne) via optimisation ORM Postgres, indexation stratégique et résolution N+1 queries",
-        "Établi un pipeline de qualité avec tests automatisés (unit, intégration, E2E) réduisant les régressions en production de 70% et augmentant la confiance de déploiement",
-        "Mentoré l'équipe sur les best practices GraphQL (dataloaders, pagination, error handling) et patterns NestJS via pair programming et code reviews structurées"
+        "Réduction du temps de développement des fonctionnalités de 40% grâce à une architecture GraphQL NestJS qui remplace les endpoints REST multiples par des requêtes typées unifiées",
+        "Accélération de l'onboarding des nouveaux développeurs de ~2 semaines à ~5 jours grâce à la documentation architecturale vivante, patterns réutilisables et exemples de code commentés",
+        "Amélioration de la maintenabilité du code de 50% en implémentant Clean Architecture et principes SOLID avec séparation claire des couches (domaine, application, infrastructure)",
+        "Optimisation des performances de requêtes base de données de 60% (de ~800ms à ~300ms en moyenne) via optimisation ORM Postgres, indexation stratégique et résolution N+1 queries",
+        "Établissement d'un pipeline de qualité avec tests automatisés (unit, intégration, E2E) réduisant les régressions en production de 70% et augmentant la confiance de déploiement",
+        "Mentorat de l'équipe sur les best practices GraphQL (dataloaders, pagination, error handling) et patterns NestJS via pair programming et code reviews structurées"
       ],
       "keywords": [
         "GraphQL",
@@ -520,12 +520,12 @@
       "featured": true,
       "description": "Conception et développement de l'architecture backend pour la plateforme d'archive photographique ARN, documentant 15 000+ images des paysages et bâtis français via une stack NestJS/Laravel optimisée pour la performance et la scalabilité.",
       "highlights": [
-        "Architecturé une plateforme d'archive photo gérant 15 000+ images haute résolution avec filtrage multi-critères (région, typologie, matériau, période), assurant <300ms de temps de réponse et 99,9% de disponibilité",
-        "Implémenté un système de catégorisation hybride avec indexation full-text permettant de traiter 10 000+ requêtes de recherche quotidiennes avec navigation géographique, thématique et historique",
-        "Optimisé le pipeline de traitement d'images réduisant le temps d'upload et de génération de miniatures de 60% (de ~5min à ~2min par lot de 50 images) via parallélisation et compression intelligente",
-        "Conçu une API REST/GraphQL unifiée avec cache distribué réduisant la charge serveur de 70% et permettant l'intégration avec expositions physiques et publications imprimées",
-        "Déployé infrastructure cloud-native avec CDN géographiquement distribué réduisant les coûts de bande passante de 40% tout en améliorant les temps de chargement internationaux de 55%",
-        "Établi pipeline CI/CD avec tests automatisés assurant la qualité des métadonnées (géolocalisation, taxonomie régionale) et réduisant les erreurs de catalogage de 80%"
+        "Architecture d'une plateforme d'archive photo gérant 15 000+ images haute résolution avec filtrage multi-critères (région, typologie, matériau, période), assurant <300ms de temps de réponse et 99,9% de disponibilité",
+        "Implémentation d'un système de catégorisation hybride avec indexation full-text permettant de traiter 10 000+ requêtes de recherche quotidiennes avec navigation géographique, thématique et historique",
+        "Optimisation du pipeline de traitement d'images réduisant le temps d'upload et de génération de miniatures de 60% (de ~5min à ~2min par lot de 50 images) via parallélisation et compression intelligente",
+        "Conception d'une API REST/GraphQL unifiée avec cache distribué réduisant la charge serveur de 70% et permettant l'intégration avec expositions physiques et publications imprimées",
+        "Déploiement d'une infrastructure cloud-native avec CDN géographiquement distribué réduisant les coûts de bande passante de 40% tout en améliorant les temps de chargement internationaux de 55%",
+        "Établissement d'un pipeline CI/CD avec tests automatisés assurant la qualité des métadonnées (géolocalisation, taxonomie régionale) et réduisant les erreurs de catalogage de 80%"
       ],
       "keywords": [
         "NestJS",
@@ -552,12 +552,12 @@
       "featured": true,
       "description": "Accompagnement stratégique technique de 3 ans auprès d'équipes de développement européennes, standardisant l'architecture et boostant l'efficacité de livraison pour les projets PHP/Symfony et Node.js/NestJS avant et après l'intégration de Tekoway dans Eukles.",
       "highlights": [
-        "Réduit le temps de bootstrap de projet de 45% (de ~10 à ~5,5 jours) via des blueprints d'architecture partagés appliquant Clean Architecture et principes SOLID sur les stacks Symfony et NestJS",
-        "Accéléré l'onboarding développeur x2 fois (de ~3 semaines à 1,5 semaine) grâce à des templates de projets unifiés, scripts de configuration automatisés et outillage commun entre les sites européens",
-        "Réduit le taux de bugs post-release de 30% après implémentation de workflows QA standardisés et pipelines DevOps inter-pays utilisant Docker, GitLab CI et ArgoCD",
-        "Amélioré la satisfaction développeur de 35% sur les enquêtes internes concernant la clarté architecturale et l'outillage via cliniques d'architecture, ateliers et documentation",
-        "Mentoré des équipes distribuées à distance dans plusieurs pays européens, établissant un langage technique partagé et une culture d'ingénierie unifiée qui a scallé sans friction à travers l'évolution de Tekoway vers Eukles",
-        "Créé des boilerplates multi-stack intégrant structures de dossiers DDD, injection de dépendances, logging, monitoring et hooks d'observabilité pour une qualité de livraison constante quel que soit la localisation de l'équipe"
+        "Réduction du temps de bootstrap de projet de 45% (de ~10 à ~5,5 jours) via des blueprints d'architecture partagés appliquant Clean Architecture et principes SOLID sur les stacks Symfony et NestJS",
+        "Accélération de l'onboarding développeur x2 fois (de ~3 semaines à 1,5 semaine) grâce à des templates de projets unifiés, scripts de configuration automatisés et outillage commun entre les sites européens",
+        "Réduction du taux de bugs post-release de 30% après implémentation de workflows QA standardisés et pipelines DevOps inter-pays utilisant Docker, GitLab CI et ArgoCD",
+        "Amélioration de la satisfaction développeur de 35% sur les enquêtes internes concernant la clarté architecturale et l'outillage via cliniques d'architecture, ateliers et documentation",
+        "Mentorat d'équipes distribuées à distance dans plusieurs pays européens, établissant un langage technique partagé et une culture d'ingénierie unifiée qui a scallé sans friction à travers l'évolution de Tekoway vers Eukles",
+        "Création de boilerplates multi-stack intégrant structures de dossiers DDD, injection de dépendances, logging, monitoring et hooks d'observabilité pour une qualité de livraison constante quel que soit la localisation de l'équipe"
       ],
       "keywords": [
         "PHP",
