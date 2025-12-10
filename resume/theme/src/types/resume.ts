@@ -1,6 +1,5 @@
 export type ResumeStrings = {
   sections: {
-    impact: string;
     professional: string;
     projects: string;
     community: string;

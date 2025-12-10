@@ -3,7 +3,6 @@ import type { ExperienceEntry, ResumeStrings } from "../types/resume";
 const STRINGS: Record<string, ResumeStrings> = {
   en: {
     sections: {
-      impact: "Impact Missions",
       professional: "Professional Experience",
       projects: "Key Projects",
       community: "Community Leadership",
@@ -18,7 +17,6 @@ const STRINGS: Record<string, ResumeStrings> = {
   },
   fr: {
     sections: {
-      impact: "Expériences Professionnelles",
       professional: "Expériences Professionnelles",
       projects: "Projets Clés",
       community: "Engagement Communautaire",
