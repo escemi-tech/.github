@@ -149,7 +149,7 @@
       "endDate": "2019-09",
       "type": "founder",
       "featured": true,
-      "summary": "Co-fondé Ouistiti pour lancer une plateforme d'inspiration voyage sans dette technique, en dirigeant l'ingénierie produit du concept à la croissance. Stack JAMStack/serverless sur AWS, boucles UX continues et pilotage data des leviers acquisition (SEA, CRM, analytics).",
+      "summary": "Co-création de Ouistiti pour lancer une plateforme d'inspiration voyage sans dette technique, en dirigeant l'ingénierie produit du concept à la croissance. Stack JAMStack/serverless sur AWS, boucles UX continues et pilotage data des leviers acquisition (SEA, CRM, analytics).",
       "highlights": [
         "Défi : lancer un MVP inspiration voyage <3 mois avec objectifs d'acquisition élevés",
         "Actions : stack JAMStack/serverless sur AWS, boucles UX rapides, funnels CRM/SEA pilotés par la donnée, dashboards produit",
@@ -160,10 +160,10 @@
         "Serverless",
         "AWS",
         "UX",
-        "CRM",
         "SEA",
-        "analytics",
-        "MVP"
+        "MVP",
+        "Nest.js",
+        "React"
       ]
     },
     {
