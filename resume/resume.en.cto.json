@@ -1,0 +1,613 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.en.json",
+    "version": "2025.11.16.5",
+    "lastModified": "2025-11-16T11:30:00Z",
+    "locale": "en",
+    "impact": [
+      {
+        "label": "Cost optimization",
+        "value": "€1M+",
+        "description": "Cumulative infrastructure and operational cost savings delivered across client engagements"
+      },
+      {
+        "label": "Time-to-market",
+        "value": "-60%",
+        "description": "Average reduction in feature delivery cycles through engineering transformation and process optimization"
+      },
+      {
+        "label": "Engineering teams scaled",
+        "value": "15+",
+        "description": "Organizations where engineering capacity, velocity, and quality were simultaneously improved"
+      },
+      {
+        "label": "Platform scalability",
+        "value": "10x",
+        "description": "Traffic and user growth enabled through cloud-native architecture modernization without proportional cost increase"
+      }
+    ],
+    "services": [
+      {
+        "name": "Fractional CTO & Strategic Technology Leadership",
+        "summary": "Executive technology partner who translates board-level business objectives into executable technical strategy, delivering measurable ROI and competitive advantage.",
+        "description": "I partner with CEOs, boards, and investors to align technology investments with business outcomes. I develop multi-year technology roadmaps, establish engineering governance, manage technical due diligence, optimize infrastructure costs (€80-500K annual savings), and build scalable engineering organizations that support 3-5x revenue growth without proportional headcount increase."
+      },
+      {
+        "name": "Digital Transformation & Platform Modernization",
+        "summary": "End-to-end technology transformation leader driving cloud migration, architecture modernization, and engineering process optimization.",
+        "description": "I architect and execute large-scale platform migrations from legacy to cloud-native infrastructure, establishing DevOps practices and CI/CD automation that reduce deployment time by 70% and enable 10x traffic scale. I build business cases, manage vendor relationships, and deliver transformations on-time and within budget while maintaining business continuity."
+      },
+      {
+        "name": "Engineering Organization Scaling",
+        "summary": "Build and scale high-performing engineering teams with predictable delivery, clear accountability, and measurable business impact.",
+        "description": "I establish engineering leadership structures, hiring frameworks, and team topologies that enable scaling from 10 to 50+ engineers while improving velocity (+35% average), quality (-55% defects), and developer satisfaction. I implement DORA metrics, OKR frameworks, and operational reviews that align engineering output to business KPIs and board reporting."
+      },
+      {
+        "name": "Technical Due Diligence & Architecture Governance",
+        "summary": "Comprehensive technical assessment and architecture oversight for M&A, fundraising, and risk management.",
+        "description": "I conduct in-depth technical audits evaluating platform scalability, security posture, technical debt, and team capability. I provide actionable recommendations with ROI projections, identify integration risks for M&A scenarios, and establish architecture governance frameworks that balance innovation velocity with technical risk management."
+      }
+    ]
+  },
+  "basics": {
+    "name": "Emilien Escalle",
+    "label": "Fractional CTO & Technical Executive",
+    "baseline": "Strategic Technology Leadership · Digital Transformation · Engineering Excellence",
+    "signatureNumbers": [
+      "16 years driving technical strategy",
+      "€1M+ in cost optimization delivered",
+      "15+ engineering teams scaled"
+    ],
+    "url": "https://www.escemi.com",
+    "image": "https://raw.githubusercontent.com/escemi-tech/.github/main/headshots/primary.jpg",
+    "summary": "Fractional CTO who translates business objectives into executable technical strategy, delivering measurable ROI through engineering transformation, team scalability, and platform modernization.\n\nI partner with boards and executive teams to build technology organizations that drive competitive advantage-combining strategic vision with hands-on execution to reduce time-to-market, optimize costs, and scale engineering capacity.\n\nProven track record turning technical debt into business assets: €200K-500K annual savings, 5x release velocity improvements, and engineering teams that deliver predictably at scale.",
+    "location": {
+      "city": "Aix-en-Provence",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "countryCode": "FR"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "emilienescalle",
+        "url": "https://www.linkedin.com/in/emilienescalle/"
+      },
+      {
+        "network": "GitHub",
+        "username": "neilime",
+        "url": "https://github.com/neilime"
+      },
+      {
+        "network": "Collective",
+        "username": "emilien-escalle",
+        "url": "https://app.collective.work/collective/emilien-escalle"
+      },
+      {
+        "network": "Malt",
+        "username": "emilienescalle",
+        "url": "https://www.malt.fr/profile/emilienescalle"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "ESCEMI - Strategic Technical Partner",
+      "location": "Aix-en-Provence, France",
+      "position": "Fractional CTO & Strategic Technology Advisor",
+      "url": "https://www.escemi.com",
+      "startDate": "2019-09",
+      "type": "freelance",
+      "featured": true,
+      "summary": "Strategic technology partner for SMEs and scale-ups requiring executive-level technical leadership without full-time commitment. I align technology investments with business objectives, build scalable engineering organizations, and drive platform modernization that delivers measurable ROI.",
+      "highlights": [
+        "Challenge: Board-level need for technical strategy, platform scalability, and engineering efficiency to support 3-5x revenue growth without proportional headcount increase",
+        "Actions: Development of 12-24 month technology roadmaps aligned to business KPIs, establishment of engineering governance frameworks, execution of cloud migration strategies, and buildout of autonomous cross-functional teams",
+        "Results: Delivered €80-150K annual cost optimization per client, enabled 10x traffic scale without infrastructure redesign, reduced time-to-market by 60%, and established predictable delivery cadence supporting board-level planning"
+      ]
+    },
+    {
+      "name": "Build & Run - Fractional CTO / DevX Expert",
+      "location": "Remote · France",
+      "position": "Fractional CTO & Engineering Transformation Lead",
+      "url": "https://www.build-and-run.fr/",
+      "startDate": "2022-10",
+      "type": "freelance",
+      "featured": false,
+      "summary": "Executive technology advisor within the Build & Run collective, partnering with scale-up leadership teams to industrialize engineering operations and accelerate product velocity. I establish engineering standards, governance frameworks, and team structures that enable predictable multi-squad delivery at scale.",
+      "highlights": [
+        "Challenge: Executive mandate to scale engineering from 15 to 50+ developers while maintaining delivery predictability and reducing operational risk for board reporting",
+        "Actions: Architected enterprise-wide engineering standards and cloud-native blueprints, established DORA metrics governance and engineering OKRs, structured hiring frameworks and onboarding programs, and implemented cross-functional delivery rituals aligned to business outcomes",
+        "Results: Enabled 5x increase in release frequency supporting aggressive go-to-market timeline, reduced technical risk exposure by 40% improving investor confidence, decreased cost-per-feature by 30% through standardization, and established <5% change failure rate meeting enterprise SLA requirements"
+      ]
+    },
+    {
+      "name": "Ouistiti - Co-founder & CTO",
+      "location": "Aix-en-Provence, France",
+      "position": "Co-Founder & Chief Technology Officer",
+      "startDate": "2018-09",
+      "endDate": "2019-09",
+      "type": "founder",
+      "featured": true,
+      "summary": "Co-founded and served as CTO for Ouistiti, a bootstrapped travel inspiration platform. Owned complete technology strategy, product engineering, and growth infrastructure-translating founder vision into scalable technical execution while managing zero-debt constraint and aggressive user acquisition targets.",
+      "highlights": [
+        "Challenge: Board mandate to launch market-validated MVP within 3 months and achieve 5K MAU in 6 months, all while maintaining capital efficiency (zero external funding) and sub-€3 customer acquisition cost",
+        "Actions: Architected serverless-first technology stack optimizing for speed and cost efficiency, established lean product development methodology integrating continuous user feedback, built data-driven growth engine combining SEA, CRM automation, and real-time analytics, and managed technical vendor relationships and infrastructure budget",
+        "Results: Delivered MVP in 12 weeks (on schedule), achieved 5K MAU milestone 6 months post-launch, maintained €2.50 CPA (17% under target), grew to 300+ weekly sign-ups with +40% engagement improvement, and built scalable infrastructure supporting 10x growth trajectory-all while staying within bootstrap budget constraints"
+      ]
+    },
+    {
+      "name": "Qwamplify Group - Technical Director & IS Architect",
+      "location": "Rousset, France",
+      "position": "Technical Director & Head of Engineering",
+      "url": "https://www.qwamplify.com/",
+      "startDate": "2013-09",
+      "endDate": "2018-08",
+      "type": "employee",
+      "featured": true,
+      "summary": "Led enterprise-wide technology transformation for Qwamplify Group, serving as de facto CTO during critical growth phase. Directed 25-person engineering organization through 3-year modernization program enabling M&A consolidation of 8 business units while maintaining operational continuity for high-volume marketing campaigns.",
+      "highlights": [
+        "Challenge: Executive mandate to enable business unit consolidation post-acquisition while reducing technical operating costs and accelerating product velocity-all within fragmented legacy infrastructure threatening business continuity",
+        "Actions: Developed and executed 3-year IT transformation roadmap presented to board quarterly, architected enterprise service-oriented architecture enabling business unit integration, established engineering governance including hiring, budget management (€2M+ annual tech spend), and vendor strategy, and built DevOps culture and CICD infrastructure across distributed teams",
+        "Results: Delivered €200K annual maintenance cost reduction (10% of tech budget), accelerated release cycles 4x (from monthly to weekly) enabling faster go-to-market, reduced production incidents 55% improving customer satisfaction and SLA compliance, achieved 85% sprint predictability enabling reliable business planning, and successfully integrated 8 business units onto unified platform without revenue disruption"
+      ]
+    },
+    {
+      "name": "Logicielnet",
+      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France · On-site",
+      "position": "Engineering Manager & Product Development Lead",
+      "startDate": "2010-09",
+      "endDate": "2013-09",
+      "type": "employee",
+      "featured": true,
+      "summary": "Led product engineering and technical roadmap for company's flagship SaaS platform. Balanced competing stakeholder demands (sales, clients, technical debt) while maintaining aggressive release cadence. Managed cross-functional development team and established quality standards that scaled the product.",
+      "highlights": [
+        "Challenge: Leadership mandate to accelerate feature delivery for competitive differentiation while managing technical debt accumulation and maintaining SaaS reliability for revenue-generating customer base",
+        "Actions: Established quarterly roadmap planning process balancing innovation and stability, built and led cross-functional development team with engineering standards and code review discipline, and implemented technical governance framework preventing architectural drift",
+        "Results: Maintained 20+ major releases annually supporting sales pipeline and customer retention, reduced feature delivery time 30% improving competitive position, and stabilized platform quality enabling enterprise client acquisition and retention"
+      ]
+    },
+    {
+      "name": "Logicielnet",
+      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France · On-site",
+      "position": "R&D Engineer (Apprenticeship)",
+      "startDate": "2009-09",
+      "endDate": "2010-09",
+      "type": "apprenticeship",
+      "featured": true,
+      "summary": "Engineered customer engagement innovation for SaaS platform, delivering Web Callback functionality that improved customer service efficiency. Early demonstration of ability to translate business needs into technical solutions with measurable impact.",
+      "highlights": [
+        "Challenge: Product leadership directive to reduce customer response time and improve service quality through instant-callback capability integrated into existing SaaS infrastructure",
+        "Actions: Architected and delivered click-to-call module integrating VoIP providers, designed reusable component system for platform-wide deployment, and created rollout documentation enabling non-technical staff deployment",
+        "Results: Reduced customer follow-up time 40% improving service metrics and customer satisfaction, enabled seamless deployment across all client-facing screens without production incidents"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Cloud Native Aix-Marseille",
+      "position": "Co-organizer & Speaker",
+      "url": "https://www.cloudnative.aixmarseille.tech/",
+      "startDate": "2022-10",
+      "summary": "Promoting cloud-native technologies in the Aix-Marseille region with 60+ meetups animated for 1,200+ members alongside the CNCF community.",
+      "highlights": [
+        "Co-organization of 60+ Cloud Native meetups (61 past events) uniting 1,200+ registered members across the Aix/Marseille tech scene",
+        "Delivery of 6 technical talks on Kubernetes, GitOps, and DevOps practices while sustaining a 4.8★ score based on 250 Meetup reviews"
+      ]
+    },
+    {
+      "organization": "Aix-Marseille Université",
+      "position": "Professional instructor",
+      "url": "https://www.univ-amu.fr/",
+      "startDate": "2019-01",
+      "summary": "Teaching software architectures and web development best practices.",
+      "highlights": [
+        "Teaching of software architecture course to 60+ Master's students annually, covering practical applications of Clean Architecture, SOLID, and design patterns",
+        "Development of hands-on curriculum with 10+ real-world case studies, achieving 90% student satisfaction rating and 85% pass rate"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Université Aix-Marseille III Paul Cézanne",
+      "area": "MIAGE (Computer Methods Applied to Business Management)",
+      "studyType": "Master 2",
+      "url": "https://www.univ-amu.fr/",
+      "startDate": "2007-09",
+      "endDate": "2010-06"
+    },
+    {
+      "institution": "IUT GEA Gap",
+      "area": "GEA (Business and Administration Management)",
+      "studyType": "DUT",
+      "url": "https://iut.univ-amu.fr/",
+      "startDate": "2005-09",
+      "endDate": "2007-06"
+    }
+  ],
+  "awards": [],
+  "certificates": [
+    {
+      "name": "LFC102: Inclusive Open Source Community Orientation",
+      "issuer": "The Linux Foundation",
+      "date": "2024-11-01",
+      "url": "https://www.credly.com/badges/336e21aa-95f6-4025-8ddf-17ffda9953f7/",
+      "summary": "Training on building inclusive open source communities, covering governance, allyship, and community health best practices."
+    }
+  ],
+  "publications": [],
+  "skills": [
+    {
+      "name": "🧠 Strategic Leadership",
+      "level": "Expert",
+      "keywords": [
+        "Technology Strategy & Roadmapping",
+        "Engineering Team Building & Scaling",
+        "Digital Transformation & Change Management",
+        "Technical Due Diligence & Architecture Governance"
+      ]
+    },
+    {
+      "name": "🎯 Core Tech",
+      "level": "Expert",
+      "keywords": [
+        "Node.js (NestJS)",
+        "PHP (Symfony, Laravel)",
+        "TypeScript / JavaScript",
+        "Clean Architecture · DDD · TDD"
+      ]
+    },
+    {
+      "name": "☁️ DevOps & Cloud",
+      "level": "Expert",
+      "keywords": [
+        "GitHub Actions · GitLab CI",
+        "Docker · AWS",
+        "Observability · OpenTelemetry"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "🇫🇷 French",
+      "fluency": "Native"
+    },
+    {
+      "language": "🇬🇧 English",
+      "fluency": "Full Professional"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Developer Experience",
+      "keywords": [
+        "DevX",
+        "CI/CD",
+        "Automation",
+        "Productivity Tools"
+      ]
+    },
+    {
+      "name": "Software Architecture",
+      "keywords": [
+        "Clean Architecture",
+        "Design Patterns",
+        "Domain-Driven Design"
+      ]
+    },
+    {
+      "name": "Cloud Native Technologies",
+      "keywords": [
+        "Serverless",
+        "Microservices",
+        "CNCF"
+      ]
+    },
+    {
+      "name": "Open Source",
+      "keywords": [
+        "OSS Contribution",
+        "Community Building",
+        "Collaboration"
+      ]
+    },
+    {
+      "name": "Technical Education",
+      "keywords": [
+        "Mentoring",
+        "Teaching",
+        "Knowledge Sharing",
+        "Community Speaking"
+      ]
+    },
+    {
+      "name": "Lean & Agile Methodologies",
+      "keywords": [
+        "Continuous Improvement",
+        "Team Dynamics",
+        "Delivery Excellence"
+      ]
+    }
+  ],
+  "references": [],
+  "projects": [
+    {
+      "name": "Air Corsica - DevX Platform Engineering",
+      "featured": true,
+      "description": "Modernized developer experience and transactional security for airline booking platform through GitHub Actions CI/CD ecosystem, hands-on mentoring, and resilient NestJS/RabbitMQ proxy architecture.",
+      "highlights": [
+        "Reduction of deployment time by 80% (from ~2 days manual work to <30 minutes fully automated) via reusable GitHub Actions workflows with canary deployments and automated rollbacks",
+        "Increase in release frequency by 5x (from monthly to weekly feature releases) through implementation of Cloud Native principles, ensuring staging/production parity",
+        "Improvement of transaction reliability to 99.9% uptime with 90% fewer third-party failures by architecting NestJS proxy with RabbitMQ, implementing circuit breakers, retry policies, and idempotency guarantees",
+        "Reduction of new developer onboarding time by 70% (from multiple days to <1 day productivity) through standardization of workflows, creation of living style guides, and automation of dependency updates",
+        "Mentoring of distributed team (in-house + contractors) on Clean Architecture and SOLID principles via weekly workshops, elevating code quality and establishing unit-test coverage thresholds",
+        "Deployment of resilient microservice in Docker with OpenTelemetry monitoring, Datadog integration, and zero-downtime health checks for critical booking/payment flows"
+      ],
+      "keywords": [
+        "DevX",
+        "GitHub Actions",
+        "CI/CD",
+        "NestJS",
+        "RabbitMQ",
+        "Clean Architecture",
+        "SOLID",
+        "Docker",
+        "Datadog",
+        "Mentoring"
+      ],
+      "startDate": "2023-01",
+      "url": "https://www.youtube.com/watch?v=Xb8PKOdTilA",
+      "roles": [
+        "DevX Lead",
+        "Platform Engineer",
+        "Technical Mentor"
+      ],
+      "entity": "Air Corsica",
+      "type": "consulting"
+    },
+    {
+      "name": "Critical Infrastructure IoT Gateway Platform",
+      "featured": true,
+      "description": "High-performance IoT gateway for global smart infrastructure SaaS provider, unifying heterogeneous device integration across data centers and smart buildings with Redis-backed resilience, automated CI/CD, and OpenTelemetry observability.",
+      "highlights": [
+        "Achievement of 99.99% production uptime by implementing Redis caching, edge queueing, and automatic retry strategies with exponential backoff",
+        "Reduction of data loss incidents by 85% through resilient fallback mechanisms that buffer messages during SaaS platform outages",
+        "Acceleration of new device onboarding by 81% (from 3 weeks to 4 days) via centralized decoders, schema-based validation, and normalized payload pipeline",
+        "Scaling to handle 10x traffic increase (100K+ events/minute per gateway) without additional hardware through worker pools and optimized in-memory caching",
+        "Reduction of deployment cycle time by 70% with GitLab CI automation integrating unit, integration, and E2E tests plus canary releases and staged rollouts",
+        "Construction of unified REST API with OpenAPI specification for device lifecycle management, enabling remote registration, updates, and real-time monitoring",
+        "Integration of OpenTelemetry for full observability with logs, metrics, and alerting tied to device health and data flow KPIs"
+      ],
+      "keywords": [
+        "Node.js",
+        "TypeScript",
+        "NestJS",
+        "Redis",
+        "OpenTelemetry",
+        "OpenAPI",
+        "GitLab CI",
+        "Docker",
+        "IoT",
+        "Gateway Architecture",
+        "Device Management",
+        "High Availability",
+        "CI/CD"
+      ],
+      "startDate": "2025-04",
+      "endDate": "2025-07",
+      "roles": [
+        "IoT Platform Architect",
+        "Lead Developer"
+      ],
+      "entity": "Global Smart Infrastructure SaaS Provider",
+      "type": "consulting"
+    },
+    {
+      "name": "TestUnMetier - CTO Accompaniment",
+      "featured": true,
+      "description": "Two-phase strategic consulting engagement for a career guidance platform: comprehensive IT audit followed by monthly CTO accompaniment covering product roadmap, technical recruitment, and infrastructure/security vendor management.",
+      "highlights": [
+        "Conduction of 1-week IT audit analyzing application architecture, development processes, and team organization, identifying 12 priority improvement areas that reduced technical risk by 60%",
+        "Structuring of interviews with 8 stakeholders (product, project, tech leads) to map system dependencies and bottlenecks, reducing feature delivery timelines by ~40%",
+        "Development of 5 technical job descriptions aligned with product strategy, accelerating recruitment process from 3 months to 6 weeks and improving candidate-role fit by 45%",
+        "Definition of 12-month technical roadmap prioritizing 15+ initiatives by business impact and feasibility, aligning tech investments with growth objectives (+30% target user increase)",
+        "Management of relationships with 3 external vendors (cloud infrastructure, security assurance), negotiating SLAs guaranteeing 99.5% uptime and reducing infrastructure costs by ~25%",
+        "Establishment of technical governance framework (monthly committees, velocity KPIs, quality dashboards) improving team visibility and reducing time-to-market by 35%"
+      ],
+      "keywords": [
+        "CTO Accompaniment",
+        "IT Audit",
+        "Technical Strategy",
+        "Roadmap Planning",
+        "Team Building",
+        "Vendor Management",
+        "Technical Governance",
+        "Recruitment",
+        "PHP",
+        "Symfony"
+      ],
+      "startDate": "2021-11",
+      "endDate": "2022-05",
+      "url": "https://www.testunmetier.com/",
+      "roles": [
+        "CTO Consultant",
+        "Strategic Advisor"
+      ],
+      "entity": "TestUnMetier",
+      "type": "consulting"
+    },
+    {
+      "name": "Tekkare - Technical Mentoring & Architectural Bootstrap",
+      "featured": true,
+      "description": "Hands-on mentorship of development team for technical services management platform, accelerating their skill growth in GraphQL/modern backend API architecture and optimizing development practices.",
+      "highlights": [
+        "Reduction of new feature development time by 40% through optimized GraphQL architecture with NestJS, replacing multiple REST endpoints with unified, type-safe queries",
+        "Acceleration of new developer onboarding from ~2 weeks to ~5 days via living architectural documentation, reusable patterns, and annotated code examples",
+        "Improvement of code maintainability by 50% by implementing Clean Architecture and SOLID principles with clear layer separation (domain, application, infrastructure)",
+        "Optimization of database query performance by 60% (from ~800ms to ~300ms average) through Postgres ORM optimization, strategic indexing, and N+1 query resolution",
+        "Establishment of quality pipeline with automated testing (unit, integration, E2E) reducing production regressions by 70% and increasing deployment confidence",
+        "Mentoring of team on GraphQL best practices (dataloaders, pagination, error handling) and NestJS patterns via pair programming and structured code reviews"
+      ],
+      "keywords": [
+        "GraphQL",
+        "NestJS",
+        "Node.js",
+        "PostgreSQL",
+        "ORM",
+        "TypeScript",
+        "Clean Architecture",
+        "SOLID",
+        "Mentoring",
+        "API Design",
+        "Backend Architecture"
+      ],
+      "startDate": "2022-04",
+      "endDate": "2022-06",
+      "url": "https://tekkare.com/",
+      "roles": [
+        "Technical Mentor",
+        "Backend Architect"
+      ],
+      "entity": "Tekkare",
+      "type": "consulting"
+    },
+    {
+      "name": "Atlas des Régions Naturelles (ARN) - Backend Architecture",
+      "featured": true,
+      "description": "Designed and developed backend architecture for the ARN photographic archive platform, documenting 15,000+ images of French landscapes and buildings through an optimized NestJS/Laravel stack focused on performance and scalability.",
+      "highlights": [
+        "Architecting of photo archive platform managing 15,000+ high-resolution images with multi-criteria filtering (region, typology, materials, period), ensuring <300ms response time and 99.9% uptime",
+        "Implementation of hybrid categorization system with full-text indexing handling 10,000+ daily search queries with geographic, thematic, and historical navigation",
+        "Optimization of image processing pipeline reducing upload and thumbnail generation time by 60% (from ~5min to ~2min per batch of 50 images) through parallelization and smart compression",
+        "Design of unified REST/GraphQL API with distributed caching cutting server load by 70% and enabling integration with physical exhibitions and printed publications",
+        "Deployment of cloud-native infrastructure with geographically distributed CDN reducing bandwidth costs by 40% while improving international load times by 55%",
+        "Establishment of CI/CD pipeline with automated testing ensuring metadata quality (geolocation, regional taxonomy) and reducing cataloging errors by 80%"
+      ],
+      "keywords": [
+        "NestJS",
+        "Laravel",
+        "Backend Architecture",
+        "REST API",
+        "GraphQL",
+        "Image Processing",
+        "Full-text Search",
+        "CDN",
+        "Cloud Native",
+        "AWS",
+        "CI/CD"
+      ],
+      "startDate": "2022-06",
+      "endDate": "2023-12",
+      "url": "https://www.archive-arn.fr/",
+      "roles": [
+        "Backend Architect",
+        "Lead Developer"
+      ],
+      "entity": "Atlas des Régions Naturelles",
+      "type": "consulting"
+    },
+    {
+      "name": "Tekoway / Eukles - Architecture Standardization",
+      "featured": true,
+      "description": "3-year strategic technical mentorship across European development teams, standardizing architecture and boosting delivery efficiency for PHP/Symfony and Node.js/NestJS projects before and after Tekoway's integration into Eukles.",
+      "highlights": [
+        "Reduction of project bootstrap time by 45% (from ~10 to ~5.5 days) through shared architecture blueprints applying Clean Architecture and SOLID principles across Symfony and NestJS stacks",
+        "Acceleration of developer onboarding x2 faster (from ~3 weeks to 1.5 weeks) via unified project templates, automated setup scripts, and common tooling across European locations",
+        "Reduction of post-release bug rate by 30% after implementing standardized QA workflows and cross-country DevOps pipelines using Docker, GitLab CI, and ArgoCD",
+        "Improvement of developer satisfaction by 35% on internal surveys regarding architecture clarity and tooling through architecture clinics, workshops, and documentation",
+        "Mentoring of distributed teams remotely across multiple European countries, establishing shared technical language and unified engineering culture that scaled seamlessly through Tekoway's evolution into Eukles",
+        "Creation of multi-stack project boilerplates integrating DDD folder structures, dependency injection, logging, monitoring, and observability hooks for consistent delivery quality regardless of team location"
+      ],
+      "keywords": [
+        "PHP",
+        "Symfony",
+        "Node.js",
+        "NestJS",
+        "Clean Architecture",
+        "DevOps",
+        "Docker",
+        "GitLab CI",
+        "ArgoCD",
+        "Mentoring",
+        "Team leadership"
+      ],
+      "startDate": "2020-01",
+      "endDate": "2023-01",
+      "url": "https://www.tekoway.com",
+      "roles": [
+        "Technical Mentor",
+        "Architecture Lead"
+      ],
+      "entity": "Tekoway / Eukles",
+      "type": "consulting"
+    },
+    {
+      "name": "twbs-helper-module",
+      "featured": false,
+      "description": "Laminas (formerly Zend Framework) module that streamlines Twitter Bootstrap component integration.",
+      "highlights": [
+        "21+ GitHub stars and 20+ forks adopted by enterprise portals and design systems",
+        "Ships reusable helpers for grids, forms, navigation, and responsive layouts to accelerate delivery",
+        "Maintains comprehensive docs, CI pipelines, and semantic versioning to guarantee backward compatibility"
+      ],
+      "keywords": [
+        "PHP",
+        "Laminas",
+        "Bootstrap",
+        "Open Source"
+      ],
+      "url": "https://github.com/neilime/twbs-helper-module",
+      "roles": [
+        "Creator",
+        "Maintainer"
+      ],
+      "entity": "Open Source Community",
+      "type": "open-source"
+    },
+    {
+      "name": "php-css-lint",
+      "featured": false,
+      "description": "CLI and Composer package that enforces CSS quality gates directly from PHP projects.",
+      "highlights": [
+        "11 GitHub stars and active usage inside custom CI pipelines for multi-brand marketing platforms",
+        "Wraps MDN and W3C specifications to surface actionable errors for large design systems",
+        "Provides zero-dependency binaries and GitHub Pages docs for quick onboarding"
+      ],
+      "keywords": [
+        "PHP",
+        "CSS",
+        "Linting",
+        "Composer"
+      ],
+      "url": "https://github.com/neilime/php-css-lint",
+      "roles": [
+        "Creator",
+        "Maintainer"
+      ],
+      "entity": "Open Source Community",
+      "type": "open-source"
+    },
+    {
+      "name": "ubuntu-config",
+      "featured": false,
+      "description": "Infrastructure-as-code flavored bootstrap that standardizes my developer workstations on Ubuntu.",
+      "highlights": [
+        "Automates installation of Docker, Node.js, PHP toolchains, and desktop essentials via scripted tasks",
+        "Documents repeatable steps so consulting engagements start with a consistent developer environment",
+        "Modular Make targets and shell scripts make it easy to extend the setup per client needs"
+      ],
+      "keywords": [
+        "Shell",
+        "Automation",
+        "Developer Experience",
+        "Ubuntu"
+      ],
+      "url": "https://github.com/neilime/ubuntu-config",
+      "roles": [
+        "Maintainer"
+      ],
+      "entity": "Personal Tooling",
+      "type": "infrastructure"
+    }
+  ]
+}
