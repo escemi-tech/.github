@@ -1,0 +1,27 @@
+name: "Get Available Resumes"
+description: "Discovers all resume JSON files in the repository"
+outputs:
+  matrix:
+    description: "GitHub Actions matrix with resume file information"
+    value: ${{ steps.discover.outputs.matrix }}
+  count:
+    description: "Number of resume files discovered"
+    value: ${{ steps.discover.outputs.count }}
+runs:
+  using: "composite"
+  steps:
+    - name: Discover resume files
+      id: discover
+      shell: bash
+      run: |
+        OUTPUT=$(node ${{ github.action_path }}/discover-resumes.js --matrix 2>&1)
+        echo "$OUTPUT"
+
+        # Extract the JSON matrix output
+        MATRIX=$(echo "$OUTPUT" | sed -n '/--- GitHub Actions Matrix ---/,$p' | tail -n +2)
+        echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
+
+        # Count resumes
+        COUNT=$(echo "$MATRIX" | jq '.include | length')
+        echo "count=$COUNT" >> $GITHUB_OUTPUT
+        echo "✅ Discovered $COUNT resume file(s)"

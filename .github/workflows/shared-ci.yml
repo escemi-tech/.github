@@ -29,20 +29,9 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Discover resume files
+      - name: Get available resumes
         id: discover
-        run: |
-          OUTPUT=$(node .github/scripts/discover-resumes.js --matrix 2>&1)
-          echo "$OUTPUT"
-
-          # Extract the JSON matrix output
-          MATRIX=$(echo "$OUTPUT" | sed -n '/--- GitHub Actions Matrix ---/,$p' | tail -n +2)
-          echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
-
-          # Count resumes
-          COUNT=$(echo "$MATRIX" | jq '.include | length')
-          echo "count=$COUNT" >> $GITHUB_OUTPUT
-          echo "✅ Discovered $COUNT resume file(s)"
+        uses: ./.github/actions/get-available-resumes
 
   linter:
     uses: hoverkraft-tech/ci-github-common/.github/workflows/linter.yml@666b7b6eb000db3e8614647871fa60c9f1eb7179 # 0.31.4
