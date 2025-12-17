@@ -10,9 +10,9 @@
 const fs = require("fs");
 const path = require("path");
 
-// Navigate from .github/scripts to the root, then to resume
-// Path: .github/scripts -> .github -> root -> resume
-const RESUME_DIR = path.resolve(__dirname, "../../resume");
+// Navigate from .github/actions/get-available-resumes to the root, then to resume
+// Path: .github/actions/get-available-resumes -> .github/actions -> .github -> root -> resume
+const RESUME_DIR = path.resolve(__dirname, "../../../resume");
 const PDF_OUTPUT_DIR = path.join(RESUME_DIR, "pdf");
 
 // Supported languages

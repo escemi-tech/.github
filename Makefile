@@ -27,7 +27,7 @@ lint-fix: ## Execute linting and fix
 
 humanize-resume: ## Normalize resume text with humanize-ai-lib
 	@echo "Discovering resume files..."
-	@RESUME_FILES=$$(node .github/scripts/discover-resumes.js --json 2>/dev/null | grep -A 1000 "JSON Output" | tail -n +2 | jq -r '.[].absPath' | tr '\n' ' '); \
+	@RESUME_FILES=$$(node .github/actions/get-available-resumes/discover-resumes.js --json 2>/dev/null | grep -A 1000 "JSON Output" | tail -n +2 | jq -r '.[].absPath' | tr '\n' ' '); \
 	cd .github/actions/humanize-resume && \
 	npm install && \
 	npm run humanize -- $$RESUME_FILES
@@ -38,7 +38,7 @@ preview-resume: ## Preview resume in the browser
 
 validate-resume: ## Validate resume JSON files
 	@echo "Discovering and validating resume files..."
-	@node .github/scripts/discover-resumes.js --json 2>/dev/null | grep -A 1000 "JSON Output" | tail -n +2 | jq -r '.[].absPath' | while read -r resume; do \
+	@node .github/actions/get-available-resumes/discover-resumes.js --json 2>/dev/null | grep -A 1000 "JSON Output" | tail -n +2 | jq -r '.[].absPath' | while read -r resume; do \
 		echo "Validating $$resume..."; \
 		cd ./.github/actions/validate-resume && npm install > /dev/null 2>&1 && npm run validate -- "$$resume" || exit 1; \
 		cd - > /dev/null; \
@@ -49,7 +49,7 @@ generate-pdfs: ## Generate all resumes PDFs
 	@cd resume/theme && npm install > /dev/null 2>&1 && npm run build > /dev/null
 	@echo "Discovering and generating PDFs for all resume files..."
 	@cd ./.github/actions/generate-resume-pdf && npm install > /dev/null 2>&1
-	@node .github/scripts/discover-resumes.js --json 2>/dev/null | grep -A 1000 "JSON Output" | tail -n +2 | jq -c '.[]' | while read -r resume; do \
+	@node .github/actions/get-available-resumes/discover-resumes.js --json 2>/dev/null | grep -A 1000 "JSON Output" | tail -n +2 | jq -c '.[]' | while read -r resume; do \
 		RESUME_PATH=$$(echo "$$resume" | jq -r '.absPath'); \
 		PDF_PATH=$$(echo "$$resume" | jq -r '.pdfAbsPath'); \
 		PDF_FILE=$$(echo "$$resume" | jq -r '.file'); \
