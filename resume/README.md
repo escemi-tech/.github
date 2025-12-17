@@ -35,6 +35,7 @@ You can create multiple resume variants optimized for different positions (CTO, 
 - Tailor the content for specific job applications
 
 **Example:**
+
 - `resume.en.cto.json` - CTO-focused version emphasizing leadership and strategy
 - `resume.en.lead-dev.json` - Technical leadership version emphasizing hands-on development
 - `resume.en.staff-engineer.json` - Staff engineer version emphasizing technical expertise
