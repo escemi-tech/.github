@@ -10,12 +10,36 @@ The resume is stored in a structured JSON format that serves as the single sourc
 
 ### Files
 
-- **`resume.en.json`** - English version of the resume following the standard JSON Resume schema
-- **`resume.fr.json`** - French version of the resume following the standard JSON Resume schema
-- **`pdf/`** - Directory containing generated PDF versions of the resumes
-  - `resume.en.pdf` - English PDF (auto-generated)
-  - `resume.fr.pdf` - French PDF (auto-generated)
+The repository supports multiple resume variants optimized for different positions or roles:
+
+#### File Naming Convention
+
+- **`resume.<lang>.json`** - Default resume (e.g., `resume.en.json`, `resume.fr.json`)
+- **`resume.<lang>.<position>.json`** - Position-specific resume (e.g., `resume.en.cto.json`, `resume.fr.lead-dev.json`)
+
+#### Current Files
+
+- **`resume.en.json`** - English version of the resume
+- **`resume.fr.json`** - French version of the resume
+- **`pdf/`** - Directory containing generated PDF versions
+  - PDFs are auto-generated for each resume file
+  - Position-specific resumes generate PDFs like `resume.en.cto.pdf`
   - See [pdf/README.md](pdf/README.md) for more details
+
+### Position-Specific Resumes
+
+You can create multiple resume variants optimized for different positions (CTO, Lead Developer, Engineering Manager, etc.). Each variant can:
+
+- Emphasize different aspects of the same experience
+- Highlight role-specific skills and achievements
+- Tailor the content for specific job applications
+
+**Example:**
+- `resume.en.cto.json` - CTO-focused version emphasizing leadership and strategy
+- `resume.en.lead-dev.json` - Technical leadership version emphasizing hands-on development
+- `resume.en.staff-engineer.json` - Staff engineer version emphasizing technical expertise
+
+All resume files are automatically discovered and processed by the CI/CD pipeline.
 
 ## Format
 
@@ -23,19 +47,32 @@ The resume follows the standard [JSON Resume schema v1.0.0](https://jsonresume.o
 
 ### Supported Languages
 
-We maintain two separate files for bilingual support:
+We support bilingual resumes with the following language codes:
 
-- **resume.en.json** - English (English)
-- **resume.fr.json** - French (Français)
+- **`en`** - English
+- **`fr`** - French (Français)
 
-Both files follow the exact same schema structure from [jsonresume.org/schema](https://jsonresume.org/schema/).
+Both base and position-specific files follow the exact same schema structure from [jsonresume.org/schema](https://jsonresume.org/schema/).
 
 ## Updating the Resume
 
-1. Edit both `resume.en.json` and `resume.fr.json` files
+### For All Resume Files
+
+1. Edit your resume JSON files (e.g., `resume.en.json`, `resume.fr.lead-dev.json`)
 2. Run `make humanize-resume` to normalize punctuation and whitespace with `humanize-ai-lib`
-3. Keep the structure consistent between both files
+3. Keep the structure consistent between language variants of the same position
 4. Commit the changes to trigger automated updates
+
+### Creating a New Position-Specific Resume
+
+1. Copy an existing resume file (e.g., `resume.en.json`)
+2. Rename it following the pattern `resume.<lang>.<position>.json` (e.g., `resume.en.cto.json`)
+3. Edit the content to emphasize the specific position
+4. Run `make validate-resume` to ensure the file is valid
+5. Run `make generate-pdfs` to generate the PDF locally
+6. Commit the new file - the CI/CD pipeline will automatically discover and process it
+
+**Supported position slugs:** Use lowercase with hyphens for multi-word positions (e.g., `cto`, `lead-dev`, `staff-engineer`, `engineering-manager`)
 
 ### Cleanup automation
 
