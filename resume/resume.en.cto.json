@@ -1,7 +1,7 @@
 {
   "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
   "meta": {
-    "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.en.json",
+    "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.en.cto.json",
     "version": "2025.11.16.5",
     "lastModified": "2025-11-16T11:30:00Z",
     "locale": "en",
@@ -280,7 +280,12 @@
   "interests": [
     {
       "name": "Developer Experience",
-      "keywords": ["DevX", "CI/CD", "Automation", "Productivity Tools"]
+      "keywords": [
+        "DevX",
+        "CI/CD",
+        "Automation",
+        "Productivity Tools"
+      ]
     },
     {
       "name": "Software Architecture",
@@ -292,11 +297,19 @@
     },
     {
       "name": "Cloud Native Technologies",
-      "keywords": ["Serverless", "Microservices", "CNCF"]
+      "keywords": [
+        "Serverless",
+        "Microservices",
+        "CNCF"
+      ]
     },
     {
       "name": "Open Source",
-      "keywords": ["OSS Contribution", "Community Building", "Collaboration"]
+      "keywords": [
+        "OSS Contribution",
+        "Community Building",
+        "Collaboration"
+      ]
     },
     {
       "name": "Technical Education",
@@ -344,7 +357,11 @@
       ],
       "startDate": "2023-01",
       "url": "https://www.youtube.com/watch?v=Xb8PKOdTilA",
-      "roles": ["DevX Lead", "Platform Engineer", "Technical Mentor"],
+      "roles": [
+        "DevX Lead",
+        "Platform Engineer",
+        "Technical Mentor"
+      ],
       "entity": "Air Corsica",
       "type": "consulting"
     },
@@ -378,7 +395,10 @@
       ],
       "startDate": "2025-04",
       "endDate": "2025-07",
-      "roles": ["IoT Platform Architect", "Lead Developer"],
+      "roles": [
+        "IoT Platform Architect",
+        "Lead Developer"
+      ],
       "entity": "Global Smart Infrastructure SaaS Provider",
       "type": "consulting"
     },
@@ -409,7 +429,10 @@
       "startDate": "2021-11",
       "endDate": "2022-05",
       "url": "https://www.testunmetier.com/",
-      "roles": ["CTO Consultant", "Strategic Advisor"],
+      "roles": [
+        "CTO Consultant",
+        "Strategic Advisor"
+      ],
       "entity": "TestUnMetier",
       "type": "consulting"
     },
@@ -441,7 +464,10 @@
       "startDate": "2022-04",
       "endDate": "2022-06",
       "url": "https://tekkare.com/",
-      "roles": ["Technical Mentor", "Backend Architect"],
+      "roles": [
+        "Technical Mentor",
+        "Backend Architect"
+      ],
       "entity": "Tekkare",
       "type": "consulting"
     },
@@ -473,7 +499,10 @@
       "startDate": "2022-06",
       "endDate": "2023-12",
       "url": "https://www.archive-arn.fr/",
-      "roles": ["Backend Architect", "Lead Developer"],
+      "roles": [
+        "Backend Architect",
+        "Lead Developer"
+      ],
       "entity": "Atlas des Régions Naturelles",
       "type": "consulting"
     },
@@ -505,7 +534,10 @@
       "startDate": "2020-01",
       "endDate": "2023-01",
       "url": "https://www.tekoway.com",
-      "roles": ["Technical Mentor", "Architecture Lead"],
+      "roles": [
+        "Technical Mentor",
+        "Architecture Lead"
+      ],
       "entity": "Tekoway / Eukles",
       "type": "consulting"
     },
@@ -518,9 +550,17 @@
         "Ships reusable helpers for grids, forms, navigation, and responsive layouts to accelerate delivery",
         "Maintains comprehensive docs, CI pipelines, and semantic versioning to guarantee backward compatibility"
       ],
-      "keywords": ["PHP", "Laminas", "Bootstrap", "Open Source"],
+      "keywords": [
+        "PHP",
+        "Laminas",
+        "Bootstrap",
+        "Open Source"
+      ],
       "url": "https://github.com/neilime/twbs-helper-module",
-      "roles": ["Creator", "Maintainer"],
+      "roles": [
+        "Creator",
+        "Maintainer"
+      ],
       "entity": "Open Source Community",
       "type": "open-source"
     },
@@ -533,9 +573,17 @@
         "Wraps MDN and W3C specifications to surface actionable errors for large design systems",
         "Provides zero-dependency binaries and GitHub Pages docs for quick onboarding"
       ],
-      "keywords": ["PHP", "CSS", "Linting", "Composer"],
+      "keywords": [
+        "PHP",
+        "CSS",
+        "Linting",
+        "Composer"
+      ],
       "url": "https://github.com/neilime/php-css-lint",
-      "roles": ["Creator", "Maintainer"],
+      "roles": [
+        "Creator",
+        "Maintainer"
+      ],
       "entity": "Open Source Community",
       "type": "open-source"
     },
@@ -548,9 +596,16 @@
         "Documents repeatable steps so consulting engagements start with a consistent developer environment",
         "Modular Make targets and shell scripts make it easy to extend the setup per client needs"
       ],
-      "keywords": ["Shell", "Automation", "Developer Experience", "Ubuntu"],
+      "keywords": [
+        "Shell",
+        "Automation",
+        "Developer Experience",
+        "Ubuntu"
+      ],
       "url": "https://github.com/neilime/ubuntu-config",
-      "roles": ["Maintainer"],
+      "roles": [
+        "Maintainer"
+      ],
       "entity": "Personal Tooling",
       "type": "infrastructure"
     }
