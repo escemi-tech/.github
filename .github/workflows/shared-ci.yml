@@ -34,11 +34,11 @@ jobs:
         run: |
           OUTPUT=$(node .github/scripts/discover-resumes.js --matrix 2>&1)
           echo "$OUTPUT"
-          
+
           # Extract the JSON matrix output
           MATRIX=$(echo "$OUTPUT" | sed -n '/--- GitHub Actions Matrix ---/,$p' | tail -n +2)
           echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
-          
+
           # Count resumes
           COUNT=$(echo "$MATRIX" | jq '.include | length')
           echo "count=$COUNT" >> $GITHUB_OUTPUT
