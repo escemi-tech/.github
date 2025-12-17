@@ -14,7 +14,10 @@
         "github.copilot-chat",
         "ms-vscode.makefile-tools",
         "tomoki1207.pdf"
-      ]
+      ],
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "zsh"
+      }
     }
   }
 }

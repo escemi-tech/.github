@@ -45,7 +45,7 @@ jobs:
             PDFs have been generated for this pull request. You can download them from the workflow artifacts.
 
             **Generated files:**
-            ${generatedPdfs.map(pdf => `- **${pdf.language}**: [\`${pdf["pdf-path"]}\`](${pdf["artifact-url"]})`).join('\n')}
+            ${generatedPdfs.map(pdf => `- **${pdf.name}**: [\`${pdf["pdf-path"]}\`](${pdf["artifact-url"]})`).join('\n')}
             `;
 
             return comment;
