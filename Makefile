@@ -26,27 +26,37 @@ lint-fix: ## Execute linting and fix
 	)
 
 humanize-resume: ## Normalize resume text with humanize-ai-lib
-	@cd .github/actions/humanize-resume && \
+	@echo "Discovering resume files..."
+	@RESUME_FILES=$$(node .github/scripts/discover-resumes.js --json 2>/dev/null | grep -A 1000 "JSON Output" | tail -n +2 | jq -r '.[].path' | tr '\n' ' '); \
+	cd .github/actions/humanize-resume && \
 	npm install && \
-	npm run humanize -- ../../../resume/resume.en.json ../../../resume/resume.fr.json
+	npm run humanize -- $$RESUME_FILES
 
 preview-resume: ## Preview resume in the browser
 	@cd resume/theme && \
 	npm install && npm run dev
 
 validate-resume: ## Validate resume JSON files
-	@cd ./.github/actions/validate-resume && \
-	npm install && \
-	npm run validate -- ../../../resume/resume.en.json && \
-	npm run validate -- ../../../resume/resume.fr.json
+	@echo "Discovering and validating resume files..."
+	@node .github/scripts/discover-resumes.js --json 2>/dev/null | grep -A 1000 "JSON Output" | tail -n +2 | jq -r '.[].path' | while read -r resume; do \
+		echo "Validating $$resume..."; \
+		cd ./.github/actions/validate-resume && npm install > /dev/null 2>&1 && npm run validate -- "$$resume" || exit 1; \
+		cd - > /dev/null; \
+	done
 
 generate-pdfs: ## Generate all resumes PDFs
-	@cd resume/theme && \
-	npm install && npm run build
-	@cd ./.github/actions/generate-resume-pdf && \
-	npm install && \
-	npm run generate-pdf -- ../../../resume/resume.en.json ../../../resume/pdf/resume.en.pdf && \
-	npm run generate-pdf -- ../../../resume/resume.fr.json ../../../resume/pdf/resume.fr.pdf
+	@echo "Building theme..."
+	@cd resume/theme && npm install > /dev/null 2>&1 && npm run build > /dev/null
+	@echo "Discovering and generating PDFs for all resume files..."
+	@cd ./.github/actions/generate-resume-pdf && npm install > /dev/null 2>&1
+	@node .github/scripts/discover-resumes.js --json 2>/dev/null | grep -A 1000 "JSON Output" | tail -n +2 | jq -c '.[]' | while read -r resume; do \
+		RESUME_PATH=$$(echo "$$resume" | jq -r '.path'); \
+		PDF_PATH=$$(echo "$$resume" | jq -r '.pdfPath'); \
+		PDF_FILE=$$(echo "$$resume" | jq -r '.file'); \
+		echo "Generating PDF for $$PDF_FILE..."; \
+		cd ./.github/actions/generate-resume-pdf && npm run generate-pdf -- "$$RESUME_PATH" "$$PDF_PATH" || exit 1; \
+		cd - > /dev/null; \
+	done
 
 ci: ## Run all CI tasks
 	$(MAKE) lint-fix

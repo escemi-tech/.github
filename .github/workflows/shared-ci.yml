@@ -16,6 +16,34 @@ env:
   RESUME_PDFS_ROOT_PATH: resume/pdf
 
 jobs:
+  discover-resumes:
+    name: Discover Resumes
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    outputs:
+      matrix: ${{ steps.discover.outputs.matrix }}
+      count: ${{ steps.discover.outputs.count }}
+    steps:
+      - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
+        with:
+          persist-credentials: false
+
+      - name: Discover resume files
+        id: discover
+        run: |
+          OUTPUT=$(node .github/scripts/discover-resumes.js --matrix 2>&1)
+          echo "$OUTPUT"
+          
+          # Extract the JSON matrix output
+          MATRIX=$(echo "$OUTPUT" | sed -n '/--- GitHub Actions Matrix ---/,$p' | tail -n +2)
+          echo "matrix=$MATRIX" >> $GITHUB_OUTPUT
+          
+          # Count resumes
+          COUNT=$(echo "$MATRIX" | jq '.include | length')
+          echo "count=$COUNT" >> $GITHUB_OUTPUT
+          echo "✅ Discovered $COUNT resume file(s)"
+
   linter:
     uses: hoverkraft-tech/ci-github-common/.github/workflows/linter.yml@666b7b6eb000db3e8614647871fa60c9f1eb7179 # 0.31.4
     permissions:
@@ -26,24 +54,22 @@ jobs:
 
   validate-resumes:
     name: Validate Resumes
+    needs: discover-resumes
     runs-on: ubuntu-latest
     permissions:
       contents: read
     strategy:
-      matrix:
-        resume-language: [en, fr]
+      matrix: ${{ fromJSON(needs.discover-resumes.outputs.matrix) }}
       fail-fast: false
-    env:
-      RESUME_FILE: resume/resume.${{ matrix.resume-language }}.json
     steps:
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
         with:
           persist-credentials: false
 
-      - name: Validate English resume
+      - name: Validate resume ${{ matrix.resume-file }}
         uses: ./.github/actions/validate-resume
         with:
-          resume-path: ${{ env.RESUME_FILE }}
+          resume-path: ${{ matrix.resume-path }}
 
   theme-continuous-integration:
     needs: [linter, validate-resumes]
@@ -64,16 +90,12 @@ jobs:
   generate-pdfs:
     name: Generate PDF Resumes
     runs-on: ubuntu-latest
-    needs: theme-continuous-integration
+    needs: [discover-resumes, theme-continuous-integration]
     permissions:
       contents: read
     strategy:
       fail-fast: false
-      matrix:
-        resume-language: [en, fr]
-    env:
-      RESUME_FILE: resume/resume.${{ matrix.resume-language }}.json
-      OUTPUT_FILE: resume/pdf/resume.${{ matrix.resume-language }}.pdf
+      matrix: ${{ fromJSON(needs.discover-resumes.outputs.matrix) }}
     steps:
       - name: Checkout code
         uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8 # v6.0.1
@@ -85,26 +107,29 @@ jobs:
           artifact-ids: ${{ needs.theme-continuous-integration.outputs.build-artifact-id }}
           path: /
 
-      - name: Generate English PDF
+      - name: Generate PDF for ${{ matrix.resume-file }}
         uses: ./.github/actions/generate-resume-pdf
         with:
-          resume-path: ${{ env.RESUME_FILE }}
-          output-path: ${{ env.OUTPUT_FILE }}
+          resume-path: ${{ matrix.resume-path }}
+          output-path: ${{ matrix.pdf-path }}
 
       - name: Upload PDF artifacts
         id: upload-artifact
         uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6.0.0
         with:
-          name: resume-pdf-${{ matrix.resume-language }}
-          path: ${{ env.OUTPUT_FILE }}
+          name: resume-pdf-${{ matrix.language }}-${{ matrix.position }}
+          path: ${{ matrix.pdf-path }}
           if-no-files-found: error
 
       - uses: hoverkraft-tech/ci-github-common/actions/set-matrix-output@666b7b6eb000db3e8614647871fa60c9f1eb7179 # 0.31.4
         with:
           value: |
             {
-              "language": ${{ toJSON(matrix.resume-language) }},
-              "pdf-path": ${{ toJSON(env.OUTPUT_FILE) }},
+              "language": ${{ toJSON(matrix.language) }},
+              "position": ${{ toJSON(matrix.position) }},
+              "resume-file": ${{ toJSON(matrix.resume-file) }},
+              "pdf-path": ${{ toJSON(matrix.pdf-path) }},
+              "pdf-filename": ${{ toJSON(matrix.pdf-filename) }},
               "artifact-url": ${{ toJSON(steps.upload-artifact.outputs.artifact-url) }},
               "artifact-id": ${{ toJSON(steps.upload-artifact.outputs.artifact-id) }}
             }
