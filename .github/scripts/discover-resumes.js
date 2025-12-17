@@ -36,19 +36,27 @@ function discoverResumeFiles() {
         continue;
       }
 
-      const resumePath = path.join(RESUME_DIR, file);
       const positionSlug = position || "default";
       const pdfFileName = position
         ? `resume.${language}.${position}.pdf`
         : `resume.${language}.pdf`;
-      const pdfPath = path.join(PDF_OUTPUT_DIR, pdfFileName);
+
+      // Use relative paths from repository root for GitHub Actions compatibility
+      const resumePath = `resume/${file}`;
+      const pdfPath = `resume/pdf/${pdfFileName}`;
+
+      // Keep absolute paths for local filesystem access (for Makefile usage)
+      const resumeAbsPath = path.join(RESUME_DIR, file);
+      const pdfAbsPath = path.join(PDF_OUTPUT_DIR, pdfFileName);
 
       resumes.push({
         file,
         path: resumePath,
+        absPath: resumeAbsPath,
         language,
         position: positionSlug,
         pdfPath,
+        pdfAbsPath,
         pdfFileName,
       });
     }
