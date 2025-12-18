@@ -17,9 +17,13 @@ const COUNTRY_LOCALE_MAP = {
   GB: "en",
 };
 const DEFAULT_PAGEDJS_TIMEOUT_MS = 10_000;
-const PAGEDJS_TIMEOUT_MS = process.env.PAGEDJS_TIMEOUT_MS
-  ? Number.parseInt(process.env.PAGEDJS_TIMEOUT_MS, 10) || DEFAULT_PAGEDJS_TIMEOUT_MS
-  : DEFAULT_PAGEDJS_TIMEOUT_MS;
+const PAGEDJS_TIMEOUT_MS = (() => {
+  if (!process.env.PAGEDJS_TIMEOUT_MS) {
+    return DEFAULT_PAGEDJS_TIMEOUT_MS;
+  }
+  const parsed = Number.parseInt(process.env.PAGEDJS_TIMEOUT_MS, 10);
+  return Number.isFinite(parsed) ? parsed : DEFAULT_PAGEDJS_TIMEOUT_MS;
+})();
 
 const normalizeLocale = (candidate) => {
   if (typeof candidate !== "string") {
@@ -178,7 +182,7 @@ async function main() {
     const pagedReady = await waitForPagedjsLayout(page);
     if (!pagedReady) {
       console.warn(
-        "WARNING: Paged.js layout not detected; falling back to browser print rendering (page breaks and margins may differ).",
+        "WARNING: Paged.js layout not detected; falling back to browser print rendering (page breaks and margins may differ). Verify CDN access to pagedjs, or increase PAGEDJS_TIMEOUT_MS if layout needs more time.",
       );
     }
     await page.pdf({
