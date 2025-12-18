@@ -105,7 +105,10 @@ const optimizePdf = async (inputPath) => {
 
 const waitForPagedjsLayout = async (page) => {
   const hasPaged = await page.evaluate(
-    () => typeof window.PagedPolyfill !== "undefined",
+    () =>
+      typeof window.PagedPolyfill !== "undefined" ||
+      typeof window.Paged !== "undefined" ||
+      typeof window.PagedJS !== "undefined",
   );
 
   if (!hasPaged) {
@@ -182,7 +185,7 @@ async function main() {
     const pagedReady = await waitForPagedjsLayout(page);
     if (!pagedReady) {
       console.warn(
-        "WARNING: Paged.js layout not detected; falling back to browser print rendering (page breaks and margins may differ). Verify CDN access to pagedjs, or increase PAGEDJS_TIMEOUT_MS if layout needs more time.",
+        "WARNING: Paged.js layout not detected; falling back to browser print rendering (page breaks and margins may differ). Verify CDN access to Paged.js, or increase PAGEDJS_TIMEOUT_MS if layout needs more time.",
       );
     }
     await page.pdf({
