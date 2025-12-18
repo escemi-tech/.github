@@ -17,9 +17,9 @@ const COUNTRY_LOCALE_MAP = {
   GB: "en",
 };
 const DEFAULT_PAGEDJS_TIMEOUT_MS = 10_000;
-const PAGEDJS_TIMEOUT_MS =
-  Number.parseInt(process.env.PAGEDJS_TIMEOUT_MS ?? "", 10) ||
-  DEFAULT_PAGEDJS_TIMEOUT_MS;
+const PAGEDJS_TIMEOUT_MS = process.env.PAGEDJS_TIMEOUT_MS
+  ? Number.parseInt(process.env.PAGEDJS_TIMEOUT_MS, 10) || DEFAULT_PAGEDJS_TIMEOUT_MS
+  : DEFAULT_PAGEDJS_TIMEOUT_MS;
 
 const normalizeLocale = (candidate) => {
   if (typeof candidate !== "string") {
