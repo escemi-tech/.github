@@ -28,6 +28,14 @@ export default defineConfig({
       },
     },
   },
+  resolve: {
+    alias: {
+      "pagedjs/dist/paged.polyfill.js": path.resolve(
+        __dirname,
+        "node_modules/pagedjs/dist/paged.polyfill.js",
+      ),
+    },
+  },
   server: {
     fs: {
       allow: [path.resolve(__dirname, ".."), path.resolve(__dirname)],
