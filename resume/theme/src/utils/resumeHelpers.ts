@@ -1,15 +1,16 @@
 import type { ExperienceEntry, ResumeStrings } from "../types/resume";
+import { parseDate } from "./text";
 
 const STRINGS: Record<string, ResumeStrings> = {
   en: {
     sections: {
-      professional: "Professional Experience",
-      projects: "Key Projects",
-      community: "Community Leadership",
-      skills: "Skills",
-      languages: "Languages",
-      education: "Education",
-      certificates: "Certifications",
+      professional: "💼 Professional Experience",
+      projects: "🚀 Key Projects",
+      community: "🤝 Community Leadership",
+      skills: "⚙ Skills",
+      languages: "🌍 Languages",
+      education: "🎓 Education",
+      certificates: "🏅 Certifications",
     },
     labels: {
       present: "Present",
@@ -17,13 +18,13 @@ const STRINGS: Record<string, ResumeStrings> = {
   },
   fr: {
     sections: {
-      professional: "Expériences Professionnelles",
-      projects: "Projets Clés",
-      community: "Engagement Communautaire",
-      skills: "Compétences",
-      languages: "Langues",
-      education: "Formation",
-      certificates: "Certifications",
+      professional: "💼 Expériences Professionnelles",
+      projects: "🚀 Projets Clés",
+      community: "🤝 Engagement Communautaire",
+      skills: "⚙ Compétences",
+      languages: "🌍 Langues",
+      education: "🎓 Formation",
+      certificates: "🏅 Certifications",
     },
     labels: {
       present: "Aujourd'hui",
@@ -35,13 +36,6 @@ export const getStrings = (locale?: string): ResumeStrings => {
   const language = locale?.split("-")[0]?.toLowerCase();
   return STRINGS[language || "en"] || STRINGS.en;
 };
-
-export const sanitize = (value?: string | null): string => value?.trim() || "";
-
-export const displayUrl = (value?: string | null): string =>
-  sanitize(value)
-    .replace(/^https?:\/\//i, "")
-    .replace(/\/$/, "");
 
 type FeatureFlag = { featured?: boolean };
 
@@ -70,59 +64,6 @@ export const stripBaseline = (summary?: string | null): string => {
     return rest.join("\n").trim();
   }
   return summary.trim();
-};
-
-export const emphasize = (text?: string | null): string => {
-  if (!text) return "";
-  let value = text;
-  const numberPattern = String.raw`(?:\d{1,3}(?:[.,]\d{3})+|\d+)(?:[.,]\d+)?`;
-  const numberRangePattern = String.raw`${numberPattern}(?:[KMB])?(?:\s*[-–]\s*${numberPattern}(?:[KMB])?)?`;
-  const currencySegments: Array<{ token: string; content: string }> = [];
-  const toCurrencyPlaceholder = (content: string) => {
-    const token = `@@CURRENCY_HL_${currencySegments.length}@@`;
-    currencySegments.push({ token, content });
-    return token;
-  };
-  value = value.replace(
-    new RegExp(`([€$£])(\\s*)(${numberRangePattern})`, "gi"),
-    (match, symbol, spacing, amount) =>
-      toCurrencyPlaceholder(`<strong>${symbol}${spacing}${amount}</strong>`),
-  );
-  value = value.replace(
-    new RegExp(`(${numberRangePattern})(\\s*)([€$£])`, "gi"),
-    (match, amount, spacing, symbol) =>
-      toCurrencyPlaceholder(`<strong>${amount}${spacing}${symbol}</strong>`),
-  );
-  value = value.replace(
-    /(\d+(?:-\d+)?\s+[a-z]+\s+to\s+\d+(?:-\d+)?\s+[a-z]+)/gi,
-    "<em>$1</em>",
-  );
-  value = value.replace(
-    /(\d+(?:\.\d+)?\s*[a-z]+\s*→\s*\d+(?:\.\d+)?\s*[a-z]+)/gi,
-    "<em>$1</em>",
-  );
-  value = value.replace(
-    new RegExp(`([+\\-~]?${numberPattern}%)`, "g"),
-    "<em>$1</em>",
-  );
-  value = value.replace(
-    new RegExp(`(${numberPattern}[KMB])`, "gi"),
-    "<strong>$1</strong>",
-  );
-  value = value.replace(
-    new RegExp(`(${numberPattern}\\+)`, "g"),
-    "<strong>$1</strong>",
-  );
-  currencySegments.forEach(({ token, content }) => {
-    value = value.replace(token, content);
-  });
-  return value;
-};
-
-export const parseDate = (value?: string | null): Date | null => {
-  if (!value) return null;
-  const parsed = new Date(value);
-  return Number.isNaN(parsed.getTime()) ? null : parsed;
 };
 
 export const formatDateRange = (
@@ -175,4 +116,18 @@ export const experienceKey = (
     entry.endDate,
   ].filter(Boolean);
   return tokens.length ? tokens.join("::") : `experience-${index}`;
+};
+export const extractResultsSnippet = (value: string): string => {
+  const text = value.trim();
+  if (!text) return "";
+
+  const markers = ["Results:", "Result:", "Résultats:", "Résultat:"];
+  for (const marker of markers) {
+    const index = text.toLowerCase().indexOf(marker.toLowerCase());
+    if (index >= 0) {
+      return text.slice(index + marker.length).trim();
+    }
+  }
+
+  return text;
 };

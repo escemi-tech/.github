@@ -25,6 +25,10 @@ lint-fix: ## Execute linting and fix
 		-e FIX_TYPESCRIPT_PRETTIER=true\
 	)
 
+test: ## Run tests
+	@echo "Running tests..."
+	@cd resume/theme && npm install && npm test	
+
 humanize-resume: ## Normalize resume text with humanize-ai-lib
 	@echo "Discovering resume files..."
 	@RESUME_FILES=$$(node .github/actions/get-available-resumes/get-available-resumes.js | jq -r '.[].path'); \
@@ -60,6 +64,8 @@ generate-pdfs: ## Generate all resumes PDFs
 
 ci: ## Run all CI tasks
 	$(MAKE) lint-fix
+	$(MAKE) test
+	$(MAKE) humanize-resume
 	$(MAKE) validate-resume
 	$(MAKE) generate-pdfs
 

@@ -24,7 +24,7 @@ The repository supports multiple resume variants optimized for different positio
 - **`pdf/`** - Directory containing generated PDF versions
   - PDFs are auto-generated for each resume file
   - Position-specific resumes generate PDFs like `resume.en.cto.pdf`
-  - See [pdf/README.md](pdf/README.md) for more details
+  - See [PDF Generation](#pdf-generation) below
 
 ### Position-Specific Resumes
 
@@ -177,6 +177,7 @@ The custom theme (`jsonresume-theme-escemi`) is optimized for:
 - **ESCEMI branding**: Source Sans Pro font with official ESCEMI colors (dark blue #1c3144, gold #ecb807)
 - **Metric emphasis**: Highlights quantifiable achievements and business impact
 - **6-second scannability**: Recruiters can instantly identify key information
+- **Print optimization**: A4 format with stable page breaks and margins
 
 See [themes/escemi/README.md](themes/escemi/README.md) for complete theme documentation.
 
@@ -187,13 +188,24 @@ See [themes/escemi/README.md](themes/escemi/README.md) for complete theme docume
 
 ### Manual Generation
 
-To generate PDFs locally using the custom theme:
+To generate all PDFs locally using the custom theme:
 
 ```sh
 make generate-pdfs
 ```
 
-See [pdf/README.md](pdf/README.md) for more details.
+To generate a single PDF (useful for debugging), run the generator directly:
+
+```sh
+cd .github/actions/generate-resume-pdf
+npm install
+
+# Example: English
+npm run generate-pdf -- ../../resume/resume.en.json ../../resume/pdf/resume.en.pdf
+
+# Example: English (position-specific)
+npm run generate-pdf -- ../../resume/resume.en.cto.json ../../resume/pdf/resume.en.cto.pdf
+```
 
 ## Schema Reference
 

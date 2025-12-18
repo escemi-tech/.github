@@ -92,21 +92,6 @@
   },
   "work": [
     {
-      "name": "ESCEMI - Strategic Technical Partner",
-      "location": "Aix-en-Provence, France",
-      "position": "On-Demand CTO & Senior Lead Developer",
-      "url": "https://www.escemi.com",
-      "startDate": "2019-09",
-      "type": "freelance",
-      "featured": true,
-      "summary": "Independent strategic partner for SMEs and scale-ups that need industrialized delivery without a permanent CTO. I architect SOLID-centric platforms, tailor CI/CD and observability stacks, and embed coaching so mixed-seniority teams become autonomous.",
-      "highlights": [
-        "Challenge: ambitious product roadmaps executed by under-structured mixed-seniority teams",
-        "Actions: engineering of SOLID-centric API platforms, tailoring of client-specific CI/CD + IaC stacks, execution of FinOps reviews, and immersive coaching",
-        "Results: automation of 90% quality gates, achievement of <30 min deployments, generation of €80-150K/year savings, preparation of squads for 10x traffic"
-      ]
-    },
-    {
       "name": "Build & Run - Fractional CTO / DevX Expert",
       "location": "Remote · France",
       "position": "Fractional CTO & DevX Expert",
@@ -119,6 +104,41 @@
         "Challenge: multi-squad delivery slowed by heterogeneous stacks and manual releases",
         "Actions: standardization of \"12 factors Application\" blueprints, deployment of reusable GitHub/GitLab CI/CD templates, implementation of DevX scorecards and leadership rituals",
         "Results: gain of +35% velocity, reduction of -40% debt, multiplication of releases x5, reduction of onboarding from 4 weeks to 1 with <5% change failure rate"
+      ],
+      "keywords": [
+        "Fractional CTO",
+        "DevX",
+        "cloud-native",
+        "CI/CD",
+        "GitHub",
+        "GitLab",
+        "12 factors Application",
+        "Leadership"
+      ]
+    },
+    {
+      "name": "ESCEMI - Strategic Technical Partner",
+      "location": "Aix-en-Provence, France",
+      "position": "On-Demand CTO & Senior Lead Developer",
+      "url": "https://www.escemi.com",
+      "startDate": "2019-09",
+      "type": "freelance",
+      "featured": true,
+      "summary": "Independent strategic partner for SMEs and scale-ups that need industrialized delivery without a permanent CTO. I architect SOLID-centric platforms, tailor CI/CD and observability stacks, and embed coaching so mixed-seniority teams become autonomous.",
+      "highlights": [
+        "Challenge: ambitious product roadmaps executed by under-structured mixed-seniority teams",
+        "Actions: engineering of SOLID-centric API platforms, tailoring of client-specific CI/CD + IaC stacks, execution of FinOps reviews, and immersive coaching",
+        "Results: automation of 90% quality gates, achievement of <30 min deployments, generation of €80-150K/year savings, preparation of squads for 10x traffic"
+      ],
+      "keywords": [
+        "Fractional CTO",
+        "Senior Lead Dev",
+        "SOLID",
+        "CI/CD",
+        "IaC",
+        "Observability",
+        "FinOps",
+        "Immersive Coaching"
       ]
     },
     {
@@ -134,6 +154,16 @@
         "Challenge: launch of a zero-debt travel inspiration MVP under 3 months with aggressive acquisition goals",
         "Actions: delivery of JAMStack/serverless stack on AWS, execution of rapid UX experimentation, implementation of data-driven CRM/SEA funnels, and creation of product ops dashboards",
         "Results: shipment of MVP in 12 weeks, achievement of <500 ms loads, attainment of 5K MAU in 6 months, increase of +40% engagement, acquisition of 300+ sign-ups/week at €2.50 CPA"
+      ],
+      "keywords": [
+        "JAMStack",
+        "Serverless",
+        "AWS",
+        "UX",
+        "SEA",
+        "MVP",
+        "Nest.js",
+        "React"
       ]
     },
     {
@@ -150,12 +180,21 @@
         "Challenge: fragmented legacy PHP stack blocking consolidation of 8 business units and rapid campaign launches",
         "Actions: execution of 3-year IT master plan, introduction of SOA/microservices and standardization of environments, enforcement of CI/CD + observability governance",
         "Results: reduction of release cycle from 4w to 1w, decrease of production defects by -55%, achievement of sprint reliability at 85%, generation of €200K/year maintenance savings"
+      ],
+      "keywords": [
+        "IT Master Plan",
+        "SOA/microservices",
+        "CI/CD",
+        "Observability",
+        "Standardized Environments",
+        "Legacy PHP"
       ]
     },
     {
       "name": "Logicielnet",
-      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France · On-site",
+      "location": "Aix-en-Provence, France",
       "position": "Application Systems Manager",
+      "url": "https://logicielnet.fr",
       "startDate": "2010-09",
       "endDate": "2013-09",
       "type": "employee",
@@ -165,12 +204,21 @@
         "Challenge: Balance of client-driven innovations with mounting technical debt while maintaining a packed SaaS roadmap.",
         "Actions: Prioritization of roadmap governance, leadership of a cross-functional squad with mandatory code reviews, and enforcement of a shared Zend Framework baseline.",
         "Results: Delivery of 20+ major upgrades annually, stabilization of release quality, and reduction of request-to-production lead time by 30%."
+      ],
+      "keywords": [
+        "Modular SaaS",
+        "Project Management",
+        "SaaS Roadmap",
+        "Zend Framework",
+        "Code Reviews",
+        "Cross-functional Team"
       ]
     },
     {
       "name": "Logicielnet",
-      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France · On-site",
+      "location": "Aix-en-Provence, France",
       "position": "R&D Engineer",
+      "url": "https://logicielnet.fr",
       "startDate": "2009-09",
       "endDate": "2010-09",
       "type": "apprenticeship",
@@ -180,6 +228,15 @@
         "Challenge: Delivery of instant customer callbacks inside the legacy SaaS while integrating external VoIP providers.",
         "Actions: Engineering of a Zend Framework/PHP callback service with secure, reusable widgets covering 100% of client-facing screens and comprehensive rollout documentation.",
         "Results: Reduction of customer follow-up time by 40% and enablement of support teams to deploy the feature without regressions."
+      ],
+      "keywords": [
+        "Web Callback",
+        "Click-to-call",
+        "VoIP",
+        "Zend Framework",
+        "PHP",
+        "JavaScript",
+        "Support"
       ]
     }
   ],

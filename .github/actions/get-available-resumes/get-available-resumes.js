@@ -18,7 +18,7 @@ function getAvailableResumes() {
     if (match) {
       const [, language, position] = match;
 
-      const name = position ? `${language}-${position}` : `${language}`;
+      const name = position ? `${language}.${position}` : `${language}`;
       const pdfFileName = `resume.${name}.pdf`;
 
       // Keep absolute paths for local filesystem access (for Makefile usage)

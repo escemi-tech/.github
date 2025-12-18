@@ -14,8 +14,11 @@
         ]
       }
     ],
+    "declaration-property-value-no-unknown": null,
+    "no-descending-specificity": null,
+    "no-duplicate-selectors": null,
     "selector-class-pattern": [
-      "^[a-z]+(?:-[a-z]+)*(?:__(?:[a-z]+(?:-[a-z]+)*))?(?:--[a-z]+(?:-[a-z]+)*)?$",
+      "^[a-zA-Z0-9]+(?:[-_][a-zA-Z0-9]+)*(?:__(?:[a-zA-Z0-9]+(?:[-_][a-zA-Z0-9]+)*))?(?:--[a-zA-Z0-9]+(?:[-_][a-zA-Z0-9]+)*)?$",
       {
         "resolveNestedSelectors": true,
         "message": "Expected class selector to follow kebab-case or BEM conventions"

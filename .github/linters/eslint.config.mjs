@@ -72,6 +72,7 @@ const nodeCommonJsScriptsConfig = {
     globals: {
       ...globals.node,
       ...globals.commonjs,
+      ...globals.browser,
     },
   },
   plugins: {

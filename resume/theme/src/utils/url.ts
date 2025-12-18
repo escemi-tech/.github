@@ -1,3 +1,5 @@
+import { sanitize } from "./text";
+
 const FALLBACK_URL = "#";
 const DEFAULT_ALLOWED_PROTOCOLS = [
   "http:",
@@ -39,34 +41,7 @@ export function safeUrl(
     return FALLBACK_URL;
   }
 }
-
-export function getLinkRel(
-  rawUrl?: string,
-  openInNewTab = false,
-): string | undefined {
-  const rel = new Set<string>();
-
-  if (openInNewTab) {
-    rel.add("noopener");
-    rel.add("noreferrer");
-  }
-
-  if (rawUrl) {
-    const isLikelyExternal = (() => {
-      try {
-        const url = new URL(rawUrl, "http://localhost");
-        return url.origin !== "null" && url.hostname !== "localhost";
-      } catch {
-        return true;
-      }
-    })();
-
-    if (isLikelyExternal) {
-      rel.add("nofollow");
-      rel.add("external");
-    }
-  }
-
-  const relValue = Array.from(rel).join(" ");
-  return relValue || undefined;
-}
+export const displayUrl = (value?: string | null): string =>
+  sanitize(value)
+    .replace(/^https?:\/\//i, "")
+    .replace(/\/$/, "");
