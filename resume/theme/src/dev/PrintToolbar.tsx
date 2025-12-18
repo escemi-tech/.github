@@ -2,14 +2,8 @@ import { useEffect, useMemo, useState, type RefObject } from "react";
 import { useReactToPrint } from "react-to-print";
 
 const PAGE_STYLE = `
-  @page {
-    size: A4;
-    margin: 0;
-  }
-
   @media print {
     body {
-      margin: 0;
       -webkit-print-color-adjust: exact;
       color-adjust: exact;
       print-color-adjust: exact;

@@ -75,10 +75,18 @@ const Resume = ({ resume, locale = "en" }: ResumeProps) => {
     timeline,
   );
 
+  const runningHeaderName = basics.name || "";
+  const runningHeaderTitle = basics.label || "";
+
   return (
-    <div className="resume-root space-y-5">
-      <section className="page page-first">
-        <div className="page-shell bg-gradient-to-br from-white via-slate-50 to-white text-slate-900">
+    <div className="resume-root">
+      <div className="resume-running-header" aria-hidden="true">
+        <div className="resume-running-header__name">{runningHeaderName}</div>
+        <div className="resume-running-header__title">{runningHeaderTitle}</div>
+      </div>
+
+      <main className="resume-document bg-gradient-to-br from-white via-slate-50 to-white text-slate-900">
+        <section className="resume-first-page">
           <HeroDomain basics={basics} summary={summary} metrics={metrics} />
 
           <div className="page-first__body mt-2.5 grid grid-cols-[215px_minmax(0,1fr)] gap-3.5 px-4 pb-4">
@@ -98,14 +106,14 @@ const Resume = ({ resume, locale = "en" }: ResumeProps) => {
               highlightLimit={4}
             />
           </div>
-        </div>
-      </section>
+        </section>
 
-      <ContinuationDomain
-        sections={extraSections}
-        locale={locale}
-        strings={strings}
-      />
+        <ContinuationDomain
+          sections={extraSections}
+          locale={locale}
+          strings={strings}
+        />
+      </main>
     </div>
   );
 };

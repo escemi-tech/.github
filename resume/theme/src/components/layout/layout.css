@@ -5,6 +5,40 @@
     padding: 0.25rem;
   }
 
+  .resume-document {
+    background: #fff;
+    border: 1px solid rgb(28 49 68 / 8%);
+    box-shadow: 0 10px 30px rgb(28 49 68 / 8%);
+    overflow: hidden;
+  }
+
+  .resume-first-page {
+    page: first;
+    break-after: page;
+  }
+
+  .resume-continuation {
+    display: block;
+  }
+
+  .resume-running-header {
+    position: running(resumeHeader);
+  }
+
+  .resume-running-header__name {
+    font-weight: 700;
+    color: #1c3144;
+    font-size: 0.8rem;
+    line-height: 1.1;
+  }
+
+  .resume-running-header__title {
+    font-weight: 600;
+    color: rgb(28 49 68 / 70%);
+    font-size: 0.72rem;
+    line-height: 1.1;
+  }
+
   .preview-toolbar-host {
     position: sticky;
     top: 0;
@@ -42,9 +76,7 @@
     color: #1c3144;
     background: transparent;
     cursor: pointer;
-    transition:
-      background 0.15s ease,
-      color 0.15s ease;
+    transition: background 0.15s ease, color 0.15s ease;
   }
 
   .print-toolbar__language-button--active {
@@ -63,9 +95,7 @@
     background: linear-gradient(180deg, #fff, #f8fafc);
     box-shadow: 0 10px 25px rgb(15 23 42 / 12%);
     cursor: pointer;
-    transition:
-      transform 0.15s ease,
-      box-shadow 0.15s ease;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
   }
 
   .print-toolbar__button:disabled {
@@ -79,54 +109,37 @@
     box-shadow: 0 12px 30px rgb(15 23 42 / 22%);
   }
 
-  .page {
-    width: 100%;
-    min-height: 297mm;
-    margin-bottom: 0.2rem;
-    break-inside: avoid;
+  /* Screen preview when Paged.js polyfill is active. */
+  .pagedjs_pages {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: 0.25rem 0;
   }
 
-  .page:last-child {
-    margin-bottom: 0;
-  }
-
-  .page-shell {
+  .pagedjs_page {
     background: #fff;
     border: 1px solid rgb(28 49 68 / 8%);
     box-shadow: 0 10px 30px rgb(28 49 68 / 8%);
     overflow: hidden;
-    position: relative;
-    min-height: inherit;
-    display: flex;
-    flex-direction: column;
   }
 
   @media print {
     .resume-root {
       padding: 0;
+      max-width: none;
     }
 
     .preview-toolbar-host {
       display: none;
     }
 
-    .page {
-      margin: 0;
-      width: auto;
-      break-after: auto;
-      break-inside: avoid;
-      min-height: auto;
-    }
-
-    .page + .page {
-      break-before: page;
-    }
-
-    .page-shell {
+    .resume-document {
       border-radius: 0;
       box-shadow: none;
       border: none;
       background: transparent;
+      overflow: visible;
     }
 
     .page-first__body {
