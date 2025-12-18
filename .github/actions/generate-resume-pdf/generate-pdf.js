@@ -2,9 +2,9 @@
 /* global document */
 const fs = require("node:fs/promises");
 const path = require("node:path");
+const os = require("node:os");
 const { execFile } = require("node:child_process");
 const { promisify } = require("node:util");
-const puppeteer = require("puppeteer");
 const theme = require("jsonresume-theme-escemi");
 
 const execFileAsync = promisify(execFile);
@@ -103,40 +103,6 @@ const optimizePdf = async (inputPath) => {
   }
 };
 
-const waitForPagedjsLayout = async (page) => {
-  const hasPaged = await page.evaluate(
-    () =>
-      typeof window.PagedPolyfill !== "undefined" ||
-      typeof window.Paged !== "undefined" ||
-      typeof window.PagedJS !== "undefined",
-  );
-
-  if (!hasPaged) {
-    return false;
-  }
-
-  return page.evaluate(
-    (timeoutMs) =>
-      new Promise((resolve) => {
-        if (document.querySelector(".pagedjs_pages")) {
-          resolve(true);
-          return;
-        }
-
-        const timeoutId = setTimeout(() => resolve(false), timeoutMs);
-        document.addEventListener(
-          "pagedjs:rendered",
-          () => {
-            clearTimeout(timeoutId);
-            resolve(true);
-          },
-          { once: true },
-        );
-      }),
-    PAGEDJS_TIMEOUT_MS,
-  );
-};
-
 async function main() {
   const [resumeArg, outputArg] = process.argv.slice(2);
 
@@ -167,41 +133,25 @@ async function main() {
   const renderOptions = buildRenderOptions(resumeData, resumePath);
   const html = theme.render(resumeData, renderOptions);
 
-  const browser = await puppeteer.launch({
-    headless: "new",
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
-    defaultViewport: null,
-  });
+  const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "resume-pagedjs-"));
+  const htmlPath = path.join(tempDir, "resume.html");
+  await fs.writeFile(htmlPath, html, "utf8");
+
+  const cliPath = path.resolve(__dirname, "node_modules/.bin/pagedjs-cli");
+  const args = [htmlPath, outputPath];
 
   try {
-    const page = await browser.newPage();
-    await page.setContent(html, { waitUntil: "networkidle0" });
-    await page.emulateMediaType("print");
-    await page.evaluate(async () => {
-      if (document.fonts?.ready) {
-        await document.fonts.ready;
-      }
-    });
-    const pagedReady = await waitForPagedjsLayout(page);
-    if (!pagedReady) {
-      console.warn(
-        "WARNING: Paged.js layout not detected; falling back to browser print rendering (page breaks and margins may differ). Verify CDN access to Paged.js, or increase PAGEDJS_TIMEOUT_MS if layout needs more time.",
-      );
-    }
-    await page.pdf({
-      path: outputPath,
-      format: "A4",
-      printBackground: true,
-      preferCSSPageSize: true,
+    await execFileAsync(cliPath, args, {
+      env: {
+        ...process.env,
+        PAGEDJS_TIMEOUT: String(PAGEDJS_TIMEOUT_MS),
+      },
     });
     console.log(`✅ Resume PDF created: ${outputPath}`);
-
     await optimizePdf(outputPath);
   } catch (error) {
     console.error("Failed to generate PDF:", error.message);
     process.exitCode = 1;
-  } finally {
-    await browser.close();
   }
 }
 
