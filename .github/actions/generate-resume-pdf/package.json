@@ -5,9 +5,9 @@
   "description": "Generates PDF resumes from JSON resume files.",
   "dependencies": {
     "jsonresume-theme-escemi": "file:../../../resume/theme",
-    "puppeteer": "^24.31.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "pagedjs-cli": "^0.4.3",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
   },
   "scripts": {
     "generate-pdf": "node ./generate-pdf.js"

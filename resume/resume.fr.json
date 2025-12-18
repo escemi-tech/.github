@@ -131,7 +131,7 @@
         "Résultats : automatisation de 90% des contrôles, déploiements en <30 min, économies de 80-150 K€/an, préparation des équipes pour un trafic x10"
       ],
       "keywords": [
-        "CTO à la demande",
+        "Fractional CTO",
         "Lead Dev Senior",
         "SOLID",
         "CI/CD",
@@ -182,18 +182,19 @@
         "Résultats : réduction du cycle de release de 4 sem à 1, diminution des défauts prod de -55%, fiabilisation des sprints à 85%, réalisation d'économies de maintenance de 200 K€/an"
       ],
       "keywords": [
-        "legacy PHP",
         "Schéma directeur IT",
         "SOA/microservices",
         "CI/CD",
-        "observabilité",
-        "Environnements standardisés"
+        "Observabilité",
+        "Environnements standardisés",
+        "Legacy PHP"
       ]
     },
     {
       "name": "Logicielnet",
-      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France · Sur site",
+      "location": "Aix-en-Provence, France",
       "position": "Responsable systèmes applicatifs",
+      "url": "https://logicielnet.fr",
       "startDate": "2010-09",
       "endDate": "2013-09",
       "type": "employee",
@@ -206,17 +207,18 @@
       ],
       "keywords": [
         "SaaS modulaire",
-        "cahiers des charges",
-        "roadmap SaaS",
+        "Gestion de projets",
+        "Roadmap SaaS",
         "Zend Framework",
-        "revues de code",
-        "équipe pluridisciplinaire"
+        "Revues de code",
+        "Équipe pluridisciplinaire"
       ]
     },
     {
       "name": "Logicielnet",
-      "location": "Aix-en-Provence, Provence-Alpes-Côte d'Azur, France · Sur site",
+      "location": "Aix-en-Provence, France",
       "position": "Ingénieur R&D",
+      "url": "https://logicielnet.fr",
       "startDate": "2009-09",
       "endDate": "2010-09",
       "type": "apprenticeship",
@@ -234,7 +236,7 @@
         "Zend Framework",
         "PHP",
         "JavaScript",
-        "support"
+        "Support"
       ]
     }
   ],
@@ -274,7 +276,7 @@
         "SOLID",
         "Design patterns",
         "Master",
-        "études de cas"
+        "Etudes de cas"
       ]
     }
   ],
