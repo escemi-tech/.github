@@ -16,7 +16,7 @@ const COUNTRY_LOCALE_MAP = {
   US: "en",
   GB: "en",
 };
-const PAGEDJS_TIMEOUT_MS = 10_000;
+const PAGEDJS_TIMEOUT_MS = Number.parseInt(process.env.PAGEDJS_TIMEOUT_MS ?? "", 10) || 10_000;
 
 const normalizeLocale = (candidate) => {
   if (typeof candidate !== "string") {
@@ -174,7 +174,7 @@ async function main() {
     });
     const pagedReady = await waitForPagedjsLayout(page);
     if (!pagedReady) {
-      console.warn("⚠️ Paged.js layout not detected; proceeding with fallback print layout.");
+      console.warn("WARNING: Paged.js layout not detected; proceeding with fallback print layout.");
     }
     await page.pdf({
       path: outputPath,

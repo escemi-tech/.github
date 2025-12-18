@@ -39,7 +39,7 @@ export function render(resume: ResumeSchema, options: RenderOptions = {}): strin
       var script = document.createElement("script");
       script.src = "${PAGEDJS_POLYFILL}";
       script.async = true;
-      script.crossOrigin = "anonymous";
+      script.setAttribute("crossorigin", "anonymous");
       script.dataset.enforce = "pagedjs";
       document.head.appendChild(script);
     })();
