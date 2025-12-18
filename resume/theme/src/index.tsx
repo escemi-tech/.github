@@ -7,6 +7,8 @@ const GOOGLE_FONTS =
   "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap";
 const PAGEDJS_POLYFILL =
   "https://unpkg.com/pagedjs/dist/paged.polyfill.js";
+const PAGEDJS_INTEGRITY =
+  "sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb";
 
 export function render(resume: ResumeSchema, options: RenderOptions = {}): string {
   if (!resume) {
@@ -38,6 +40,7 @@ export function render(resume: ResumeSchema, options: RenderOptions = {}): strin
       }
       var script = document.createElement("script");
       script.src = "${PAGEDJS_POLYFILL}";
+      script.integrity = "${PAGEDJS_INTEGRITY}";
       script.async = true;
       script.setAttribute("crossorigin", "anonymous");
       script.dataset.enforce = "pagedjs";
