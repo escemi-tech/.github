@@ -1,4 +1,8 @@
 /* Imports must precede all other at-rules so Tailwind keeps the component layers. */
+@import "@fontsource/source-sans-pro/300.css";
+@import "@fontsource/source-sans-pro/400.css";
+@import "@fontsource/source-sans-pro/600.css";
+@import "@fontsource/source-sans-pro/700.css";
 @import url("./components/layout/layout.css");
 @import url("./components/hero/hero.css");
 @import url("./components/sidebar/sidebar.css");
