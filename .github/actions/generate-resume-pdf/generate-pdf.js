@@ -16,6 +16,7 @@ const COUNTRY_LOCALE_MAP = {
   US: "en",
   GB: "en",
 };
+const PAGEDJS_TIMEOUT_MS = 10_000;
 
 const normalizeLocale = (candidate) => {
   if (typeof candidate !== "string") {
@@ -105,14 +106,14 @@ const waitForPagedjsLayout = async (page) => {
   }
 
   return page.evaluate(
-    () =>
+    (timeoutMs) =>
       new Promise((resolve) => {
         if (document.querySelector(".pagedjs_pages")) {
           resolve(true);
           return;
         }
 
-        const timeoutId = setTimeout(() => resolve(false), 10000);
+        const timeoutId = setTimeout(() => resolve(false), timeoutMs);
         document.addEventListener(
           "pagedjs:rendered",
           () => {
@@ -122,6 +123,7 @@ const waitForPagedjsLayout = async (page) => {
           { once: true },
         );
       }),
+    PAGEDJS_TIMEOUT_MS,
   );
 };
 
