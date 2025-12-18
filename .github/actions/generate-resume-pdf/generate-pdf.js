@@ -95,6 +95,36 @@ const optimizePdf = async (inputPath) => {
   }
 };
 
+const waitForPagedjsLayout = async (page) => {
+  const hasPaged = await page.evaluate(
+    () => typeof window !== "undefined" && typeof window.PagedPolyfill !== "undefined",
+  );
+
+  if (!hasPaged) {
+    return false;
+  }
+
+  return page.evaluate(
+    () =>
+      new Promise((resolve) => {
+        if (document.querySelector(".pagedjs_pages")) {
+          resolve(true);
+          return;
+        }
+
+        const timeoutId = setTimeout(() => resolve(false), 10000);
+        document.addEventListener(
+          "pagedjs:rendered",
+          () => {
+            clearTimeout(timeoutId);
+            resolve(true);
+          },
+          { once: true },
+        );
+      }),
+  );
+};
+
 async function main() {
   const [resumeArg, outputArg] = process.argv.slice(2);
 
@@ -140,6 +170,10 @@ async function main() {
         await document.fonts.ready;
       }
     });
+    const pagedReady = await waitForPagedjsLayout(page);
+    if (!pagedReady) {
+      console.warn("⚠️ Paged.js layout not detected; proceeding with fallback print layout.");
+    }
     await page.pdf({
       path: outputPath,
       format: "A4",

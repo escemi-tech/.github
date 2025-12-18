@@ -5,6 +5,8 @@ import styles from "./styles.css?inline";
 
 const GOOGLE_FONTS =
   "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap";
+const PAGEDJS_POLYFILL =
+  "https://unpkg.com/pagedjs/dist/paged.polyfill.js";
 
 export function render(resume: ResumeSchema, options: RenderOptions = {}): string {
   if (!resume) {
@@ -29,6 +31,19 @@ export function render(resume: ResumeSchema, options: RenderOptions = {}): strin
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="${GOOGLE_FONTS}" rel="stylesheet">
   <style>${styles}</style>
+  <script>
+    (function() {
+      if (typeof window === "undefined" || window.PagedPolyfill) {
+        return;
+      }
+      var script = document.createElement("script");
+      script.src = "${PAGEDJS_POLYFILL}";
+      script.async = true;
+      script.crossOrigin = "anonymous";
+      script.dataset.enforce = "pagedjs";
+      document.head.appendChild(script);
+    })();
+  </script>
 </head>
 <body>
   ${markup}
