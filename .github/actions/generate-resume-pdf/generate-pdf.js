@@ -177,7 +177,9 @@ async function main() {
     });
     const pagedReady = await waitForPagedjsLayout(page);
     if (!pagedReady) {
-      console.warn("WARNING: Paged.js layout not detected; proceeding with fallback print layout.");
+      console.warn(
+        "WARNING: Paged.js layout not detected; falling back to browser print rendering (page breaks and margins may differ).",
+      );
     }
     await page.pdf({
       path: outputPath,

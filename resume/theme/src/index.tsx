@@ -6,7 +6,7 @@ import styles from "./styles.css?inline";
 const GOOGLE_FONTS =
   "https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap";
 const PAGEDJS_POLYFILL =
-  "https://unpkg.com/pagedjs/dist/paged.polyfill.js";
+  "https://unpkg.com/pagedjs@0.4.3/dist/paged.polyfill.js";
 const PAGEDJS_INTEGRITY =
   "sha384-OLBgp1GsljhM2TJ+sbHjaiH9txEUvgdDTAzHv2P24donTt6/529l+9Ua0vFImLlb";
 
