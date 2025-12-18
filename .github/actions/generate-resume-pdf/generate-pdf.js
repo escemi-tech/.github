@@ -98,7 +98,7 @@ const optimizePdf = async (inputPath) => {
 
 const waitForPagedjsLayout = async (page) => {
   const hasPaged = await page.evaluate(
-    () => typeof window !== "undefined" && typeof window.PagedPolyfill !== "undefined",
+    () => typeof window.PagedPolyfill !== "undefined",
   );
 
   if (!hasPaged) {

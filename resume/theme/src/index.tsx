@@ -33,9 +33,6 @@ export function render(resume: ResumeSchema, options: RenderOptions = {}): strin
   <style>${styles}</style>
   <script>
     (function() {
-      if (typeof window === "undefined") {
-        return;
-      }
       if (document.querySelector('script[data-enforce="pagedjs"]')) {
         return;
       }
