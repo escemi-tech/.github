@@ -33,7 +33,7 @@ jobs:
         uses: ./.github/actions/get-available-resumes
 
   linter:
-    uses: hoverkraft-tech/ci-github-common/.github/workflows/linter.yml@666b7b6eb000db3e8614647871fa60c9f1eb7179 # 0.31.4
+    uses: hoverkraft-tech/ci-github-common/.github/workflows/linter.yml@b17226e57c8ef31f860719766656ebb6df017218 # 0.31.6
     permissions:
       actions: read
       contents: read
@@ -63,7 +63,7 @@ jobs:
   theme-continuous-integration:
     needs: [linter, validate-resumes]
     name: Resume Theme CI
-    uses: hoverkraft-tech/ci-github-nodejs/.github/workflows/continuous-integration.yml@25ef8d971c0a866fb9e5d90130c7aaa084619df6 # 0.21.0
+    uses: hoverkraft-tech/ci-github-nodejs/.github/workflows/continuous-integration.yml@c9d9d041ba4ef35695ee469c4782fa6a8bbebbcc # 0.21.2
     permissions:
       contents: read
       id-token: write
@@ -111,7 +111,7 @@ jobs:
           path: ${{ matrix.resume.pdf-path }}
           if-no-files-found: error
 
-      - uses: hoverkraft-tech/ci-github-common/actions/set-matrix-output@666b7b6eb000db3e8614647871fa60c9f1eb7179 # 0.31.4
+      - uses: hoverkraft-tech/ci-github-common/actions/set-matrix-output@b17226e57c8ef31f860719766656ebb6df017218 # 0.31.6
         with:
           value: |
             {
@@ -131,6 +131,6 @@ jobs:
       pdfs-root-path: ${{ env.RESUME_PDFS_ROOT_PATH }}
     steps:
       - id: get-generated-pdfs
-        uses: hoverkraft-tech/ci-github-common/actions/get-matrix-outputs@666b7b6eb000db3e8614647871fa60c9f1eb7179 # 0.31.4
+        uses: hoverkraft-tech/ci-github-common/actions/get-matrix-outputs@b17226e57c8ef31f860719766656ebb6df017218 # 0.31.6
         with:
           artifact-name: "generated-pdfs"
