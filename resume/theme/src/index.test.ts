@@ -17,6 +17,7 @@ describe("render", () => {
     expect(html).toContain('<html lang="en"');
     expect(html).toContain("resume-root");
     expect(html).toContain("<style>");
+    expect(html).toContain('data-enforce="pagedjs"');
   });
 
   it("throws when no resume payload is provided", () => {

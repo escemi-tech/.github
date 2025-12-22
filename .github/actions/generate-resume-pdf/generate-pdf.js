@@ -1,10 +1,9 @@
 #!/usr/bin/env node
-/* global document */
 const fs = require("node:fs/promises");
 const path = require("node:path");
+const os = require("node:os");
 const { execFile } = require("node:child_process");
 const { promisify } = require("node:util");
-const puppeteer = require("puppeteer");
 const theme = require("jsonresume-theme-escemi");
 
 const execFileAsync = promisify(execFile);
@@ -16,6 +15,14 @@ const COUNTRY_LOCALE_MAP = {
   US: "en",
   GB: "en",
 };
+const DEFAULT_PAGEDJS_TIMEOUT_MS = 10_000;
+const PAGEDJS_TIMEOUT_MS = (() => {
+  if (!process.env.PAGEDJS_TIMEOUT_MS) {
+    return DEFAULT_PAGEDJS_TIMEOUT_MS;
+  }
+  const parsed = Number.parseInt(process.env.PAGEDJS_TIMEOUT_MS, 10);
+  return Number.isFinite(parsed) ? parsed : DEFAULT_PAGEDJS_TIMEOUT_MS;
+})();
 
 const normalizeLocale = (candidate) => {
   if (typeof candidate !== "string") {
@@ -84,7 +91,11 @@ const optimizePdf = async (inputPath) => {
     const reduction =
       ((originalStats.size - optimizedStats.size) / originalStats.size) * 100;
     console.log(
-      `📉 PDF optimized: ${Math.round(originalStats.size / 1024)}KB → ${Math.round(optimizedStats.size / 1024)}KB (${reduction.toFixed(1)}% reduction)`,
+      `📉 PDF optimized: ${Math.round(
+        originalStats.size / 1024,
+      )}KB → ${Math.round(optimizedStats.size / 1024)}KB (${reduction.toFixed(
+        1,
+      )}% reduction)`,
     );
   } finally {
     await fs.unlink(tempPath).catch((error) => {
@@ -102,58 +113,19 @@ async function main() {
     console.error("Usage: node generate-pdf.js <resume.json> <output.pdf>");
     process.exit(1);
   }
-
   const resumePath = path.resolve(resumeArg);
   const outputPath = path.resolve(outputArg);
 
-  const resumeRaw = await fs.readFile(resumePath, "utf8").catch((error) => {
-    console.error(
-      `Unable to read resume file at ${resumePath}:`,
-      error.message,
-    );
-    process.exit(1);
-  });
-
-  let resumeData;
   try {
-    resumeData = JSON.parse(resumeRaw);
-  } catch (error) {
-    console.error(`Invalid JSON in resume file: ${error.message}`);
-    process.exit(1);
-  }
+    const htmlPath = await generateHtmlFileFromResume(resumePath);
+    console.log(`📝 Generated HTML at: ${htmlPath}`);
 
-  const renderOptions = buildRenderOptions(resumeData, resumePath);
-  const html = theme.render(resumeData, renderOptions);
-
-  const browser = await puppeteer.launch({
-    headless: "new",
-    args: ["--no-sandbox", "--disable-setuid-sandbox"],
-    defaultViewport: null,
-  });
-
-  try {
-    const page = await browser.newPage();
-    await page.setContent(html, { waitUntil: "networkidle0" });
-    await page.emulateMediaType("print");
-    await page.evaluate(async () => {
-      if (document.fonts?.ready) {
-        await document.fonts.ready;
-      }
-    });
-    await page.pdf({
-      path: outputPath,
-      format: "A4",
-      printBackground: true,
-      preferCSSPageSize: true,
-    });
+    await generatePdfFromHtml(htmlPath, outputPath);
     console.log(`✅ Resume PDF created: ${outputPath}`);
-
     await optimizePdf(outputPath);
   } catch (error) {
     console.error("Failed to generate PDF:", error.message);
     process.exitCode = 1;
-  } finally {
-    await browser.close();
   }
 }
 
@@ -165,3 +137,27 @@ main()
     console.error("Unexpected error while generating PDF:", error);
     process.exit(1);
   });
+
+async function generatePdfFromHtml(htmlPath, outputPath) {
+  const cliPath = path.resolve(__dirname, "node_modules/.bin/pagedjs-cli");
+  const args = [htmlPath, outputPath];
+  await execFileAsync(cliPath, args, {
+    env: {
+      ...process.env,
+      PAGEDJS_TIMEOUT: String(PAGEDJS_TIMEOUT_MS),
+    },
+  });
+}
+
+async function generateHtmlFileFromResume(resumePath) {
+  const resumeRaw = await fs.readFile(resumePath, "utf8");
+
+  const resumeData = JSON.parse(resumeRaw);
+
+  const renderOptions = buildRenderOptions(resumeData, resumePath);
+  const html = theme.render(resumeData, renderOptions);
+  const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "resume-pagedjs-"));
+  const htmlPath = path.join(tempDir, "resume.html");
+  await fs.writeFile(htmlPath, html, "utf8");
+  return htmlPath;
+}
