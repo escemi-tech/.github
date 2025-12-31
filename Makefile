@@ -51,7 +51,7 @@ test: ## Run tests
 
 humanize-resume: ## Normalize resume text with humanize-ai-lib
 	@echo "Discovering resume files..."
-	@RESUME_FILES=$$(node .github/actions/get-available-resumes/get-available-resumes.js | jq -r '.[].path'); \
+	@RESUME_FILES="$$(node .github/actions/get-available-resumes/get-available-resumes.js | jq -r '.[].path') $(CURDIR)/resume/resume.common.json"; \
 	cd .github/actions/humanize-resume && \
 	npm install && \
 	npm run humanize -- $$RESUME_FILES

@@ -1,5 +1,3 @@
-/* global __dirname, console, module, require */
-
 const fs = require("node:fs");
 const path = require("node:path");
 

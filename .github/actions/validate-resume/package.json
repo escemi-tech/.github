@@ -7,6 +7,6 @@
     "resume-cli": "^3.1.2"
   },
   "scripts": {
-    "validate": "resume validate --resume"
+    "validate": "node ./validate.js"
   }
 }

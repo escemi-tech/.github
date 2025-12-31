@@ -52,6 +52,20 @@ const typescriptConfigs = tseslint.configs["flat/recommended"].map(
   })
 );
 
+const nodeCommonJsScriptsConfig = {
+  files: [".github/actions/**/*.js", "resume/**/*.js"],
+  languageOptions: {
+    sourceType: "script",
+    globals: {
+      ...globals.node,
+      ...globals.commonjs,
+    },
+  },
+  plugins: {
+    n: nPlugin,
+  },
+};
+
 const nodeModuleScriptsConfig = {
   files: [".github/actions/humanize-resume/**/*.js"],
   languageOptions: {
@@ -65,10 +79,10 @@ const nodeModuleScriptsConfig = {
   },
 };
 
-const nodeCommonJsScriptsConfig = {
+const nodeCommonJsBrowserScriptsConfig = {
   files: [".github/actions/generate-resume-pdf/**/*.js"],
   languageOptions: {
-    sourceType: "commonjs",
+    sourceType: "script",
     globals: {
       ...globals.node,
       ...globals.commonjs,
@@ -89,7 +103,8 @@ export default [
     ],
   },
   js.configs.recommended,
-  nodeModuleScriptsConfig,
   nodeCommonJsScriptsConfig,
+  nodeCommonJsBrowserScriptsConfig,
+  nodeModuleScriptsConfig,
   ...typescriptConfigs,
 ];
