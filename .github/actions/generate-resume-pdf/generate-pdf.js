@@ -149,30 +149,38 @@ async function generatePdfFromHtml(htmlPath, outputPath, renderOptions) {
   await generatePagedPdfFromHtml(htmlPath, outputPath, renderOptions);
 }
 
-function resolveFrom(subpath, candidates) {
-  return require.resolve(subpath, { paths: candidates });
-}
-
 async function generatePagedPdfFromHtml(htmlPath, outputPath, renderOptions) {
-  const puppeteerPath = resolveFrom("puppeteer", [
-    path.resolve(__dirname, "node_modules"),
-    path.resolve(__dirname, "node_modules/pagedjs-cli/node_modules"),
-  ]);
-  const pdfLibPath = resolveFrom("pdf-lib", [
-    path.resolve(__dirname, "node_modules"),
-    path.resolve(__dirname, "node_modules/pagedjs-cli/node_modules"),
-  ]);
+  const puppeteer = require("puppeteer");
+  const { PDFDocument } = require("pdf-lib");
 
-  const puppeteer = require(puppeteerPath);
-  const { PDFDocument } = require(pdfLibPath);
+  const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+
+  const shouldDisableSandbox = (() => {
+    if (process.env.PUPPETEER_NO_SANDBOX === "1") {
+      return true;
+    }
+    if (process.env.CI === "true" || process.env.GITHUB_ACTIONS === "true") {
+      return true;
+    }
+    if (typeof process.getuid === "function" && process.getuid() === 0) {
+      return true;
+    }
+    return false;
+  })();
+
+  const launchArgs = [
+    "--disable-dev-shm-usage",
+    "--export-tagged-pdf",
+    "--allow-file-access-from-files",
+  ];
+
+  if (shouldDisableSandbox) {
+    launchArgs.unshift("--no-sandbox", "--disable-setuid-sandbox");
+  }
 
   const browser = await puppeteer.launch({
     headless: "new",
-    args: [
-      "--disable-dev-shm-usage",
-      "--export-tagged-pdf",
-      "--allow-file-access-from-files",
-    ],
+    args: launchArgs,
   });
 
   try {
@@ -190,7 +198,7 @@ async function generatePagedPdfFromHtml(htmlPath, outputPath, renderOptions) {
       { timeout: PAGEDJS_TIMEOUT_MS },
     );
     // Give layout a short beat to settle.
-    await page.waitForTimeout(200);
+    await sleep(200);
 
     const pageCount = await page.evaluate(
       () => document.querySelectorAll(".pagedjs_pages .pagedjs_page").length,

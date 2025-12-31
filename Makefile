@@ -6,6 +6,15 @@ MAKEFLAGS += --silent
 help: ## Show help message
 	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m\033[0m\n"} /^[$$()% a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
 
+setup: ## Setup development environment
+	@echo "Setting up development environment..."
+	@npm install --prefix resume/theme
+	@for packageFile in ./.github/actions/**/package.json; do \
+		dir=$$(dirname "$$packageFile"); \
+		npm install --prefix "$$dir"; \
+	done
+	@echo "Development environment setup complete."
+
 lint: ## Execute linting
 	$(call run_linter,)
 
@@ -24,6 +33,17 @@ lint-fix: ## Execute linting and fix
 		-e FIX_JSX_PRETTIER=true\
 		-e FIX_TYPESCRIPT_PRETTIER=true\
 	)
+
+audit-fix: ## Audit and fix npm packages
+	@echo "Auditing and fixing npm packages in resume/theme..."
+	@cd resume/theme && npm audit fix
+	@echo "Auditing and fixing npm packages in GitHub Actions..."
+	@for packageFile in ./.github/actions/**/package.json; do \
+		dir=$$(dirname "$$packageFile"); \
+		echo "Auditing and fixing npm packages in $$dir..."; \
+		npm audit fix --prefix "$$dir"; \
+	done
+	@echo "NPM package audit and fix complete."
 
 test: ## Run tests
 	@echo "Running tests..."
@@ -63,9 +83,9 @@ generate-pdfs: ## Generate all resumes PDFs
 	done
 
 ci: ## Run all CI tasks
+	$(MAKE) setup
 	$(MAKE) lint-fix
 	$(MAKE) test
-	$(MAKE) humanize-resume
 	$(MAKE) validate-resume
 	$(MAKE) generate-pdfs
 
