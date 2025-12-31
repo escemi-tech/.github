@@ -19,6 +19,7 @@ The repository supports multiple resume variants optimized for different positio
 
 #### Current Files
 
+- **`resume.common.json`** - Shared resume content inherited by all variants
 - **`resume.en.json`** - English version of the resume
 - **`resume.fr.json`** - French version of the resume
 - **`pdf/`** - Directory containing generated PDF versions
@@ -58,6 +59,11 @@ Both base and position-specific files follow the exact same schema structure fro
 ## Updating the Resume
 
 ### For All Resume Files
+
+Shared contact details and other reusable data live in `resume.common.json`.
+Language-specific files declare `"extends": "./resume.common.json"` and only
+override localized content. Work and project entries carry an `"id"` so shared
+fields can be merged across languages.
 
 1. Edit your resume JSON files (e.g., `resume.en.json`, `resume.fr.lead-dev.json`)
 2. Run `make humanize-resume` to normalize punctuation and whitespace with `humanize-ai-lib`
@@ -100,8 +106,11 @@ The resume data follows the JSON Resume schema v1.0.0. You can validate it using
 
 ```bash
 npm install -g resume-cli
-resume validate resume.en.json
-resume validate resume.fr.json
+# Resolve inheritance before validating manually
+node ./resolve-resume.js ./resume.en.json > /tmp/resume.en.resolved.json
+node ./resolve-resume.js ./resume.fr.json > /tmp/resume.fr.resolved.json
+resume validate /tmp/resume.en.resolved.json
+resume validate /tmp/resume.fr.resolved.json
 ```
 
 Or simply validate JSON structure with `jq`:

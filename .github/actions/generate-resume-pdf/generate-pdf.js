@@ -5,6 +5,7 @@ const os = require("node:os");
 const { execFile } = require("node:child_process");
 const { promisify } = require("node:util");
 const theme = require("jsonresume-theme-escemi");
+const { resolveResume } = require("../../../resume/resolve-resume");
 
 const execFileAsync = promisify(execFile);
 
@@ -405,9 +406,7 @@ async function generatePagedPdfFromHtml(htmlPath, outputPath, renderOptions) {
 }
 
 async function generateHtmlFileFromResume(resumePath) {
-  const resumeRaw = await fs.readFile(resumePath, "utf8");
-
-  const resumeData = JSON.parse(resumeRaw);
+  const resumeData = await resolveResume(resumePath);
 
   const renderOptions = buildRenderOptions(resumeData, resumePath);
   const html = theme.render(resumeData, renderOptions);

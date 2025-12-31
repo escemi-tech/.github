@@ -1,5 +1,5 @@
 {
-  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "extends": "./resume.common.json",
   "meta": {
     "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.en.json",
     "version": "2025.11.16.5",
@@ -51,7 +51,6 @@
     ]
   },
   "basics": {
-    "name": "Emilien Escalle",
     "label": "On-Demand CTO & DevX Expert - Senior Lead Developer",
     "baseline": "Node.js & PHP Expert · Cloud Native · DevX Coach",
     "signatureNumbers": [
@@ -59,46 +58,13 @@
       "15+ teams mentored",
       "20+ platforms delivered"
     ],
-    "url": "https://www.escemi.com",
-    "image": "https://raw.githubusercontent.com/escemi-tech/.github/main/headshots/primary.jpg",
-    "summary": "I combine technical coaching, DevX excellence, and cloud-native modernization to transform product quality and velocity while keeping teams autonomous and accountable.\n\nI help companies industrialize their development and elevate their teams' technical capabilities.\nOn-demand CTO and Senior Lead Dev for missions that need structure, velocity, and clean execution.\nNode.js & PHP expert with deep mastery of NestJS, Symfony, and Laravel frameworks.",
-    "location": {
-      "city": "Aix-en-Provence",
-      "region": "Provence-Alpes-Côte d'Azur",
-      "countryCode": "FR"
-    },
-    "profiles": [
-      {
-        "network": "LinkedIn",
-        "username": "emilienescalle",
-        "url": "https://www.linkedin.com/in/emilienescalle/"
-      },
-      {
-        "network": "GitHub",
-        "username": "neilime",
-        "url": "https://github.com/neilime"
-      },
-      {
-        "network": "Collective",
-        "username": "emilien-escalle",
-        "url": "https://app.collective.work/collective/emilien-escalle"
-      },
-      {
-        "network": "Malt",
-        "username": "emilienescalle",
-        "url": "https://www.malt.fr/profile/emilienescalle"
-      }
-    ]
+    "summary": "I combine technical coaching, DevX excellence, and cloud-native modernization to transform product quality and velocity while keeping teams autonomous and accountable.\n\nI help companies industrialize their development and elevate their teams' technical capabilities.\nOn-demand CTO and Senior Lead Dev for missions that need structure, velocity, and clean execution.\nNode.js & PHP expert with deep mastery of NestJS, Symfony, and Laravel frameworks."
   },
   "work": [
     {
+      "id": "build-and-run",
       "name": "Build & Run - Fractional CTO / DevX Expert",
-      "location": "Remote · France",
       "position": "Fractional CTO & DevX Expert",
-      "url": "https://www.build-and-run.fr/",
-      "startDate": "2022-10",
-      "type": "freelance",
-      "featured": false,
       "summary": "Fractional CTO within the Build & Run collective, engaged with scale-ups needing structure, modern DevX, and senior guidance. Designed reference cloud-native applications, reusable CI/CD stacks, and leadership rituals that align squads around measurable delivery outcomes.",
       "highlights": [
         "Challenge: multi-squad delivery slowed by heterogeneous stacks and manual releases",
@@ -117,13 +83,9 @@
       ]
     },
     {
+      "id": "escemi",
       "name": "ESCEMI - Strategic Technical Partner",
-      "location": "Aix-en-Provence, France",
       "position": "On-Demand CTO & Senior Lead Developer",
-      "url": "https://www.escemi.com",
-      "startDate": "2019-09",
-      "type": "freelance",
-      "featured": true,
       "summary": "Independent strategic partner for SMEs and scale-ups that need industrialized delivery without a permanent CTO. I architect SOLID-centric platforms, tailor CI/CD and observability stacks, and embed coaching so mixed-seniority teams become autonomous.",
       "highlights": [
         "Challenge: ambitious product roadmaps executed by under-structured mixed-seniority teams",
@@ -142,13 +104,9 @@
       ]
     },
     {
+      "id": "ouistiti",
       "name": "Ouistiti - Co-founder & CTO",
-      "location": "Aix-en-Provence, France",
       "position": "Chief Technical Officer",
-      "startDate": "2018-09",
-      "endDate": "2019-09",
-      "type": "founder",
-      "featured": true,
       "summary": "Co-founded Ouistiti to launch a zero-debt travel inspiration platform, owning product engineering from concept to growth. Delivered a JAMStack/serverless stack on AWS, orchestrated continuous UX loops, and instrumented the growth engine with SEA, CRM, and analytics.",
       "highlights": [
         "Challenge: launch of a zero-debt travel inspiration MVP under 3 months with aggressive acquisition goals",
@@ -167,14 +125,9 @@
       ]
     },
     {
+      "id": "qwamplify",
       "name": "Qwamplify Group - Technical Director & IS Architect",
-      "location": "Rousset, France",
       "position": "Technical Director & IS Architect",
-      "url": "https://www.qwamplify.com/",
-      "startDate": "2013-09",
-      "endDate": "2018-08",
-      "type": "employee",
-      "featured": true,
       "summary": "Led the 3-year modernization program for Qwamplify, consolidating 8 business units, taming a legacy PHP estate, and sustaining high-volume marketing campaigns. Owned the IT master plan, architecture standards, and delivery governance for a 25-person engineering org.",
       "highlights": [
         "Challenge: fragmented legacy PHP stack blocking consolidation of 8 business units and rapid campaign launches",
@@ -191,14 +144,9 @@
       ]
     },
     {
+      "id": "logicielnet-manager",
       "name": "Logicielnet",
-      "location": "Aix-en-Provence, France",
       "position": "Application Systems Manager",
-      "url": "https://logicielnet.fr",
-      "startDate": "2010-09",
-      "endDate": "2013-09",
-      "type": "employee",
-      "featured": true,
       "summary": "Owned the evolution of the company's modular SaaS core product, from requirements gathering through development leadership to client validation of each release.",
       "highlights": [
         "Challenge: Balance of client-driven innovations with mounting technical debt while maintaining a packed SaaS roadmap.",
@@ -215,14 +163,9 @@
       ]
     },
     {
+      "id": "logicielnet-rd",
       "name": "Logicielnet",
-      "location": "Aix-en-Provence, France",
       "position": "R&D Engineer",
-      "url": "https://logicielnet.fr",
-      "startDate": "2009-09",
-      "endDate": "2010-09",
-      "type": "apprenticeship",
-      "featured": true,
       "summary": "Designed and built a Web Callback (click-to-call) module to improve customer relationships inside the company's application panel.",
       "highlights": [
         "Challenge: Delivery of instant customer callbacks inside the legacy SaaS while integrating external VoIP providers.",
@@ -285,10 +228,6 @@
   "awards": [],
   "certificates": [
     {
-      "name": "LFC102: Inclusive Open Source Community Orientation",
-      "issuer": "The Linux Foundation",
-      "date": "2024-11-01",
-      "url": "https://www.credly.com/badges/336e21aa-95f6-4025-8ddf-17ffda9953f7/",
       "summary": "Training on building inclusive open source communities, covering governance, allyship, and community health best practices."
     }
   ],
@@ -376,7 +315,6 @@
   "projects": [
     {
       "name": "Air Corsica - DevX Platform Engineering",
-      "featured": true,
       "description": "Modernized developer experience and transactional security for airline booking platform through GitHub Actions CI/CD ecosystem, hands-on mentoring, and resilient NestJS/RabbitMQ proxy architecture.",
       "highlights": [
         "Reduction of deployment time by 80% (from ~2 days manual work to <30 minutes fully automated) via reusable GitHub Actions workflows with canary deployments and automated rollbacks",
@@ -398,15 +336,11 @@
         "Datadog",
         "Mentoring"
       ],
-      "startDate": "2023-01",
-      "url": "https://www.youtube.com/watch?v=Xb8PKOdTilA",
       "roles": ["DevX Lead", "Platform Engineer", "Technical Mentor"],
-      "entity": "Air Corsica",
-      "type": "consulting"
+      "id": "air-corsica-devx"
     },
     {
       "name": "Critical Infrastructure IoT Gateway Platform",
-      "featured": true,
       "description": "High-performance IoT gateway for global smart infrastructure SaaS provider, unifying heterogeneous device integration across data centers and smart buildings with Redis-backed resilience, automated CI/CD, and OpenTelemetry observability.",
       "highlights": [
         "Achievement of 99.99% production uptime by implementing Redis caching, edge queueing, and automatic retry strategies with exponential backoff",
@@ -432,15 +366,11 @@
         "High Availability",
         "CI/CD"
       ],
-      "startDate": "2025-04",
-      "endDate": "2025-07",
       "roles": ["IoT Platform Architect", "Lead Developer"],
-      "entity": "Global Smart Infrastructure SaaS Provider",
-      "type": "consulting"
+      "id": "critical-iot-gateway"
     },
     {
       "name": "TestUnMetier - CTO Accompaniment",
-      "featured": true,
       "description": "Two-phase strategic consulting engagement for a career guidance platform: comprehensive IT audit followed by monthly CTO accompaniment covering product roadmap, technical recruitment, and infrastructure/security vendor management.",
       "highlights": [
         "Conduction of 1-week IT audit analyzing application architecture, development processes, and team organization, identifying 12 priority improvement areas that reduced technical risk by 60%",
@@ -462,16 +392,11 @@
         "PHP",
         "Symfony"
       ],
-      "startDate": "2021-11",
-      "endDate": "2022-05",
-      "url": "https://www.testunmetier.com/",
       "roles": ["CTO Consultant", "Strategic Advisor"],
-      "entity": "TestUnMetier",
-      "type": "consulting"
+      "id": "testunmetier-cto"
     },
     {
       "name": "Tekkare - Technical Mentoring & Architectural Bootstrap",
-      "featured": true,
       "description": "Hands-on mentorship of development team for technical services management platform, accelerating their skill growth in GraphQL/modern backend API architecture and optimizing development practices.",
       "highlights": [
         "Reduction of new feature development time by 40% through optimized GraphQL architecture with NestJS, replacing multiple REST endpoints with unified, type-safe queries",
@@ -494,16 +419,11 @@
         "API Design",
         "Backend Architecture"
       ],
-      "startDate": "2022-04",
-      "endDate": "2022-06",
-      "url": "https://tekkare.com/",
       "roles": ["Technical Mentor", "Backend Architect"],
-      "entity": "Tekkare",
-      "type": "consulting"
+      "id": "tekkare-mentoring"
     },
     {
       "name": "Atlas des Régions Naturelles (ARN) - Backend Architecture",
-      "featured": true,
       "description": "Designed and developed backend architecture for the ARN photographic archive platform, documenting 15,000+ images of French landscapes and buildings through an optimized NestJS/Laravel stack focused on performance and scalability.",
       "highlights": [
         "Architecting of photo archive platform managing 15,000+ high-resolution images with multi-criteria filtering (region, typology, materials, period), ensuring <300ms response time and 99.9% uptime",
@@ -526,16 +446,11 @@
         "AWS",
         "CI/CD"
       ],
-      "startDate": "2022-06",
-      "endDate": "2023-12",
-      "url": "https://www.archive-arn.fr/",
       "roles": ["Backend Architect", "Lead Developer"],
-      "entity": "Atlas des Régions Naturelles",
-      "type": "consulting"
+      "id": "arn-backend"
     },
     {
       "name": "Tekoway / Eukles - Architecture Standardization",
-      "featured": true,
       "description": "3-year strategic technical mentorship across European development teams, standardizing architecture and boosting delivery efficiency for PHP/Symfony and Node.js/NestJS projects before and after Tekoway's integration into Eukles.",
       "highlights": [
         "Reduction of project bootstrap time by 45% (from ~10 to ~5.5 days) through shared architecture blueprints applying Clean Architecture and SOLID principles across Symfony and NestJS stacks",
@@ -558,16 +473,11 @@
         "Mentoring",
         "Team leadership"
       ],
-      "startDate": "2020-01",
-      "endDate": "2023-01",
-      "url": "https://www.tekoway.com",
       "roles": ["Technical Mentor", "Architecture Lead"],
-      "entity": "Tekoway / Eukles",
-      "type": "consulting"
+      "id": "tekoway-eukles"
     },
     {
       "name": "twbs-helper-module",
-      "featured": false,
       "description": "Laminas (formerly Zend Framework) module that streamlines Twitter Bootstrap component integration.",
       "highlights": [
         "21+ GitHub stars and 20+ forks adopted by enterprise portals and design systems",
@@ -575,14 +485,11 @@
         "Maintains comprehensive docs, CI pipelines, and semantic versioning to guarantee backward compatibility"
       ],
       "keywords": ["PHP", "Laminas", "Bootstrap", "Open Source"],
-      "url": "https://github.com/neilime/twbs-helper-module",
       "roles": ["Creator", "Maintainer"],
-      "entity": "Open Source Community",
-      "type": "open-source"
+      "id": "twbs-helper-module"
     },
     {
       "name": "php-css-lint",
-      "featured": false,
       "description": "CLI and Composer package that enforces CSS quality gates directly from PHP projects.",
       "highlights": [
         "11 GitHub stars and active usage inside custom CI pipelines for multi-brand marketing platforms",
@@ -590,14 +497,11 @@
         "Provides zero-dependency binaries and GitHub Pages docs for quick onboarding"
       ],
       "keywords": ["PHP", "CSS", "Linting", "Composer"],
-      "url": "https://github.com/neilime/php-css-lint",
       "roles": ["Creator", "Maintainer"],
-      "entity": "Open Source Community",
-      "type": "open-source"
+      "id": "php-css-lint"
     },
     {
       "name": "ubuntu-config",
-      "featured": false,
       "description": "Infrastructure-as-code flavored bootstrap that standardizes my developer workstations on Ubuntu.",
       "highlights": [
         "Automates installation of Docker, Node.js, PHP toolchains, and desktop essentials via scripted tasks",
@@ -605,10 +509,8 @@
         "Modular Make targets and shell scripts make it easy to extend the setup per client needs"
       ],
       "keywords": ["Shell", "Automation", "Developer Experience", "Ubuntu"],
-      "url": "https://github.com/neilime/ubuntu-config",
       "roles": ["Maintainer"],
-      "entity": "Personal Tooling",
-      "type": "infrastructure"
+      "id": "ubuntu-config"
     }
   ]
 }

@@ -1,0 +1,171 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Emilien Escalle",
+    "url": "https://www.escemi.com",
+    "image": "https://raw.githubusercontent.com/escemi-tech/.github/main/headshots/primary.jpg",
+    "location": {
+      "city": "Aix-en-Provence",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "countryCode": "FR"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "emilienescalle",
+        "url": "https://www.linkedin.com/in/emilienescalle/"
+      },
+      {
+        "network": "GitHub",
+        "username": "neilime",
+        "url": "https://github.com/neilime"
+      },
+      {
+        "network": "Collective",
+        "username": "emilien-escalle",
+        "url": "https://app.collective.work/collective/emilien-escalle"
+      },
+      {
+        "network": "Malt",
+        "username": "emilienescalle",
+        "url": "https://www.malt.fr/profile/emilienescalle"
+      }
+    ]
+  },
+  "certificates": [
+    {
+      "name": "LFC102: Inclusive Open Source Community Orientation",
+      "issuer": "The Linux Foundation",
+      "date": "2024-11-01",
+      "url": "https://www.credly.com/badges/336e21aa-95f6-4025-8ddf-17ffda9953f7/"
+    }
+  ],
+  "projects": [
+    {
+      "id": "air-corsica-devx",
+      "entity": "Air Corsica",
+      "type": "consulting",
+      "startDate": "2023-01",
+      "featured": true,
+      "url": "https://www.youtube.com/watch?v=Xb8PKOdTilA"
+    },
+    {
+      "id": "critical-iot-gateway",
+      "entity": "Global Smart Infrastructure SaaS Provider",
+      "type": "consulting",
+      "startDate": "2025-04",
+      "endDate": "2025-07",
+      "featured": true
+    },
+    {
+      "id": "testunmetier-cto",
+      "entity": "TestUnMetier",
+      "type": "consulting",
+      "startDate": "2021-11",
+      "endDate": "2022-05",
+      "featured": true,
+      "url": "https://www.testunmetier.com/"
+    },
+    {
+      "id": "tekkare-mentoring",
+      "entity": "Tekkare",
+      "type": "consulting",
+      "startDate": "2022-04",
+      "endDate": "2022-06",
+      "featured": true,
+      "url": "https://tekkare.com/"
+    },
+    {
+      "id": "arn-backend",
+      "entity": "Atlas des Régions Naturelles",
+      "type": "consulting",
+      "startDate": "2022-06",
+      "endDate": "2023-12",
+      "featured": true,
+      "url": "https://www.archive-arn.fr/"
+    },
+    {
+      "id": "tekoway-eukles",
+      "entity": "Tekoway / Eukles",
+      "type": "consulting",
+      "startDate": "2020-01",
+      "endDate": "2023-01",
+      "featured": true,
+      "url": "https://www.tekoway.com"
+    },
+    {
+      "id": "twbs-helper-module",
+      "entity": "Open Source Community",
+      "type": "open-source",
+      "featured": false,
+      "url": "https://github.com/neilime/twbs-helper-module"
+    },
+    {
+      "id": "php-css-lint",
+      "entity": "Open Source Community",
+      "type": "open-source",
+      "featured": false,
+      "url": "https://github.com/neilime/php-css-lint"
+    },
+    {
+      "id": "ubuntu-config",
+      "entity": "Personal Tooling",
+      "type": "infrastructure",
+      "featured": false,
+      "url": "https://github.com/neilime/ubuntu-config"
+    }
+  ],
+  "work": [
+    {
+      "id": "build-and-run",
+      "location": "Remote · France",
+      "url": "https://www.build-and-run.fr/",
+      "startDate": "2022-10",
+      "type": "freelance",
+      "featured": false
+    },
+    {
+      "id": "escemi",
+      "location": "Aix-en-Provence, France",
+      "url": "https://www.escemi.com",
+      "startDate": "2019-09",
+      "type": "freelance",
+      "featured": true
+    },
+    {
+      "id": "ouistiti",
+      "location": "Aix-en-Provence, France",
+      "startDate": "2018-09",
+      "endDate": "2019-09",
+      "type": "founder",
+      "featured": true
+    },
+    {
+      "id": "qwamplify",
+      "location": "Rousset, France",
+      "url": "https://www.qwamplify.com/",
+      "startDate": "2013-09",
+      "endDate": "2018-08",
+      "type": "employee",
+      "featured": true
+    },
+    {
+      "id": "logicielnet-manager",
+      "location": "Aix-en-Provence, France",
+      "url": "https://logicielnet.fr",
+      "startDate": "2010-09",
+      "endDate": "2013-09",
+      "type": "employee",
+      "featured": true
+    },
+    {
+      "id": "logicielnet-rd",
+      "location": "Aix-en-Provence, France",
+      "url": "https://logicielnet.fr",
+      "startDate": "2009-09",
+      "endDate": "2010-09",
+      "type": "apprenticeship",
+      "featured": true
+    }
+  ]
+}
