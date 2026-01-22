@@ -21,7 +21,9 @@ The repository supports multiple resume variants optimized for different positio
 
 - **`resume.common.json`** - Shared resume content inherited by all variants
 - **`resume.en.json`** - English version of the resume
+- **`resume.en.lead-dev.json`** - English lead developer version
 - **`resume.fr.json`** - French version of the resume
+- **`resume.fr.lead-dev.json`** - French lead developer version
 - **`pdf/`** - Directory containing generated PDF versions
   - PDFs are auto-generated for each resume file
   - Position-specific resumes generate PDFs like `resume.en.cto.pdf`
