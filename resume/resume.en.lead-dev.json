@@ -1,0 +1,46 @@
+{
+  "extends": "./resume.en.json",
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.en.lead-dev.json",
+    "version": "2026.01.22.1",
+    "lastModified": "2026-01-22T08:11:14Z"
+  },
+  "basics": {
+    "label": "Senior Lead Developer & DevX Expert",
+    "baseline": "Node.js & PHP Expert · Cloud Native · Technical Leadership",
+    "summary": "16 years of experience · 15+ teams mentored · 20+ platforms delivered\n\nSenior lead developer focused on hands-on delivery, DevX excellence, and cloud-native modernization to keep teams autonomous and accountable.\n\nI help product teams ship reliable Node.js/PHP platforms faster through clean architecture, CI/CD automation, and pragmatic coaching.\nHands-on mentor with deep mastery of NestJS, Symfony, and Laravel frameworks."
+  },
+  "work": [
+    {
+      "id": "build-and-run",
+      "name": "Build & Run - Senior Lead Developer / DevX Expert",
+      "position": "Senior Lead Developer & DevX Expert",
+      "summary": "Senior lead developer within the Build & Run collective, engaged with scale-ups needing structure, modern DevX, and senior technical leadership. Designed reference cloud-native applications, reusable CI/CD stacks, and delivery rituals that align squads around measurable outcomes.",
+      "keywords": [
+        "Senior Lead Developer",
+        "DevX",
+        "cloud-native",
+        "CI/CD",
+        "GitHub",
+        "GitLab",
+        "12 factors Application",
+        "Leadership"
+      ]
+    },
+    {
+      "id": "escemi",
+      "name": "ESCEMI - Senior Technical Partner",
+      "position": "Senior Lead Developer & Technical Partner",
+      "summary": "Independent senior lead developer for SMEs and scale-ups that need industrialized delivery without a permanent technical leader. I architect SOLID-centric platforms, tailor CI/CD and observability stacks, and embed coaching so mixed-seniority teams become autonomous.",
+      "keywords": [
+        "Senior Lead Dev",
+        "SOLID",
+        "CI/CD",
+        "IaC",
+        "Observability",
+        "FinOps",
+        "Immersive Coaching"
+      ]
+    }
+  ]
+}
