@@ -1,0 +1,46 @@
+{
+  "extends": "./resume.fr.json",
+  "meta": {
+    "canonical": "https://raw.githubusercontent.com/escemi-tech/.github/main/resume/resume.fr.lead-dev.json",
+    "version": "2026.01.22.1",
+    "lastModified": "2026-01-22T08:11:14Z"
+  },
+  "basics": {
+    "label": "Lead Developer Senior & Expert DevX",
+    "baseline": "Expert Node.js & PHP · Cloud Native · Leadership Technique",
+    "summary": "16 ans d'expérience · 15+ équipes mentorées · 20+ plateformes livrées\n\nLead developer senior orienté delivery hands-on, excellence DevX et modernisation cloud-native pour garder les équipes autonomes et responsables.\n\nJ'aide les équipes produit à livrer plus vite des plateformes Node.js/PHP fiables grâce à une architecture propre, l'automatisation CI/CD et un coaching pragmatique.\nMentor opérationnel avec une maîtrise approfondie de NestJS, Symfony et Laravel."
+  },
+  "work": [
+    {
+      "id": "build-and-run",
+      "name": "Build & Run - Lead Developer Senior / Expert DevX",
+      "position": "Lead Developer Senior & Expert DevX",
+      "summary": "Lead developer senior au sein du collectif Build & Run, engagé auprès de scale-ups qui ont besoin de structure, de DevX moderne et d'un leadership technique senior. Conception d'applications cloud-native de référence, stacks CI/CD mutualisées et rituels de delivery alignés sur des indicateurs mesurables.",
+      "keywords": [
+        "Lead Developer Senior",
+        "DevX",
+        "cloud-native",
+        "CI/CD",
+        "GitHub",
+        "GitLab",
+        "12 factors Application",
+        "Leadership"
+      ]
+    },
+    {
+      "id": "escemi",
+      "name": "ESCEMI - Partenaire technique senior",
+      "position": "Lead Developer Senior & Partenaire technique",
+      "summary": "Lead developer senior indépendant pour PME et scale-ups qui doivent industrialiser leur delivery sans leadership technique permanent. J'architecture des plateformes SOLID, j'adapte CI/CD et observabilité, et j'ancre du coaching pour rendre les équipes autonomes.",
+      "keywords": [
+        "Lead Dev Senior",
+        "SOLID",
+        "CI/CD",
+        "IaC",
+        "Observabilité",
+        "FinOps",
+        "Coaching immersif"
+      ]
+    }
+  ]
+}
