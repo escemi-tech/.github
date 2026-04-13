@@ -33,7 +33,7 @@ jobs:
         uses: ./.github/actions/get-available-resumes
 
   linter:
-    uses: hoverkraft-tech/ci-github-common/.github/workflows/linter.yml@4b53189212d5810f710bed89711002626977215b # 0.33.0
+    uses: hoverkraft-tech/ci-github-common/.github/workflows/linter.yml@03a5a2a3626b03434b19b79cdd2e141bea410bae # 0.34.1
     permissions:
       actions: read
       contents: read
@@ -105,14 +105,14 @@ jobs:
 
       - name: Upload PDF artifacts
         id: upload-artifact
-        uses: actions/upload-artifact@bbbca2ddaa5d8feaa63e36b76fdaad77386f024f # v7.0.0
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
           name: resume-pdf-${{ matrix.resume.name }}
           path: ${{ matrix.resume.pdf-path }}
           archive: false
           if-no-files-found: error
 
-      - uses: hoverkraft-tech/ci-github-common/actions/set-matrix-output@4b53189212d5810f710bed89711002626977215b # 0.33.0
+      - uses: hoverkraft-tech/ci-github-common/actions/set-matrix-output@03a5a2a3626b03434b19b79cdd2e141bea410bae # 0.34.1
         with:
           value: |
             {
@@ -132,6 +132,6 @@ jobs:
       pdfs-root-path: ${{ env.RESUME_PDFS_ROOT_PATH }}
     steps:
       - id: get-generated-pdfs
-        uses: hoverkraft-tech/ci-github-common/actions/get-matrix-outputs@4b53189212d5810f710bed89711002626977215b # 0.33.0
+        uses: hoverkraft-tech/ci-github-common/actions/get-matrix-outputs@03a5a2a3626b03434b19b79cdd2e141bea410bae # 0.34.1
         with:
           artifact-name: "generated-pdfs"
