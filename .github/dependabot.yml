@@ -33,7 +33,7 @@ updates:
     open-pull-requests-limit: 20
     directories:
       - "/.github/actions/**/*"
-      - "/resume/themes/escemi"
+      - "/resume/theme/*"
     versioning-strategy: increase
     schedule:
       interval: "weekly"
