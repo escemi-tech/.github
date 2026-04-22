@@ -2,11 +2,13 @@ import path from "node:path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 
+const rootDir = import.meta.dirname;
+
 export default defineConfig({
   plugins: [react()],
   build: {
     lib: {
-      entry: path.resolve(__dirname, "src/index.tsx"),
+      entry: path.resolve(rootDir, "src/index.tsx"),
       name: "JsonResumeThemeEscemi",
       fileName: (format) =>
         format === "cjs"
@@ -14,7 +16,7 @@ export default defineConfig({
           : "jsonresume-theme-escemi.js",
       formats: ["cjs", "es"],
     },
-    target: "node18",
+    target: "esnext",
     sourcemap: true,
     emptyOutDir: true,
     rollupOptions: {
@@ -31,14 +33,14 @@ export default defineConfig({
   resolve: {
     alias: {
       "pagedjs/dist/paged.polyfill.js": path.resolve(
-        __dirname,
+        rootDir,
         "node_modules/pagedjs/dist/paged.polyfill.js",
       ),
     },
   },
   server: {
     fs: {
-      allow: [path.resolve(__dirname, ".."), path.resolve(__dirname)],
+      allow: [path.resolve(rootDir, ".."), path.resolve(rootDir)],
     },
   },
 });

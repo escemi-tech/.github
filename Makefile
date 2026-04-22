@@ -2,6 +2,7 @@
 
 MAKEFLAGS += --silent
 .DEFAULT_GOAL := help
+PUPPETEER_CACHE_DIR := $(CURDIR)/.github/actions/generate-resume-pdf/.cache/puppeteer
 
 help: ## Show help message
 	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m\033[0m\n"} /^[$$()% a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
@@ -9,10 +10,21 @@ help: ## Show help message
 setup: ## Setup development environment
 	@echo "Setting up development environment..."
 	@npm install --prefix resume/theme
+	@if sudo -n true > /dev/null 2>&1; then \
+		sudo apt-get update > /dev/null 2>&1; \
+		sudo apt-get install -y ghostscript > /dev/null 2>&1; \
+	fi
 	@for packageFile in ./.github/actions/**/package.json; do \
 		dir=$$(dirname "$$packageFile"); \
 		npm install --prefix "$$dir"; \
 	done
+	@if sudo -n true > /dev/null 2>&1; then \
+		sudo apt-get update > /dev/null 2>&1; \
+		sudo env PATH="$$PATH" PUPPETEER_CACHE_DIR="$(PUPPETEER_CACHE_DIR)" npx --prefix ./.github/actions/generate-resume-pdf puppeteer browsers install chrome --install-deps > /dev/null 2>&1; \
+		sudo chown -R "$$(id -u):$$(id -g)" "$(PUPPETEER_CACHE_DIR)" > /dev/null 2>&1; \
+	else \
+		PUPPETEER_CACHE_DIR="$(PUPPETEER_CACHE_DIR)" npx --prefix ./.github/actions/generate-resume-pdf puppeteer browsers install chrome > /dev/null 2>&1; \
+	fi
 	@echo "Development environment setup complete."
 
 lint: ## Execute linting
@@ -72,13 +84,12 @@ generate-pdfs: ## Generate all resumes PDFs
 	@echo "Building theme..."
 	@cd resume/theme && npm install > /dev/null 2>&1 && npm run build > /dev/null
 	@echo "Discovering and generating PDFs for all resume files..."
-	@cd ./.github/actions/generate-resume-pdf && npm install > /dev/null 2>&1
 	@node .github/actions/get-available-resumes/get-available-resumes.js | jq -c '.[]' | while read -r resume; do \
 		RESUME_NAME=$$(echo "$$resume" | jq -r '.name'); \
 		RESUME_PATH=$$(echo "$$resume" | jq -r '.path'); \
 		PDF_PATH=$$(echo "$$resume" | jq -r '.["pdf-path"]'); \
 		echo "Generating PDF for $$RESUME_NAME..."; \
-		cd ./.github/actions/generate-resume-pdf && npm run generate-pdf -- "$$RESUME_PATH" "$$PDF_PATH" || exit 1; \
+		cd ./.github/actions/generate-resume-pdf && PUPPETEER_CACHE_DIR="$(PUPPETEER_CACHE_DIR)" npm run generate-pdf -- "$$RESUME_PATH" "$$PDF_PATH" || exit 1; \
 		cd - > /dev/null; \
 	done
 
