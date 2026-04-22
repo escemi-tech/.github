@@ -82,25 +82,41 @@ const buildRenderOptions = (resumeData, resumePath) => {
 };
 
 const optimizePdf = async (inputPath) => {
-  const tempPath = inputPath.replace(/\.pdf$/i, ".optimized.tmp.pdf");
-  await fs.unlink(tempPath).catch(() => undefined);
+  const tempDir = await fs.mkdtemp(path.join(os.tmpdir(), "resume-optimize-"));
+  const tempInputPath = path.join(tempDir, path.basename(inputPath));
+  const tempPath = path.join(
+    tempDir,
+    path.basename(inputPath).replace(/\.pdf$/i, ".optimized.tmp.pdf"),
+  );
 
   const originalStats = await fs.stat(inputPath);
-  await execFileAsync("gs", [
-    "-sDEVICE=pdfwrite",
-    "-dCompatibilityLevel=1.4",
-    "-dPDFSETTINGS=/ebook",
-    "-dNOPAUSE",
-    "-dQUIET",
-    "-dBATCH",
-    `-sOutputFile=${tempPath}`,
-    inputPath,
-  ]);
+  await fs.copyFile(inputPath, tempInputPath);
+  try {
+    await execFileAsync("gs", [
+      "-sDEVICE=pdfwrite",
+      "-dCompatibilityLevel=1.4",
+      "-dPDFSETTINGS=/ebook",
+      "-dNOPAUSE",
+      "-dQUIET",
+      "-dBATCH",
+      `-sOutputFile=${tempPath}`,
+      tempInputPath,
+    ]);
+  } catch (error) {
+    if (error?.code === "ENOENT") {
+      throw new Error(
+        "Ghostscript is required for PDF optimization but was not found in PATH.",
+      );
+    }
+    throw error;
+  }
 
   const optimizedStats = await fs.stat(tempPath);
 
-  await fs.unlink(inputPath);
-  await fs.rename(tempPath, inputPath);
+  await fs.copyFile(tempPath, inputPath);
+  await fs.unlink(tempInputPath).catch(() => undefined);
+  await fs.unlink(tempPath).catch(() => undefined);
+  await fs.rmdir(tempDir).catch(() => undefined);
 
   const reduction =
     ((originalStats.size - optimizedStats.size) / originalStats.size) * 100;
@@ -155,12 +171,19 @@ async function generatePagedPdfFromHtml(htmlPath, outputPath, renderOptions) {
   const { PDFDocument } = require("pdf-lib");
 
   const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+  const isContainerized = await fs
+    .access("/.dockerenv")
+    .then(() => true)
+    .catch(() => false);
 
   const shouldDisableSandbox = (() => {
     if (process.env.PUPPETEER_NO_SANDBOX === "1") {
       return true;
     }
     if (process.env.CI === "true" || process.env.GITHUB_ACTIONS === "true") {
+      return true;
+    }
+    if (isContainerized) {
       return true;
     }
     if (typeof process.getuid === "function" && process.getuid() === 0) {
