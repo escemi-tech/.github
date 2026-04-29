@@ -33,7 +33,7 @@ jobs:
         uses: ./.github/actions/get-available-resumes
 
   linter:
-    uses: hoverkraft-tech/ci-github-common/.github/workflows/linter.yml@71b85947453f32b5d147ff3ab37351439a92d840 # 0.34.2
+    uses: hoverkraft-tech/ci-github-common/.github/workflows/linter.yml@4c9d51717dc04d823dac2dc9ac2857e7b3069454 # 0.35.0
     permissions:
       actions: read
       contents: read
@@ -112,7 +112,7 @@ jobs:
           archive: false
           if-no-files-found: error
 
-      - uses: hoverkraft-tech/ci-github-common/actions/set-matrix-output@71b85947453f32b5d147ff3ab37351439a92d840 # 0.34.2
+      - uses: hoverkraft-tech/ci-github-common/actions/set-matrix-output@4c9d51717dc04d823dac2dc9ac2857e7b3069454 # 0.35.0
         with:
           value: |
             {
@@ -132,6 +132,6 @@ jobs:
       pdfs-root-path: ${{ env.RESUME_PDFS_ROOT_PATH }}
     steps:
       - id: get-generated-pdfs
-        uses: hoverkraft-tech/ci-github-common/actions/get-matrix-outputs@71b85947453f32b5d147ff3ab37351439a92d840 # 0.34.2
+        uses: hoverkraft-tech/ci-github-common/actions/get-matrix-outputs@4c9d51717dc04d823dac2dc9ac2857e7b3069454 # 0.35.0
         with:
           artifact-name: "generated-pdfs"
