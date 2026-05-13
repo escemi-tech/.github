@@ -6,9 +6,9 @@
   "dependencies": {
     "jsonresume-theme-escemi": "file:../../../resume/theme",
     "pdf-lib": "^1.17.1",
-    "puppeteer": "^24.42.0",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5"
+    "puppeteer": "^24.43.1",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
   },
   "scripts": {
     "generate-pdf": "node ./generate-pdf.js"
