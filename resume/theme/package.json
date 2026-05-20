@@ -60,17 +60,17 @@
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.0",
     "@tailwindcss/typography": "^0.5.13",
-    "@types/node": "^25.7.0",
-    "@types/react": "^19.2.14",
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.2.15",
     "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.1",
-    "@vitest/coverage-v8": "^4.1.6",
+    "@vitejs/plugin-react": "^6.0.2",
+    "@vitest/coverage-v8": "^4.1.7",
     "jsdom": "^29.1.1",
-    "postcss": "^8.5.14",
+    "postcss": "^8.5.15",
     "react-to-print": "^3.3.0",
     "tailwindcss": "^4.2.4",
     "typescript": "^6.0.3",
-    "vite": "^8.0.12",
+    "vite": "^8.0.13",
     "vitest": "^4.0.13"
   }
 }
