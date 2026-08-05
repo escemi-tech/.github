@@ -31,19 +31,14 @@ lint: ## Execute linting
 	$(call run_linter,)
 
 lint-fix: ## Execute linting and fix
-	$(MAKE) humanize-resume
 	$(call run_linter, \
-		-e FIX_JSON_PRETTIER=true \
-		-e FIX_JAVASCRIPT_PRETTIER=true \
 		-e FIX_YAML_PRETTIER=true \
 		-e FIX_MARKDOWN=true \
 		-e FIX_MARKDOWN_PRETTIER=true \
-		-e FIX_NATURAL_LANGUAGE=true\
-		-e FIX_HTML_PRETTIER=true\
-		-e FIX_CSS=true\
-		-e FIX_CSS_PRETTIER=true\
-		-e FIX_JSX_PRETTIER=true\
-		-e FIX_TYPESCRIPT_PRETTIER=true\
+		-e FIX_NATURAL_LANGUAGE=true \
+		-e FIX_SHELL_SHFMT=true \
+		-e FIX_BIOME_LINT=true \
+		-e FIX_BIOME_FORMAT=true \
 	)
 
 audit-fix: ## Audit and fix npm packages
@@ -95,6 +90,7 @@ generate-pdfs: ## Generate all resumes PDFs
 
 ci: ## Run all CI tasks
 	$(MAKE) setup
+	$(MAKE) audit-fix || true
 	$(MAKE) lint-fix
 	$(MAKE) test
 	$(MAKE) validate-resume
@@ -104,14 +100,14 @@ define run_linter
 	DEFAULT_WORKSPACE="$(CURDIR)"; \
 	LINTER_IMAGE="linter:latest"; \
 	VOLUME="$$DEFAULT_WORKSPACE:$$DEFAULT_WORKSPACE"; \
-	docker build --build-arg UID=$(shell id -u) --build-arg GID=$(shell id -g) --tag $$LINTER_IMAGE .; \
+	docker build --platform=linux/amd64 --build-arg UID=$(shell id -u) --build-arg GID=$(shell id -g) --tag $$LINTER_IMAGE .; \
 	docker run \
-		-e DEFAULT_WORKSPACE="$$DEFAULT_WORKSPACE" \
-		-e FILTER_REGEX_INCLUDE="$(filter-out $@,$(MAKECMDGOALS))" \
-		-e IGNORE_GITIGNORED_FILES=true \
-		$(1) \
+		--platform=linux/amd64 \
 		-v $$VOLUME \
 		--rm \
+		-e DEFAULT_WORKSPACE="$$DEFAULT_WORKSPACE" \
+		-e FILTER_REGEX_INCLUDE="$(filter-out $@,$(MAKECMDGOALS))" \
+		$(1) \
 		$$LINTER_IMAGE
 endef
 

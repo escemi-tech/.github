@@ -11,11 +11,20 @@ type Page3Props = {
   projectsTitle: string;
 };
 
-export function Page3({ projects, locale, presentLabel, projectsTitle }: Page3Props) {
+export function Page3({
+  projects,
+  locale,
+  presentLabel,
+  projectsTitle,
+}: Page3Props) {
   return (
     <section className="page page--projects">
       <Section title={projectsTitle}>
-        <ProjectsGrid projects={projects} locale={locale} presentLabel={presentLabel} />
+        <ProjectsGrid
+          projects={projects}
+          locale={locale}
+          presentLabel={presentLabel}
+        />
       </Section>
     </section>
   );

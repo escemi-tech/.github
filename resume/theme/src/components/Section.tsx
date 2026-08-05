@@ -8,7 +8,12 @@ type SectionProps = {
   className?: string;
 };
 
-export function Section({ title, children, forceBreakBefore, className }: SectionProps) {
+export function Section({
+  title,
+  children,
+  forceBreakBefore,
+  className,
+}: SectionProps) {
   const resolvedClassName = [
     "section",
     forceBreakBefore ? "section--break" : null,

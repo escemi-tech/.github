@@ -1,0 +1,4 @@
+[codespell]
+check-hidden =
+skip = .git,**/node_modules/**,**/package-lock.json,**/resume/theme/dist/**,**/resume/theme/eslint-report.json,**/*.svg,**/resume/resume.fr.json,**/resume/resume.fr.*.json
+ignore-words-list = Projets,projets

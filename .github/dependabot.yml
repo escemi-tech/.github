@@ -8,6 +8,8 @@ updates:
       - "/.github/actions/**/*"
     schedule:
       interval: weekly
+    cooldown:
+      default-days: 7
     groups:
       github-actions-dependencies:
         patterns:
@@ -18,12 +20,16 @@ updates:
     directory: "/"
     schedule:
       interval: weekly
+    cooldown:
+      default-days: 7
 
   - package-ecosystem: "docker"
     open-pull-requests-limit: 20
     directory: "/"
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 7
     groups:
       docker-dependencies:
         patterns:
@@ -37,7 +43,10 @@ updates:
     versioning-strategy: increase
     schedule:
       interval: "weekly"
+    cooldown:
+      default-days: 7
     groups:
       npm-dependencies:
+        group-by: dependency-name
         patterns:
           - "*"

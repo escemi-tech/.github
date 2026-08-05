@@ -17,14 +17,8 @@ body {
 
 body {
   font-family:
-    "Source Sans Pro",
-    -apple-system,
-    BlinkMacSystemFont,
-    "Segoe UI",
-    "Noto Color Emoji",
-    "Apple Color Emoji",
-    "Segoe UI Emoji",
-    sans-serif;
+    "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Noto Color Emoji", "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
   font-size: 10px;
   background: #f5f7fb;
   color: #1c3144;
@@ -90,6 +84,7 @@ strong {
 }
 
 .running-header {
+  /* biome-ignore lint/correctness/noUnknownFunction: Paged.js uses the CSS paged-media running() function for margin boxes. */
   position: running(resumeheader);
   height: 0;
   overflow: hidden;
@@ -759,8 +754,7 @@ strong {
 }
 
 /* Page 1: second spotlight entry is denser to fit full summary. */
-.section--professional
-  .professional-spotlight
+.section--professional .professional-spotlight
   > .stack:nth-child(2)
   .entry__summary {
   margin-top: 0.3rem;

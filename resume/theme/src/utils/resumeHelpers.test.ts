@@ -9,7 +9,7 @@ import {
   splitExperiences,
   stripBaseline,
 } from "./resumeHelpers";
-import { ExperienceEntry } from "../types/resume";
+import type { ExperienceEntry } from "../types/resume";
 
 describe("getStrings", () => {
   it("falls back to English", () => {

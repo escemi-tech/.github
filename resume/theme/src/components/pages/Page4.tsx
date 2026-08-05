@@ -25,10 +25,18 @@ export function Page4({
   return (
     <section className="page page--projects">
       <Section title={projectsTitle}>
-        <ProjectsGrid projects={projects} locale={locale} presentLabel={presentLabel} />
+        <ProjectsGrid
+          projects={projects}
+          locale={locale}
+          presentLabel={presentLabel}
+        />
       </Section>
       <Section title={communityTitle}>
-        <CommunityGrid items={communityItems} locale={locale} presentLabel={presentLabel} />
+        <CommunityGrid
+          items={communityItems}
+          locale={locale}
+          presentLabel={presentLabel}
+        />
       </Section>
     </section>
   );

@@ -1,7 +1,12 @@
 import type { ResumeSchema } from "../../types/resume";
 import { Section } from "../Section";
 import { Hero } from "../Hero";
-import { CertificatesList, EducationList, LanguagesList, SkillGroups } from "../Sidebar";
+import {
+  CertificatesList,
+  EducationList,
+  LanguagesList,
+  SkillGroups,
+} from "../Sidebar";
 import { ExperienceSpotlight } from "../Experience";
 
 type WorkEntry = NonNullable<ResumeSchema["work"]>[number];
@@ -78,7 +83,10 @@ export function Page1({
             <EducationList education={education || []} locale={locale} />
           </Section>
           <Section title={certificatesTitle} className="section--certificates">
-            <CertificatesList certificates={certificates || []} locale={locale} />
+            <CertificatesList
+              certificates={certificates || []}
+              locale={locale}
+            />
           </Section>
         </aside>
         <div className="main">

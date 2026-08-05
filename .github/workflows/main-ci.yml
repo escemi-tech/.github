@@ -20,6 +20,7 @@ jobs:
       actions: read
       contents: read
       id-token: write
+      issues: write
       packages: read
       pull-requests: write
       statuses: write
@@ -34,7 +35,7 @@ jobs:
       pull-requests: write
     steps:
       - name: Checkout code
-        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
@@ -63,10 +64,10 @@ jobs:
           DOWNLOAD_PATH: ${{ steps.download-pdfs.outputs.download-path }}
           DESTINATION_PATH: ${{ needs.ci.outputs.pdfs-root-path }}
         run: |
-          ls -la ${{ env.DOWNLOAD_PATH }}/**/*.pdf
-          rm -f ${{ env.DESTINATION_PATH }}/*.pdf
-          cp ${{ env.DOWNLOAD_PATH }}/**/*.pdf ${{ env.DESTINATION_PATH }}/
-          ls -la ${{ env.DESTINATION_PATH }}
+          ls -la "${DOWNLOAD_PATH}"/**/*.pdf
+          rm -f "${DESTINATION_PATH}"/*.pdf
+          cp "${DOWNLOAD_PATH}"/**/*.pdf "${DESTINATION_PATH}"/
+          ls -la "${DESTINATION_PATH}"
 
       - name: Upload resumes artifact
         id: upload-resumes
@@ -78,7 +79,7 @@ jobs:
             resume/pdf/resume.*.pdf
           if-no-files-found: error
 
-      - uses: hoverkraft-tech/ci-github-common/actions/create-and-merge-pull-request@66578f5b9aec4ac5558b5dad750c4c74dfcb65c5 # 0.35.5
+      - uses: hoverkraft-tech/ci-github-common/actions/create-and-merge-pull-request@3a27d31e9ccefbe9609cc9165017ed100ff34a22 # 0.38.0
         with:
           branch: chore/update-resume-pdfs
           commit-message: "chore(resume): update generated resume PDFs"
@@ -94,8 +95,9 @@ jobs:
         id: generate-token
         with:
           client-id: ${{ vars.CI_BOT_APP_CLIENT_ID }}
-          private-key: ${{ secrets.CI_BOT_APP_PRIVATE_KEY }}
+          private-key: ${{ secrets.CI_BOT_APP_PRIVATE_KEY }} # zizmor: ignore[secrets-outside-env] GitHub App key is intentionally repository-scoped for this automation workflow.
           owner: ${{ github.repository_owner }}
+          repositories: escemi-website
 
       - name: Dispatch sync-resumes event
         uses: peter-evans/repository-dispatch@28959ce8df70de7be546dd1250a005dd32156697 # v4.0.1

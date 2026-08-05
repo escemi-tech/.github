@@ -1,12 +1,15 @@
 #!/usr/bin/env node
+const Ajv = require("ajv");
+const addFormats = require("ajv-formats");
 const path = require("node:path");
-const { execFile } = require("node:child_process");
-const { promisify } = require("node:util");
-const { resolveResumeToFile } = require(
+const schema = require("@jsonresume/schema/schema.json");
+const { resolveResume } = require(
   path.resolve(__dirname, "../../../resume/resolve-resume"),
 );
-const execFileAsync = promisify(execFile);
-const RESUME_BIN = path.resolve(__dirname, "node_modules/.bin/resume");
+
+const ajv = new Ajv({ allErrors: true, strict: false });
+addFormats(ajv);
+const validateResume = ajv.compile(schema);
 
 async function main() {
   const resumeArg = process.argv[2];
@@ -16,18 +19,27 @@ async function main() {
     process.exit(1);
   }
 
-  const { path: resolvedResumePath } = await resolveResumeToFile(
-    path.resolve(resumeArg),
-  );
+  const resolvedResume = await resolveResume(path.resolve(resumeArg));
 
-  await runValidation(resolvedResumePath);
+  runValidation(resolvedResume, resumeArg);
 }
 
-async function runValidation(resumePath) {
-  await execFileAsync(RESUME_BIN, ["validate", "--resume", resumePath], {
-    cwd: __dirname,
-    stdio: "inherit",
+function runValidation(resume, resumeArg) {
+  const isValid = validateResume(resume);
+
+  if (isValid) {
+    return;
+  }
+
+  const formattedErrors = (validateResume.errors || []).map((error) => {
+    const location = error.instancePath || "/";
+    const details = error.message || "schema validation failed";
+    return `${location} ${details}`;
   });
+
+  throw new Error(
+    [`Invalid resume: ${resumeArg}`, ...formattedErrors].join("\n"),
+  );
 }
 
 main().catch((error) => {
