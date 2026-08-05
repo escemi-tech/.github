@@ -1,10 +1,8 @@
 import type { ExperienceEntry } from "../types/resume";
 import { formatDateRange } from "../utils/resumeHelpers";
-import { emphasize } from "../utils/text";
-import { sanitize } from "../utils/text";
+import { renderEmphasizedText, sanitize } from "../utils/text";
 import { displayUrl } from "../utils/url";
 import { safeUrl } from "../utils/url";
-import { escapeHtml } from "../utils/escapeHtml";
 import { joinDefined } from "../utils/text";
 import { Bullets } from "./Bullets";
 
@@ -26,22 +24,39 @@ export function ExperienceSpotlight({
   const blocks = entries
     .map((entry, index) => {
       const title = joinDefined(entry.position || entry.title);
-      const org = joinDefined(entry.organization || entry.entity || entry.client, entry.name);
+      const org = joinDefined(
+        entry.organization || entry.entity || entry.client,
+        entry.name,
+      );
       const location = sanitize(entry.location);
-      const range = formatDateRange(entry.startDate, entry.endDate, locale, presentLabel);
+      const range = formatDateRange(
+        entry.startDate,
+        entry.endDate,
+        locale,
+        presentLabel,
+      );
       const summary = sanitize(entry.summary);
       const href = safeUrl(entry.url);
       const label = displayUrl(entry.url);
-      const keywords = (entry.keywords ?? []).map((keyword) => sanitize(keyword)).filter(Boolean);
+      const keywords = (entry.keywords ?? [])
+        .map((keyword) => sanitize(keyword))
+        .filter(Boolean);
 
       const hasMetaRow = Boolean(range || location);
 
       const highlights = entry.highlights ?? [];
 
-      if (!title && !org && !hasMetaRow && !summary && !highlights.length) return null;
+      if (!title && !org && !hasMetaRow && !summary && !highlights.length)
+        return null;
 
       return (
-        <article className="entry entry--experience" key={entry.id || `${title}-${org}-${index}`}>
+        <article
+          className="entry entry--experience"
+          key={
+            entry.id ||
+            `${title}-${org}-${range || ""}-${location || ""}-${index}`
+          }
+        >
           <header className="entry__header">
             {title ? <div className="entry__title">{title}</div> : null}
             {org || (label && href !== "#") ? (
@@ -57,16 +72,21 @@ export function ExperienceSpotlight({
             {hasMetaRow ? (
               <div className="entry__metaRow">
                 {range ? <div className="entry__meta">{range}</div> : null}
-                {location ? <div className="entry__location">{location}</div> : null}
+                {location ? (
+                  <div className="entry__location">{location}</div>
+                ) : null}
               </div>
             ) : null}
           </header>
           {includeSummary && summary ? (
-            <p className="entry__summary" dangerouslySetInnerHTML={{ __html: emphasize(escapeHtml(summary)) }} />
+            <p className="entry__summary">{renderEmphasizedText(summary)}</p>
           ) : null}
-          <Bullets highlights={highlights} preferResults={preferResultsHighlights} />
+          <Bullets
+            highlights={highlights}
+            preferResults={preferResultsHighlights}
+          />
           {keywords.length ? (
-            <div className="entry__keywords" aria-label="Keywords">
+            <div className="entry__keywords">
               {keywords.map((keyword) => (
                 <span className="chip" key={keyword}>
                   {keyword}
@@ -95,13 +115,23 @@ export function ExperienceTimelineCompact({
   const blocks = entries
     .map((entry, index) => {
       const title = joinDefined(entry.position || entry.title);
-      const org = joinDefined(entry.organization || entry.entity || entry.client, entry.name);
+      const org = joinDefined(
+        entry.organization || entry.entity || entry.client,
+        entry.name,
+      );
       const location = sanitize(entry.location);
-      const range = formatDateRange(entry.startDate, entry.endDate, locale, presentLabel);
+      const range = formatDateRange(
+        entry.startDate,
+        entry.endDate,
+        locale,
+        presentLabel,
+      );
       const href = safeUrl(entry.url);
       const label = displayUrl(entry.url);
       const summary = sanitize(entry.summary);
-      const keywords = (entry.keywords ?? []).map((keyword) => sanitize(keyword)).filter(Boolean);
+      const keywords = (entry.keywords ?? [])
+        .map((keyword) => sanitize(keyword))
+        .filter(Boolean);
 
       // Keep Page 2 compact but visually identical: same structure as spotlight.
       const highlights = entry.highlights ?? [];
@@ -109,7 +139,13 @@ export function ExperienceTimelineCompact({
       if (!title && !org && !location && !range) return null;
 
       return (
-        <article className="entry entry--experience" key={entry.id || `${title}-${org}-${index}`}>
+        <article
+          className="entry entry--experience"
+          key={
+            entry.id ||
+            `${title}-${org}-${range || ""}-${location || ""}-${index}`
+          }
+        >
           <header className="entry__header">
             {title ? <div className="entry__title">{title}</div> : null}
             {org || (label && href !== "#") ? (
@@ -125,18 +161,20 @@ export function ExperienceTimelineCompact({
             {range || location ? (
               <div className="entry__metaRow">
                 {range ? <div className="entry__meta">{range}</div> : null}
-                {location ? <div className="entry__location">{location}</div> : null}
+                {location ? (
+                  <div className="entry__location">{location}</div>
+                ) : null}
               </div>
             ) : null}
           </header>
 
           {summary ? (
-            <p className="entry__summary" dangerouslySetInnerHTML={{ __html: emphasize(escapeHtml(summary)) }} />
+            <p className="entry__summary">{renderEmphasizedText(summary)}</p>
           ) : null}
           <Bullets highlights={highlights} preferResults={true} />
 
           {keywords.length ? (
-            <div className="entry__keywords" aria-label="Keywords">
+            <div className="entry__keywords">
               {keywords.map((keyword) => (
                 <span className="chip" key={keyword}>
                   {keyword}

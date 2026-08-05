@@ -14,12 +14,23 @@ type Page2Props = {
   professionalTitle: string;
 };
 
-export function Page2({ name, title, timelineEntries, locale, presentLabel, professionalTitle }: Page2Props) {
+export function Page2({
+  name,
+  title,
+  timelineEntries,
+  locale,
+  presentLabel,
+  professionalTitle,
+}: Page2Props) {
   return (
     <section className="page page--experience">
       <RunningHeader name={name} title={title} />
       <Section title={professionalTitle} className="section--professional">
-        <ExperienceTimelineCompact entries={timelineEntries} locale={locale} presentLabel={presentLabel} />
+        <ExperienceTimelineCompact
+          entries={timelineEntries}
+          locale={locale}
+          presentLabel={presentLabel}
+        />
       </Section>
     </section>
   );

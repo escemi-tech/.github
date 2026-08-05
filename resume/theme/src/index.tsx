@@ -11,7 +11,10 @@ function stripReactServerPreloadLinks(markup: string): string {
   );
 }
 
-export function render(resume: ResumeSchema, options: RenderOptions = {}): string {
+export function render(
+  resume: ResumeSchema,
+  options: RenderOptions = {},
+): string {
   if (!resume) {
     throw new Error("[@escemi/jsonresume-theme] resume payload is required");
   }
@@ -22,7 +25,9 @@ export function render(resume: ResumeSchema, options: RenderOptions = {}): strin
     title = resume.basics?.name || "Resume",
   } = options;
 
-  const markup = stripReactServerPreloadLinks(renderPagedResume(resume, { locale }));
+  const markup = stripReactServerPreloadLinks(
+    renderPagedResume(resume, { locale }),
+  );
 
   return `<!DOCTYPE html>
 <html lang="${locale}" dir="${dir}">

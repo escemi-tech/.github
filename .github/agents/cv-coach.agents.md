@@ -209,7 +209,7 @@ Build & Run – Fractional CTO / DevX Expert (2020 - Present)
 
 ### 3. Languages & Soft Skills
 
-**Problem**: Too discreet and poorly hierarchical.
+**Problem**: Too discrete and poorly hierarchical.
 
 **Solutions**:
 

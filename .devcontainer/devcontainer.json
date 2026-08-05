@@ -1,7 +1,10 @@
 {
-  "name": ".github",
+  "name": "escemi-tech/.github",
   "image": "mcr.microsoft.com/devcontainers/base:debian",
   "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "configureZshAsDefaultShell": true
+    },
     "ghcr.io/devcontainers/features/node:2": {},
     "ghcr.io/devcontainers/features/docker-in-docker:4": {
       "moby": false
@@ -20,10 +23,7 @@
         "github.copilot-chat",
         "ms-vscode.makefile-tools",
         "tomoki1207.pdf"
-      ],
-      "settings": {
-        "terminal.integrated.defaultProfile.linux": "zsh"
-      }
+      ]
     }
   }
 }

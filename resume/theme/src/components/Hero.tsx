@@ -19,9 +19,12 @@ type HeroProps = {
 function ContactInlineList({ items }: { items: ContactItem[] }) {
   if (!items.length) return null;
   return (
-    <ul className="contact-inline-list" role="list">
-      {items.map((item, index) => (
-        <li key={`${item.label}-${index}`} className="contact-inline-list__item">
+    <ul className="contact-inline-list">
+      {items.map((item) => (
+        <li
+          key={`${item.label}-${item.href || "no-href"}-${item.icon}`}
+          className="contact-inline-list__item"
+        >
           <span aria-hidden className="contact-inline-list__icon">
             {renderEmojiText(item.icon)}
           </span>
@@ -60,9 +63,9 @@ export function Hero({
           {label ? <div className="hero__label">{label}</div> : null}
           <h1 className="hero__name">{name}</h1>
           {metrics.length ? (
-            <div className="hero__metrics" aria-label="Key metrics">
-              {metrics.map((metric, index) => (
-                <span key={`metric-${index}`} className="metric-chip">
+            <div className="hero__metrics">
+              {metrics.map((metric) => (
+                <span key={metric} className="metric-chip">
                   {metric}
                 </span>
               ))}

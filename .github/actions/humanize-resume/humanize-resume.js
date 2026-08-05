@@ -58,12 +58,12 @@ async function processFile(filePath, options) {
     throw new Error(`Invalid JSON: ${error.message}`);
   }
 
-  const baseline = JSON.stringify(parsed, null, 2) + "\n";
+  const baseline = `${JSON.stringify(parsed, null, 2)}\n`;
   const stats = { totalStrings: 0, updatedStrings: 0, normalizedSymbols: 0 };
 
   humanizeNode(parsed, stats, options);
 
-  const result = JSON.stringify(parsed, null, 2) + "\n";
+  const result = `${JSON.stringify(parsed, null, 2)}\n`;
   const relativePath = path.relative(cwd, filePath) || filePath;
 
   if (baseline !== result) {

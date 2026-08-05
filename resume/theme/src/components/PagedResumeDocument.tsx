@@ -1,5 +1,11 @@
 import type { ResumeSchema } from "../types/resume";
-import { extractBaseline, getStrings, selectFeatured, splitExperiences, stripBaseline } from "../utils/resumeHelpers";
+import {
+  extractBaseline,
+  getStrings,
+  selectFeatured,
+  splitExperiences,
+  stripBaseline,
+} from "../utils/resumeHelpers";
 import { sanitize } from "../utils/text";
 import { displayUrl } from "../utils/url";
 import { safeUrl } from "../utils/url";
@@ -14,7 +20,10 @@ type PagedResumeDocumentProps = {
   locale: string;
 };
 
-export function PagedResumeDocument({ resume, locale }: PagedResumeDocumentProps) {
+export function PagedResumeDocument({
+  resume,
+  locale,
+}: PagedResumeDocumentProps) {
   const strings = getStrings(locale);
 
   const basics = resume.basics || {};
@@ -35,7 +44,9 @@ export function PagedResumeDocument({ resume, locale }: PagedResumeDocumentProps
 
   const baseline = extractBaseline(basics.summary);
   const summary = sanitize(stripBaseline(basics.summary));
-  const metrics = baseline ? baseline.split("·").map((token) => token.trim()) : [];
+  const metrics = baseline
+    ? baseline.split("·").map((token) => token.trim())
+    : [];
 
   const location = joinDefined(basics.location?.city, basics.location?.region);
   const email = sanitize(basics.email);
@@ -43,15 +54,20 @@ export function PagedResumeDocument({ resume, locale }: PagedResumeDocumentProps
   const websiteHref = safeUrl(basics.url);
   const websiteLabel = displayUrl(basics.url);
 
-  const contactItems: Array<{ icon: string; label: string; href?: string }> = [];
+  const contactItems: Array<{ icon: string; label: string; href?: string }> =
+    [];
   if (location) contactItems.push({ icon: "📍", label: location });
-  if (email) contactItems.push({ icon: "✉️", label: email, href: `mailto:${email}` });
-  if (phone) contactItems.push({ icon: "📞", label: phone, href: `tel:${phone}` });
+  if (email)
+    contactItems.push({ icon: "✉️", label: email, href: `mailto:${email}` });
+  if (phone)
+    contactItems.push({ icon: "📞", label: phone, href: `tel:${phone}` });
   if (websiteLabel && websiteHref !== "#") {
     contactItems.push({ icon: "🔗", label: websiteLabel, href: websiteHref });
   }
 
-  const profileItems: Array<{ icon: string; label: string; href?: string }> = (basics.profiles || [])
+  const profileItems: Array<{ icon: string; label: string; href?: string }> = (
+    basics.profiles || []
+  )
     .filter((profile) => Boolean(profile?.url))
     .map((profile) => {
       const url = String(profile.url);

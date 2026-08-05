@@ -35,7 +35,8 @@ function Card({
   highlights = [],
   footerLeft,
 }: CardProps) {
-  const className = variant === "community" ? "card card--community" : "card card--project";
+  const className =
+    variant === "community" ? "card card--community" : "card card--project";
 
   if (variant === "project") {
     return (
@@ -47,7 +48,7 @@ function Card({
           </div>
 
           {badges.length ? (
-            <div className="card__badges" aria-label="Roles">
+            <div className="card__badges">
               {badges.map((badge) => (
                 <span className="card-chip" key={badge}>
                   {badge}
@@ -59,7 +60,12 @@ function Card({
 
         {meta ? <div className="card__meta">{meta}</div> : null}
 
-        {summaryHtml ? <p className="card__summary" dangerouslySetInnerHTML={{ __html: summaryHtml }} /> : null}
+        {summaryHtml ? (
+          <p className="card__summary">
+            {/* biome-ignore lint/security/noDangerouslySetInnerHtml: summaryHtml is produced from escaped resume text with controlled emphasis markup. */}
+            <span dangerouslySetInnerHTML={{ __html: summaryHtml }} />
+          </p>
+        ) : null}
 
         {highlights.length ? (
           <div className="card__highlights">
@@ -68,7 +74,7 @@ function Card({
         ) : null}
 
         {keywords.length ? (
-          <div className="card__keywords" aria-label="Keywords">
+          <div className="card__keywords">
             {keywords.map((keyword) => (
               <span className="card-chip card-chip--ghost" key={keyword}>
                 {keyword}
@@ -99,7 +105,12 @@ function Card({
           {meta ? <span className="card__badge">{meta}</span> : null}
         </header>
 
-        {summaryHtml ? <p className="card__summary" dangerouslySetInnerHTML={{ __html: summaryHtml }} /> : null}
+        {summaryHtml ? (
+          <p className="card__summary">
+            {/* biome-ignore lint/security/noDangerouslySetInnerHtml: summaryHtml is produced from escaped resume text with controlled emphasis markup. */}
+            <span dangerouslySetInnerHTML={{ __html: summaryHtml }} />
+          </p>
+        ) : null}
 
         {highlights.length ? (
           <div className="card__highlights">
@@ -129,7 +140,10 @@ function Card({
       </div>
       <div className="card__subtitle">{subtitle || ""}</div>
       {summaryHtml ? (
-        <p className="card__summary" dangerouslySetInnerHTML={{ __html: summaryHtml }} />
+        <p className="card__summary">
+          {/* biome-ignore lint/security/noDangerouslySetInnerHtml: summaryHtml is produced from escaped resume text with controlled emphasis markup. */}
+          <span dangerouslySetInnerHTML={{ __html: summaryHtml }} />
+        </p>
       ) : null}
       {linkHref && linkLabel ? (
         <div className="card__footer">
@@ -150,12 +164,25 @@ function TwoColGrid({ children }: TwoColGridProps) {
   return <div className="grid grid--2">{children}</div>;
 }
 
-export function ProjectsGrid({ projects, locale, presentLabel }: { projects: ProjectEntry[]; locale: string; presentLabel: string }) {
+export function ProjectsGrid({
+  projects,
+  locale,
+  presentLabel,
+}: {
+  projects: ProjectEntry[];
+  locale: string;
+  presentLabel: string;
+}) {
   const cards = projects
     .map((entry) => {
       const name = sanitize(entry.name);
       const org = sanitize(entry.organization || entry.entity);
-      const range = formatDateRange(entry.startDate, entry.endDate, locale, presentLabel);
+      const range = formatDateRange(
+        entry.startDate,
+        entry.endDate,
+        locale,
+        presentLabel,
+      );
       const typeLabel = sanitize(entry.type)
         ? sanitize(entry.type)
             .replace(/[-_]+/g, " ")
@@ -163,8 +190,14 @@ export function ProjectsGrid({ projects, locale, presentLabel }: { projects: Pro
         : "";
       const meta = [range, typeLabel].filter(Boolean).join(" · ");
       const summary = sanitize(entry.description);
-      const roleBadges = (entry.roles ?? []).map((r) => sanitize(r)).filter(Boolean).slice(0, 3);
-      const keywordBadges = (entry.keywords ?? []).map((k) => sanitize(k)).filter(Boolean).slice(0, 6);
+      const roleBadges = (entry.roles ?? [])
+        .map((r) => sanitize(r))
+        .filter(Boolean)
+        .slice(0, 3);
+      const keywordBadges = (entry.keywords ?? [])
+        .map((k) => sanitize(k))
+        .filter(Boolean)
+        .slice(0, 6);
       const highlights = (entry.highlights ?? []).slice(0, 2);
       const href = safeUrl(entry.url);
       const label = displayUrl(entry.url);
@@ -193,12 +226,25 @@ export function ProjectsGrid({ projects, locale, presentLabel }: { projects: Pro
   return <TwoColGrid>{cards}</TwoColGrid>;
 }
 
-export function CommunityGrid({ items, locale, presentLabel }: { items: CommunityEntry[]; locale: string; presentLabel: string }) {
+export function CommunityGrid({
+  items,
+  locale,
+  presentLabel,
+}: {
+  items: CommunityEntry[];
+  locale: string;
+  presentLabel: string;
+}) {
   const cards = items
     .map((entry) => {
       const org = sanitize(entry.organization || entry.name);
       const role = sanitize(entry.position);
-      const range = formatDateRange(entry.startDate, entry.endDate, locale, presentLabel);
+      const range = formatDateRange(
+        entry.startDate,
+        entry.endDate,
+        locale,
+        presentLabel,
+      );
       const summary = sanitize(entry.summary);
       const location = sanitize(entry.location);
       const highlights = (entry.highlights ?? []).slice(0, 2);

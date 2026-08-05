@@ -3,8 +3,7 @@ import type { ReactNode } from "react";
 const TWEMOJI_BASE_URL =
   "https://cdn.jsdelivr.net/gh/twitter/twemoji@14.0.2/assets/svg";
 
-const EMOJI_TOKEN_REGEX =
-  /(🧠|💼|🚀|🤝|🌍|🎓|🏅|📍|🔗|🎯|⚙️?|☁️?)/gu;
+const EMOJI_TOKEN_REGEX = /(🧠|💼|🚀|🤝|🌍|🎓|🏅|📍|🔗|🎯|⚙️?|☁️?)/gu;
 
 const toCodePoints = (value: string): number[] => {
   const points: number[] = [];
@@ -16,7 +15,9 @@ const toCodePoints = (value: string): number[] => {
 
 const toTwemojiAssetName = (emoji: string): string => {
   // Drop VS16 so the asset path matches Twemoji’s file naming.
-  const codePoints = toCodePoints(emoji).filter((cp) => cp !== 0xfe0f && cp !== 0);
+  const codePoints = toCodePoints(emoji).filter(
+    (cp) => cp !== 0xfe0f && cp !== 0,
+  );
   return codePoints.map((cp) => cp.toString(16)).join("-");
 };
 
@@ -50,7 +51,7 @@ export const renderEmojiText = (value: string): ReactNode => {
         loading="eager"
         decoding="async"
         referrerPolicy="no-referrer"
-      />
+      />,
     );
 
     lastIndex = index + token.length;

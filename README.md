@@ -4,14 +4,12 @@
 
 ### Company Baseline
 
-| Language | Baseline                                                                            |
-| -------- | ----------------------------------------------------------------------------------- |
-| English  | At your service to support you and meet the challenges of your digital projects.    |
-| French   | À votre service pour vous accompagner et relever les défis de vos projets digitaux. |
+- English: At your service to support you and meet the challenges of your digital projects.
+- French: À votre service pour vous accompagner et relever les défis numériques.
 
 ## [Resume as Code](/resume/README.md)
 
-Professional resume managed as code in JSON Resume format with bilingual support (English/French).
+Professional resume managed as code in JSON Resume format with bilingual support (English/French) for digital projects.
 
 ## [Branding](/branding/README.md)
 

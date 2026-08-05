@@ -1,4 +1,9 @@
-import type { Certificate, Education, Language, SkillGroup } from "../types/resume";
+import type {
+  Certificate,
+  Education,
+  Language,
+  SkillGroup,
+} from "../types/resume";
 import { formatDateRange } from "../utils/resumeHelpers";
 import { sanitize } from "../utils/text";
 import { renderEmojiText } from "../utils/emoji";
@@ -7,16 +12,23 @@ import { joinDefined } from "../utils/text";
 export function SkillGroups({ skills }: { skills: SkillGroup[] }) {
   const groups = skills
     .filter((group) => sanitize(group.name) || (group.keywords ?? []).length)
-    .slice(0, 4);
+    .slice(0, 4)
+    .map((group) => ({
+      ...group,
+      key: `${sanitize(group.name) || "skills"}::${(group.keywords ?? [])
+        .map((keyword) => sanitize(keyword))
+        .filter(Boolean)
+        .join("|")}`,
+    }));
 
   if (!groups.length) return null;
 
   return (
     <div className="stack stack--sm">
-      {groups.map((group, index) => {
+      {groups.map((group) => {
         const keywords = (group.keywords ?? []).slice(0, 7);
         return (
-          <div className="kv" key={`${group.name || "skills"}-${index}`}>
+          <div className="kv" key={group.key}>
             <div className="kv__key">{renderEmojiText(group.name || "")}</div>
             <div className="kv__value">
               {keywords.map((keyword) => (
@@ -39,16 +51,24 @@ export function LanguagesList({ languages }: { languages: Language[] }) {
       const language = sanitize(entry.language);
       const fluency = sanitize(entry.fluency);
       if (!language && !fluency) return null;
-      return { language, fluency };
+      return {
+        language,
+        fluency,
+        key: `${language || "unknown"}::${fluency || "unknown"}`,
+      };
     })
-    .filter(Boolean) as Array<{ language: string; fluency: string }>;
+    .filter(Boolean) as Array<{
+    language: string;
+    fluency: string;
+    key: string;
+  }>;
 
   if (!entries.length) return null;
 
   return (
     <div className="stack stack--xs">
-      {entries.map((entry, index) => (
-        <div className="kv" key={`${entry.language}-${index}`}>
+      {entries.map((entry) => (
+        <div className="kv" key={entry.key}>
           <div className="kv__key">{entry.language}</div>
           <div className="kv__value">{entry.fluency}</div>
         </div>
@@ -57,7 +77,13 @@ export function LanguagesList({ languages }: { languages: Language[] }) {
   );
 }
 
-export function EducationList({ education, locale }: { education: Education[]; locale: string }) {
+export function EducationList({
+  education,
+  locale,
+}: {
+  education: Education[];
+  locale: string;
+}) {
   const entries = education
     .slice(0, 2)
     .map((entry) => {
@@ -74,16 +100,24 @@ export function EducationList({ education, locale }: { education: Education[]; l
         titleText,
         institutionText,
         range,
+        key: `${titleText || "education"}::${institutionText || "unknown"}::${
+          range || "unknown"
+        }`,
       };
     })
-    .filter(Boolean) as Array<{ titleText: string; institutionText: string; range: string | null }>;
+    .filter(Boolean) as Array<{
+    titleText: string;
+    institutionText: string;
+    range: string | null;
+    key: string;
+  }>;
 
   if (!entries.length) return null;
 
   return (
     <div className="stack stack--sm">
-      {entries.map((entry, index) => (
-        <div className="entry" key={`${entry.titleText}-${index}`}>
+      {entries.map((entry) => (
+        <div className="entry" key={entry.key}>
           <div className="entry__header">
             <div className="entry__title">{entry.titleText}</div>
             <div className="entry__meta">{entry.range || ""}</div>
@@ -95,7 +129,13 @@ export function EducationList({ education, locale }: { education: Education[]; l
   );
 }
 
-export function CertificatesList({ certificates, locale }: { certificates: Certificate[]; locale: string }) {
+export function CertificatesList({
+  certificates,
+  locale,
+}: {
+  certificates: Certificate[];
+  locale: string;
+}) {
   const entries = certificates
     .slice(0, 2)
     .map((entry) => {
@@ -112,16 +152,24 @@ export function CertificatesList({ certificates, locale }: { certificates: Certi
         nameText,
         issuerText,
         dateLabel,
+        key: `${nameText || "certificate"}::${issuerText || "unknown"}::${
+          dateLabel || "unknown"
+        }`,
       };
     })
-    .filter(Boolean) as Array<{ nameText: string; issuerText: string; dateLabel: string | null }>;
+    .filter(Boolean) as Array<{
+    nameText: string;
+    issuerText: string;
+    dateLabel: string | null;
+    key: string;
+  }>;
 
   if (!entries.length) return null;
 
   return (
     <div className="stack stack--sm">
-      {entries.map((entry, index) => (
-        <div className="entry" key={`${entry.nameText}-${index}`}>
+      {entries.map((entry) => (
+        <div className="entry" key={entry.key}>
           <div className="entry__header">
             <div className="entry__title">{entry.nameText}</div>
             <div className="entry__meta">{entry.dateLabel || ""}</div>

@@ -8,11 +8,16 @@ type BulletsProps = {
   preferResults?: boolean;
 };
 
-export function Bullets({ highlights = [], preferResults = true }: BulletsProps) {
+export function Bullets({
+  highlights = [],
+  preferResults = true,
+}: BulletsProps) {
   const items = highlights
     .map((highlight) => sanitize(highlight))
     .filter(Boolean)
-    .map((highlight) => (preferResults ? extractResultsSnippet(highlight) : highlight))
+    .map((highlight) =>
+      preferResults ? extractResultsSnippet(highlight) : highlight,
+    )
     .filter(Boolean)
     .map((highlight) => emphasize(escapeHtml(highlight)));
 
@@ -20,8 +25,11 @@ export function Bullets({ highlights = [], preferResults = true }: BulletsProps)
 
   return (
     <ul className="bullets">
-      {items.map((html, index) => (
-        <li key={index} dangerouslySetInnerHTML={{ __html: html }} />
+      {items.map((html) => (
+        <li key={html}>
+          {/* biome-ignore lint/security/noDangerouslySetInnerHtml: content is escaped before emphasize() injects limited markup. */}
+          <span dangerouslySetInnerHTML={{ __html: html }} />
+        </li>
       ))}
     </ul>
   );
