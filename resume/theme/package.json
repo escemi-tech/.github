@@ -54,7 +54,7 @@
     "react-dom": "^19.2.5"
   },
   "dependencies": {
-    "@fontsource/source-sans-pro": "^5.1.0",
+    "@fontsource/source-sans-pro": "^5.3.0",
     "pagedjs": "^0.4.3"
   },
   "devDependencies": {
