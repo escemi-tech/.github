@@ -8,6 +8,6 @@
     "humanize": "node humanize-resume.js"
   },
   "dependencies": {
-    "humanize-ai-lib": "^1.0.0"
+    "humanize-ai-lib": "^1.1.0"
   }
 }
