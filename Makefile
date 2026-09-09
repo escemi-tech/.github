@@ -9,14 +9,14 @@ help: ## Show help message
 
 setup: ## Setup development environment
 	@echo "Setting up development environment..."
-	@npm install --prefix resume/theme
+	@npm ci --prefix resume/theme
 	@if sudo -n true > /dev/null 2>&1; then \
 		sudo apt-get update > /dev/null 2>&1; \
 		sudo apt-get install -y ghostscript > /dev/null 2>&1; \
 	fi
 	@for packageFile in ./.github/actions/**/package.json; do \
 		dir=$$(dirname "$$packageFile"); \
-		npm install --prefix "$$dir"; \
+		npm ci --prefix "$$dir"; \
 	done
 	@if sudo -n true > /dev/null 2>&1; then \
 		sudo apt-get update > /dev/null 2>&1; \
@@ -54,7 +54,7 @@ audit-fix: ## Audit and fix npm packages
 
 test: ## Run tests
 	@echo "Running tests..."
-	@cd resume/theme && npm install && npm test	
+	@cd resume/theme && npm ci && npm test	
 
 humanize-resume: ## Normalize resume text with humanize-ai-lib
 	@echo "Discovering resume files..."
@@ -71,13 +71,13 @@ validate-resume: ## Validate resume JSON files
 	@echo "Discovering and validating resume files..."
 	@node .github/actions/get-available-resumes/get-available-resumes.js | jq -r '.[].path' | while read -r resume; do \
 		echo "Validating $$resume..."; \
-		cd ./.github/actions/validate-resume && npm install > /dev/null 2>&1 && npm run validate -- "$$resume" || exit 1; \
+		cd ./.github/actions/validate-resume && npm ci > /dev/null 2>&1 && npm run validate -- "$$resume" || exit 1; \
 		cd - > /dev/null; \
 	done
 
 generate-pdfs: ## Generate all resumes PDFs
 	@echo "Building theme..."
-	@cd resume/theme && npm install > /dev/null 2>&1 && npm run build > /dev/null
+	@cd resume/theme && npm ci > /dev/null 2>&1 && npm run build > /dev/null
 	@echo "Discovering and generating PDFs for all resume files..."
 	@node .github/actions/get-available-resumes/get-available-resumes.js | jq -c '.[]' | while read -r resume; do \
 		RESUME_NAME=$$(echo "$$resume" | jq -r '.name'); \

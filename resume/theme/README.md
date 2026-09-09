@@ -58,7 +58,7 @@ This theme now incorporates the CV Coach methodology for transforming senior tec
 npm install --save /path/to/resume/theme
 ```
 
-2. Generate your resume:
+1. Generate your resume:
 
 ```bash
 resume export resume.pdf --theme escemi
@@ -67,6 +67,8 @@ resume export resume.pdf --theme escemi
 ### For development
 
 From the `resume/theme` directory:
+
+Use Node.js 22.12 or newer for local development. Vitest 5 requires that baseline, and the current toolchain is validated on modern Node 22/24 runtimes.
 
 ```bash
 npm install
