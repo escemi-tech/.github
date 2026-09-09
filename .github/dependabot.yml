@@ -39,7 +39,6 @@ updates:
     open-pull-requests-limit: 20
     directories:
       - "/.github/actions/**/*"
-      - "/resume/theme/*"
     versioning-strategy: increase
     schedule:
       interval: "weekly"
@@ -47,6 +46,18 @@ updates:
       default-days: 7
     groups:
       npm-dependencies:
-        group-by: dependency-name
+        patterns:
+          - "*"
+
+  - package-ecosystem: "npm"
+    open-pull-requests-limit: 20
+    directory: "/resume/theme/"
+    versioning-strategy: increase
+    schedule:
+      interval: "weekly"
+    cooldown:
+      default-days: 7
+    groups:
+      npm-dependencies:
         patterns:
           - "*"
