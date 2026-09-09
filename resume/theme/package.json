@@ -66,7 +66,7 @@
     "@vitejs/plugin-react": "^6.0.2",
     "@vitest/coverage-v8": "^4.1.7",
     "jsdom": "^29.1.1",
-    "postcss": "^8.5.25",
+    "postcss": "^8.5.26",
     "react-to-print": "^3.3.0",
     "tailwindcss": "^4.2.4",
     "typescript": "^6.0.3",
