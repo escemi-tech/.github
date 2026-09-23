@@ -1,11 +1,10 @@
 import type { ReactNode } from "react";
 import type { CommunityEntry, ProjectEntry } from "../types/resume";
 import { formatDateRange } from "../utils/resumeHelpers";
-import { emphasize } from "../utils/text";
+import { renderEmphasizedText } from "../utils/text";
 import { sanitize } from "../utils/text";
 import { displayUrl } from "../utils/url";
 import { safeUrl } from "../utils/url";
-import { escapeHtml } from "../utils/escapeHtml";
 import { Bullets } from "./Bullets";
 
 type CardProps = {
@@ -13,7 +12,7 @@ type CardProps = {
   title: string;
   meta?: string | null;
   subtitle?: string;
-  summaryHtml?: string | null;
+  summaryContent?: ReactNode;
   linkHref?: string | null;
   linkLabel?: string | null;
   badges?: string[];
@@ -27,7 +26,7 @@ function Card({
   title,
   meta,
   subtitle,
-  summaryHtml,
+  summaryContent,
   linkHref,
   linkLabel,
   badges = [],
@@ -60,10 +59,9 @@ function Card({
 
         {meta ? <div className="card__meta">{meta}</div> : null}
 
-        {summaryHtml ? (
+        {summaryContent ? (
           <p className="card__summary">
-            {/* biome-ignore lint/security/noDangerouslySetInnerHtml: summaryHtml is produced from escaped resume text with controlled emphasis markup. */}
-            <span dangerouslySetInnerHTML={{ __html: summaryHtml }} />
+            <span>{summaryContent}</span>
           </p>
         ) : null}
 
@@ -105,10 +103,9 @@ function Card({
           {meta ? <span className="card__badge">{meta}</span> : null}
         </header>
 
-        {summaryHtml ? (
+        {summaryContent ? (
           <p className="card__summary">
-            {/* biome-ignore lint/security/noDangerouslySetInnerHtml: summaryHtml is produced from escaped resume text with controlled emphasis markup. */}
-            <span dangerouslySetInnerHTML={{ __html: summaryHtml }} />
+            <span>{summaryContent}</span>
           </p>
         ) : null}
 
@@ -139,10 +136,9 @@ function Card({
         <div className="card__meta">{meta || ""}</div>
       </div>
       <div className="card__subtitle">{subtitle || ""}</div>
-      {summaryHtml ? (
+      {summaryContent ? (
         <p className="card__summary">
-          {/* biome-ignore lint/security/noDangerouslySetInnerHtml: summaryHtml is produced from escaped resume text with controlled emphasis markup. */}
-          <span dangerouslySetInnerHTML={{ __html: summaryHtml }} />
+          <span>{summaryContent}</span>
         </p>
       ) : null}
       {linkHref && linkLabel ? (
@@ -211,7 +207,7 @@ export function ProjectsGrid({
           title={name}
           meta={meta}
           subtitle={org}
-          summaryHtml={summary ? emphasize(escapeHtml(summary)) : null}
+          summaryContent={summary ? renderEmphasizedText(summary) : null}
           badges={roleBadges}
           keywords={keywordBadges}
           highlights={highlights}
@@ -260,7 +256,7 @@ export function CommunityGrid({
           title={org}
           meta={range}
           subtitle={role}
-          summaryHtml={summary ? emphasize(escapeHtml(summary)) : null}
+          summaryContent={summary ? renderEmphasizedText(summary) : null}
           highlights={highlights}
           footerLeft={location}
           linkHref={label && href !== "#" ? href : null}
