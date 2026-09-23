@@ -1,6 +1,5 @@
-import { emphasize } from "../utils/text";
+import { renderEmphasizedText } from "../utils/text";
 import { sanitize } from "../utils/text";
-import { escapeHtml } from "../utils/escapeHtml";
 import { extractResultsSnippet } from "../utils/resumeHelpers";
 
 type BulletsProps = {
@@ -19,16 +18,18 @@ export function Bullets({
       preferResults ? extractResultsSnippet(highlight) : highlight,
     )
     .filter(Boolean)
-    .map((highlight) => emphasize(escapeHtml(highlight)));
+    .map((highlight, index) => ({
+      key: `${highlight}-${index}`,
+      content: renderEmphasizedText(highlight),
+    }));
 
   if (!items.length) return null;
 
   return (
     <ul className="bullets">
-      {items.map((html) => (
-        <li key={html}>
-          {/* biome-ignore lint/security/noDangerouslySetInnerHtml: content is escaped before emphasize() injects limited markup. */}
-          <span dangerouslySetInnerHTML={{ __html: html }} />
+      {items.map((item) => (
+        <li key={item.key}>
+          <span>{item.content}</span>
         </li>
       ))}
     </ul>

@@ -2,6 +2,7 @@
   "threshold": 5,
   "ignore": [
     "**/node_modules/**",
+    "**/package-lock.json",
     "**/profile/README.md",
     "**/branding/email-signature/email-signature.html",
     "**/resume/resume.*.json",
