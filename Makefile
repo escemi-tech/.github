@@ -1,4 +1,4 @@
-.PHONY: help
+.PHONY: help update-deps
 
 MAKEFLAGS += --silent
 .DEFAULT_GOAL := help
@@ -40,6 +40,13 @@ lint-fix: ## Execute linting and fix
 		-e FIX_BIOME_LINT=true \
 		-e FIX_BIOME_FORMAT=true \
 	)
+
+update-deps: ## Interactively update npm dependencies and lockfiles
+	@for packageFile in resume/theme/package.json ./.github/actions/*/package.json; do \
+		dir=$$(dirname "$$packageFile"); \
+		echo "Updating npm dependencies in $$dir..."; \
+		(cd "$$dir" && npx --yes npm-check-updates --interactive --install always) || exit $$?; \
+	done
 
 audit-fix: ## Audit and fix npm packages
 	@echo "Auditing and fixing npm packages in resume/theme..."
