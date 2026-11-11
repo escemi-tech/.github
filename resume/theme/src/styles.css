@@ -754,7 +754,8 @@ strong {
 }
 
 /* Page 1: second spotlight entry is denser to fit full summary. */
-.section--professional .professional-spotlight
+.section--professional
+  .professional-spotlight
   > .stack:nth-child(2)
   .entry__summary {
   margin-top: 0.3rem;

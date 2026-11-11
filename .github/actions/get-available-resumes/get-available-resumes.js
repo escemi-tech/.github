@@ -1,7 +1,10 @@
 const fs = require("node:fs");
 const path = require("node:path");
 
-const RESUME_DIR = path.resolve(__dirname, "../../../resume");
+const RESUME_DIR = path.resolve(
+  process.env.GITHUB_WORKSPACE || path.join(__dirname, "../../.."),
+  "resume",
+);
 const PDF_OUTPUT_DIR = path.join(RESUME_DIR, "pdf");
 
 // Regex to match resume files: resume.<lang>[.<position>].json

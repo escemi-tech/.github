@@ -2,6 +2,8 @@ version: 2
 
 updates:
   - package-ecosystem: github-actions
+    commit-message:
+      prefix: build
     open-pull-requests-limit: 20
     directories:
       - "/"
@@ -16,6 +18,8 @@ updates:
           - "*"
 
   - package-ecosystem: "devcontainers"
+    commit-message:
+      prefix: build
     open-pull-requests-limit: 20
     directory: "/"
     schedule:
@@ -24,6 +28,8 @@ updates:
       default-days: 7
 
   - package-ecosystem: "docker"
+    commit-message:
+      prefix: build
     open-pull-requests-limit: 20
     directory: "/"
     schedule:
@@ -36,6 +42,8 @@ updates:
           - "*"
 
   - package-ecosystem: "npm"
+    commit-message:
+      prefix: build
     open-pull-requests-limit: 20
     directories:
       - "/.github/actions/**/*"
@@ -50,6 +58,8 @@ updates:
           - "*"
 
   - package-ecosystem: "npm"
+    commit-message:
+      prefix: build
     open-pull-requests-limit: 20
     directory: "/resume/theme/"
     versioning-strategy: increase

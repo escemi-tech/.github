@@ -152,14 +152,16 @@ The repository uses a modular CI/CD workflow structure:
   - Commits PDFs to repository
   - Creates LinkedIn update reminder issue
 
-- `pull-request-ci.yml` - Runs on pull requests
+- `pull-request-ci.yml` - Runs on pull requests and merge queues
   - Validates resumes
   - Generates PDF previews as artifacts
   - Comments on PR with download link
 
 - `shared-ci.yml` - Reusable workflow for common CI tasks
-  - Validates both resume files
-  - Generates PDFs
+  - Runs lint and resume-theme build/tests independently
+  - Validates all resume files
+  - Generates PDFs after resume validation and theme checks pass
+  - Consolidates lint, test and coverage reports
 
 **Composite Actions:**
 
