@@ -21,16 +21,22 @@ runs:
           echo "Ghostscript is already installed: $(gs --version)"
         fi
 
-    - uses: hoverkraft-tech/ci-github-nodejs/actions/setup-node@df348077afa4e79725151d50606e9dc63f86dcb6 # 0.24.4
+    # Run the package from the workspace so its local theme dependency uses the restored build.
+    - uses: hoverkraft-tech/ci-github-nodejs/actions/setup-node@a60704c5e9902675a1b4a5141411d95733e80ff5 # 3.0.2
       with:
-        working-directory: ${{ github.action_path }}
+        working-directory: .github/actions/generate-resume-pdf
+
+    - name: Install the browser required by Puppeteer
+      shell: bash
+      working-directory: .github/actions/generate-resume-pdf
+      run: npm exec -- puppeteer browsers install chrome
 
     - name: Generate PDF resume
       id: validate
       uses: actions/github-script@3a2844b7e9c422d3c10d287c895573f7108da1b3 # v9.0.0
       env:
-        NODE_PATH: ${{ github.action_path }}/node_modules
-        ACTION_PATH: ${{ github.action_path }}
+        NODE_PATH: ${{ github.workspace }}/.github/actions/generate-resume-pdf/node_modules
+        ACTION_PATH: ${{ github.workspace }}/.github/actions/generate-resume-pdf
         RESUME_PATH: ${{ inputs.resume-path }}
         OUTPUT_PATH: ${{ inputs.output-path }}
       with:

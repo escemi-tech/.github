@@ -28,7 +28,7 @@
     "preview": "vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
-    "test:ci": "vitest run --coverage.enabled --coverage.reporter=lcov --coverage.reporter=text",
+    "test:ci": "vitest run --reporter=default --reporter=junit --outputFile=junit.xml --coverage.enabled --coverage.reporter=lcov --coverage.reporter=text",
     "prepublishOnly": "npm run build"
   },
   "license": "MIT",

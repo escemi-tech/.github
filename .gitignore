@@ -23,3 +23,4 @@ resume/theme/eslint-report.json
 .github/actions/generate-resume-pdf/.cache
 .github/actions/generate-resume-pdf/core.*
 resume/theme/coverage/
+resume/theme/junit.xml
