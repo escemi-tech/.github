@@ -146,13 +146,15 @@ The repository uses a modular CI/CD workflow structure:
 
 **Main Workflows:**
 
-- `main-ci.yml` - Runs on push to main branch
+- `main-ci.yml` - Runs manually or on pushes to main that change files outside `resume/pdf/`
+
   - Validates resumes using composite actions
   - Generates PDFs
-  - Commits PDFs to repository
-  - Creates LinkedIn update reminder issue
+  - Merges generated PDFs through a GitHub App pull request
+  - Sends the resume artifact to `escemi-website` for synchronization and deployment
 
 - `pull-request-ci.yml` - Runs on pull requests and merge queues
+
   - Validates resumes
   - Generates PDF previews as artifacts
   - Comments on PR with download link
