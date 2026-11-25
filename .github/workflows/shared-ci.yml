@@ -33,7 +33,7 @@ jobs:
         uses: $/.github/actions/get-available-resumes
 
   lint:
-    uses: hoverkraft-tech/ci-github-common/.github/workflows/linter.yml@d07ee49b460ae2f3815804b5153fe918092aa321 # 4.2.0
+    uses: hoverkraft-tech/ci-github-common/.github/workflows/linter.yml@f165c0ca3e88604611481e1408ace1e0e3a5ee47 # 4.3.1
     permissions:
       actions: read
       contents: read
@@ -70,7 +70,7 @@ jobs:
 
   theme-continuous-integration:
     name: Resume Theme CI
-    uses: hoverkraft-tech/ci-github-nodejs/.github/workflows/continuous-integration.yml@a60704c5e9902675a1b4a5141411d95733e80ff5 # 3.0.2
+    uses: hoverkraft-tech/ci-github-nodejs/.github/workflows/continuous-integration.yml@98d91b1cc347efc64cd5fb20bc0ebc076acad114 # 3.1.0
     permissions:
       contents: read
       id-token: write
@@ -87,7 +87,7 @@ jobs:
   reports:
     needs: [lint, theme-continuous-integration]
     if: always()
-    uses: hoverkraft-tech/ci-github-common/.github/workflows/ci-reports.yml@d07ee49b460ae2f3815804b5153fe918092aa321 # 4.2.0
+    uses: hoverkraft-tech/ci-github-common/.github/workflows/ci-reports.yml@f165c0ca3e88604611481e1408ace1e0e3a5ee47 # 4.3.1
     permissions:
       contents: read
       pull-requests: write
@@ -131,7 +131,7 @@ jobs:
           archive: false
           if-no-files-found: error
 
-      - uses: hoverkraft-tech/ci-github-common/actions/set-matrix-output@d07ee49b460ae2f3815804b5153fe918092aa321 # 4.2.0
+      - uses: hoverkraft-tech/ci-github-common/actions/set-matrix-output@f165c0ca3e88604611481e1408ace1e0e3a5ee47 # 4.3.1
         with:
           value: |
             {
@@ -151,6 +151,6 @@ jobs:
       pdfs-root-path: ${{ env.RESUME_PDFS_ROOT_PATH }}
     steps:
       - id: get-generated-pdfs
-        uses: hoverkraft-tech/ci-github-common/actions/get-matrix-outputs@d07ee49b460ae2f3815804b5153fe918092aa321 # 4.2.0
+        uses: hoverkraft-tech/ci-github-common/actions/get-matrix-outputs@f165c0ca3e88604611481e1408ace1e0e3a5ee47 # 4.3.1
         with:
           artifact-name: "generated-pdfs"
