@@ -22,7 +22,7 @@ runs:
         fi
 
     # Run the package from the workspace so its local theme dependency uses the restored build.
-    - uses: hoverkraft-tech/ci-github-nodejs/actions/setup-node@a60704c5e9902675a1b4a5141411d95733e80ff5 # 3.0.2
+    - uses: hoverkraft-tech/ci-github-nodejs/actions/setup-node@98d91b1cc347efc64cd5fb20bc0ebc076acad114 # 3.1.0
       with:
         working-directory: .github/actions/generate-resume-pdf
 
